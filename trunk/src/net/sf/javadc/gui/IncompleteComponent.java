@@ -1,21 +1,11 @@
 /*
- * Copyright (C) 2001 Jesper Nordenberg, mayhem@home.se
- *
- * Copyright (C) 2004 Timo Westkämper
- *
- * This program is free software;      you can redistribute it and/or modify it
- * under the terms of the   GNU General Public License as published by the Free
- * Software Foundation;    either version 2 of the License, or (at your option)
- * any later version.
- *
- *  This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY;   without even the implied warranty of MERCHANTABILITY or FIT-
- * NESS FOR A PARTICULAR PURPOSE.   See the GNU General Public License for more
- * details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program; if not, write to the Free Software Foundation, Inc.,
- * 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ * Copyright (C) 2001 Jesper Nordenberg, mayhem@home.se Copyright (C) 2004 Timo Westkämper This program is free
+ * software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or (at your option) any later version. This program is
+ * distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FIT- NESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You
+ * should have received a copy of the GNU General Public License along with this program; if not, write to the Free
+ * Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 // $Id: IncompleteComponent.java,v 1.19 2005/10/02 11:42:28 timowest Exp $
 package net.sf.javadc.gui;
@@ -53,22 +43,24 @@ import org.apache.log4j.Category;
 import spin.Spin;
 
 /**
- * <CODE>IncompleteComponent</CODE> provides a <CODE>SortabelTable</CODE>
- * view on the queue of <CODE>DownloadRequests</CODE>
+ * <CODE>IncompleteComponent</CODE> provides a <CODE>SortabelTable</CODE> view on the queue of
+ * <CODE>DownloadRequests</CODE>
  * 
  * @author Jesper Nordenberg
  * @version $Revision: 1.19 $ $Date: 2005/10/02 11:42:28 $
  */
-public class IncompleteComponent extends JPanel implements
-        SortableTableListener, KeyListener {
-
+public class IncompleteComponent
+    extends JPanel
+    implements
+        SortableTableListener,
+        KeyListener
+{
     /**
      * 
      */
-    private static final long serialVersionUID = 1181165713477183455L;
+    private static final long          serialVersionUID = 1181165713477183455L;
 
-    private final static Category logger = Category
-            .getInstance(IncompleteComponent.class);
+    private final static Category      logger           = Category.getInstance( IncompleteComponent.class );
 
     /**
      * 
@@ -78,65 +70,71 @@ public class IncompleteComponent extends JPanel implements
     /**
      * 
      */
-    private final SortableTable incompleteTable;
+    private final SortableTable        incompleteTable;
 
     // external components
     // private final ISettings settings;
     /**
      * 
      */
-    private IDownloadManager downloadManager;
+    private IDownloadManager           downloadManager;
 
     /**
      * 
      */
-    private IHub hub;
+    private IHub                       hub;
 
     /**
-     * Create an IncompleteComponent instance with the given ISettings,
-     * IRequestsModel and IDownloadRequestResumer
+     * Create an IncompleteComponent instance with the given ISettings, IRequestsModel and IDownloadRequestResumer
      * 
-     * @param _requestsModel
-     *            IRequestsModel to be used
-     * @param _downloadManager
-     *            IDownloadManager instance to be used
+     * @param _requestsModel IRequestsModel to be used
+     * @param _downloadManager IDownloadManager instance to be used
      */
-    public IncompleteComponent(IRequestsModel _requestsModel,
-            IDownloadManager _downloadManager, AllHubs _hub) {
-        super(new BorderLayout());
+    public IncompleteComponent(
+        IRequestsModel _requestsModel,
+        IDownloadManager _downloadManager,
+        AllHubs _hub )
+    {
+        super( new BorderLayout() );
 
         // if (_settings == null)
         // throw new NullPointerException("settings was null.");
 
-        if (_requestsModel == null)
-            throw new NullPointerException("requestsModel was null.");
+        if ( _requestsModel == null )
+        {
+            throw new NullPointerException( "requestsModel was null." );
+        }
 
-        if (_downloadManager == null)
-            throw new NullPointerException("downloadManager was null.");
+        if ( _downloadManager == null )
+        {
+            throw new NullPointerException( "downloadManager was null." );
+        }
 
-        if (_hub == null)
-            throw new NullPointerException("hub was null.");
+        if ( _hub == null )
+        {
+            throw new NullPointerException( "hub was null." );
+        }
 
         // spinned components
         // settings = _settings;
 
-        downloadManager = (IDownloadManager) Spin.off(_downloadManager);
+        downloadManager = (IDownloadManager) Spin.off( _downloadManager );
 
-        hub = (IHub) Spin.off(_hub);
+        hub = (IHub) Spin.off( _hub );
 
         // wraps the general RequestsModel into a form used by the
         // SortableTable
-        model = new RowTableModelAdapter(_requestsModel, new String[] { "File",
-                "Hash", "Temp Size", "Size", "Nick", "Host", "Hub", "State" });
+        model =
+            new RowTableModelAdapter( _requestsModel, new String[] { "File", "Hash", "Temp Size", "Size", "Nick",
+                            "Host", "Hub", "State" } );
 
-        incompleteTable = new SortableTable(new int[] { 120, 100, 20, 20, 50,
-                50, 50, 20 }, this, model, "incomplete downloads");
+        incompleteTable =
+            new SortableTable( new int[] { 120, 100, 20, 20, 50, 50, 50, 20 }, this, model, "incomplete downloads" );
 
-        incompleteTable.getTable().setDefaultRenderer(Long.class,
-                new ByteCellRenderer());
+        incompleteTable.getTable().setDefaultRenderer( Long.class, new ByteCellRenderer() );
 
-        add(incompleteTable, BorderLayout.CENTER);
-        incompleteTable.getTable().addKeyListener(this);
+        add( incompleteTable, BorderLayout.CENTER );
+        incompleteTable.getTable().addKeyListener( this );
 
     }
 
@@ -145,19 +143,22 @@ public class IncompleteComponent extends JPanel implements
     /**
      * Cancel the DownloadRequest located in the row with the given index
      * 
-     * @param row
-     *            index of the DownloadRequest to be deleted
+     * @param row index of the DownloadRequest to be deleted
      */
-    public final void cancel(int[] selectedRows) {
+    public final void cancel(
+        int[] selectedRows )
+    {
 
         List rows = new ArrayList();
 
-        for (int i = 0; i < selectedRows.length; i++) {
-            rows.add(model.getRow(selectedRows[i]));
+        for ( int i = 0; i < selectedRows.length; i++ )
+        {
+            rows.add( model.getRow( selectedRows[i] ) );
         }
 
-        for (Iterator i = rows.iterator(); i.hasNext();) {
-            model.deleteRow(i.next());
+        for ( Iterator i = rows.iterator(); i.hasNext(); )
+        {
+            model.deleteRow( i.next() );
         }
 
     }
@@ -167,17 +168,23 @@ public class IncompleteComponent extends JPanel implements
      * 
      * @see net.sf.javadc.gui.model.SortableTableListener#cellSelected(int, int)
      */
-    public final void cellSelected(int row, int column, int[] selectedRows) {
+    public final void cellSelected(
+        int row,
+        int column,
+        int[] selectedRows )
+    {
 
         List requests = new ArrayList();
 
-        for (int i = 0; i < selectedRows.length; i++) {
-            requests.add(model.getRow(selectedRows[i]));
+        for ( int i = 0; i < selectedRows.length; i++ )
+        {
+            requests.add( model.getRow( selectedRows[i] ) );
 
         }
 
-        for (Iterator i = requests.iterator(); i.hasNext();) {
-            downloadManager.requestDownload((DownloadRequest) i.next());
+        for ( Iterator i = requests.iterator(); i.hasNext(); )
+        {
+            downloadManager.requestDownload( (DownloadRequest) i.next() );
 
         }
     }
@@ -187,7 +194,9 @@ public class IncompleteComponent extends JPanel implements
      * 
      * @see java.awt.event.KeyListener#keyPressed(java.awt.event.KeyEvent)
      */
-    public final void keyPressed(KeyEvent ke) {
+    public final void keyPressed(
+        KeyEvent ke )
+    {
 
     }
 
@@ -196,24 +205,30 @@ public class IncompleteComponent extends JPanel implements
      * 
      * @see java.awt.event.KeyListener#keyReleased(java.awt.event.KeyEvent)
      */
-    public final void keyReleased(KeyEvent ke) {
-        if (ke.getKeyCode() == KeyEvent.VK_DELETE) {
+    public final void keyReleased(
+        KeyEvent ke )
+    {
+        if ( ke.getKeyCode() == KeyEvent.VK_DELETE )
+        {
             int row = incompleteTable.getTable().getSelectedRow();
 
-            if (row > -1) {
+            if ( row > -1 )
+            {
                 int[] rows = { row };
-                cancel(rows);
+                cancel( rows );
 
             }
 
-            if (model.getRowCount() > 1) {
-                if (row < model.getRowCount()) {
-                    incompleteTable.getTable()
-                            .setRowSelectionInterval(row, row);
+            if ( model.getRowCount() > 1 )
+            {
+                if ( row < model.getRowCount() )
+                {
+                    incompleteTable.getTable().setRowSelectionInterval( row, row );
 
-                } else {
-                    incompleteTable.getTable().setRowSelectionInterval(row - 1,
-                            row - 1);
+                }
+                else
+                {
+                    incompleteTable.getTable().setRowSelectionInterval( row - 1, row - 1 );
 
                 }
 
@@ -228,7 +243,9 @@ public class IncompleteComponent extends JPanel implements
      * 
      * @see java.awt.event.KeyListener#keyTyped(java.awt.event.KeyEvent)
      */
-    public final void keyTyped(KeyEvent ke) {
+    public final void keyTyped(
+        KeyEvent ke )
+    {
 
     }
 
@@ -238,113 +255,131 @@ public class IncompleteComponent extends JPanel implements
      * @see net.sf.javadc.gui.model.SortableTableListener#showPopupClicked(int,
      *      int, java.awt.event.MouseEvent)
      */
-    public final void showPopupClicked(final int row, final int column,
-            MouseEvent e, final int[] selectedRows) {
+    public final void showPopupClicked(
+        final int row,
+        final int column,
+        MouseEvent e,
+        final int[] selectedRows )
+    {
         JPopupMenu popup = new JPopupMenu();
-        JMenuItem close = new JMenuItem("Remove");
-        close.setIcon(FileUtils.loadIcon("images/16/edittrash.png"));
+        JMenuItem close = new JMenuItem( "Remove" );
+        close.setIcon( FileUtils.loadIcon( "images/16/edittrash.png" ) );
 
-        JMenuItem reconnect = new JMenuItem("Resume");
-        reconnect.setIcon(FileUtils.loadIcon("images/16/reload.png"));
+        JMenuItem reconnect = new JMenuItem( "Resume" );
+        reconnect.setIcon( FileUtils.loadIcon( "images/16/reload.png" ) );
 
-        JMenuItem search = new JMenuItem("Search for alternates");
+        JMenuItem search = new JMenuItem( "Search for alternates" );
 
-        JMenuItem searchFreeSlots = new JMenuItem(
-                "Search for alternates with free slots");
+        JMenuItem searchFreeSlots = new JMenuItem( "Search for alternates with free slots" );
 
-        close.addActionListener(new ActionListener() {
+        close.addActionListener( new ActionListener()
+        {
 
-            public void actionPerformed(ActionEvent e) {
-
-                // multi selection
-
-                cancel(selectedRows);
-
-            }
-
-        });
-
-        reconnect.addActionListener(new ActionListener() {
-
-            public void actionPerformed(ActionEvent e) {
+            public void actionPerformed(
+                ActionEvent e )
+            {
 
                 // multi selection
 
-                cellSelected(row, column, selectedRows);
+                cancel( selectedRows );
 
             }
 
-        });
+        } );
 
-        search.addActionListener(new ActionListener() {
+        reconnect.addActionListener( new ActionListener()
+        {
 
-            public void actionPerformed(ActionEvent arg0) {
+            public void actionPerformed(
+                ActionEvent e )
+            {
+
+                // multi selection
+
+                cellSelected( row, column, selectedRows );
+
+            }
+
+        } );
+
+        search.addActionListener( new ActionListener()
+        {
+
+            public void actionPerformed(
+                ActionEvent arg0 )
+            {
 
                 // multiselection ( general )
 
-                searchForAlternates(selectedRows, false);
+                searchForAlternates( selectedRows, false );
 
             }
 
-        });
+        } );
 
-        searchFreeSlots.addActionListener(new ActionListener() {
+        searchFreeSlots.addActionListener( new ActionListener()
+        {
 
-            public void actionPerformed(ActionEvent arg0) {
+            public void actionPerformed(
+                ActionEvent arg0 )
+            {
 
                 // multiselection ( only results with free slots)
 
-                searchForAlternates(selectedRows, true);
+                searchForAlternates( selectedRows, true );
 
             }
 
-        });
+        } );
 
-        popup.add(reconnect);
-        popup.add(search);
-        popup.add(searchFreeSlots);
+        popup.add( reconnect );
+        popup.add( search );
+        popup.add( searchFreeSlots );
 
         popup.addSeparator();
 
-        popup.add(close);
+        popup.add( close );
 
-        popup.show(e.getComponent(), e.getX(), e.getY());
+        popup.show( e.getComponent(), e.getX(), e.getY() );
 
     }
 
     /**
      * Search for alternates for the search results in the given rows
      * 
-     * @param selectedRows
-     *            indices of search results
-     * @param freeSlots
-     *            true, if only results with free slots are searched and false,
-     *            if not
+     * @param selectedRows indices of search results
+     * @param freeSlots true, if only results with free slots are searched and false, if not
      */
-    protected void searchForAlternates(int[] selectedRows, boolean freeSlots) {
+    protected void searchForAlternates(
+        int[] selectedRows,
+        boolean freeSlots )
+    {
 
         List rows = new ArrayList();
 
-        for (int i = 0; i < selectedRows.length; i++) {
-            rows.add(model.getRow(selectedRows[i]));
+        for ( int i = 0; i < selectedRows.length; i++ )
+        {
+            rows.add( model.getRow( selectedRows[i] ) );
         }
 
-        for (Iterator i = rows.iterator(); i.hasNext();) {
+        for ( Iterator i = rows.iterator(); i.hasNext(); )
+        {
 
-            SearchResult searchResult = ((DownloadRequest) i.next())
-                    .getSearchResult();
+            SearchResult searchResult = ((DownloadRequest) i.next()).getSearchResult();
 
-            if (searchResult.getTTH() != null) {
+            if ( searchResult.getTTH() != null )
+            {
 
-                SearchRequest sr = new SearchRequest(searchResult.getTTH(),
-                        SearchRequest.TTH, 0, true, freeSlots);
+                SearchRequest sr = new SearchRequest( searchResult.getTTH(), SearchRequest.TTH, 0, true, freeSlots );
 
-                try {
-                    hub.search(sr);
+                try
+                {
+                    hub.search( sr );
 
-                } catch (IOException e) {
-                    logger.error("Caught " + e.getClass().getName()
-                            + " when trying to search with " + sr, e);
+                }
+                catch ( IOException e )
+                {
+                    logger.error( "Caught " + e.getClass().getName() + " when trying to search with " + sr, e );
                 }
 
             }
@@ -355,13 +390,6 @@ public class IncompleteComponent extends JPanel implements
 }
 
 /*******************************************************************************
- * $Log: IncompleteComponent.java,v $
- * Revision 1.19  2005/10/02 11:42:28  timowest
- * updated sources and tests
- * Revision 1.18 2005/09/25 16:40:58 timowest
- * updated sources and tests Revision 1.17 2005/09/14 07:11:49 timowest updated
- * sources
- * 
- * 
- * 
+ * $Log: IncompleteComponent.java,v $ Revision 1.19 2005/10/02 11:42:28 timowest updated sources and tests Revision 1.18
+ * 2005/09/25 16:40:58 timowest updated sources and tests Revision 1.17 2005/09/14 07:11:49 timowest updated sources
  */

@@ -1,24 +1,14 @@
 /*
- * Copyright (C) 2001 Jesper Nordenberg, mayhem@home.se
- *
- * Copyright (C) 2004 Timo Westkämper
- *
- * This program is free software;      you can redistribute it and/or modify it
- * under the terms of the   GNU General Public License as published by the Free
- * Software Foundation;    either version 2 of the License, or (at your option)
- * any later version.
- *
- *  This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY;   without even the implied warranty of MERCHANTABILITY or FIT-
- * NESS FOR A PARTICULAR PURPOSE.   See the GNU General Public License for more
- * details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program; if not, write to the Free Software Foundation, Inc.,
- * 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ * Copyright (C) 2001 Jesper Nordenberg, mayhem@home.se Copyright (C) 2004 Timo Westkämper This program is free
+ * software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or (at your option) any later version. This program is
+ * distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FIT- NESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You
+ * should have received a copy of the GNU General Public License along with this program; if not, write to the Free
+ * Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
-//$Id: AdvancedSettings.java,v 1.13 2005/10/02 11:42:27 timowest Exp $
+// $Id: AdvancedSettings.java,v 1.13 2005/10/02 11:42:27 timowest Exp $
 package net.sf.javadc.config;
 
 /**
@@ -26,52 +16,52 @@ package net.sf.javadc.config;
  * 
  * @author Timo Westk�mper
  */
-public class AdvancedSettings {
+public class AdvancedSettings
+{
 
     /**
      * 
      */
     private boolean forceMove = true;
+    /**
+     * 
+     */
+    private String  hublistAddress;
+    /**
+     * 
+     */
+    private String  clientVersion;
 
     /**
      * 
      */
-    private String hublistAddress;
+    private int     iconSize;
 
     /**
      * 
      */
-    private String clientVersion;
+    private int     xLocation;
 
     /**
      * 
      */
-    private int iconSize;
+    private int     yLocation;
 
     /**
      * 
      */
-    private int xLocation;
+    private int     xSize;
 
     /**
      * 
      */
-    private int yLocation;
-
-    /**
-     * 
-     */
-    private int xSize;
-
-    /**
-     * 
-     */
-    private int ySize;
+    private int     ySize;
 
     /**
      * Create an AdvancedSettings instance
      */
-    public AdvancedSettings() {
+    public AdvancedSettings()
+    {
         iconSize = 16;
 
     }
@@ -83,29 +73,30 @@ public class AdvancedSettings {
      * 
      * @return
      */
-    public String getClientVersion() {
+    public String getClientVersion()
+    {
         return clientVersion;
 
     }
 
     /**
-     * Get the URL of the hublist from which the hublist view of javadc3 is
-     * populated
+     * Get the URL of the hublist from which the hublist view of javadc3 is populated
      * 
      * @return
      */
-    public String getHublistAddress() {
+    public String getHublistAddress()
+    {
         return hublistAddress;
 
     }
 
     /**
-     * Get the icon size of the icons displayed in the user interface of javadc3
-     * (16 pixels is the default size)
+     * Get the icon size of the icons displayed in the user interface of javadc3 (16 pixels is the default size)
      * 
      * @return
      */
-    public int getIconSize() {
+    public int getIconSize()
+    {
         return iconSize;
 
     }
@@ -115,7 +106,8 @@ public class AdvancedSettings {
      * 
      * @return
      */
-    public int getXLocation() {
+    public int getXLocation()
+    {
         return xLocation;
 
     }
@@ -125,7 +117,8 @@ public class AdvancedSettings {
      * 
      * @return
      */
-    public int getXSize() {
+    public int getXSize()
+    {
         return xSize;
 
     }
@@ -135,7 +128,8 @@ public class AdvancedSettings {
      * 
      * @return
      */
-    public int getYLocation() {
+    public int getYLocation()
+    {
         return yLocation;
 
     }
@@ -145,18 +139,20 @@ public class AdvancedSettings {
      * 
      * @return
      */
-    public int getYSize() {
+    public int getYSize()
+    {
         return ySize;
 
     }
 
     /**
-     * Get whether the Client is automatically forwarded to a secondary hub,
-     * when it receives a ForceMove command from a Hub
+     * Get whether the Client is automatically forwarded to a secondary hub, when it receives a ForceMove command from a
+     * Hub
      * 
      * @return
      */
-    public boolean isForceMove() {
+    public boolean isForceMove()
+    {
         return forceMove;
 
     }
@@ -166,29 +162,34 @@ public class AdvancedSettings {
      * 
      * @param string
      */
-    public void setClientVersion(String string) {
+    public void setClientVersion(
+        String string )
+    {
         clientVersion = string;
 
     }
 
     /**
-     * Set whether the local Client is automatically forwarded to secondary
-     * hubs, when it receives a ForceMove command from a Hub
+     * Set whether the local Client is automatically forwarded to secondary hubs, when it receives a ForceMove command
+     * from a Hub
      * 
      * @param b
      */
-    public void setForceMove(boolean b) {
+    public void setForceMove(
+        boolean b )
+    {
         forceMove = b;
 
     }
 
     /**
-     * Set the URL from which the hublist view of the user interface is
-     * populated
+     * Set the URL from which the hublist view of the user interface is populated
      * 
      * @param string
      */
-    public void setHublistAddress(String string) {
+    public void setHublistAddress(
+        String string )
+    {
         hublistAddress = string;
 
     }
@@ -198,7 +199,9 @@ public class AdvancedSettings {
      * 
      * @param i
      */
-    public void setIconSize(int i) {
+    public void setIconSize(
+        int i )
+    {
         iconSize = i;
 
     }
@@ -208,7 +211,9 @@ public class AdvancedSettings {
      * 
      * @param i
      */
-    public void setXLocation(int i) {
+    public void setXLocation(
+        int i )
+    {
         xLocation = i;
 
     }
@@ -218,7 +223,9 @@ public class AdvancedSettings {
      * 
      * @param i
      */
-    public void setXSize(int i) {
+    public void setXSize(
+        int i )
+    {
         xSize = i;
 
     }
@@ -228,7 +235,9 @@ public class AdvancedSettings {
      * 
      * @param i
      */
-    public void setYLocation(int i) {
+    public void setYLocation(
+        int i )
+    {
         yLocation = i;
 
     }
@@ -238,7 +247,9 @@ public class AdvancedSettings {
      * 
      * @param i
      */
-    public void setYSize(int i) {
+    public void setYSize(
+        int i )
+    {
         ySize = i;
 
     }
@@ -246,14 +257,6 @@ public class AdvancedSettings {
 }
 
 /*******************************************************************************
- * $Log: AdvancedSettings.java,v $
- * Revision 1.13  2005/10/02 11:42:27  timowest
- * updated sources and tests
- * Revision 1.12 2005/09/30 15:59:52 timowest
- * updated sources and tests
- * 
- * Revision 1.11 2005/09/14 07:11:48 timowest updated sources
- * 
- * 
- * 
+ * $Log: AdvancedSettings.java,v $ Revision 1.13 2005/10/02 11:42:27 timowest updated sources and tests Revision 1.12
+ * 2005/09/30 15:59:52 timowest updated sources and tests Revision 1.11 2005/09/14 07:11:48 timowest updated sources
  */

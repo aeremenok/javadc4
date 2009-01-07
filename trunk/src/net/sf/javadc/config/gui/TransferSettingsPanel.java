@@ -1,21 +1,11 @@
 /*
- * Copyright (C) 2001 Michael Kurz mkurz@epost.de
- *
- * Copyright (C) 2004 Timo Westkämper
- *
- * This program is free software;      you can redistribute it and/or modify it
- * under the terms of the   GNU General Public License as published by the Free
- * Software Foundation;    either version 2 of the License, or (at your option)
- * any later version.
- *
- *  This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY;   without even the implied warranty of MERCHANTABILITY or FIT-
- * NESS FOR A PARTICULAR PURPOSE.   See the GNU General Public License for more
- * details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program; if not, write to the Free Software Foundation, Inc.,
- * 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ * Copyright (C) 2001 Michael Kurz mkurz@epost.de Copyright (C) 2004 Timo Westkämper This program is free software; you
+ * can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free
+ * Software Foundation; either version 2 of the License, or (at your option) any later version. This program is
+ * distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FIT- NESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You
+ * should have received a copy of the GNU General Public License along with this program; if not, write to the Free
+ * Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
 // $Id: TransferSettingsPanel.java,v 1.18 2005/10/02 11:42:28 timowest Exp $
@@ -47,66 +37,69 @@ import net.sf.javadc.util.layout.HIGLayout;
 import org.apache.log4j.Category;
 
 /**
- * <CODE>TransferSettingsPanel</CODE> is a subpanel of the
- * <code>SettingsDialog</code>. It enables the user to set the share
- * preferences.
+ * <CODE>TransferSettingsPanel</CODE> is a subpanel of the <code>SettingsDialog</code>. It enables the user to set the
+ * share preferences.
  * 
  * @author Michael Kurz
  */
-public class TransferSettingsPanel extends AbstractSettingsPanel {
+public class TransferSettingsPanel
+    extends AbstractSettingsPanel
+{
+    /**
+     * 
+     */
+    private static final long        serialVersionUID      = 8818041755542208208L;
+
+    private final static Category    logger                = Category.getInstance( TransferSettingsPanel.class );
 
     /**
      * 
      */
-    private static final long serialVersionUID = 8818041755542208208L;
-
-    private final static Category logger = Category
-            .getInstance(TransferSettingsPanel.class);
+    private final JButton            addShareButton        = new JButton( "Add" );
 
     /**
      * 
      */
-    private final JButton addShareButton = new JButton("Add");
+    private final JButton            tempDownloadDirButton = new JButton( "Browse" );
 
     /**
      * 
      */
-    private final JButton tempDownloadDirButton = new JButton("Browse");
+    private final JButton            downloadDirButton     = new JButton();
 
     /**
      * 
      */
-    private final JButton downloadDirButton = new JButton();
+    private final JTextField         txtDownloadDir        = new JTextField();
 
     /**
      * 
      */
-    private final JTextField txtDownloadDir = new JTextField();
+    private final JButton            removeShareButton     = new JButton( "Remove" );
 
     /**
      * 
      */
-    private final JButton removeShareButton = new JButton("Remove");
+    private final JList              shareList;                                                                  // =
+                                                                                                                  // new
+                                                                                                                  // JList();
 
     /**
      * 
      */
-    private final JList shareList; // = new JList();
+    private final DirectoryListModel shareModel            = new DirectoryListModel();
 
     /**
      * 
      */
-    private final DirectoryListModel shareModel = new DirectoryListModel();
+    private final JScrollPane        shareScrollPane;                                                            // =
+                                                                                                                  // new
+                                                                                                                  // JScrollPane(shareList);
 
     /**
      * 
      */
-    private final JScrollPane shareScrollPane; // = new JScrollPane(shareList);
-
-    /**
-     * 
-     */
-    private final JTextField txtTempDownloadDir = new JTextField();
+    private final JTextField         txtTempDownloadDir    = new JTextField();
 
     // private final JPanel uploadPanel = new JPanel();
 
@@ -114,280 +107,100 @@ public class TransferSettingsPanel extends AbstractSettingsPanel {
     /**
      * 
      */
-    private final ISettings settings;
+    private final ISettings          settings;
 
     /**
      * 
      */
-    private final IShareManager shareManager;
+    private final IShareManager      shareManager;
 
     /**
      * Create a TransferSettingsPanel instance
      * 
-     * @param _settings
-     *            ISettings instance to be used
-     * @param _shareManager
-     *            IShareManager instance to be used
+     * @param _settings ISettings instance to be used
+     * @param _shareManager IShareManager instance to be used
      */
-    public TransferSettingsPanel(ISettings _settings,
-            IShareManager _shareManager) {
-        if (_settings == null)
-            throw new NullPointerException("_settings was null");
+    public TransferSettingsPanel(
+        ISettings _settings,
+        IShareManager _shareManager )
+    {
+        if ( _settings == null )
+        {
+            throw new NullPointerException( "_settings was null" );
+        }
 
-        if (_shareManager == null)
-            throw new NullPointerException("_shareManager was null");
+        if ( _shareManager == null )
+        {
+            throw new NullPointerException( "_shareManager was null" );
+        }
 
         settings = _settings;
         shareManager = _shareManager;
 
         String[] dirs = new String[settings.getUploadDirs().size()];
 
-        dirs = (String[]) settings.getUploadDirs().toArray(dirs);
+        dirs = (String[]) settings.getUploadDirs().toArray( dirs );
 
-        populateShareList(dirs);
+        populateShareList( dirs );
 
-        shareList = new JList(shareModel);
-        shareScrollPane = new JScrollPane(shareList);
+        shareList = new JList( shareModel );
+        shareScrollPane = new JScrollPane( shareList );
 
-        try {
+        try
+        {
             jbInit();
 
-        } catch (Exception ex) {
+        }
+        catch ( Exception ex )
+        {
             // logger.error("Catched " + ex.getClass().getName()
             // + " when trying to initialize TransferSettingsPanel.", ex);
             //            
             // throw new RuntimeException(ex);
 
-            logger.error("Caught " + ex.getClass().getName(), ex);
-            throw new RuntimeException(ex);
+            logger.error( "Caught " + ex.getClass().getName(), ex );
+            throw new RuntimeException( ex );
         }
-
-    }
-
-    /**
-     * This method is called when the "browse" button is pressed.
-     * 
-     * @return Returns the String
-     */
-    private final String browseDir() {
-        JFileChooser chooser = new JFileChooser();
-
-        chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-
-        int returnVal = chooser.showOpenDialog(this);
-
-        if (returnVal == JFileChooser.APPROVE_OPTION) {
-            return chooser.getSelectedFile().getPath();
-
-        } else {
-            return null;
-
-        }
-
-    }
-
-    /**
-     * Create a JPanel instance with the Download Preferences
-     */
-    private final JPanel getDownloadPreferences() {
-        JPanel p1 = new JPanel();
-
-        p1
-                .setBorder(new TitledBorder(BorderFactory.createEtchedBorder(
-                        Color.white, new Color(142, 142, 142)),
-                        "Download Preferences"));
-
-        txtTempDownloadDir.setColumns(20);
-
-        int[] w1 = { 10, 70, 10, 100, 10, 70, 10 };
-        int[] h1 = { 21, 21, 21, 21, 21, 10 };
-
-        HIGLayout l1 = new HIGLayout(w1, h1);
-        HIGConstraints c = new HIGConstraints();
-
-        l1.setColumnWeight(4, 1);
-        l1.setRowWeight(6, 1);
-
-        p1.setLayout(l1);
-
-        // Temp Download
-        p1.add(new JLabel("Temporary"), c.rcwh(1, 2, 3, 1));
-        p1.add(txtTempDownloadDir, c.rcwh(2, 4, 1, 1));
-
-        tempDownloadDirButton.addMouseListener(new MouseAdapter() {
-
-            public void mouseClicked(MouseEvent e) {
-                onBrowseDir(true);
-
-            }
-
-        });
-
-        p1.add(tempDownloadDirButton, c.rcwh(2, 6, 1, 1));
-
-        // Download
-        p1.add(new JLabel("Downloads"), c.rcwh(3, 2, 3, 1));
-        p1.add(txtDownloadDir, c.rcwh(4, 4, 1, 1));
-
-        downloadDirButton.setText("Browse");
-        downloadDirButton
-                .addActionListener(new java.awt.event.ActionListener() {
-
-                    public void actionPerformed(ActionEvent e) {
-                        moveBrowseButton_actionPerformed(e);
-
-                    }
-
-                });
-
-        p1.add(downloadDirButton, c.rcwh(4, 6, 1, 1));
-
-        return p1;
-
-    }
-
-    /**
-     * Create a JPanel instance with the Upload settings
-     * 
-     * @return
-     */
-    private final JPanel getUploadPreferences() {
-        JPanel p1 = new JPanel();
-
-        p1.setBorder(new TitledBorder(BorderFactory.createEtchedBorder(
-                Color.white, new Color(142, 142, 142)), "Upload Preferences"));
-
-        int[] w1 = { 10, 10, 10, 100, 10 };
-        int[] h1 = { 10, 21, 10, 21, 100, 10 };
-
-        HIGLayout l1 = new HIGLayout(w1, h1);
-        HIGConstraints c = new HIGConstraints();
-
-        l1.setColumnWeight(2, 1);
-        l1.setRowWeight(5, 1);
-
-        p1.setLayout(l1);
-
-        // addShareButton = new JButton("Add");
-        p1.add(addShareButton, c.rc(2, 4));
-
-        // removeShareButton = new JButton("Remove");
-        p1.add(removeShareButton, c.rc(4, 4));
-
-        addShareButton.addMouseListener(new MouseAdapter() {
-
-            public void mouseClicked(MouseEvent e) {
-                onBrowseDir(false);
-
-            }
-
-        });
-
-        removeShareButton.addMouseListener(new MouseAdapter() {
-
-            public void mouseClicked(MouseEvent e) {
-                onRemoveShare();
-
-            }
-
-        });
-
-        shareScrollPane.setSize(400, 175);
-        shareList.setSize(new java.awt.Dimension(400, 175));
-
-        shareList
-                .setPrototypeCellValue("000000000000000000000000000000000000000000000000");
-
-        shareScrollPane.getViewport().add(shareList, null);
-
-        p1.add(shareScrollPane, c.rcwh(2, 2, 1, 4));
-
-        return p1;
 
     }
 
     /**
      * Intialize the Panel
      */
-    public final void initPanel() {
-        try {
-            txtDownloadDir.setText(settings.getDownloadDir());
+    @Override
+    public final void initPanel()
+    {
+        try
+        {
+            txtDownloadDir.setText( settings.getDownloadDir() );
 
-        } catch (NullPointerException e) {
+        }
+        catch ( NullPointerException e )
+        {
             // logger.error(e);
-            logger.error("Caught " + e.getClass().getName(), e);
+            logger.error( "Caught " + e.getClass().getName(), e );
 
         }
 
-        try {
-            txtTempDownloadDir.setText(settings.getTempDownloadDir());
+        try
+        {
+            txtTempDownloadDir.setText( settings.getTempDownloadDir() );
 
-        } catch (NullPointerException e) {
+        }
+        catch ( NullPointerException e )
+        {
             // logger.error(e);
-            logger.error("Caught " + e.getClass().getName(), e);
+            logger.error( "Caught " + e.getClass().getName(), e );
 
         }
 
         String[] strList = new String[settings.getUploadDirs().size()];
 
-        strList = (String[]) settings.getUploadDirs().toArray(strList);
+        strList = (String[]) settings.getUploadDirs().toArray( strList );
 
-        for (int i = 0; i < strList.length; i++) {
-            shareModel.addDirectory(strList[i]);
-
-        }
-
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see net.sf.javadc.config.gui.AbstractSettingsPanel#jbInit()
-     */
-    protected final void jbInit() throws Exception {
-        this.setLayout(new BorderLayout());
-
-        JPanel p1 = new JPanel();
-
-        p1.setLayout(new BoxLayout(p1, BoxLayout.Y_AXIS));
-
-        p1.add(getDownloadPreferences());
-        p1.add(getUploadPreferences());
-
-        this.add(p1, BorderLayout.NORTH);
-
-    }
-
-    /**
-     * Description of the Method
-     */
-    private final void moveBrowseButton_actionPerformed(ActionEvent e) {
-        txtDownloadDir.setText(browseDir());
-
-    }
-
-    /**
-     * This method is called when the "browse" button is pressed.
-     */
-    private final void onBrowseDir(boolean download) {
-        JFileChooser chooser = new JFileChooser();
-
-        chooser.setFileSelectionMode(JFileChooser.DIRECTORIES_ONLY);
-
-        int returnVal = chooser.showOpenDialog(this);
-
-        if (returnVal == JFileChooser.APPROVE_OPTION) {
-            if (download) {
-                txtTempDownloadDir.setText(chooser.getSelectedFile().getPath());
-
-            } else {
-                ((DirectoryListModel) shareList.getModel())
-                        .addDirectory(chooser.getSelectedFile().getPath());
-
-            }
-
-        } else {
-            logger.debug("Adding directory didn't work.");
+        for ( int i = 0; i < strList.length; i++ )
+        {
+            shareModel.addDirectory( strList[i] );
 
         }
 
@@ -398,7 +211,9 @@ public class TransferSettingsPanel extends AbstractSettingsPanel {
      * 
      * @see net.sf.javadc.config.gui.AbstractSettingsPanel#onCancel()
      */
-    public final void onCancel() {
+    @Override
+    public final void onCancel()
+    {
 
     }
 
@@ -407,14 +222,219 @@ public class TransferSettingsPanel extends AbstractSettingsPanel {
      * 
      * @see net.sf.javadc.config.gui.AbstractSettingsPanel#onOK()
      */
-    public final void onOK() {
-        settings.setDownloadDir(txtTempDownloadDir.getText());
+    @Override
+    public final void onOK()
+    {
+        settings.setDownloadDir( txtTempDownloadDir.getText() );
 
-        settings.setUploadDirs(shareModel.getDirList());
+        settings.setUploadDirs( shareModel.getDirList() );
         shareManager.update();
 
-        settings.setTempDownloadDir(txtTempDownloadDir.getText());
-        settings.setDownloadDir(txtDownloadDir.getText());
+        settings.setTempDownloadDir( txtTempDownloadDir.getText() );
+        settings.setDownloadDir( txtDownloadDir.getText() );
+
+    }
+
+    /**
+     * This method is called when the "browse" button is pressed.
+     * 
+     * @return Returns the String
+     */
+    private final String browseDir()
+    {
+        JFileChooser chooser = new JFileChooser();
+
+        chooser.setFileSelectionMode( JFileChooser.DIRECTORIES_ONLY );
+
+        int returnVal = chooser.showOpenDialog( this );
+
+        if ( returnVal == JFileChooser.APPROVE_OPTION )
+        {
+            return chooser.getSelectedFile().getPath();
+
+        }
+        else
+        {
+            return null;
+
+        }
+
+    }
+
+    /**
+     * Create a JPanel instance with the Download Preferences
+     */
+    private final JPanel getDownloadPreferences()
+    {
+        JPanel p1 = new JPanel();
+
+        p1.setBorder( new TitledBorder( BorderFactory.createEtchedBorder( Color.white, new Color( 142, 142, 142 ) ),
+            "Download Preferences" ) );
+
+        txtTempDownloadDir.setColumns( 20 );
+
+        int[] w1 = { 10, 70, 10, 100, 10, 70, 10 };
+        int[] h1 = { 21, 21, 21, 21, 21, 10 };
+
+        HIGLayout l1 = new HIGLayout( w1, h1 );
+        HIGConstraints c = new HIGConstraints();
+
+        l1.setColumnWeight( 4, 1 );
+        l1.setRowWeight( 6, 1 );
+
+        p1.setLayout( l1 );
+
+        // Temp Download
+        p1.add( new JLabel( "Temporary" ), c.rcwh( 1, 2, 3, 1 ) );
+        p1.add( txtTempDownloadDir, c.rcwh( 2, 4, 1, 1 ) );
+
+        tempDownloadDirButton.addMouseListener( new MouseAdapter()
+        {
+
+            @Override
+            public void mouseClicked(
+                MouseEvent e )
+            {
+                onBrowseDir( true );
+
+            }
+
+        } );
+
+        p1.add( tempDownloadDirButton, c.rcwh( 2, 6, 1, 1 ) );
+
+        // Download
+        p1.add( new JLabel( "Downloads" ), c.rcwh( 3, 2, 3, 1 ) );
+        p1.add( txtDownloadDir, c.rcwh( 4, 4, 1, 1 ) );
+
+        downloadDirButton.setText( "Browse" );
+        downloadDirButton.addActionListener( new java.awt.event.ActionListener()
+        {
+
+            public void actionPerformed(
+                ActionEvent e )
+            {
+                moveBrowseButton_actionPerformed( e );
+
+            }
+
+        } );
+
+        p1.add( downloadDirButton, c.rcwh( 4, 6, 1, 1 ) );
+
+        return p1;
+
+    }
+
+    /**
+     * Create a JPanel instance with the Upload settings
+     * 
+     * @return
+     */
+    private final JPanel getUploadPreferences()
+    {
+        JPanel p1 = new JPanel();
+
+        p1.setBorder( new TitledBorder( BorderFactory.createEtchedBorder( Color.white, new Color( 142, 142, 142 ) ),
+            "Upload Preferences" ) );
+
+        int[] w1 = { 10, 10, 10, 100, 10 };
+        int[] h1 = { 10, 21, 10, 21, 100, 10 };
+
+        HIGLayout l1 = new HIGLayout( w1, h1 );
+        HIGConstraints c = new HIGConstraints();
+
+        l1.setColumnWeight( 2, 1 );
+        l1.setRowWeight( 5, 1 );
+
+        p1.setLayout( l1 );
+
+        // addShareButton = new JButton("Add");
+        p1.add( addShareButton, c.rc( 2, 4 ) );
+
+        // removeShareButton = new JButton("Remove");
+        p1.add( removeShareButton, c.rc( 4, 4 ) );
+
+        addShareButton.addMouseListener( new MouseAdapter()
+        {
+
+            @Override
+            public void mouseClicked(
+                MouseEvent e )
+            {
+                onBrowseDir( false );
+
+            }
+
+        } );
+
+        removeShareButton.addMouseListener( new MouseAdapter()
+        {
+
+            @Override
+            public void mouseClicked(
+                MouseEvent e )
+            {
+                onRemoveShare();
+
+            }
+
+        } );
+
+        shareScrollPane.setSize( 400, 175 );
+        shareList.setSize( new java.awt.Dimension( 400, 175 ) );
+
+        shareList.setPrototypeCellValue( "000000000000000000000000000000000000000000000000" );
+
+        shareScrollPane.getViewport().add( shareList, null );
+
+        p1.add( shareScrollPane, c.rcwh( 2, 2, 1, 4 ) );
+
+        return p1;
+
+    }
+
+    /**
+     * Description of the Method
+     */
+    private final void moveBrowseButton_actionPerformed(
+        ActionEvent e )
+    {
+        txtDownloadDir.setText( browseDir() );
+
+    }
+
+    /**
+     * This method is called when the "browse" button is pressed.
+     */
+    private final void onBrowseDir(
+        boolean download )
+    {
+        JFileChooser chooser = new JFileChooser();
+
+        chooser.setFileSelectionMode( JFileChooser.DIRECTORIES_ONLY );
+
+        int returnVal = chooser.showOpenDialog( this );
+
+        if ( returnVal == JFileChooser.APPROVE_OPTION )
+        {
+            if ( download )
+            {
+                txtTempDownloadDir.setText( chooser.getSelectedFile().getPath() );
+
+            }
+            else
+            {
+                ((DirectoryListModel) shareList.getModel()).addDirectory( chooser.getSelectedFile().getPath() );
+
+            }
+
+        }
+        else
+        {
+            logger.debug( "Adding directory didn't work." );
+
+        }
 
     }
 
@@ -423,53 +443,71 @@ public class TransferSettingsPanel extends AbstractSettingsPanel {
      * 
      * @deprecated 2002-05-08
      */
-    private final void onRemoveShare() {
-        try {
-            ((DirectoryListModel) shareList.getModel())
-                    .removeDirectoryAt(shareList.getSelectedIndex());
+    @Deprecated
+    private final void onRemoveShare()
+    {
+        try
+        {
+            ((DirectoryListModel) shareList.getModel()).removeDirectoryAt( shareList.getSelectedIndex() );
 
-        } catch (Exception e) {
+        }
+        catch ( Exception e )
+        {
             // logger.debug(e.toString());
-            logger.error("Caught " + e.getClass().getName(), e);
+            logger.error( "Caught " + e.getClass().getName(), e );
 
         }
 
     }
 
     /**
-     * This Method fills the <code>shareModel</code> with the given
-     * directories.
+     * This Method fills the <code>shareModel</code> with the given directories.
      * 
-     * @param dirs
-     *            The Directories to fill into the <code>shareModel</code>.
-     *            The Directories hav to be given as an <code>Array of
+     * @param dirs The Directories to fill into the <code>shareModel</code>. The Directories hav to be given as an
+     *            <code>Array of
      * 		  Strings</code>.
-     * 
      * @deprecated 2002-05-08
      */
-    private final void populateShareList(String[] dirs) {
-        for (int i = 0; i < dirs.length; i++) {
-            shareModel.addDirectory(dirs[i]);
+    @Deprecated
+    private final void populateShareList(
+        String[] dirs )
+    {
+        for ( int i = 0; i < dirs.length; i++ )
+        {
+            shareModel.addDirectory( dirs[i] );
 
-            logger.debug("Directory " + dirs[i] + " added.");
+            logger.debug( "Directory " + dirs[i] + " added." );
 
         }
+
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see net.sf.javadc.config.gui.AbstractSettingsPanel#jbInit()
+     */
+    @Override
+    protected final void jbInit()
+        throws Exception
+    {
+        this.setLayout( new BorderLayout() );
+
+        JPanel p1 = new JPanel();
+
+        p1.setLayout( new BoxLayout( p1, BoxLayout.Y_AXIS ) );
+
+        p1.add( getDownloadPreferences() );
+        p1.add( getUploadPreferences() );
+
+        this.add( p1, BorderLayout.NORTH );
 
     }
 
 }
 
 /*******************************************************************************
- * $Log: TransferSettingsPanel.java,v $
- * Revision 1.18  2005/10/02 11:42:28  timowest
- * updated sources and tests
- * Revision 1.17 2005/09/30 15:59:53
- * timowest updated sources and tests
- * 
- * Revision 1.16 2005/09/25 16:40:58 timowest updated sources and tests
- * 
- * Revision 1.15 2005/09/14 07:11:49 timowest updated sources
- * 
- * 
- * 
+ * $Log: TransferSettingsPanel.java,v $ Revision 1.18 2005/10/02 11:42:28 timowest updated sources and tests Revision
+ * 1.17 2005/09/30 15:59:53 timowest updated sources and tests Revision 1.16 2005/09/25 16:40:58 timowest updated
+ * sources and tests Revision 1.15 2005/09/14 07:11:49 timowest updated sources
  */
