@@ -1,19 +1,11 @@
 /*
- * Copyright (C) 2004 Marco Bazzoni
- *
- * This program is free software; you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation; either version 2 of the License, or (at your option) any later
- * version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FIT-
- * NESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program; if not, write to the Free Software Foundation, Inc., 59 Temple
- * Place - Suite 330, Boston, MA 02111-1307, USA.
+ * Copyright (C) 2004 Marco Bazzoni This program is free software; you can redistribute it and/or modify it under the
+ * terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the
+ * License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FIT- NESS FOR A PARTICULAR PURPOSE. See
+ * the GNU General Public License for more details. You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
+ * 02111-1307, USA.
  */
 
 package net.sf.javadc.net.client;
@@ -25,74 +17,72 @@ import net.sf.javadc.util.ByteConverter;
 import org.apache.log4j.Category;
 
 /**
- * <code>ConnectionStatistics</code> represents statistical data on an active
- * Client <code>Connection</code>.
- * 
+ * <code>ConnectionStatistics</code> represents statistical data on an active Client <code>Connection</code>.
  * <p>
- * This data was previously contained directly in the <code>Connection</code>
- * class and has been refactored out for maintenance and testability reasons.
+ * This data was previously contained directly in the <code>Connection</code> class and has been refactored out for
+ * maintenance and testability reasons.
  * 
  * @author Timo Westk�mper
  */
-public class ConnectionStatistics {
-
-    private static final Category logger = Category
-            .getInstance(ConnectionStatistics.class);
-
-    /**
-     * 
-     */
-    private int bytesPerSecond;
+public class ConnectionStatistics
+{
+    private static final Category logger = Category.getInstance( ConnectionStatistics.class );
 
     /**
      * 
      */
-    private long bytesReceived;
+    private int                   bytesPerSecond;
 
     /**
      * 
      */
-    private long lastBytesReceived;
+    private long                  bytesReceived;
 
     /**
      * 
      */
-    private long lastStateChange;
+    private long                  lastBytesReceived;
 
     /**
      * 
      */
-    private long fileLength;
+    private long                  lastStateChange;
 
     /**
      * 
      */
-    private long startTime;
+    private long                  fileLength;
 
     /**
      * 
      */
-    private String infoBuffered;
+    private long                  startTime;
 
     /**
      * 
      */
-    private long lastUpdate;
+    private String                infoBuffered;
 
     /**
      * 
      */
-    private long startLocation;
+    private long                  lastUpdate;
 
     /**
      * 
      */
-    private long segmentOffset;
+    private long                  startLocation;
+
+    /**
+     * 
+     */
+    private long                  segmentOffset;
 
     /**
      * Create a ConnectionStatistics instance
      */
-    public ConnectionStatistics() {
+    public ConnectionStatistics()
+    {
 
         // clientConnection = _clientConnection;
     }
@@ -104,7 +94,8 @@ public class ConnectionStatistics {
      * 
      * @return
      */
-    public int getBytesPerSecond() {
+    public int getBytesPerSecond()
+    {
         return bytesPerSecond;
 
     }
@@ -114,77 +105,9 @@ public class ConnectionStatistics {
      * 
      * @return
      */
-    public long getBytesReceived() {
+    public long getBytesReceived()
+    {
         return bytesReceived;
-
-    }
-
-    /**
-     * Obtain the amount of bytes already received ?
-     * 
-     * @return
-     */
-    public long getLastBytesReceived() {
-        return lastBytesReceived;
-
-    }
-
-    /**
-     * Get the timestamp of the last state change
-     * 
-     * @return
-     */
-    public long getLastStateChange() {
-        return lastStateChange;
-
-    }
-
-    /**
-     * Set the connection speed in bytes per second
-     * 
-     * @param i
-     */
-    public void setBytesPerSecond(int i) {
-        if (i >= 0) {
-            bytesPerSecond = i;
-
-        }
-
-    }
-
-    /**
-     * Set the amount of received bytes
-     * 
-     * @param l
-     */
-    public void setBytesReceived(long l) {
-        if (l >= 0) {
-            bytesReceived = l;
-
-        }
-
-    }
-
-    /**
-     * Set the amount of last received bytes
-     * 
-     * @param l
-     */
-    public void setLastBytesReceived(long l) {
-        if (l >= 0) {
-            lastBytesReceived = l;
-
-        }
-
-    }
-
-    /**
-     * Set the timestamp of the last state change
-     * 
-     * @param l
-     */
-    public void setLastStateChange(long l) {
-        lastStateChange = l;
 
     }
 
@@ -193,21 +116,26 @@ public class ConnectionStatistics {
      * 
      * @return
      */
-    public String getConnectionInfo() {
+    public String getConnectionInfo()
+    {
         long time = System.currentTimeMillis();
         int interval = ConstantSettings.STATISTICS_UPDATE_INTERVAL;
 
-        if ((time - lastUpdate) > interval) {
+        if ( time - lastUpdate > interval )
+        {
 
-            try {
-                setBytesPerSecond((int) (((getBytesReceived() - getLastBytesReceived()) * 1000) / (time - lastUpdate)));
+            try
+            {
+                setBytesPerSecond( (int) ((getBytesReceived() - getLastBytesReceived()) * 1000 / (time - lastUpdate)) );
 
-            } catch (Exception e) {
-                logger.error(e);
+            }
+            catch ( Exception e )
+            {
+                logger.error( e );
 
             }
 
-            setLastBytesReceived(getBytesReceived());
+            setLastBytesReceived( getBytesReceived() );
             infoBuffered = null;
 
             lastUpdate = time; // updates the lastUpdate field
@@ -215,7 +143,8 @@ public class ConnectionStatistics {
         }
 
         // create info string and cache it
-        if (infoBuffered == null) {
+        if ( infoBuffered == null )
+        {
             StringBuffer str = new StringBuffer();
 
             // segment start point needs to be given
@@ -225,13 +154,15 @@ public class ConnectionStatistics {
             long temp = getBytesReceived() - getSegmentOffset();
             long full = getFileLength() - getSegmentOffset();
 
-            try {
-                str.append((temp * 100) / full);
+            try
+            {
+                str.append( temp * 100 / full );
 
-            } catch (Exception e) {
-                logger
-                        .error("The FileLength property has not been properly set.");
-                str = new StringBuffer("0");
+            }
+            catch ( Exception e )
+            {
+                logger.error( "The FileLength property has not been properly set." );
+                str = new StringBuffer( "0" );
 
             }
 
@@ -239,20 +170,18 @@ public class ConnectionStatistics {
             // account, as otherwise the connection info string wouldn't contain
             // any information on the offset
 
-            str.append("%  ");
-            str.append(ByteConverter.byteToShortString(getBytesPerSecond()));
-            str.append("/s  ");
-            str.append(ByteConverter.byteToShortString(getBytesReceived()));
-            str.append(" / ");
-            str.append(ByteConverter.byteToShortString(getFileLength()));
+            str.append( "%  " );
+            str.append( ByteConverter.byteToShortString( getBytesPerSecond() ) );
+            str.append( "/s  " );
+            str.append( ByteConverter.byteToShortString( getBytesReceived() ) );
+            str.append( " / " );
+            str.append( ByteConverter.byteToShortString( getFileLength() ) );
 
             // add the number of the segment offset
 
-            if (getSegmentOffset() > 0) {
-                str.append(" (").append(
-                        getSegmentOffset()
-                                / ConnectionSettings.DOWNLOAD_SEGMENT_SIZE)
-                        .append(")");
+            if ( getSegmentOffset() > 0 )
+            {
+                str.append( " (" ).append( getSegmentOffset() / ConnectionSettings.DOWNLOAD_SEGMENT_SIZE ).append( ")" );
             }
 
             infoBuffered = str.toString();
@@ -268,8 +197,92 @@ public class ConnectionStatistics {
      * 
      * @return
      */
-    public long getFileLength() {
+    public long getFileLength()
+    {
         return fileLength;
+
+    }
+
+    /**
+     * Obtain the amount of bytes already received ?
+     * 
+     * @return
+     */
+    public long getLastBytesReceived()
+    {
+        return lastBytesReceived;
+
+    }
+
+    /**
+     * Get the timestamp of the last state change
+     * 
+     * @return
+     */
+    public long getLastStateChange()
+    {
+        return lastStateChange;
+
+    }
+
+    /**
+     * @return Returns the segmentOffset.
+     */
+    public long getSegmentOffset()
+    {
+        return segmentOffset;
+    }
+
+    /**
+     * Get the location in bytes from where the download or resume started
+     * 
+     * @return
+     */
+    public long getStartLocation()
+    {
+        return startLocation;
+    }
+
+    /**
+     * Obtain the timestamp of the start time
+     * 
+     * @return
+     */
+    public long getStartTime()
+    {
+        return startTime;
+
+    }
+
+    /**
+     * Set the connection speed in bytes per second
+     * 
+     * @param i
+     */
+    public void setBytesPerSecond(
+        int i )
+    {
+        if ( i >= 0 )
+        {
+            bytesPerSecond = i;
+
+        }
+
+    }
+
+    /**
+     * Set the amount of received bytes
+     * 
+     * @param l
+     */
+    public void setBytesReceived(
+        long l )
+    {
+        if ( l >= 0 )
+        {
+            bytesReceived = l;
+
+        }
 
     }
 
@@ -278,8 +291,11 @@ public class ConnectionStatistics {
      * 
      * @param l
      */
-    public void setFileLength(long l) {
-        if (l >= 0) {
+    public void setFileLength(
+        long l )
+    {
+        if ( l >= 0 )
+        {
             fileLength = l;
 
         }
@@ -287,12 +303,51 @@ public class ConnectionStatistics {
     }
 
     /**
-     * Obtain the timestamp of the start time
+     * Set the amount of last received bytes
      * 
-     * @return
+     * @param l
      */
-    public long getStartTime() {
-        return startTime;
+    public void setLastBytesReceived(
+        long l )
+    {
+        if ( l >= 0 )
+        {
+            lastBytesReceived = l;
+
+        }
+
+    }
+
+    /**
+     * Set the timestamp of the last state change
+     * 
+     * @param l
+     */
+    public void setLastStateChange(
+        long l )
+    {
+        lastStateChange = l;
+
+    }
+
+    /**
+     * @param segmentOffset The segmentOffset to set.
+     */
+    public void setSegmentOffset(
+        long segmentOffset )
+    {
+        this.segmentOffset = segmentOffset;
+    }
+
+    /**
+     * Set the location in bytes from where the download or resume starts
+     * 
+     * @param fileLength2
+     */
+    public void setStartLocation(
+        long startLocation )
+    {
+        this.startLocation = startLocation;
 
     }
 
@@ -301,43 +356,11 @@ public class ConnectionStatistics {
      * 
      * @param l
      */
-    public void setStartTime(long l) {
+    public void setStartTime(
+        long l )
+    {
         startTime = l;
 
-    }
-
-    /**
-     * Set the location in bytes from where the download or resume starts
-     * 
-     * @param fileLength2
-     */
-    public void setStartLocation(long startLocation) {
-        this.startLocation = startLocation;
-
-    }
-
-    /**
-     * Get the location in bytes from where the download or resume started
-     * 
-     * @return
-     */
-    public long getStartLocation() {
-        return startLocation;
-    }
-
-    /**
-     * @return Returns the segmentOffset.
-     */
-    public long getSegmentOffset() {
-        return segmentOffset;
-    }
-
-    /**
-     * @param segmentOffset
-     *            The segmentOffset to set.
-     */
-    public void setSegmentOffset(long segmentOffset) {
-        this.segmentOffset = segmentOffset;
     }
 
     /*
@@ -345,15 +368,17 @@ public class ConnectionStatistics {
      * 
      * @see java.lang.Object#toString()
      */
-    public String toString() {
-        StringBuffer buffer = new StringBuffer("Connection statistics : ");
-        buffer.append("\n  bytesPerSecond    : ").append(bytesPerSecond);
-        buffer.append("\n  bytesReceived     : ").append(bytesReceived);
-        buffer.append("\n  lastBytesReceived : ").append(lastBytesReceived);
-        buffer.append("\n  fileLength        : ").append(fileLength);
-        buffer.append("\n  startTime         : ").append(startTime);
-        buffer.append("\n  startlocation     : ").append(startLocation);
-        buffer.append("\n  segmentOffset     : ").append(segmentOffset);
+    @Override
+    public String toString()
+    {
+        StringBuffer buffer = new StringBuffer( "Connection statistics : " );
+        buffer.append( "\n  bytesPerSecond    : " ).append( bytesPerSecond );
+        buffer.append( "\n  bytesReceived     : " ).append( bytesReceived );
+        buffer.append( "\n  lastBytesReceived : " ).append( lastBytesReceived );
+        buffer.append( "\n  fileLength        : " ).append( fileLength );
+        buffer.append( "\n  startTime         : " ).append( startTime );
+        buffer.append( "\n  startlocation     : " ).append( startLocation );
+        buffer.append( "\n  segmentOffset     : " ).append( segmentOffset );
 
         return buffer.toString();
     }
@@ -361,13 +386,7 @@ public class ConnectionStatistics {
 }
 
 /*******************************************************************************
- * $Log: ConnectionStatistics.java,v $
- * Revision 1.15  2005/10/02 11:42:28  timowest
- * updated sources and tests
- * Revision 1.14 2005/09/30 15:59:53
- * timowest updated sources and tests
- * 
- * Revision 1.13 2005/09/12 21:12:02 timowest added log block
- * 
- * 
+ * $Log: ConnectionStatistics.java,v $ Revision 1.15 2005/10/02 11:42:28 timowest updated sources and tests Revision
+ * 1.14 2005/09/30 15:59:53 timowest updated sources and tests Revision 1.13 2005/09/12 21:12:02 timowest added log
+ * block
  */

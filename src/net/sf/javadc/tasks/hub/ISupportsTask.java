@@ -12,10 +12,13 @@ import net.sf.javadc.tasks.BaseHubTask;
 /**
  * @author Timo Westkämper
  */
-public class ISupportsTask extends BaseHubTask {
-
-    public static void main(String[] args) {
-        junit.textui.TestRunner.run(ISupportsTask.class);
+public class ISupportsTask
+    extends BaseHubTask
+{
+    public static void main(
+        String[] args )
+    {
+        junit.textui.TestRunner.run( ISupportsTask.class );
     }
 
     /*
@@ -23,11 +26,13 @@ public class ISupportsTask extends BaseHubTask {
      * 
      * @see net.sf.javadc.tasks.BaseHubTask#runTaskTemplate()
      */
-    protected void runTaskTemplate() {
+    @Override
+    protected void runTaskTemplate()
+    {
 
-        List supports = Arrays.asList(cmdData.split("\\s"));
+        List supports = Arrays.asList( cmdData.split( "\\s" ) );
 
-        hub.setSupports(supports);
+        hub.setSupports( supports );
     }
 
 }

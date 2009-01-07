@@ -1,19 +1,11 @@
 /*
- * Copyright (C) 2004 Timo Westkämper
- *
- * This program is free software;      you can redistribute it and/or modify it 
- * under the terms of the   GNU General Public License as published by the Free
- * Software Foundation;    either version 2 of the License, or (at your option) 
- * any later version.
- *
- *  This program is distributed in the hope that it will be useful, but WITHOUT 
- * ANY WARRANTY;   without even the implied warranty of MERCHANTABILITY or FIT-
- * NESS FOR A PARTICULAR PURPOSE.   See the GNU General Public License for more 
- * details.
- *
- * You should have received a copy of the GNU General Public License along with 
- * this program; if not, write to the Free Software Foundation, Inc., 
- * 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ * Copyright (C) 2004 Timo Westkämper This program is free software; you can redistribute it and/or modify it under the
+ * terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the
+ * License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FIT- NESS FOR A PARTICULAR PURPOSE. See
+ * the GNU General Public License for more details. You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
+ * 02111-1307, USA.
  */
 
 package net.sf.javadc.interfaces;
@@ -34,33 +26,38 @@ import net.sf.javadc.net.hub.HubUser;
 import net.sf.javadc.util.TokenInputStream;
 
 /**
- * <CODE>IHub</CODE> represents the abstract interface for <CODE>Hub</CODE>,
- * the object representation of a Hub
+ * <CODE>IHub</CODE> represents the abstract interface for <CODE>Hub</CODE>, the object representation of a Hub
  * 
  * @author tw70794
  */
-public interface IHub extends Runnable, ITask {
-
+public interface IHub
+    extends
+        Runnable,
+        ITask
+{
     /**
      * Add an EventListener to the list of EventListeners
      * 
      * @param listener
      */
-    public void addListener(EventListener listener);
-
-    /**
-     * Add a user to the Hub
-     * 
-     * @param ui
-     */
-    public void addUser(HubUser ui);
+    public void addListener(
+        EventListener listener );
 
     /**
      * Add a SearchResult to the Hub
      * 
      * @param sr
      */
-    public void addSearchResult(SearchResult sr);
+    public void addSearchResult(
+        SearchResult sr );
+
+    /**
+     * Add a user to the Hub
+     * 
+     * @param ui
+     */
+    public void addUser(
+        HubUser ui );
 
     /**
      * Clear the SearchResults
@@ -78,29 +75,30 @@ public interface IHub extends Runnable, ITask {
     public void disconnect();
 
     /**
-     * Notify lsteners that the BrowseList for the given Hubuser has been
-     * decoded
+     * Notify lsteners that the BrowseList for the given Hubuser has been decoded
      * 
      * @param hub
      * @return IHubblic boolean equals(Hub hub) ; /**
      * @param ui
      */
-    public void fireBrowseListDecoded(HubUser ui);
+    public void fireBrowseListDecoded(
+        HubUser ui );
 
     /**
      * Notify listeners that the given Message has been received
      * 
      * @param msg
      */
-    public void fireGotMessage(Message msg);
+    public void fireGotMessage(
+        Message msg );
 
     /**
-     * Notify listeners that the given Message from a remote Client has been
-     * received
+     * Notify listeners that the given Message from a remote Client has been received
      * 
      * @param msg
      */
-    public void fireGotUserMessage(Message msg);
+    public void fireGotUserMessage(
+        Message msg );
 
     /**
      * Notify listeners that the local Client has disconnected from the hub
@@ -113,7 +111,9 @@ public interface IHub extends Runnable, ITask {
      * @param sr
      * @param ser
      */
-    public void fireSearchResultAdded(SearchResult sr, SearchRequest ser);
+    public void fireSearchResultAdded(
+        SearchResult sr,
+        SearchRequest ser );
 
     /**
      * Notify listeners that the given SearchRequest has been added
@@ -131,14 +131,16 @@ public interface IHub extends Runnable, ITask {
      * 
      * @param ui
      */
-    public void fireUserAdded(HubUser ui);
+    public void fireUserAdded(
+        HubUser ui );
 
     /**
      * Notify listeners that the given HubUser has been removed
      * 
      * @param ui
      */
-    public void fireUserRemoved(HubUser ui);
+    public void fireUserRemoved(
+        HubUser ui );
 
     /**
      * Return the Socket of the Connection
@@ -176,6 +178,13 @@ public interface IHub extends Runnable, ITask {
     public List getOpList();
 
     /**
+     * Get the TokenInputStream of the Hub instance
+     * 
+     * @return
+     */
+    public TokenInputStream getReader();
+
+    /**
      * Return the SearchResults of this Hub
      * 
      * @return
@@ -191,12 +200,26 @@ public interface IHub extends Runnable, ITask {
     public long getStartPing();
 
     /**
+     * Get the list of supported DC++ extensions
+     * 
+     * @return
+     */
+    public List getSupports();
+
+    /**
      * Return a HubUser record for the user with given nick
      * 
      * @param nick
      * @return
      */
-    public HubUser getUser(String nick);
+    public HubUser getUser(
+        String nick );
+
+    /**
+     * Return whether the local client is a registered Operator in the Hub
+     * 
+     * @return
+     */
 
     /**
      * Return the amount of users in this Hub
@@ -206,6 +229,20 @@ public interface IHub extends Runnable, ITask {
     public int getUserCount();
 
     /**
+     * Return the active users in a HashMap with Nick to User mappings
+     * 
+     * @return
+     */
+    public Map getUsers();
+
+    /**
+     * Obtain the OutputStream of the Hub instance
+     * 
+     * @return
+     */
+    public OutputStream getWriter();
+
+    /**
      * Return whether the connection to the Hub is active
      * 
      * @return
@@ -213,10 +250,11 @@ public interface IHub extends Runnable, ITask {
     public boolean isConnected();
 
     /**
-     * Return whether the local client is a registered Operator in the Hub
+     * Get the logged status
      * 
      * @return
      */
+    public boolean isLoggedIn();
 
     // NOTE : this method is not used anymore, because it was previously used
     // with wrong semantics
@@ -224,39 +262,44 @@ public interface IHub extends Runnable, ITask {
     // hubs where the local Client acts as a Operator into the HubManager
     // public boolean isLoggedIn();
     /**
-     * processCommand takes a String with one or multiple commands, parses them
-     * and takes appropreate actions.
+     * processCommand takes a String with one or multiple commands, parses them and takes appropreate actions.
      * 
      * @param cmdString
      * @throws IOException
      */
-    public void processCommand(String cmdString) throws IOException;
+    public void processCommand(
+        String cmdString )
+        throws IOException;
 
     /**
      * @param client
      */
-    public void receivedNick(Client client);
+    public void receivedNick(
+        Client client );
 
     /**
      * Reconnect to this Hub
      * 
      * @throws IOException
      */
-    public void reconnect() throws IOException;
+    public void reconnect()
+        throws IOException;
 
     /**
      * Remove the given listeners from the list of listeners
      * 
      * @param listener
      */
-    public void removeListener(EventListener listener);
+    public void removeListener(
+        EventListener listener );
 
     /**
      * Remove the given HubUser instance from list of users
      * 
      * @param ui
      */
-    public void removeUser(HubUser ui);
+    public void removeUser(
+        HubUser ui );
 
     /**
      * Request a Client Connection to the given HubUser
@@ -264,7 +307,9 @@ public interface IHub extends Runnable, ITask {
      * @param user
      * @throws IOException
      */
-    public void requestConnection(String user) throws IOException;
+    public void requestConnection(
+        String user )
+        throws IOException;
 
     /*
      * (non-Javadoc)
@@ -286,7 +331,9 @@ public interface IHub extends Runnable, ITask {
      * @param sr
      * @throws IOException
      */
-    public void search(SearchRequest sr) throws IOException;
+    public void search(
+        SearchRequest sr )
+        throws IOException;
 
     /**
      * Send a public Message to the chat of the Hub
@@ -294,7 +341,9 @@ public interface IHub extends Runnable, ITask {
      * @param message
      * @throws IOException
      */
-    public void sendChatMessage(String message) throws IOException;
+    public void sendChatMessage(
+        String message )
+        throws IOException;
 
     /**
      * Send the given command with the given data to the Hub
@@ -302,7 +351,9 @@ public interface IHub extends Runnable, ITask {
      * @param command
      * @param data
      */
-    public void sendCommand(String command, String data);
+    public void sendCommand(
+        String command,
+        String data );
 
     /**
      * Send a private Message to the given User in the Hub
@@ -312,8 +363,10 @@ public interface IHub extends Runnable, ITask {
      * @throws IOException
      */
     // TODO : factor out
-    public void sendPrivateMessage(String message, String nick)
-            throws IOException;
+    public void sendPrivateMessage(
+        String message,
+        String nick )
+        throws IOException;
 
     /**
      * Send the given SearchResult to the given User via the Hub
@@ -323,29 +376,40 @@ public interface IHub extends Runnable, ITask {
      * @throws IOException
      */
     // TODO : factor out
-    public void sendSearchResult(String result, String to_nick)
-            throws IOException;
+    public void sendSearchResult(
+        String result,
+        String to_nick )
+        throws IOException;
 
     /**
      * Set the Socket of this Hub Connection
      * 
      * @param socket
      */
-    public void setConnection(Socket socket);
+    public void setConnection(
+        Socket socket );
 
     /**
      * Set the Description of this Hub
      * 
      * @param description
      */
-    public void setDescription(String description);
+    public void setDescription(
+        String description );
 
     /**
      * Set the Host of this Hub
      * 
      * @param host
      */
-    public void setHost(HostInfo host);
+    public void setHost(
+        HostInfo host );
+
+    /**
+     * Set the logged status
+     */
+    public void setLoggedIn(
+        boolean loggedIn );
 
     /**
      * Set whether the User has been accepted to this Hub as an Operator
@@ -358,28 +422,56 @@ public interface IHub extends Runnable, ITask {
      * 
      * @param name
      */
-    public void setName(String name);
+    public void setName(
+        String name );
+
+    /**
+     * Set the TokenInputStream of the Hub instance
+     * 
+     * @param reader
+     */
+    public void setReader(
+        TokenInputStream reader );
 
     /**
      * Set the SearchResults of this Hub
      * 
      * @param list
      */
-    public void setSearchResults(List list);
+    public void setSearchResults(
+        List list );
 
     /**
      * Set the Start Ping of this Hub
      * 
      * @param l
      */
-    public void setStartPing(long l);
+    public void setStartPing(
+        long l );
+
+    /**
+     * Set the list of supported DC++ extensions
+     * 
+     * @param supports
+     */
+    public void setSupports(
+        List supports );
 
     /**
      * Set the user count of this Hub
      * 
      * @param userCount
      */
-    public void setUserCount(int userCount);
+    public void setUserCount(
+        int userCount );
+
+    /**
+     * Set the OutputStream of the Hub instance
+     * 
+     * @param writer
+     */
+    public void setWriter(
+        OutputStream writer );
 
     /*
      * (non-Javadoc)
@@ -387,66 +479,5 @@ public interface IHub extends Runnable, ITask {
      * @see java.lang.Object#toString()
      */
     public String toString();
-
-    /**
-     * Return the active users in a HashMap with Nick to User mappings
-     * 
-     * @return
-     */
-    public Map getUsers();
-
-    /**
-     * Obtain the OutputStream of the Hub instance
-     * 
-     * @return
-     */
-    public OutputStream getWriter();
-
-    /**
-     * Set the OutputStream of the Hub instance
-     * 
-     * @param writer
-     */
-    public void setWriter(OutputStream writer);
-
-    /**
-     * Get the TokenInputStream of the Hub instance
-     * 
-     * @return
-     */
-    public TokenInputStream getReader();
-
-    /**
-     * Set the TokenInputStream of the Hub instance
-     * 
-     * @param reader
-     */
-    public void setReader(TokenInputStream reader);
-
-    /**
-     * Get the logged status
-     * 
-     * @return
-     */
-    public boolean isLoggedIn();
-
-    /**
-     * Set the logged status
-     */
-    public void setLoggedIn(boolean loggedIn);
-
-    /**
-     * Set the list of supported DC++ extensions
-     * 
-     * @param supports
-     */
-    public void setSupports(List supports);
-
-    /**
-     * Get the list of supported DC++ extensions
-     * 
-     * @return
-     */
-    public List getSupports();
 
 }

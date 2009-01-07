@@ -1,21 +1,11 @@
 /*
- * Copyright (C) 2001 Jesper Nordenberg, mayhem@home.se
- *
- * Copyright (C) 2004 Timo Westkämper
- *
- * This program is free software;      you can redistribute it and/or modify it
- * under the terms of the   GNU General Public License as published by the Free
- * Software Foundation;    either version 2 of the License, or (at your option)
- * any later version.
- *
- *  This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY;   without even the implied warranty of MERCHANTABILITY or FIT-
- * NESS FOR A PARTICULAR PURPOSE.   See the GNU General Public License for more
- * details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program; if not, write to the Free Software Foundation, Inc.,
- * 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ * Copyright (C) 2001 Jesper Nordenberg, mayhem@home.se Copyright (C) 2004 Timo Westkämper This program is free
+ * software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or (at your option) any later version. This program is
+ * distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FIT- NESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You
+ * should have received a copy of the GNU General Public License along with this program; if not, write to the Free
+ * Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
 // $Id: ISettings.java,v 1.10 2005/10/02 11:42:27 timowest Exp $
@@ -27,14 +17,25 @@ import net.sf.javadc.config.AdvancedSettings;
 import net.sf.javadc.config.GuiSettings;
 
 /**
- * <CODE>ISettings</CODE> represents the core application settings, which are
- * serialized into an XML configuration file
+ * <CODE>ISettings</CODE> represents the core application settings, which are serialized into an XML configuration file
  * 
  * @author Jesper Nordenberg
  * @author Timo Westk�mper
  * @version $Revision: 1.10 $ $Date: 2005/10/02 11:42:27 $
  */
-public interface ISettings extends IGenericModel {
+public interface ISettings
+    extends
+        IGenericModel
+{
+    /**
+     * Notify the registered SettingsListeners, that the download slot count has changed
+     */
+    public void fireDownloadSlotsChanged();
+
+    /**
+     * Notifiy the registered SettingsListeners, that the upload slot count has changed
+     */
+    public void fireUploadSlotsChanged();
 
     /**
      * Get the AdvancedSettings
@@ -77,6 +78,13 @@ public interface ISettings extends IGenericModel {
      * @return
      */
     public int getFreeUploadSlotCount();
+
+    /**
+     * Get the GuiSettings instance
+     * 
+     * @return
+     */
+    public GuiSettings getGuiSettings();
 
     /**
      * Get the IP address of the local Client
@@ -177,123 +185,119 @@ public interface ISettings extends IGenericModel {
      * 
      * @param b
      */
-    public void setActive(boolean b);
+    public void setActive(
+        boolean b );
 
     /**
      * Set the AdvancedSettings instance
      * 
      * @param settings
      */
-    public void setAdvancedSettings(AdvancedSettings settings);
+    public void setAdvancedSettings(
+        AdvancedSettings settings );
 
     /**
      * Set the download directory
      * 
      * @param dir
      */
-    public void setDownloadDir(String dir);
+    public void setDownloadDir(
+        String dir );
 
     /**
      * Set the amount of total download slots
      * 
      * @param slots
      */
-    public void setDownloadSlots(int slots);
+    public void setDownloadSlots(
+        int slots );
 
     /**
      * Set the download speed
      * 
      * @param i
      */
-    public void setDownloadSpeed(int i);
-
-    /**
-     * Set the IP address of the local Client
-     * 
-     * @param string
-     */
-    public void setIP(String string);
-
-    /**
-     * Set the logging directory
-     * 
-     * @param string
-     */
-    public void setLogDir(String string);
-
-    /**
-     * Set the directory for temporary downloads
-     * 
-     * @param string
-     */
-    public void setTempDownloadDir(String string);
-
-    /**
-     * Set the list of shared directories
-     * 
-     * @param dirs
-     */
-    public void setUploadDirs(List dirs);
-
-    /**
-     * Set the amount of total upload slots
-     * 
-     * @param i
-     */
-    public void setUploadSlots(int i);
-
-    /**
-     * Set the upload speed code
-     * 
-     * @param i
-     */
-    public void setUploadSpeed(int i);
-
-    /**
-     * Set the amount of used download slots
-     * 
-     * @param i
-     */
-    public void setUsedDownloadSlots(int i);
-
-    /**
-     * Set the amount of used upload slots
-     * 
-     * @param i
-     */
-    public void setUsedUploadSlots(int i);
-
-    /**
-     * Set the UserInfo instance
-     * 
-     * @param userInfo
-     */
-    public void setUserInfo(IUserInfo userInfo);
-
-    /**
-     * Get the GuiSettings instance
-     * 
-     * @return
-     */
-    public GuiSettings getGuiSettings();
+    public void setDownloadSpeed(
+        int i );
 
     /**
      * Set the GuiSettings instance
      * 
      * @param guiSettings
      */
-    public void setGuiSettings(GuiSettings guiSettings);
+    public void setGuiSettings(
+        GuiSettings guiSettings );
 
     /**
-     * Notify the registered SettingsListeners, that the download slot count has
-     * changed
+     * Set the IP address of the local Client
+     * 
+     * @param string
      */
-    public void fireDownloadSlotsChanged();
+    public void setIP(
+        String string );
 
     /**
-     * Notifiy the registered SettingsListeners, that the upload slot count has
-     * changed
+     * Set the logging directory
+     * 
+     * @param string
      */
-    public void fireUploadSlotsChanged();
+    public void setLogDir(
+        String string );
+
+    /**
+     * Set the directory for temporary downloads
+     * 
+     * @param string
+     */
+    public void setTempDownloadDir(
+        String string );
+
+    /**
+     * Set the list of shared directories
+     * 
+     * @param dirs
+     */
+    public void setUploadDirs(
+        List dirs );
+
+    /**
+     * Set the amount of total upload slots
+     * 
+     * @param i
+     */
+    public void setUploadSlots(
+        int i );
+
+    /**
+     * Set the upload speed code
+     * 
+     * @param i
+     */
+    public void setUploadSpeed(
+        int i );
+
+    /**
+     * Set the amount of used download slots
+     * 
+     * @param i
+     */
+    public void setUsedDownloadSlots(
+        int i );
+
+    /**
+     * Set the amount of used upload slots
+     * 
+     * @param i
+     */
+    public void setUsedUploadSlots(
+        int i );
+
+    /**
+     * Set the UserInfo instance
+     * 
+     * @param userInfo
+     */
+    public void setUserInfo(
+        IUserInfo userInfo );
 
 }

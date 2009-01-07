@@ -1,19 +1,11 @@
 /*
- * Copyright (C) 2004 Timo Westkämper
- *
- * This program is free software; you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation; either version 2 of the License, or (at your option) any later
- * version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FIT-
- * NESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program; if not, write to the Free Software Foundation, Inc., 59 Temple
- * Place - Suite 330, Boston, MA 02111-1307, USA.
+ * Copyright (C) 2004 Timo Westkämper This program is free software; you can redistribute it and/or modify it under the
+ * terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the
+ * License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FIT- NESS FOR A PARTICULAR PURPOSE. See
+ * the GNU General Public License for more details. You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
+ * 02111-1307, USA.
  */
 
 package net.sf.javadc.mockups;
@@ -41,24 +33,26 @@ import net.sf.javadc.util.ExtendedBufferedOutputStream;
 import net.sf.javadc.util.TokenInputStream;
 
 /**
- * @author Timo Westk�mper
- * 
- * TODO To change the template for this generated type comment go to Window -
- * Preferences - Java - Code Style - Code Templates
+ * @author Timo Westk�mper TODO To change the template for this generated type comment go to Window - Preferences - Java
+ *         - Code Style - Code Templates
  */
-public class BaseConnection extends AbstractConnection implements IConnection {
-
-    private final ISettings settings = new BaseSettings(true);
+public class BaseConnection
+    extends AbstractConnection
+    implements
+        IConnection
+{
+    private final ISettings settings = new BaseSettings( true );
 
     // private final IClientManager clientManager = new BaseClientManager();
 
-    private final IClient client;
+    private final IClient   client;
 
     // private final ConnectionInfo connectionInfo;
 
-    public BaseConnection() {
-        client = new Client(new HostInfo("www.gmx.de"), settings);
-        client.setNick("Hubert");
+    public BaseConnection()
+    {
+        client = new Client( new HostInfo( "www.gmx.de" ), settings );
+        client.setNick( "Hubert" );
 
         // connectionInfo = new ConnectionInfo();
     }
@@ -68,7 +62,10 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * 
      * @see net.sf.javadc.interfaces.IConnection#addListener(java.util.EventListener)
      */
-    public void addListener(EventListener listener) {
+    @Override
+    public void addListener(
+        EventListener listener )
+    {
         // TODO Auto-generated method stub
 
     }
@@ -78,7 +75,8 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * 
      * @see net.sf.javadc.interfaces.IConnection#closeFile()
      */
-    public void closeFile() {
+    public void closeFile()
+    {
         // TODO Auto-generated method stub
 
     }
@@ -88,7 +86,8 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * 
      * @see net.sf.javadc.interfaces.IConnection#disconnect()
      */
-    public void disconnect() {
+    public void disconnect()
+    {
         // TODO Auto-generated method stub
 
     }
@@ -98,8 +97,20 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * 
      * @see net.sf.javadc.interfaces.IConnection#getClient()
      */
-    public IClient getClient() {
+    public IClient getClient()
+    {
         return client;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see net.sf.javadc.interfaces.IConnection#getConnectionInfo()
+     */
+    public ConnectionInfo getConnectionInfo()
+    {
+        // TODO Auto-generated method stub
+        return null;
     }
 
     /*
@@ -107,7 +118,8 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * 
      * @see net.sf.javadc.interfaces.IConnection#getDownloadRequest()
      */
-    public DownloadRequest getDownloadRequest() {
+    public DownloadRequest getDownloadRequest()
+    {
         // TODO Auto-generated method stub
         return null;
     }
@@ -117,7 +129,9 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * 
      * @see net.sf.javadc.interfaces.IConnection#getListeners()
      */
-    public EventListenerList getListeners() {
+    @Override
+    public EventListenerList getListeners()
+    {
         // TODO Auto-generated method stub
         return null;
     }
@@ -127,7 +141,8 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * 
      * @see net.sf.javadc.interfaces.IConnection#getLocalFile()
      */
-    public RandomAccessFile getLocalFile() {
+    public RandomAccessFile getLocalFile()
+    {
         // TODO Auto-generated method stub
         return null;
     }
@@ -137,7 +152,8 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * 
      * @see net.sf.javadc.interfaces.IConnection#getReader()
      */
-    public TokenInputStream getReader() {
+    public TokenInputStream getReader()
+    {
         // TODO Auto-generated method stub
         return null;
     }
@@ -147,7 +163,8 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * 
      * @see net.sf.javadc.interfaces.IConnection#getServerSocket()
      */
-    public ServerSocket getServerSocket() {
+    public ServerSocket getServerSocket()
+    {
         // TODO Auto-generated method stub
         return null;
     }
@@ -157,7 +174,8 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * 
      * @see net.sf.javadc.interfaces.IConnection#getSocket()
      */
-    public Socket getSocket() {
+    public Socket getSocket()
+    {
         // TODO Auto-generated method stub
         return null;
     }
@@ -167,7 +185,8 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * 
      * @see net.sf.javadc.interfaces.IConnection#getState()
      */
-    public ConnectionState getState() {
+    public ConnectionState getState()
+    {
         return ConnectionState.DOWNLOADING;
     }
 
@@ -176,7 +195,19 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * 
      * @see net.sf.javadc.interfaces.IConnection#getStatistics()
      */
-    public ConnectionStatistics getStatistics() {
+    public ConnectionStatistics getStatistics()
+    {
+        // TODO Auto-generated method stub
+        return null;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see net.sf.javadc.interfaces.IConnection#getUploadRequest()
+     */
+    public UploadRequest getUploadRequest()
+    {
         // TODO Auto-generated method stub
         return null;
     }
@@ -186,7 +217,8 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * 
      * @see net.sf.javadc.interfaces.IConnection#getWriter()
      */
-    public ExtendedBufferedOutputStream getWriter() {
+    public ExtendedBufferedOutputStream getWriter()
+    {
         // TODO Auto-generated method stub
         return null;
     }
@@ -196,7 +228,8 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * 
      * @see net.sf.javadc.interfaces.IConnection#isServer()
      */
-    public boolean isServer() {
+    public boolean isServer()
+    {
         // TODO Auto-generated method stub
         return false;
     }
@@ -206,7 +239,10 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * 
      * @see net.sf.javadc.interfaces.IConnection#removeListener(java.util.EventListener)
      */
-    public void removeListener(EventListener listener) {
+    @Override
+    public void removeListener(
+        EventListener listener )
+    {
         // TODO Auto-generated method stub
 
     }
@@ -217,8 +253,11 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * @see net.sf.javadc.interfaces.IConnection#requestDirection(java.lang.String,
      *      boolean)
      */
-    public boolean requestDirection(String direction, boolean force)
-            throws IOException {
+    public boolean requestDirection(
+        String direction,
+        boolean force )
+        throws IOException
+    {
         // TODO Auto-generated method stub
         return false;
     }
@@ -228,7 +267,8 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * 
      * @see java.lang.Runnable#run()
      */
-    public void run() {
+    public void run()
+    {
         // TODO Auto-generated method stub
 
     }
@@ -238,7 +278,8 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * 
      * @see net.sf.javadc.interfaces.ITask#runTask()
      */
-    public void runTask() {
+    public void runTask()
+    {
         // TODO Auto-generated method stub
 
     }
@@ -249,7 +290,10 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * @see net.sf.javadc.interfaces.IConnection#sendCommand(java.lang.String,
      *      java.lang.String)
      */
-    public void sendCommand(String command, String data) {
+    public void sendCommand(
+        String command,
+        String data )
+    {
         // TODO Auto-generated method stub
 
     }
@@ -259,7 +303,21 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * 
      * @see net.sf.javadc.interfaces.IConnection#setDownloadRequest(net.sf.javadc.net.DownloadRequest)
      */
-    public void setDownloadRequest(DownloadRequest request) {
+    public void setDownloadRequest(
+        DownloadRequest request )
+    {
+        // TODO Auto-generated method stub
+
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see net.sf.javadc.interfaces.IConnection#setLocalFile(java.io.RandomAccessFile)
+     */
+    public void setLocalFile(
+        RandomAccessFile file )
+    {
         // TODO Auto-generated method stub
 
     }
@@ -269,7 +327,9 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * 
      * @see net.sf.javadc.interfaces.IConnection#setReader(net.sf.javadc.util.TokenInputStream)
      */
-    public void setReader(TokenInputStream stream) {
+    public void setReader(
+        TokenInputStream stream )
+    {
         // TODO Auto-generated method stub
 
     }
@@ -279,7 +339,9 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * 
      * @see net.sf.javadc.interfaces.IConnection#setServerSocket(java.net.ServerSocket)
      */
-    public void setServerSocket(ServerSocket socket) {
+    public void setServerSocket(
+        ServerSocket socket )
+    {
         // TODO Auto-generated method stub
 
     }
@@ -289,7 +351,9 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * 
      * @see net.sf.javadc.interfaces.IConnection#setSocket(java.net.Socket)
      */
-    public void setSocket(Socket socket) {
+    public void setSocket(
+        Socket socket )
+    {
         // TODO Auto-generated method stub
 
     }
@@ -299,7 +363,21 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * 
      * @see net.sf.javadc.interfaces.IConnection#setState(net.sf.javadc.net.client.ConnectionState)
      */
-    public void setState(ConnectionState state) {
+    public void setState(
+        ConnectionState state )
+    {
+        // TODO Auto-generated method stub
+
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see net.sf.javadc.interfaces.IConnection#setUploadRequest(net.sf.javadc.net.UploadRequest)
+     */
+    public void setUploadRequest(
+        UploadRequest u )
+    {
         // TODO Auto-generated method stub
 
     }
@@ -309,7 +387,9 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * 
      * @see net.sf.javadc.interfaces.IConnection#setWriter(net.sf.javadc.util.ExtendedBufferedOutputStream)
      */
-    public void setWriter(ExtendedBufferedOutputStream stream) {
+    public void setWriter(
+        ExtendedBufferedOutputStream stream )
+    {
         // TODO Auto-generated method stub
 
     }
@@ -319,47 +399,8 @@ public class BaseConnection extends AbstractConnection implements IConnection {
      * 
      * @see net.sf.javadc.interfaces.IConnection#updateConnectionInfo()
      */
-    public void updateConnectionInfo() {
-        // TODO Auto-generated method stub
-
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see net.sf.javadc.interfaces.IConnection#getUploadRequest()
-     */
-    public UploadRequest getUploadRequest() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see net.sf.javadc.interfaces.IConnection#setUploadRequest(net.sf.javadc.net.UploadRequest)
-     */
-    public void setUploadRequest(UploadRequest u) {
-        // TODO Auto-generated method stub
-
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see net.sf.javadc.interfaces.IConnection#getConnectionInfo()
-     */
-    public ConnectionInfo getConnectionInfo() {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see net.sf.javadc.interfaces.IConnection#setLocalFile(java.io.RandomAccessFile)
-     */
-    public void setLocalFile(RandomAccessFile file) {
+    public void updateConnectionInfo()
+    {
         // TODO Auto-generated method stub
 
     }

@@ -1,19 +1,11 @@
 /*
- * Copyright (C) 2004 Timo Westkämper
- *
- * This program is free software;      you can redistribute it and/or modify it
- * under the terms of the   GNU General Public License as published by the Free
- * Software Foundation;    either version 2 of the License, or (at your option)
- * any later version.
- *
- *  This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY;   without even the implied warranty of MERCHANTABILITY or FIT-
- * NESS FOR A PARTICULAR PURPOSE.   See the GNU General Public License for more
- * details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program; if not, write to the Free Software Foundation, Inc.,
- * 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ * Copyright (C) 2004 Timo Westkämper This program is free software; you can redistribute it and/or modify it under the
+ * terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the
+ * License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FIT- NESS FOR A PARTICULAR PURPOSE. See
+ * the GNU General Public License for more details. You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
+ * 02111-1307, USA.
  */
 
 package net.sf.javadc.net;
@@ -22,28 +14,27 @@ import net.sf.javadc.net.hub.HostInfo;
 import net.sf.javadc.net.hub.HubInfo;
 
 /**
- * <code>SearchResultInfo</code> is used to serialize
- * <code>SearchResult</code> instances
+ * <code>SearchResultInfo</code> is used to serialize <code>SearchResult</code> instances
  * 
  * @author Timo Westk�mper
- * 
  */
-public class SearchResultInfo {
+public class SearchResultInfo
+{
 
     /**
      * 
      */
-    private String filename;
+    private String   filename;
+
+    /**
+     *  
+     */
+    private long     fileSize;
 
     /**
      * 
      */
-    private long fileSize;
-
-    /**
-     * 
-     */
-    private String nick;
+    private String   nick;
 
     /**
      * 
@@ -53,21 +44,21 @@ public class SearchResultInfo {
     /**
      * 
      */
-    private HubInfo hub;
+    private HubInfo  hub;
 
     /**
-     * localFilename is used as an extra attribute to differentiate the remote
-     * filename from the local filename
+     * localFilename is used as an extra attribute to differentiate the remote filename from the local filename
      */
-    private String localFilename;
+    private String   localFilename;
 
     /** hashing information */
-    private String tth;
+    private String   tth;
 
     /**
      * Create a SearchResultInfo instance
      */
-    public SearchResultInfo() {
+    public SearchResultInfo()
+    {
 
         // ?
     }
@@ -79,7 +70,8 @@ public class SearchResultInfo {
      * 
      * @return
      */
-    public String getFilename() {
+    public String getFilename()
+    {
         return filename;
 
     }
@@ -89,7 +81,8 @@ public class SearchResultInfo {
      * 
      * @return
      */
-    public long getFileSize() {
+    public long getFileSize()
+    {
         return fileSize;
 
     }
@@ -99,7 +92,8 @@ public class SearchResultInfo {
      * 
      * @return
      */
-    public HostInfo getHost() {
+    public HostInfo getHost()
+    {
 
         return host;
 
@@ -110,9 +104,20 @@ public class SearchResultInfo {
      * 
      * @return
      */
-    public HubInfo getHub() {
+    public HubInfo getHub()
+    {
         return hub;
 
+    }
+
+    /**
+     * Get the local filename of the DownloadRequest
+     * 
+     * @return
+     */
+    public String getLocalFilename()
+    {
+        return localFilename;
     }
 
     /**
@@ -120,9 +125,18 @@ public class SearchResultInfo {
      * 
      * @return
      */
-    public String getNick() {
+    public String getNick()
+    {
         return nick;
 
+    }
+
+    /**
+     * @return Returns the tth.
+     */
+    public String getTTH()
+    {
+        return tth;
     }
 
     /**
@@ -130,7 +144,9 @@ public class SearchResultInfo {
      * 
      * @param string
      */
-    public void setFilename(String string) {
+    public void setFilename(
+        String string )
+    {
         filename = string;
 
     }
@@ -140,7 +156,9 @@ public class SearchResultInfo {
      * 
      * @param i
      */
-    public void setFileSize(long i) {
+    public void setFileSize(
+        long i )
+    {
         fileSize = i;
 
     }
@@ -150,7 +168,9 @@ public class SearchResultInfo {
      * 
      * @param info
      */
-    public void setHost(HostInfo info) {
+    public void setHost(
+        HostInfo info )
+    {
         host = info;
 
     }
@@ -160,8 +180,22 @@ public class SearchResultInfo {
      * 
      * @param info
      */
-    public void setHub(HubInfo info) {
+    public void setHub(
+        HubInfo info )
+    {
         hub = info;
+
+    }
+
+    /**
+     * Set the local filename of the DownloadRequest
+     * 
+     * @param localFilename
+     */
+    public void setLocalFilename(
+        String localFilename )
+    {
+        this.localFilename = localFilename;
 
     }
 
@@ -170,54 +204,24 @@ public class SearchResultInfo {
      * 
      * @param string
      */
-    public void setNick(String string) {
+    public void setNick(
+        String string )
+    {
         nick = string;
 
     }
 
     /**
-     * Get the local filename of the DownloadRequest
-     * 
-     * @return
+     * @param tth The tth to set.
      */
-    public String getLocalFilename() {
-        return localFilename;
-    }
-
-    /**
-     * Set the local filename of the DownloadRequest
-     * 
-     * @param localFilename
-     */
-    public void setLocalFilename(String localFilename) {
-        this.localFilename = localFilename;
-
-    }
-
-    /**
-     * @return Returns the tth.
-     */
-    public String getTTH() {
-        return tth;
-    }
-
-    /**
-     * @param tth
-     *            The tth to set.
-     */
-    public void setTTH(String tth) {
+    public void setTTH(
+        String tth )
+    {
         this.tth = tth;
     }
 }
 
 /*******************************************************************************
- * $Log: SearchResultInfo.java,v $
- * Revision 1.12  2005/10/02 11:42:27  timowest
- * updated sources and tests
- * Revision 1.11 2005/09/30 15:59:53 timowest
- * updated sources and tests
- * 
- * Revision 1.10 2005/09/12 21:12:02 timowest added log block
- * 
- * 
+ * $Log: SearchResultInfo.java,v $ Revision 1.12 2005/10/02 11:42:27 timowest updated sources and tests Revision 1.11
+ * 2005/09/30 15:59:53 timowest updated sources and tests Revision 1.10 2005/09/12 21:12:02 timowest added log block
  */

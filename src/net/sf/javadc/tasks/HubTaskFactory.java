@@ -1,19 +1,11 @@
-/* *
- * Copyright (C) 2004 Timo Westkämper
- *
- * This program is free software;      you can redistribute it and/or modify it
- * under the terms of the   GNU General Public License as published by the Free
- * Software Foundation;    either version 2 of the License, or (at your option)
- * any later version.
- *
- *  This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY;   without even the implied warranty of MERCHANTABILITY or FIT-
- * NESS FOR A PARTICULAR PURPOSE.   See the GNU General Public License for more
- * details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program; if not, write to the Free Software Foundation, Inc.,
- * 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+/*
+ * Copyright (C) 2004 Timo Westkämper This program is free software; you can redistribute it and/or modify it under the
+ * terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the
+ * License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FIT- NESS FOR A PARTICULAR PURPOSE. See
+ * the GNU General Public License for more details. You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
+ * 02111-1307, USA.
  */
 
 package net.sf.javadc.tasks;
@@ -27,122 +19,140 @@ import org.picocontainer.MutablePicoContainer;
 import org.picocontainer.Startable;
 
 /**
- * <code>HubTaskFactory</code> is a Jakarta Commons Pool based pooled Factory
- * Method implementation to create pooled instances of PicoContainer registered
- * <code>IHubTask</code> instances.
- * 
+ * <code>HubTaskFactory</code> is a Jakarta Commons Pool based pooled Factory Method implementation to create pooled
+ * instances of PicoContainer registered <code>IHubTask</code> instances.
  * <p>
- * <code>HubTaskObjectFactory</code> is used as the underlying Factory
- * implementation.
+ * <code>HubTaskObjectFactory</code> is used as the underlying Factory implementation.
  * </p>
  * 
  * @author tw70794
  */
-public class HubTaskFactory extends GenericKeyedObjectPool implements
-        Startable, IHubTaskFactory {
+public class HubTaskFactory
+    extends GenericKeyedObjectPool
+    implements
+        Startable,
+        IHubTaskFactory
+{
 
-    private final static Category logger = Category
-            .getInstance(HubTaskFactory.class);
+    private final static Category      logger = Category.getInstance( HubTaskFactory.class );
 
     private final HubTaskObjectFactory factory;
 
     /**
      * Create a ClientTaskFactory with the given ClientTask PicoContainer
      * 
-     * @param _clientTasksContainer
-     *            PicoContainer instance to be used for the creation of tasks
+     * @param _clientTasksContainer PicoContainer instance to be used for the creation of tasks
      */
-    public HubTaskFactory(MutablePicoContainer _hubTasksContainer) {
+    public HubTaskFactory(
+        MutablePicoContainer _hubTasksContainer )
+    {
 
-        if (_hubTasksContainer == null)
-            throw new NullPointerException("_hubTasksContainer was null.");
+        if ( _hubTasksContainer == null )
+        {
+            throw new NullPointerException( "_hubTasksContainer was null." );
+        }
 
-        factory = new HubTaskObjectFactory(_hubTasksContainer);
-        setFactory(factory);
+        factory = new HubTaskObjectFactory( _hubTasksContainer );
+        setFactory( factory );
 
     }
 
     /** ********************************************************************** */
 
     /**
-     * Obtain an instance from my pool for the specified key. By contract,
-     * clients MUST return the borrowed object using returnObject, or a related
-     * method as defined in an implementation or sub-interface, using a key that
-     * is equivalent to the one used to borrow the instance in the first place.
+     * Obtain an instance from my pool for the specified key. By contract, clients MUST return the borrowed object using
+     * returnObject, or a related method as defined in an implementation or sub-interface, using a key that is
+     * equivalent to the one used to borrow the instance in the first place.
      * 
      * @see org.apache.commons.pool.KeyedObjectPool#borrowObject(java.lang.Object)
      */
-    public Object borrowObject(Object key) {
+    @Override
+    public Object borrowObject(
+        Object key )
+    {
         String error;
 
-        if (key == null) {
+        if ( key == null )
+        {
             error = "key was null.";
-            logger.error(error);
-            throw new RuntimeException(error);
+            logger.error( error );
+            throw new RuntimeException( error );
         }
 
-        if (!(key instanceof String)) {
+        if ( !(key instanceof String) )
+        {
             error = "Invalid key class " + key.getClass().getName();
-            logger.error(error);
-            throw new RuntimeException(error);
+            logger.error( error );
+            throw new RuntimeException( error );
         }
 
-        try {
-            return super.borrowObject(key);
+        try
+        {
+            return super.borrowObject( key );
 
-        } catch (Exception e) {
-            logger.error(e);
+        }
+        catch ( Exception e )
+        {
+            logger.error( e );
             return null;
         }
 
     }
 
     /**
+     * Return an instance to my pool. By contract, obj MUST have been obtained using borrowObject or a related method as
+     * defined in an implementation or sub-interface using a key that is equivalent to the one used to borrow the Object
+     * in the first place.
      * 
-     * Return an instance to my pool. By contract, obj MUST have been obtained
-     * using borrowObject or a related method as defined in an implementation or
-     * sub-interface using a key that is equivalent to the one used to borrow
-     * the Object in the first place.
-     * 
-     * @see org.apache.commons.pool.KeyedObjectPool#returnObject(java.lang.Object,
-     *      java.lang.Object)
+     * @see org.apache.commons.pool.KeyedObjectPool#returnObject(java.lang.Object, java.lang.Object)
      */
-    public void returnObject(Object key, Object obj) {
+    @Override
+    public void returnObject(
+        Object key,
+        Object obj )
+    {
         String error;
 
-        if ((key == null) || (obj == null)) {
+        if ( key == null || obj == null )
+        {
             error = "key or obj was null.";
-            logger.error(error);
-            throw new RuntimeException(error);
+            logger.error( error );
+            throw new RuntimeException( error );
         }
 
-        if (!(key instanceof String)) {
+        if ( !(key instanceof String) )
+        {
             error = "Invalid key class " + key.getClass().getName();
-            logger.error(error);
-            throw new RuntimeException(error);
+            logger.error( error );
+            throw new RuntimeException( error );
         }
 
-        if (!(obj instanceof IHubTask)) {
+        if ( !(obj instanceof IHubTask) )
+        {
             error = "Invalid object class " + obj.getClass().getName();
-            logger.error(error);
-            throw new RuntimeException(error);
+            logger.error( error );
+            throw new RuntimeException( error );
         }
 
-        try {
-            super.returnObject(key, obj);
+        try
+        {
+            super.returnObject( key, obj );
 
-        } catch (Exception e) {
-            logger.error(e);
+        }
+        catch ( Exception e )
+        {
+            logger.error( e );
 
         }
 
     }/*
-         * (non-Javadoc)
-         * 
-         * @see org.picocontainer.Startable#start()
-         */
+             * (non-Javadoc)
+             * 
+             * @see org.picocontainer.Startable#start()
+             */
 
-    public void start() {
+    public void start()
+    {
         factory.initialize();
 
     }
@@ -152,7 +162,8 @@ public class HubTaskFactory extends GenericKeyedObjectPool implements
      * 
      * @see org.picocontainer.Startable#stop()
      */
-    public void stop() {
+    public void stop()
+    {
 
     }
 

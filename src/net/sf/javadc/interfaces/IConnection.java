@@ -1,22 +1,14 @@
 /*
- * Copyright (C) 2004 Timo Westkämper
- *
- * This program is free software; you can redistribute it and/or modify it under
- * the terms of the GNU General Public License as published by the Free Software
- * Foundation; either version 2 of the License, or (at your option) any later
- * version.
- *
- * This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FIT-
- * NESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more
- * details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program; if not, write to the Free Software Foundation, Inc., 59 Temple
- * Place - Suite 330, Boston, MA 02111-1307, USA.
+ * Copyright (C) 2004 Timo Westkämper This program is free software; you can redistribute it and/or modify it under the
+ * terms of the GNU General Public License as published by the Free Software Foundation; either version 2 of the
+ * License, or (at your option) any later version. This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FIT- NESS FOR A PARTICULAR PURPOSE. See
+ * the GNU General Public License for more details. You should have received a copy of the GNU General Public License
+ * along with this program; if not, write to the Free Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA
+ * 02111-1307, USA.
  */
 
-//$Id: IConnection.java,v 1.16 2005/10/02 11:42:27 timowest Exp $
+// $Id: IConnection.java,v 1.16 2005/10/02 11:42:27 timowest Exp $
 package net.sf.javadc.interfaces;
 
 import java.io.IOException;
@@ -35,19 +27,23 @@ import net.sf.javadc.util.ExtendedBufferedOutputStream;
 import net.sf.javadc.util.TokenInputStream;
 
 /**
- * <CODE>IConnection</CODE> represents the abstract interface for the object
- * representation of a Client <CODE>Connection</CODE>
+ * <CODE>IConnection</CODE> represents the abstract interface for the object representation of a Client
+ * <CODE>Connection</CODE>
  * 
  * @author tw70794
  */
-public interface IConnection extends Runnable, ITask {
-
+public interface IConnection
+    extends
+        Runnable,
+        ITask
+{
     /**
      * Add a <CODE>ClientConnectionListener</CODE> to the list of listeners
      * 
      * @param listener
      */
-    public abstract void addListener(EventListener listener);
+    public abstract void addListener(
+        EventListener listener );
 
     /**
      * Close the current local file
@@ -97,8 +93,7 @@ public interface IConnection extends Runnable, ITask {
     public abstract IClient getClient();
 
     /**
-     * Return the current direction of this Client Connection (Download or
-     * Upload)
+     * Return the current direction of this Client Connection (Download or Upload)
      * 
      * @return
      */
@@ -203,25 +198,25 @@ public interface IConnection extends Runnable, ITask {
     public abstract boolean isServer();
 
     /**
-     * Remove the selected <CODE>ClientConnectionListener</CODE> from the list
-     * of listeners
+     * Remove the selected <CODE>ClientConnectionListener</CODE> from the list of listeners
      * 
      * @param listener
      */
-    public abstract void removeListener(EventListener listener);
+    public abstract void removeListener(
+        EventListener listener );
 
     /**
-     * Request a direction, returns true if we have the direction, otherwise
-     * false.
+     * Request a direction, returns true if we have the direction, otherwise false.
      * 
      * @param direction
      * @param force
-     * 
      * @return
      * @throws IOException
      */
-    public abstract boolean requestDirection(String direction, boolean force)
-            throws IOException;
+    public abstract boolean requestDirection(
+        String direction,
+        boolean force )
+        throws IOException;
 
     /*
      * (non-Javadoc)
@@ -249,21 +244,25 @@ public interface IConnection extends Runnable, ITask {
      * @param command
      * @param data
      */
-    public abstract void sendCommand(String command, String data);
+    public abstract void sendCommand(
+        String command,
+        String data );
 
     /**
      * Set the active DownloadRequest
      * 
      * @param request
      */
-    public abstract void setDownloadRequest(DownloadRequest request);
+    public abstract void setDownloadRequest(
+        DownloadRequest request );
 
     /**
      * Set the local File
      * 
      * @param file
      */
-    public abstract void setLocalFile(RandomAccessFile file);
+    public abstract void setLocalFile(
+        RandomAccessFile file );
 
     /**
      * Set the remote key
@@ -276,7 +275,8 @@ public interface IConnection extends Runnable, ITask {
      * 
      * @param stream
      */
-    public abstract void setReader(TokenInputStream stream);
+    public abstract void setReader(
+        TokenInputStream stream );
 
     /**
      * Set the ServerSocket
@@ -289,14 +289,16 @@ public interface IConnection extends Runnable, ITask {
      * 
      * @param socket
      */
-    public abstract void setSocket(Socket socket);
+    public abstract void setSocket(
+        Socket socket );
 
     /**
      * Set the ConnectionState of this Client Connection
      * 
      * @param state
      */
-    public abstract void setState(ConnectionState state);
+    public abstract void setState(
+        ConnectionState state );
 
     /**
      * Set the verifyResumeSize
@@ -309,14 +311,16 @@ public interface IConnection extends Runnable, ITask {
      * 
      * @param u
      */
-    public abstract void setUploadRequest(UploadRequest u);
+    public abstract void setUploadRequest(
+        UploadRequest u );
 
     /**
      * Set the Writer
      * 
      * @param stream
      */
-    public abstract void setWriter(ExtendedBufferedOutputStream stream);
+    public abstract void setWriter(
+        ExtendedBufferedOutputStream stream );
 
     /**
      * Get the amount of (uncompressed) bytes that are still to be uploaded
