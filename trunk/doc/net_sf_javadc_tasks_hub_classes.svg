@@ -1,0 +1,456 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 20001102//EN' 'http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd'>
+<svg xmlns="http://www.w3.org/2000/svg" width="1901" height="956">
+<rect x="14" y="14" width="121" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="14" width="120" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="14" width="121" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="14" width="120" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="42" y="29" style="font-family:Dialog; font-size:10;">
+IBadPassTask</text>
+<rect x="14" y="34" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="34" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="16" y1="51" x2="97" y2="51" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="16" y="50" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<rect x="14" y="52" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="52" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="68" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="215" y="14" width="307" height="91" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="215" y="14" width="306" height="90" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="215" y="14" width="307" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="215" y="14" width="306" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="322" y="29" style="font-family:Dialog; font-size:10;">
+IConnectToMeTask</text>
+<rect x="215" y="34" width="307" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="215" y="34" width="306" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="217" y1="51" x2="298" y2="51" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="217" y="50" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="217" y="67" style="font-family:Dialog; font-size:10;">
+clientManager : IClientManager</text>
+<rect x="215" y="69" width="307" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="215" y="69" width="306" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="217" y="85" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; IConnectToMeTask(clientManager: IClientManager)</text>
+<text x="217" y="102" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="602" y="14" width="496" height="125" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="602" y="14" width="495" height="124" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="602" y="14" width="496" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="602" y="14" width="495" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="811" y="29" style="font-family:Dialog; font-size:10;">
+IForceMoveTask</text>
+<rect x="602" y="34" width="496" height="71" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="602" y="34" width="495" height="70" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="604" y1="51" x2="685" y2="51" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="604" y="50" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="604" y="67" style="font-family:Dialog; font-size:10;">
+hubManager : IHubManager</text>
+<text x="604" y="84" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="604" y="101" style="font-family:Dialog; font-size:10;">
+hubFactory : IHubFactory</text>
+<rect x="602" y="104" width="496" height="35" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="602" y="104" width="495" height="34" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="604" y="120" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; IForceMoveTask(_hubManager: IHubManager,_settings: ISettings,_hubFactory: IHubFactory)</text>
+<text x="604" y="137" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="1178" y="14" width="121" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1178" y="14" width="120" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1178" y="14" width="121" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1178" y="14" width="120" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1207" y="29" style="font-family:Dialog; font-size:10;">
+IGetPassTask</text>
+<rect x="1178" y="34" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1178" y="34" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1180" y1="51" x2="1261" y2="51" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1180" y="50" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<rect x="1178" y="52" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1178" y="52" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1180" y="68" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="1379" y="14" width="291" height="108" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1379" y="14" width="290" height="107" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1379" y="14" width="291" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1379" y="14" width="290" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1500" y="29" style="font-family:Dialog; font-size:10;">
+IHelloTask</text>
+<rect x="1379" y="34" width="291" height="53" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1379" y="34" width="290" height="52" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1381" y1="51" x2="1462" y2="51" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1381" y="50" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="1381" y="67" style="font-family:Dialog; font-size:10;">
+userInfo : IUserInfo</text>
+<text x="1381" y="84" style="font-family:Dialog; font-size:10;">
+advancedSettings : AdvancedSettings</text>
+<rect x="1379" y="86" width="291" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1379" y="86" width="290" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1381" y="102" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; IHelloTask(settings: ISettings,_userInfo: IUserInfo)</text>
+<text x="1381" y="119" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="1750" y="14" width="121" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1750" y="14" width="120" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1750" y="14" width="121" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1750" y="14" width="120" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1776" y="29" style="font-family:Dialog; font-size:10;">
+IHubIsFullTask</text>
+<rect x="1750" y="34" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1750" y="34" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1752" y1="51" x2="1833" y2="51" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1752" y="50" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<rect x="1750" y="52" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1750" y="52" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1752" y="68" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="14" y="219" width="121" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="219" width="120" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="219" width="121" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="219" width="120" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="39" y="234" style="font-family:Dialog; font-size:10;">
+IHubNameTask</text>
+<rect x="14" y="239" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="239" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="16" y1="256" x2="97" y2="256" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="16" y="255" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<rect x="14" y="257" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="257" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="273" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="215" y="219" width="202" height="108" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="215" y="219" width="201" height="107" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="215" y="219" width="202" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="215" y="219" width="201" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="293" y="234" style="font-family:Dialog; font-size:10;">
+ILockTask</text>
+<rect x="215" y="239" width="202" height="53" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="215" y="239" width="201" height="52" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="217" y1="256" x2="298" y2="256" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="217" y="255" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="217" y="272" style="font-family:Dialog; font-size:10;">
+encryptionHandler : DCEncryptionHandler</text>
+<text x="217" y="289" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<rect x="215" y="291" width="202" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="215" y="291" width="201" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="217" y="307" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ILockTask(settings: ISettings)</text>
+<text x="217" y="324" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="497" y="219" width="212" height="91" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="497" y="219" width="211" height="90" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="497" y="219" width="212" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="497" y="219" width="211" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="571" y="234" style="font-family:Dialog; font-size:10;">
+ILogedInTask</text>
+<rect x="497" y="239" width="212" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="497" y="239" width="211" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="499" y1="256" x2="580" y2="256" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="499" y="255" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="499" y="272" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<rect x="497" y="274" width="212" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="497" y="274" width="211" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="499" y="290" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ILogedInTask(settings: ISettings)</text>
+<text x="499" y="307" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="789" y="219" width="276" height="91" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="789" y="219" width="275" height="90" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="789" y="219" width="276" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="789" y="219" width="275" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="896" y="234" style="font-family:Dialog; font-size:10;">
+IMyINFOTask</text>
+<rect x="789" y="239" width="276" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="789" y="239" width="275" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="791" y1="256" x2="872" y2="256" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="791" y="255" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<rect x="789" y="256" width="276" height="54" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="789" y="256" width="275" height="53" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="791" y="272" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<text x="791" y="289" style="font-family:Dialog; font-size:10;">
+setHubUserInfo(user: HubUser,cmdData: String) : void</text>
+<text x="791" y="306" style="font-family:Dialog; font-size:10;">
+setUserInformation(user: HubUser,elements: String[]) : void</text>
+<rect x="1145" y="219" width="209" height="91" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1145" y="219" width="208" height="90" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1145" y="219" width="209" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1145" y="219" width="208" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1219" y="234" style="font-family:Dialog; font-size:10;">
+INickListTask</text>
+<rect x="1145" y="239" width="209" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1145" y="239" width="208" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1147" y1="256" x2="1228" y2="256" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1147" y="255" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="1147" y="272" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<rect x="1145" y="274" width="209" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1145" y="274" width="208" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1147" y="290" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; INickListTask(settings: ISettings)</text>
+<text x="1147" y="307" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="1434" y="219" width="121" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1434" y="219" width="120" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1434" y="219" width="121" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1434" y="219" width="120" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1467" y="234" style="font-family:Dialog; font-size:10;">
+IOpListTask</text>
+<rect x="1434" y="239" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1434" y="239" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1436" y1="256" x2="1517" y2="256" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1436" y="255" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<rect x="1434" y="257" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1434" y="257" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1436" y="273" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="14" y="407" width="121" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="407" width="120" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="407" width="121" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="407" width="120" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="52" y="422" style="font-family:Dialog; font-size:10;">
+IQuitTask</text>
+<rect x="14" y="427" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="427" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="16" y1="444" x2="97" y2="444" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="16" y="443" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<rect x="14" y="445" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="445" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="461" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="215" y="407" width="410" height="108" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="215" y="407" width="409" height="107" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="215" y="407" width="410" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="215" y="407" width="409" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="365" y="422" style="font-family:Dialog; font-size:10;">
+IRevConnectToMeTask</text>
+<rect x="215" y="427" width="410" height="53" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="215" y="427" width="409" height="52" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="217" y1="444" x2="298" y2="444" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="217" y="443" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="217" y="460" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="217" y="477" style="font-family:Dialog; font-size:10;">
+clientManager : IClientManager</text>
+<rect x="215" y="479" width="410" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="215" y="479" width="409" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="217" y="495" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; IRevConnectToMeTask(settings: ISettings,clientManager: IClientManager)</text>
+<text x="217" y="512" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="705" y="407" width="507" height="142" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="705" y="407" width="506" height="141" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="705" y="407" width="507" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="705" y="407" width="506" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="929" y="422" style="font-family:Dialog; font-size:10;">
+ISearchTask</text>
+<rect x="705" y="427" width="507" height="70" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="705" y="427" width="506" height="69" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="707" y1="444" x2="788" y2="444" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="707" y="443" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="707" y="460" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="707" y="477" style="font-family:Dialog; font-size:10;">
+shareManager : IShareManager</text>
+<text x="707" y="494" style="font-family:Dialog; font-size:10;">
+factory : ISearchRequestFactory</text>
+<rect x="705" y="496" width="507" height="53" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="705" y="496" width="506" height="52" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="707" y="512" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ISearchTask(settings: ISettings,shareManager: IShareManager,factory: ISearchRequestFactory)</text>
+<text x="707" y="529" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<text x="707" y="546" style="font-family:Dialog; font-size:10;">
+postResults(sr: SearchRequest,resulta: SearchResult[]) : void</text>
+<rect x="1292" y="407" width="193" height="91" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1292" y="407" width="192" height="90" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1292" y="407" width="193" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1292" y="407" width="192" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1369" y="422" style="font-family:Dialog; font-size:10;">
+ISRTask</text>
+<rect x="1292" y="427" width="193" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1292" y="427" width="192" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1294" y1="444" x2="1375" y2="444" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1294" y="443" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="1294" y="460" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<rect x="1292" y="462" width="193" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1292" y="462" width="192" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1294" y="478" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ISRTask(_settings: ISettings)</text>
+<text x="1294" y="495" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="1565" y="407" width="121" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1565" y="407" width="120" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1565" y="407" width="121" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1565" y="407" width="120" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1607" y="422" style="font-family:Dialog; font-size:10;">
+IToTask</text>
+<rect x="1565" y="427" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1565" y="427" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1567" y1="444" x2="1648" y2="444" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1567" y="443" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<rect x="1565" y="445" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1565" y="445" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1567" y="461" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="1766" y="407" width="121" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1766" y="407" width="120" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1766" y="407" width="121" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1766" y="407" width="120" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1777" y="422" style="font-family:Dialog; font-size:10;">
+IValidateDenideTask</text>
+<rect x="1766" y="427" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1766" y="427" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1768" y1="444" x2="1849" y2="444" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1768" y="443" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<rect x="1766" y="445" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1766" y="445" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1768" y="461" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="14" y="629" width="285" height="125" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="629" width="284" height="124" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="629" width="285" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="629" width="284" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="116" y="644" style="font-family:Dialog; font-size:10;">
+SDisconnectTask</text>
+<rect x="14" y="649" width="285" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="649" width="284" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="16" y1="666" x2="97" y2="666" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="16" y="665" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="16" y="682" style="font-family:Dialog; font-size:10;">
+taskManager : ITaskManager</text>
+<rect x="14" y="684" width="285" height="70" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="684" width="284" height="69" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="700" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; SDisconnectTask(_taskManager: ITaskManager)</text>
+<text x="16" y="717" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<text x="16" y="734" style="font-family:Dialog; font-size:10;">
+closeConnection() : void</text>
+<text x="16" y="751" style="font-family:Dialog; font-size:10;">
+removeUsers() : void</text>
+<rect x="379" y="629" width="121" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="379" y="629" width="120" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="379" y="629" width="121" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="379" y="629" width="120" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="409" y="644" style="font-family:Dialog; font-size:10;">
+SLogoutTask</text>
+<rect x="379" y="649" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="379" y="649" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="381" y1="666" x2="462" y2="666" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="381" y="665" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<rect x="379" y="667" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="379" y="667" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="381" y="683" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="580" y="629" width="421" height="108" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="580" y="629" width="420" height="107" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="580" y="629" width="421" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="580" y="629" width="420" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="730" y="644" style="font-family:Dialog; font-size:10;">
+SRequestConnectionTask</text>
+<rect x="580" y="649" width="421" height="53" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="580" y="649" width="420" height="52" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="582" y1="666" x2="663" y2="666" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="582" y="665" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="582" y="682" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="582" y="699" style="font-family:Dialog; font-size:10;">
+clientManager : IClientManager</text>
+<rect x="580" y="701" width="421" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="580" y="701" width="420" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="582" y="717" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; SRequestConnectionTask(settings: ISettings,clientManager: IClientManager)</text>
+<text x="582" y="734" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="1081" y="629" width="211" height="91" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1081" y="629" width="210" height="90" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1081" y="629" width="211" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1081" y="629" width="210" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1155" y="644" style="font-family:Dialog; font-size:10;">
+SSearchTask</text>
+<rect x="1081" y="649" width="211" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1081" y="649" width="210" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1083" y1="666" x2="1164" y2="666" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1083" y="665" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="1083" y="682" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<rect x="1081" y="684" width="211" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1081" y="684" width="210" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1083" y="700" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; SSearchTask(settings: ISettings)</text>
+<text x="1083" y="717" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="1372" y="629" width="121" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1372" y="629" width="120" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1372" y="629" width="121" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1372" y="629" width="120" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1386" y="644" style="font-family:Dialog; font-size:10;">
+IUserCommandTask</text>
+<rect x="1372" y="649" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1372" y="649" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1374" y1="666" x2="1455" y2="666" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1374" y="665" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<rect x="1372" y="667" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1372" y="667" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1374" y="683" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="1573" y="629" width="121" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1573" y="629" width="120" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1573" y="629" width="121" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1573" y="629" width="120" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1598" y="644" style="font-family:Dialog; font-size:10;">
+IHubTopicTask</text>
+<rect x="1573" y="649" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1573" y="649" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1575" y1="666" x2="1656" y2="666" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1575" y="665" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<rect x="1573" y="667" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1573" y="667" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1575" y="683" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="14" y="834" width="290" height="108" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="834" width="289" height="107" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="834" width="290" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="834" width="289" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="115" y="849" style="font-family:Dialog; font-size:10;">
+HubTaskException</text>
+<rect x="14" y="854" width="290" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="854" width="289" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="871" width="290" height="71" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="871" width="289" height="70" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="887" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; HubTaskException()</text>
+<text x="16" y="904" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; HubTaskException(arg0: String)</text>
+<text x="16" y="921" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; HubTaskException(arg0: Throwable)</text>
+<text x="16" y="938" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; HubTaskException(arg0: String,arg1: Throwable)</text>
+</svg>

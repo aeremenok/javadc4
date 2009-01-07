@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 20001102//EN' 'http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd'>
+<svg xmlns="http://www.w3.org/2000/svg" width="2072" height="990">
+<rect x="947" y="14" width="121" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="947" y="14" width="120" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="947" y="14" width="121" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="947" y="14" width="120" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="978" y="29" style="font-family:Dialog; font-size:10;">
+ICancelTask</text>
+<rect x="947" y="34" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="947" y="34" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="949" y1="51" x2="1030" y2="51" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="949" y="50" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<rect x="947" y="52" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="947" y="52" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="949" y="68" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="1148" y="14" width="121" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1148" y="14" width="120" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1148" y="14" width="121" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1148" y="14" width="120" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1175" y="29" style="font-family:Dialog; font-size:10;">
+IDirectionTask</text>
+<rect x="1148" y="34" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1148" y="34" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1150" y1="51" x2="1231" y2="51" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1150" y="50" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<rect x="1148" y="52" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1148" y="52" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1150" y="68" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="1349" y="14" width="121" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1349" y="14" width="120" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1349" y="14" width="121" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1349" y="14" width="120" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1386" y="29" style="font-family:Dialog; font-size:10;">
+IErrorTask</text>
+<rect x="1349" y="34" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1349" y="34" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1351" y1="51" x2="1432" y2="51" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1351" y="50" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<rect x="1349" y="52" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1349" y="52" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1351" y="68" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="1550" y="14" width="121" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1550" y="14" width="120" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1550" y="14" width="121" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1550" y="14" width="120" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1573" y="29" style="font-family:Dialog; font-size:10;">
+IFileLengthTask</text>
+<rect x="1550" y="34" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1550" y="34" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1552" y1="51" x2="1633" y2="51" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1552" y="50" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<rect x="1550" y="52" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1550" y="52" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1552" y="68" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="1751" y="14" width="294" height="91" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1751" y="14" width="293" height="90" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1751" y="14" width="294" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1751" y="14" width="293" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1860" y="29" style="font-family:Dialog; font-size:10;">
+IGetListLenTask</text>
+<rect x="1751" y="34" width="294" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1751" y="34" width="293" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1753" y1="51" x2="1834" y2="51" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1753" y="50" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="1753" y="67" style="font-family:Dialog; font-size:10;">
+shareManager : IShareManager</text>
+<rect x="1751" y="69" width="294" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1751" y="69" width="293" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1753" y="85" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; IGetListLenTask(_shareManager: IShareManager)</text>
+<text x="1753" y="102" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="947" y="219" width="351" height="125" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="947" y="219" width="350" height="124" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="947" y="219" width="351" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="947" y="219" width="350" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1102" y="234" style="font-family:Dialog; font-size:10;">
+IGetTask</text>
+<rect x="947" y="239" width="351" height="53" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="947" y="239" width="350" height="52" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="949" y1="256" x2="1030" y2="256" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="949" y="255" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="949" y="272" style="font-family:Dialog; font-size:10;">
+shareManager : IShareManager</text>
+<text x="949" y="289" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<rect x="947" y="291" width="351" height="53" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="947" y="291" width="350" height="52" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="949" y="307" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; IGetTask(_shareManager: IShareManager,_settings: ISettings)</text>
+<text x="949" y="324" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<text x="949" y="341" style="font-family:Dialog; font-size:10;">
+startUpload(local: File,fileOffset: long) : void</text>
+<rect x="1378" y="219" width="197" height="91" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1378" y="219" width="196" height="90" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1378" y="219" width="197" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1378" y="219" width="196" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1455" y="234" style="font-family:Dialog; font-size:10;">
+IKeyTask</text>
+<rect x="1378" y="239" width="197" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1378" y="239" width="196" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1380" y1="256" x2="1461" y2="256" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1380" y="255" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="1380" y="272" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<rect x="1378" y="274" width="197" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1378" y="274" width="196" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1380" y="290" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; IKeyTask(_settings: ISettings)</text>
+<text x="1380" y="307" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="1655" y="219" width="202" height="108" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1655" y="219" width="201" height="107" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1655" y="219" width="202" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1655" y="219" width="201" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1733" y="234" style="font-family:Dialog; font-size:10;">
+ILockTask</text>
+<rect x="1655" y="239" width="202" height="53" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1655" y="239" width="201" height="52" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1657" y1="256" x2="1738" y2="256" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1657" y="255" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="1657" y="272" style="font-family:Dialog; font-size:10;">
+encryptionHandler : DCEncryptionHandler</text>
+<text x="1657" y="289" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<rect x="1655" y="291" width="202" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1655" y="291" width="201" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1657" y="307" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ILockTask(_settings: ISettings)</text>
+<text x="1657" y="324" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="1937" y="219" width="121" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1937" y="219" width="120" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1937" y="219" width="121" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1937" y="219" width="120" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1961" y="234" style="font-family:Dialog; font-size:10;">
+IMaxedOutTask</text>
+<rect x="1937" y="239" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1937" y="239" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1939" y1="256" x2="2020" y2="256" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1939" y="255" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<rect x="1937" y="257" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1937" y="257" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1939" y="273" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="14" y="424" width="121" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="424" width="120" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="424" width="121" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="424" width="120" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="45" y="439" style="font-family:Dialog; font-size:10;">
+IMyNickTask</text>
+<rect x="14" y="444" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="444" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="16" y1="461" x2="97" y2="461" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="16" y="460" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<rect x="14" y="462" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="462" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="478" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="215" y="424" width="121" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="215" y="424" width="120" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="215" y="424" width="121" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="215" y="424" width="120" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="251" y="439" style="font-family:Dialog; font-size:10;">
+ISendTask</text>
+<rect x="215" y="444" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="215" y="444" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="217" y1="461" x2="298" y2="461" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="217" y="460" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<rect x="215" y="462" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="215" y="462" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="217" y="478" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="416" y="424" width="121" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="416" y="424" width="120" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="416" y="424" width="121" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="416" y="424" width="120" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="444" y="439" style="font-family:Dialog; font-size:10;">
+ISupportsTask</text>
+<rect x="416" y="444" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="416" y="444" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="418" y1="461" x2="499" y2="461" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="418" y="460" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<rect x="416" y="462" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="416" y="462" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="418" y="478" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="617" y="424" width="285" height="108" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="617" y="424" width="284" height="107" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="617" y="424" width="285" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="617" y="424" width="284" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="719" y="439" style="font-family:Dialog; font-size:10;">
+SDisconnectTask</text>
+<rect x="617" y="444" width="285" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="617" y="444" width="284" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="619" y1="461" x2="700" y2="461" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="619" y="460" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="619" y="477" style="font-family:Dialog; font-size:10;">
+taskManager : ITaskManager</text>
+<rect x="617" y="479" width="285" height="53" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="617" y="479" width="284" height="52" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="619" y="495" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; SDisconnectTask(_taskManager: ITaskManager)</text>
+<text x="619" y="512" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<text x="619" y="529" style="font-family:Dialog; font-size:10;">
+removeListeners() : void</text>
+<rect x="982" y="424" width="270" height="91" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="982" y="424" width="269" height="90" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="982" y="424" width="270" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="982" y="424" width="269" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1059" y="439" style="font-family:Dialog; font-size:10;">
+SDownloadFinishedTask</text>
+<rect x="982" y="444" width="270" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="982" y="444" width="269" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="984" y1="461" x2="1065" y2="461" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="984" y="460" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="984" y="477" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<rect x="982" y="479" width="270" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="982" y="479" width="269" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="984" y="495" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; SDownloadFinishedTask(_settings: ISettings)</text>
+<text x="984" y="512" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="1332" y="424" width="245" height="108" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1332" y="424" width="244" height="107" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1332" y="424" width="245" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1332" y="424" width="244" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1409" y="439" style="font-family:Dialog; font-size:10;">
+SDownloadingTask</text>
+<rect x="1332" y="444" width="245" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1332" y="444" width="244" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1334" y1="461" x2="1415" y2="461" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1334" y="460" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="1334" y="477" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<rect x="1332" y="479" width="245" height="53" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1332" y="479" width="244" height="52" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1334" y="495" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; SDownloadingTask(_settings: ISettings)</text>
+<text x="1334" y="512" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<text x="1334" y="529" style="font-family:Dialog; font-size:10;">
+continueDownload(size: int) : void</text>
+<rect x="14" y="612" width="211" height="91" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="612" width="210" height="90" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="612" width="211" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="612" width="210" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="88" y="627" style="font-family:Dialog; font-size:10;">
+SMyNickTask</text>
+<rect x="14" y="632" width="211" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="632" width="210" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="16" y1="649" x2="97" y2="649" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="16" y="648" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="16" y="665" style="font-family:Dialog; font-size:10;">
+user : IUserInfo</text>
+<rect x="14" y="667" width="211" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="667" width="210" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="683" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; SMyNickTask(settings: ISettings)</text>
+<text x="16" y="700" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="305" y="612" width="343" height="142" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="305" y="612" width="342" height="141" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="305" y="612" width="343" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="305" y="612" width="342" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="428" y="627" style="font-family:Dialog; font-size:10;">
+SStartDownloadTask</text>
+<rect x="305" y="632" width="343" height="53" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="305" y="632" width="342" height="52" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="307" y1="649" x2="388" y2="649" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="307" y="648" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="307" y="665" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="307" y="682" style="font-family:Dialog; font-size:10;">
+resumeFrom : long</text>
+<rect x="305" y="684" width="343" height="70" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="305" y="684" width="342" height="69" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="307" y="700" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; SStartDownloadTask(_settings: ISettings)</text>
+<text x="307" y="717" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<text x="307" y="734" style="font-family:Dialog; font-size:10;">
+segmentDownload(downloadRequest: DownloadRequest,file: File) : void</text>
+<text x="307" y="751" style="font-family:Dialog; font-size:10;">
+normalDownload(downloadRequest: DownloadRequest,file: File) : void</text>
+<rect x="728" y="612" width="232" height="159" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="728" y="612" width="231" height="158" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="728" y="612" width="232" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="728" y="612" width="231" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="805" y="627" style="font-family:Dialog; font-size:10;">
+SUploadingTask</text>
+<rect x="728" y="632" width="232" height="70" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="728" y="632" width="231" height="69" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="730" y1="649" x2="811" y2="649" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="730" y="648" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="730" y="665" style="font-family:Dialog; font-size:10;">
+writer : ExtendedBufferedOutputStream</text>
+<text x="730" y="682" style="font-family:Dialog; font-size:10;">
+stats : ConnectionStatistics</text>
+<text x="730" y="699" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<rect x="728" y="701" width="232" height="70" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="728" y="701" width="231" height="69" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="730" y="717" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; SUploadingTask(_settings: ISettings)</text>
+<text x="730" y="734" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<text x="730" y="751" style="font-family:Dialog; font-size:10;">
+continueUpload(size: int) : void</text>
+<text x="730" y="768" style="font-family:Dialog; font-size:10;">
+finishUpload() : void</text>
+<rect x="14" y="219" width="383" height="74" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="219" width="382" height="73" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="219" width="383" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="219" width="382" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="169" y="234" style="font-family:Dialog; font-size:10;">
+IGetZBlockTask</text>
+<rect x="14" y="239" width="383" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="239" width="382" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="257" width="383" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="257" width="382" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="273" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; IGetZBlockTask(_shareManager: IShareManager,_settings: ISettings)</text>
+<text x="16" y="290" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="477" y="219" width="390" height="74" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="477" y="219" width="389" height="73" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="477" y="219" width="390" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="477" y="219" width="389" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="632" y="234" style="font-family:Dialog; font-size:10;">
+IUGetZBlockTask</text>
+<rect x="477" y="239" width="390" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="477" y="239" width="389" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="477" y="257" width="390" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="477" y="257" width="389" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="479" y="273" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; IUGetZBlockTask(_shareManager: IShareManager,_settings: ISettings)</text>
+<text x="479" y="290" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="248" y="14" width="384" height="125" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="248" y="14" width="383" height="124" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="248" y="14" width="384" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="248" y="14" width="383" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="403" y="29" style="font-family:Dialog; font-size:10;">
+IUGetBlockTask</text>
+<rect x="248" y="34" width="384" height="53" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="248" y="34" width="383" height="52" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="250" y1="51" x2="331" y2="51" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="250" y="50" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="250" y="67" style="font-family:Dialog; font-size:10;">
+shareManager : IShareManager</text>
+<text x="250" y="84" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<rect x="248" y="86" width="384" height="53" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="248" y="86" width="383" height="52" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="250" y="102" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; IUGetBlockTask(_shareManager: IShareManager,_settings: ISettings)</text>
+<text x="250" y="119" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<text x="250" y="136" style="font-family:Dialog; font-size:10;">
+startUpload(local: File,fileOffset: long) : void</text>
+<rect x="1040" y="612" width="121" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1040" y="612" width="120" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1040" y="612" width="121" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1040" y="612" width="120" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1073" y="627" style="font-family:Dialog; font-size:10;">
+IFailedTask</text>
+<rect x="1040" y="632" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1040" y="632" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1042" y1="649" x2="1123" y2="649" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1042" y="648" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<rect x="1040" y="650" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1040" y="650" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1042" y="666" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="1241" y="612" width="121" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1241" y="612" width="120" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1241" y="612" width="121" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1241" y="612" width="120" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1269" y="627" style="font-family:Dialog; font-size:10;">
+ISendingTask</text>
+<rect x="1241" y="632" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1241" y="632" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1243" y1="649" x2="1324" y2="649" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1243" y="648" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<rect x="1241" y="650" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1241" y="650" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1243" y="666" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="1442" y="612" width="238" height="159" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1442" y="612" width="237" height="158" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1442" y="612" width="238" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1442" y="612" width="237" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1519" y="627" style="font-family:Dialog; font-size:10;">
+SZUploadingTask</text>
+<rect x="1442" y="632" width="238" height="70" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1442" y="632" width="237" height="69" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1444" y1="649" x2="1525" y2="649" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1444" y="648" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="1444" y="665" style="font-family:Dialog; font-size:10;">
+writer : OutputStream</text>
+<text x="1444" y="682" style="font-family:Dialog; font-size:10;">
+stats : ConnectionStatistics</text>
+<text x="1444" y="699" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<rect x="1442" y="701" width="238" height="70" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1442" y="701" width="237" height="69" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1444" y="717" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; SZUploadingTask(_settings: ISettings)</text>
+<text x="1444" y="734" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<text x="1444" y="751" style="font-family:Dialog; font-size:10;">
+continueUpload(size: int) : void</text>
+<text x="1444" y="768" style="font-family:Dialog; font-size:10;">
+finishUpload() : void</text>
+<rect x="14" y="851" width="121" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="851" width="120" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="851" width="121" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="851" width="120" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="42" y="866" style="font-family:Dialog; font-size:10;">
+IGetMetaTask</text>
+<rect x="14" y="871" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="871" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="16" y1="888" x2="97" y2="888" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="16" y="887" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<rect x="14" y="889" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="889" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="905" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="215" y="851" width="230" height="125" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="215" y="851" width="229" height="124" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="215" y="851" width="230" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="215" y="851" width="229" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="292" y="866" style="font-family:Dialog; font-size:10;">
+SResumingTask</text>
+<rect x="215" y="871" width="230" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="215" y="871" width="229" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="217" y1="888" x2="298" y2="888" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="217" y="887" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="217" y="904" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<rect x="215" y="906" width="230" height="70" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="215" y="906" width="229" height="69" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="217" y="922" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; SResumingTask(_settings: ISettings)</text>
+<text x="217" y="939" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<text x="217" y="956" style="font-family:Dialog; font-size:10;">
+blockDoesntMatch(resumeFrom: long) : void</text>
+<text x="217" y="973" style="font-family:Dialog; font-size:10;">
+blockMatches() : void</text>
+<rect x="525" y="851" width="121" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="525" y="851" width="120" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="525" y="851" width="121" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="525" y="851" width="120" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="530" y="866" style="font-family:Dialog; font-size:10;">
+SRemotelyQueuedTask</text>
+<rect x="525" y="871" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="525" y="871" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="527" y1="888" x2="608" y2="888" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="527" y="887" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<rect x="525" y="889" width="121" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="525" y="889" width="120" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="527" y="905" style="font-family:Dialog; font-size:10;">
+runTaskTemplate() : void</text>
+<rect x="726" y="851" width="299" height="108" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="726" y="851" width="298" height="107" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="726" y="851" width="299" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="726" y="851" width="298" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="827" y="866" style="font-family:Dialog; font-size:10;">
+ClientTaskException</text>
+<rect x="726" y="871" width="299" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="726" y="871" width="298" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="726" y="888" width="299" height="71" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="726" y="888" width="298" height="70" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="728" y="904" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ClientTaskException()</text>
+<text x="728" y="921" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ClientTaskException(arg0: String)</text>
+<text x="728" y="938" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ClientTaskException(arg0: Throwable)</text>
+<text x="728" y="955" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ClientTaskException(arg0: String,arg1: Throwable)</text>
+<polyline style="fill:none; stroke:#000000; stroke-width:1" points="205,219 205,187 440,187 440,139"/>
+<polygon style="fill:#ffffff; stroke:#ffffff; stroke-width:1" points="440,139 447,151 433,151"/>
+<polygon style="fill:none; stroke:#000000; stroke-width:1" points="440,139 447,151 433,151"/>
+<polyline style="fill:none; stroke:#000000; stroke-width:1" points="672,219 672,187 440,187 440,139"/>
+<polygon style="fill:#ffffff; stroke:#ffffff; stroke-width:1" points="440,139 447,151 433,151"/>
+<polygon style="fill:none; stroke:#000000; stroke-width:1" points="440,139 447,151 433,151"/>
+</svg>

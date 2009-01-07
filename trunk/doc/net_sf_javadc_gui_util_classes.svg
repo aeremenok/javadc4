@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 20001102//EN' 'http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd'>
+<svg xmlns="http://www.w3.org/2000/svg" width="2590" height="1261">
+<rect x="14" y="14" width="648" height="74" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="14" width="647" height="73" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="14" width="648" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="14" width="647" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="296" y="29" style="font-family:Dialog; font-size:10;">
+ByteCellRenderer</text>
+<rect x="14" y="34" width="648" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="34" width="647" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="16" y1="51" x2="97" y2="51" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="16" y="50" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<rect x="14" y="52" width="648" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="52" width="647" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="68" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ByteCellRenderer()</text>
+<text x="16" y="85" style="font-family:Dialog; font-size:10;">
+getTableCellRendererComponent(table: JTable,value: Object,isSelected: boolean,hasFocus: boolean,row: int,column: int) : Component</text>
+<rect x="742" y="14" width="648" height="74" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="742" y="14" width="647" height="73" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="742" y="14" width="648" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="742" y="14" width="647" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1033" y="29" style="font-family:Dialog; font-size:10;">
+DateRenderer</text>
+<rect x="742" y="34" width="648" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="742" y="34" width="647" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="744" y="50" style="font-family:Dialog; font-size:10;">
+format : DateFormat</text>
+<rect x="742" y="52" width="648" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="742" y="52" width="647" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="744" y="68" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; DateRenderer(format: DateFormat)</text>
+<text x="744" y="85" style="font-family:Dialog; font-size:10;">
+getTableCellRendererComponent(table: JTable,value: Object,isSelected: boolean,hasFocus: boolean,row: int,column: int) : Component</text>
+<rect x="1470" y="14" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1470" y="14" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1470" y="14" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1470" y="14" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1497" y="29" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="1470" y="34" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1470" y="34" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1470" y="52" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1470" y="52" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1610" y="14" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1610" y="14" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1610" y="14" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1610" y="14" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1637" y="29" style="font-family:Dialog; font-size:10;">
+2</text>
+<rect x="1610" y="34" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1610" y="34" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1610" y="52" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1610" y="52" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1750" y="14" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1750" y="14" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1750" y="14" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1750" y="14" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1777" y="29" style="font-family:Dialog; font-size:10;">
+3</text>
+<rect x="1750" y="34" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1750" y="34" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1750" y="52" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1750" y="52" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1890" y="14" width="686" height="261" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1890" y="14" width="685" height="260" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1890" y="14" width="686" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1890" y="14" width="685" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2161" y="29" style="font-family:Dialog; font-size:10;">
+DownloadResumePopupMenu</text>
+<rect x="1890" y="34" width="686" height="87" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1890" y="34" width="685" height="86" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1892" y1="51" x2="1973" y2="51" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1892" y="50" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="1892" y="67" style="font-family:Dialog; font-size:10;">
+hub : IHub</text>
+<text x="1892" y="84" style="font-family:Dialog; font-size:10;">
+searchResult : SearchResult</text>
+<text x="1892" y="101" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="1892" y="118" style="font-family:Dialog; font-size:10;">
+downloadManager : IDownloadManager</text>
+<rect x="1890" y="120" width="686" height="155" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1890" y="120" width="685" height="154" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1892" y="136" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; DownloadResumePopupMenu(_hub: IHub,_searchResult: SearchResult,_settings: ISettings,_downloadManager: IDownloadManager)</text>
+<text x="1892" y="153" style="font-family:Dialog; font-size:10;">
+chooseFileToResume(searchResult: SearchResult) : void</text>
+<text x="1892" y="170" style="font-family:Dialog; font-size:10;">
+customResume(name: String,searchResult: SearchResult) : void</text>
+<text x="1892" y="187" style="font-family:Dialog; font-size:10;">
+downloadFile(searchResult: SearchResult) : void</text>
+<text x="1892" y="204" style="font-family:Dialog; font-size:10;">
+setupDownloadMenuItem() : void</text>
+<text x="1892" y="221" style="font-family:Dialog; font-size:10;">
+setupMenu() : void</text>
+<text x="1892" y="238" style="font-family:Dialog; font-size:10;">
+setupResumeAsFileChooserMenuItem() : void</text>
+<text x="1892" y="255" style="font-family:Dialog; font-size:10;">
+setupResumeAsMenuItem() : void</text>
+<text x="1892" y="272" style="font-family:Dialog; font-size:10;">
+show(invoker: Component,x: int,y: int) : void</text>
+<rect x="14" y="355" width="240" height="91" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="355" width="239" height="90" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="355" width="240" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="355" width="239" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="90" y="370" style="font-family:Dialog; font-size:10;">
+ExtensionFileFilter</text>
+<rect x="14" y="375" width="240" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="375" width="239" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="391" style="font-family:Dialog; font-size:10;">
+extension : String</text>
+<rect x="14" y="392" width="240" height="54" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="392" width="239" height="53" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="408" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ExtensionFileFilter(_extension: String)</text>
+<text x="16" y="425" style="font-family:Dialog; font-size:10;">
+accept(file: File) : boolean</text>
+<text x="16" y="442" style="font-family:Dialog; font-size:10;">
+getDescription() : String</text>
+<rect x="334" y="355" width="281" height="91" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="334" y="355" width="280" height="90" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="334" y="355" width="281" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="334" y="355" width="280" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="422" y="370" style="font-family:Dialog; font-size:10;">
+ResumeAsFileChooser</text>
+<rect x="334" y="375" width="281" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="334" y="375" width="280" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="334" y="392" width="281" height="54" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="334" y="392" width="280" height="53" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="336" y="408" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ResumeAsFileChooser(currentDirectory: String)</text>
+<text x="336" y="425" style="font-family:Dialog; font-size:10;">
+showResumeDialog(file: File) : int</text>
+<text x="336" y="442" style="font-family:Dialog; font-size:10;">
+setupFilters(file: File) : void</text>
+<rect x="695" y="355" width="502" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="695" y="355" width="501" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="695" y="355" width="502" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="695" y="355" width="501" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="922" y="370" style="font-family:Dialog; font-size:10;">
+SplitPane</text>
+<rect x="695" y="375" width="502" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="695" y="375" width="501" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="695" y="393" width="502" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="695" y="393" width="501" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="697" y="409" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; SplitPane(orientation: int,newLeftComponent: Component,newRightComponent: Component)</text>
+<rect x="1277" y="355" width="308" height="380" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1277" y="355" width="307" height="379" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1277" y="355" width="308" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1277" y="355" width="307" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1403" y="370" style="font-family:Dialog; font-size:10;">
+TableSorter</text>
+<rect x="1277" y="375" width="308" height="69" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1277" y="375" width="307" height="68" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1279" y="391" style="font-family:Dialog; font-size:10;">
+indexes : int[]</text>
+<text x="1279" y="408" style="font-family:Dialog; font-size:10;">
+sortedColumn : int</text>
+<text x="1279" y="425" style="font-family:Dialog; font-size:10;">
+ascending : boolean</text>
+<text x="1279" y="442" style="font-family:Dialog; font-size:10;">
+readOnly : boolean</text>
+<rect x="1277" y="443" width="308" height="292" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1277" y="443" width="307" height="291" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1279" y="459" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; TableSorter(readOnly: boolean)</text>
+<text x="1279" y="476" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; TableSorter(model: TableModel,readOnly: boolean)</text>
+<text x="1279" y="493" style="font-family:Dialog; font-size:10;">
+isCellEditable(row: int,column: int) : boolean</text>
+<text x="1279" y="510" style="font-family:Dialog; font-size:10;">
+setModel(model: TableModel) : void</text>
+<text x="1279" y="527" style="font-family:Dialog; font-size:10;">
+rowBefore(row1: int,row2: int) : boolean</text>
+<text x="1279" y="544" style="font-family:Dialog; font-size:10;">
+compareRows(row1: int,row2: int) : int</text>
+<text x="1279" y="561" style="font-family:Dialog; font-size:10;">
+compareRows(row1: int,row2: int,column: int) : int</text>
+<text x="1279" y="578" style="font-family:Dialog; font-size:10;">
+updateRows() : void</text>
+<text x="1279" y="595" style="font-family:Dialog; font-size:10;">
+sort() : void</text>
+<text x="1279" y="612" style="font-family:Dialog; font-size:10;">
+tableChanged(e: TableModelEvent) : void</text>
+<text x="1279" y="629" style="font-family:Dialog; font-size:10;">
+insertRows(firstRow: int,lastRow: int) : void</text>
+<text x="1279" y="646" style="font-family:Dialog; font-size:10;">
+deleteRows(firstRow: int,lastRow: int) : void</text>
+<text x="1279" y="663" style="font-family:Dialog; font-size:10;">
+getValueAt(row: int,column: int) : Object</text>
+<text x="1279" y="680" style="font-family:Dialog; font-size:10;">
+setValueAt(value: Object,row: int,column: int) : void</text>
+<text x="1279" y="697" style="font-family:Dialog; font-size:10;">
+sortByColumn(column: int,ascending: boolean) : void</text>
+<text x="1279" y="714" style="font-family:Dialog; font-size:10;">
+sortByColumn(column: int) : void</text>
+<text x="1279" y="731" style="font-family:Dialog; font-size:10;">
+getRealRow(row: int) : int</text>
+<rect x="1665" y="355" width="259" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1665" y="355" width="258" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1665" y="355" width="259" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1665" y="355" width="258" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1761" y="370" style="font-family:Dialog; font-size:10;">
+&lt;&lt;Interface&gt;&gt;</text>
+<rect x="1665" y="373" width="259" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1665" y="373" width="258" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1743" y="388" style="font-family:Dialog; font-size:10;">
+TableToolTipHandler</text>
+<rect x="1666" y="373" width="257" height="2" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1666" y="373" width="256" height="1" style="fill: none; stroke:#ffffff; stroke-width:1"/>
+<rect x="1665" y="393" width="259" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1665" y="393" width="258" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1667" y="409" style="font-family:Dialog; font-size:10;">
+getToolTipText(row: int,column: int,o: Object) : String</text>
+<rect x="2004" y="355" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2004" y="355" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2004" y="355" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2004" y="355" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2031" y="370" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="2004" y="375" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2004" y="375" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2004" y="393" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2004" y="393" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="815" width="177" height="108" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="815" width="176" height="107" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="815" width="177" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="815" width="176" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="64" y="830" style="font-family:Dialog; font-size:10; font-style:italic;">
+TreeTablePanel</text>
+<rect x="14" y="835" width="177" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="835" width="176" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="851" style="font-family:Dialog; font-size:10;">
+table : JTreeTable</text>
+<rect x="14" y="852" width="177" height="71" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="852" width="176" height="70" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="868" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; TreeTablePanel()</text>
+<text x="16" y="885" style="font-family:Dialog; font-size:10;">
+expandTreeRow(row: int) : void</text>
+<text x="16" y="902" style="font-family:Dialog; font-size:10;">
+setJTreeTable(jtt: JTreeTable) : void</text>
+<text x="16" y="919" style="font-family:Dialog; font-size:10; font-style:italic;">
+showPopup(e: MouseEvent) : void</text>
+<rect x="271" y="815" width="648" height="91" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="271" y="815" width="647" height="90" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="271" y="815" width="648" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="271" y="815" width="647" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="554" y="830" style="font-family:Dialog; font-size:10;">
+UserCellRenderer</text>
+<rect x="271" y="835" width="648" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="271" y="835" width="647" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="273" y="851" style="font-family:Dialog; font-size:10;">
+bufferedImages : ImageIcon[]</text>
+<text x="273" y="868" style="font-family:Dialog; font-size:10;">
+opList : List</text>
+<rect x="271" y="870" width="648" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="271" y="870" width="647" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="273" y="886" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; UserCellRenderer(i: ImageIcon[],a: List)</text>
+<text x="273" y="903" style="font-family:Dialog; font-size:10;">
+getTableCellRendererComponent(table: JTable,value: Object,isSelected: boolean,hasFocus: boolean,row: int,column: int) : Component</text>
+<rect x="999" y="815" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="999" y="815" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="999" y="815" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="999" y="815" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1026" y="830" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="999" y="835" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="999" y="835" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="999" y="853" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="999" y="853" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1139" y="815" width="164" height="91" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1139" y="815" width="163" height="90" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1139" y="815" width="164" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1139" y="815" width="163" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1172" y="830" style="font-family:Dialog; font-size:10;">
+StatusBarSimulation</text>
+<rect x="1139" y="835" width="164" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1139" y="835" width="163" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1141" y="851" style="font-family:Dialog; font-size:10;">
+statusBar : StatusBar</text>
+<rect x="1139" y="852" width="164" height="54" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1139" y="852" width="163" height="53" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1141" y="868" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; StatusBarSimulation()</text>
+<text x="1141" y="885" style="font-family:Dialog; font-size:10;">
+doMethod(sel: int) : void</text>
+<line x1="1141" y1="903" x2="1259" y2="903" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1141" y="902" style="font-family:Dialog; font-size:10;">
+main(args: String[]) : void</text>
+<rect x="1383" y="815" width="278" height="210" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1383" y="815" width="277" height="209" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1383" y="815" width="278" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1383" y="815" width="277" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1499" y="830" style="font-family:Dialog; font-size:10;">
+StatusBar</text>
+<rect x="1383" y="835" width="278" height="104" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1383" y="835" width="277" height="103" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1385" y="851" style="font-family:Dialog; font-size:10;">
+lblStatus1 : JLabel</text>
+<text x="1385" y="868" style="font-family:Dialog; font-size:10;">
+lblStatus2 : JLabel</text>
+<text x="1385" y="885" style="font-family:Dialog; font-size:10;">
+lblStatus3 : JLabel</text>
+<text x="1385" y="902" style="font-family:Dialog; font-size:10;">
+downloadSlotsText : String</text>
+<text x="1385" y="919" style="font-family:Dialog; font-size:10;">
+uploadSlotsText : String</text>
+<text x="1385" y="936" style="font-family:Dialog; font-size:10;">
+startTime : Date</text>
+<rect x="1383" y="938" width="278" height="87" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1383" y="938" width="277" height="86" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1385" y="954" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; StatusBar()</text>
+<text x="1385" y="971" style="font-family:Dialog; font-size:10;">
+updateHashingFile(fileName: String,percent: String) : void</text>
+<text x="1385" y="988" style="font-family:Dialog; font-size:10;">
+updateHashedFile(fileName: String) : void</text>
+<text x="1385" y="1005" style="font-family:Dialog; font-size:10;">
+updateDownloadSlots(used: int,total: int) : void</text>
+<text x="1385" y="1022" style="font-family:Dialog; font-size:10;">
+updateUploadSlots(used: int,total: int) : void</text>
+<rect x="1741" y="815" width="209" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1741" y="815" width="208" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1741" y="815" width="209" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1741" y="815" width="208" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1796" y="830" style="font-family:Dialog; font-size:10;">
+ListSelectionHandler</text>
+<rect x="1741" y="835" width="209" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1741" y="835" width="208" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1741" y="853" width="209" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1741" y="853" width="208" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1743" y="869" style="font-family:Dialog; font-size:10;">
+valueChanged(e: ListSelectionEvent) : void</text>
+<rect x="14" y="1105" width="247" height="125" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1105" width="246" height="124" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="1105" width="247" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1105" width="246" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="54" y="1120" style="font-family:Dialog; font-size:10;">
+ListToTreeSelectionModelWrapper</text>
+<rect x="14" y="1125" width="247" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1125" width="246" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="1141" style="font-family:Dialog; font-size:10;">
+updatingListSelectionModel : boolean</text>
+<rect x="14" y="1142" width="247" height="88" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1142" width="246" height="87" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="1158" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ListToTreeSelectionModelWrapper()</text>
+<text x="16" y="1175" style="font-family:Dialog; font-size:10;">
+createListSelectionListener() : ListSelectionListener</text>
+<text x="16" y="1192" style="font-family:Dialog; font-size:10;">
+getListSelectionModel() : ListSelectionModel</text>
+<text x="16" y="1209" style="font-family:Dialog; font-size:10;">
+resetRowSelection() : void</text>
+<text x="16" y="1226" style="font-family:Dialog; font-size:10;">
+updateSelectedPathsFromSelectedRows() : void</text>
+<rect x="341" y="1105" width="498" height="91" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="341" y="1105" width="497" height="90" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="341" y="1105" width="498" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="341" y="1105" width="497" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="541" y="1120" style="font-family:Dialog; font-size:10;">
+TreeTableCellEditor</text>
+<rect x="341" y="1125" width="498" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="341" y="1125" width="497" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="341" y="1142" width="498" height="54" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="341" y="1142" width="497" height="53" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="343" y="1158" style="font-family:Dialog; font-size:10;">
+getCellEditorValue() : Object</text>
+<text x="343" y="1175" style="font-family:Dialog; font-size:10;">
+getTableCellEditorComponent(table: JTable,value: Object,isSelected: boolean,r: int,c: int) : Component</text>
+<text x="343" y="1192" style="font-family:Dialog; font-size:10;">
+isCellEditable(e: EventObject) : boolean</text>
+<rect x="919" y="1105" width="648" height="142" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="919" y="1105" width="647" height="141" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="919" y="1105" width="648" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="919" y="1105" width="647" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1187" y="1120" style="font-family:Dialog; font-size:10;">
+TreeTableCellRenderer</text>
+<rect x="919" y="1125" width="648" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="919" y="1125" width="647" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="921" y="1141" style="font-family:Dialog; font-size:10;">
+visibleRow : int</text>
+<rect x="919" y="1142" width="648" height="105" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="919" y="1142" width="647" height="104" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="921" y="1158" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; TreeTableCellRenderer(model: TreeModel)</text>
+<text x="921" y="1175" style="font-family:Dialog; font-size:10;">
+getTableCellRendererComponent(table: JTable,value: Object,isSelected: boolean,hasFocus: boolean,row: int,column: int) : Component</text>
+<text x="921" y="1192" style="font-family:Dialog; font-size:10;">
+paint(g: Graphics) : void</text>
+<text x="921" y="1209" style="font-family:Dialog; font-size:10;">
+setBounds(x: int,y: int,w: int,h: int) : void</text>
+<text x="921" y="1226" style="font-family:Dialog; font-size:10;">
+setRowHeight(rowHeight: int) : void</text>
+<text x="921" y="1243" style="font-family:Dialog; font-size:10;">
+updateUI() : void</text>
+<rect x="1647" y="1105" width="284" height="125" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1647" y="1105" width="283" height="124" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1647" y="1105" width="284" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1647" y="1105" width="283" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1761" y="1120" style="font-family:Dialog; font-size:10;">
+JTreeTable</text>
+<rect x="1647" y="1125" width="284" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1647" y="1125" width="283" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1649" y="1141" style="font-family:Dialog; font-size:10;">
+tree : TreeTableCellRenderer</text>
+<rect x="1647" y="1142" width="284" height="88" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1647" y="1142" width="283" height="87" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1649" y="1158" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; JTreeTable(treeTableModel: TreeTableModel)</text>
+<text x="1649" y="1175" style="font-family:Dialog; font-size:10;">
+getEditingRow() : int</text>
+<text x="1649" y="1192" style="font-family:Dialog; font-size:10;">
+getTree() : JTree</text>
+<text x="1649" y="1209" style="font-family:Dialog; font-size:10;">
+setRowHeight(rowHeight: int) : void</text>
+<text x="1649" y="1226" style="font-family:Dialog; font-size:10;">
+updateUI() : void</text>
+</svg>

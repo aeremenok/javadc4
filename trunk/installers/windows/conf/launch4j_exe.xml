@@ -1,0 +1,39 @@
+<launch4jConfig>
+  <dontWrapJar>true</dontWrapJar>
+  <headerType>0</headerType>
+  <jar>..\lib\javadc3.jar</jar>
+  <outfile>..\..\..\build\JavaDC3.exe</outfile>
+  <errTitle></errTitle>
+  <jarArgs></jarArgs>
+  <chdir></chdir>
+  <customProcName>false</customProcName>
+  <stayAlive>false</stayAlive>
+  <icon>windows\conf\main.ico</icon>
+  <jre>
+    <path>jre</path>
+    <minVersion>1.4.0</minVersion>
+    <maxVersion></maxVersion>
+    <initialHeapSize>0</initialHeapSize>
+    <maxHeapSize>0</maxHeapSize>
+    <args>
+</args>
+  </jre>
+  <splash>
+    <file>..\..\..\src\images\JavaDCLogo.bmp</file>
+    <waitForWindow>true</waitForWindow>
+    <timeout>60</timeout>
+    <timeoutErr>true</timeoutErr>
+  </splash>
+  <versionInfo>
+    <fileVersion>0.0.0.0</fileVersion>
+    <txtFileVersion>Initial version</txtFileVersion>
+    <fileDescription>P2P Client Java Direct Connect 3 executable</fileDescription>
+    <copyright>GNU</copyright>
+    <productVersion>0.0.0.0</productVersion>
+    <txtProductVersion>Initial version</txtProductVersion>
+    <productName>P2P Client Java Direct Connect 3</productName>
+    <companyName></companyName>
+    <internalName>JavaDC3</internalName>
+    <originalFilename>JavaDC3.exe</originalFilename>
+  </versionInfo>
+</launch4jConfig>

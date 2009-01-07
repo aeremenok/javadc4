@@ -1,0 +1,666 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 20001102//EN' 'http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd'>
+<svg xmlns="http://www.w3.org/2000/svg" width="3362" height="1872">
+<rect x="1100" y="14" width="424" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1100" y="14" width="423" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1100" y="14" width="424" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1100" y="14" width="423" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1272" y="29" style="font-family:Dialog; font-size:10;">
+MyClientListener</text>
+<rect x="1100" y="34" width="424" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1100" y="34" width="423" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1100" y="52" width="424" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1100" y="52" width="423" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1102" y="68" style="font-family:Dialog; font-size:10;">
+connectionRequested(client: Client,isServer: boolean,listener: ConnectionListener) : void</text>
+<rect x="1604" y="14" width="789" height="278" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1604" y="14" width="788" height="277" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1604" y="14" width="789" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1604" y="14" width="788" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1963" y="29" style="font-family:Dialog; font-size:10;">
+ClientManager</text>
+<rect x="1604" y="34" width="789" height="121" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1604" y="34" width="788" height="120" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1606" y1="51" x2="1687" y2="51" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1606" y="50" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="1606" y="67" style="font-family:Dialog; font-size:10;">
+clients : HashMap</text>
+<text x="1606" y="84" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="1606" y="101" style="font-family:Dialog; font-size:10;">
+taskManager : ITaskManager</text>
+<text x="1606" y="118" style="font-family:Dialog; font-size:10;">
+clientConnectionManager : IConnectionManager</text>
+<text x="1606" y="135" style="font-family:Dialog; font-size:10;">
+clientTaskFactory : IClientTaskFactory</text>
+<text x="1606" y="152" style="font-family:Dialog; font-size:10;">
+clientListener : ClientListener</text>
+<rect x="1604" y="154" width="789" height="138" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1604" y="154" width="788" height="137" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1606" y="170" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ClientManager(_settings: ISettings,_taskManager: ITaskManager,_clientConnectionManager: IConnectionManager,_clientTaskFactory: IClientTaskFactory)</text>
+<text x="1606" y="187" style="font-family:Dialog; font-size:10;">
+getClient(host: HostInfo) : Client</text>
+<text x="1606" y="204" style="font-family:Dialog; font-size:10;">
+getListenerClass() : Class</text>
+<text x="1606" y="221" style="font-family:Dialog; font-size:10;">
+fireClientAdded(c: Client) : void</text>
+<text x="1606" y="238" style="font-family:Dialog; font-size:10;">
+fireClientRemoved(c: Client) : void</text>
+<text x="1606" y="255" style="font-family:Dialog; font-size:10;">
+addClient(info: HostInfo,c: Client) : void</text>
+<text x="1606" y="272" style="font-family:Dialog; font-size:10;">
+removeClient(info: HostInfo) : void</text>
+<text x="1606" y="289" style="font-family:Dialog; font-size:10;">
+createClientConnection(client: Client,listener: ConnectionListener,isServer: boolean) : Connection</text>
+<rect x="2473" y="14" width="875" height="142" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2473" y="14" width="874" height="141" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2473" y="14" width="875" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2473" y="14" width="874" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2865" y="29" style="font-family:Dialog; font-size:10;">
+ConnectionFactory</text>
+<rect x="2473" y="34" width="875" height="88" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2473" y="34" width="874" height="87" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="2475" y1="51" x2="2556" y2="51" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2475" y="50" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="2475" y="67" style="font-family:Dialog; font-size:10;">
+taskManager : ITaskManager</text>
+<text x="2475" y="84" style="font-family:Dialog; font-size:10;">
+clientConnectionManager : IConnectionManager</text>
+<text x="2475" y="101" style="font-family:Dialog; font-size:10;">
+clientManager : IClientManager</text>
+<text x="2475" y="118" style="font-family:Dialog; font-size:10;">
+clientTaskFactory : IClientTaskFactory</text>
+<rect x="2473" y="121" width="875" height="35" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2473" y="121" width="874" height="34" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2475" y="137" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ConnectionFactory(_taskManager: ITaskManager,_clientConnectionManager: IConnectionManager,_clientManager: IClientManager,_clientTaskFactory: IClientTaskFactory)</text>
+<text x="2475" y="154" style="font-family:Dialog; font-size:10;">
+createClientConnection(client: Client,listener: ConnectionListener,isServer: boolean) : IConnection</text>
+<rect x="2110" y="372" width="222" height="74" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2110" y="372" width="221" height="73" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2110" y="372" width="222" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2110" y="372" width="221" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2168" y="387" style="font-family:Dialog; font-size:10;">
+MyConnectionListener</text>
+<rect x="2110" y="392" width="222" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2110" y="392" width="221" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2110" y="410" width="222" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2110" y="410" width="221" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2112" y="426" style="font-family:Dialog; font-size:10;">
+disconnected(connection: IConnection) : void</text>
+<text x="2112" y="443" style="font-family:Dialog; font-size:10;">
+stateChanged(connection: IConnection) : void</text>
+<rect x="470" y="372" width="349" height="278" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="470" y="372" width="348" height="277" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="470" y="372" width="349" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="470" y="372" width="348" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="596" y="387" style="font-family:Dialog; font-size:10;">
+ConnectionManager</text>
+<rect x="470" y="392" width="349" height="87" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="470" y="392" width="348" height="86" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="472" y1="409" x2="553" y2="409" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="472" y="408" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="472" y="425" style="font-family:Dialog; font-size:10;">
+connections : List</text>
+<text x="472" y="442" style="font-family:Dialog; font-size:10;">
+connectionListener : ConnectionListener</text>
+<text x="472" y="459" style="font-family:Dialog; font-size:10;">
+slotReservation : ConnectionSlotReservation</text>
+<text x="472" y="476" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<rect x="470" y="478" width="349" height="172" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="470" y="478" width="348" height="171" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="472" y="494" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ConnectionManager(_settings: ISettings)</text>
+<text x="472" y="511" style="font-family:Dialog; font-size:10;">
+getClientConnections() : IConnection[]</text>
+<text x="472" y="528" style="font-family:Dialog; font-size:10;">
+getConnection(connection: IConnection) : IConnection</text>
+<text x="472" y="545" style="font-family:Dialog; font-size:10;">
+addConnection(connection: IConnection) : boolean</text>
+<text x="472" y="562" style="font-family:Dialog; font-size:10;">
+contains(connection: IConnection) : boolean</text>
+<text x="472" y="579" style="font-family:Dialog; font-size:10;">
+updateSlotUsage(connection: IConnection) : void</text>
+<text x="472" y="596" style="font-family:Dialog; font-size:10;">
+updateSlotUsage(connection: IConnection,state: ConnectionState) : void</text>
+<text x="472" y="613" style="font-family:Dialog; font-size:10;">
+removeConnection(connection: IConnection) : void</text>
+<text x="472" y="630" style="font-family:Dialog; font-size:10;">
+start() : void</text>
+<text x="472" y="647" style="font-family:Dialog; font-size:10;">
+stop() : void</text>
+<rect x="2412" y="372" width="284" height="227" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2412" y="372" width="283" height="226" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2412" y="372" width="284" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2412" y="372" width="283" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2489" y="387" style="font-family:Dialog; font-size:10;">
+ConnectionSlotReservation</text>
+<rect x="2412" y="392" width="284" height="70" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2412" y="392" width="283" height="69" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="2414" y1="409" x2="2495" y2="409" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2414" y="408" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="2414" y="425" style="font-family:Dialog; font-size:10;">
+downloadConnections : List</text>
+<text x="2414" y="442" style="font-family:Dialog; font-size:10;">
+uploadConnections : List</text>
+<text x="2414" y="459" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<rect x="2412" y="461" width="284" height="138" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2412" y="461" width="283" height="137" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2414" y="477" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ConnectionSlotReservation(_settings: ISettings)</text>
+<text x="2414" y="494" style="font-family:Dialog; font-size:10;">
+freeDownloadSlot(conn: IConnection) : boolean</text>
+<text x="2414" y="511" style="font-family:Dialog; font-size:10;">
+useDownloadSlot(conn: IConnection) : boolean</text>
+<text x="2414" y="528" style="font-family:Dialog; font-size:10;">
+freeUploadSlot(conn: IConnection) : boolean</text>
+<text x="2414" y="545" style="font-family:Dialog; font-size:10;">
+useUploadSlot(conn: IConnection) : boolean</text>
+<text x="2414" y="562" style="font-family:Dialog; font-size:10;">
+removeConnection(conn: IConnection) : boolean</text>
+<text x="2414" y="579" style="font-family:Dialog; font-size:10;">
+getDownloadConnections() : List</text>
+<text x="2414" y="596" style="font-family:Dialog; font-size:10;">
+getUploadConnections() : List</text>
+<rect x="2776" y="372" width="232" height="499" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2776" y="372" width="231" height="498" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2776" y="372" width="232" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2776" y="372" width="231" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2852" y="387" style="font-family:Dialog; font-size:10;">
+ConnectionState</text>
+<rect x="2776" y="392" width="232" height="428" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2776" y="392" width="231" height="427" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="2778" y1="409" x2="2986" y2="409" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="408" style="font-family:Dialog; font-size:10;">
+COMMAND_DOWNLOAD : ConnectionState</text>
+<line x1="2778" y1="426" x2="2969" y2="426" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="425" style="font-family:Dialog; font-size:10;">
+COMMAND_UPLOAD : ConnectionState</text>
+<line x1="2778" y1="443" x2="2935" y2="443" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="442" style="font-family:Dialog; font-size:10;">
+CONNECTING : ConnectionState</text>
+<line x1="2778" y1="460" x2="2959" y2="460" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="459" style="font-family:Dialog; font-size:10;">
+NOT_CONNECTED : ConnectionState</text>
+<line x1="2778" y1="477" x2="2899" y2="477" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="476" style="font-family:Dialog; font-size:10;">
+LOGIN : ConnectionState</text>
+<line x1="2778" y1="494" x2="2975" y2="494" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="493" style="font-family:Dialog; font-size:10;">
+SETTING_DIRECTION : ConnectionState</text>
+<line x1="2778" y1="511" x2="2944" y2="511" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="510" style="font-family:Dialog; font-size:10;">
+DOWNLOADING : ConnectionState</text>
+<line x1="2778" y1="528" x2="2922" y2="528" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="527" style="font-family:Dialog; font-size:10;">
+RESUMING : ConnectionState</text>
+<line x1="2778" y1="545" x2="2980" y2="545" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="544" style="font-family:Dialog; font-size:10;">
+RESUME_SUCCEEDED : ConnectionState</text>
+<line x1="2778" y1="562" x2="2927" y2="562" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="561" style="font-family:Dialog; font-size:10;">
+UPLOADING : ConnectionState</text>
+<line x1="2778" y1="579" x2="3006" y2="579" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="578" style="font-family:Dialog; font-size:10;">
+COMPRESSED_UPLOADING : ConnectionState</text>
+<line x1="2778" y1="596" x2="2979" y2="596" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="595" style="font-family:Dialog; font-size:10;">
+DOWNLOAD_FINISHED : ConnectionState</text>
+<line x1="2778" y1="613" x2="2962" y2="613" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="612" style="font-family:Dialog; font-size:10;">
+UPLOAD_FINISHED : ConnectionState</text>
+<line x1="2778" y1="630" x2="2911" y2="630" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="629" style="font-family:Dialog; font-size:10;">
+WAITING : ConnectionState</text>
+<line x1="2778" y1="647" x2="2974" y2="647" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="646" style="font-family:Dialog; font-size:10;">
+REMOTELY_QUEUED : ConnectionState</text>
+<line x1="2778" y1="664" x2="2971" y2="664" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="663" style="font-family:Dialog; font-size:10;">
+NO_UPLOAD_SLOTS : ConnectionState</text>
+<line x1="2778" y1="681" x2="2988" y2="681" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="680" style="font-family:Dialog; font-size:10;">
+NO_DOWNLOAD_SLOTS : ConnectionState</text>
+<line x1="2778" y1="698" x2="2917" y2="698" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="697" style="font-family:Dialog; font-size:10;">
+ABORTED : ConnectionState</text>
+<line x1="2778" y1="715" x2="2953" y2="715" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="714" style="font-family:Dialog; font-size:10;">
+RESUME_FAILED : ConnectionState</text>
+<line x1="2778" y1="732" x2="2945" y2="732" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="731" style="font-family:Dialog; font-size:10;">
+CORRUPT_FILE : ConnectionState</text>
+<line x1="2778" y1="749" x2="2941" y2="749" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="748" style="font-family:Dialog; font-size:10;">
+INVALID_LOCK : ConnectionState</text>
+<line x1="2778" y1="766" x2="2969" y2="766" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="765" style="font-family:Dialog; font-size:10;">
+INVALID_DIRECTION : ConnectionState</text>
+<line x1="2778" y1="783" x2="2958" y2="783" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="782" style="font-family:Dialog; font-size:10;">
+FILE_NOT_FOUND : ConnectionState</text>
+<line x1="2778" y1="800" x2="2855" y2="800" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="799" style="font-family:Dialog; font-size:10;">
+transitions : Map</text>
+<text x="2778" y="816" style="font-family:Dialog; font-size:10;">
+info : String</text>
+<rect x="2776" y="819" width="232" height="52" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2776" y="819" width="231" height="51" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="835" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ConnectionState(name: String)</text>
+<line x1="2778" y1="853" x2="2991" y2="853" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="852" style="font-family:Dialog; font-size:10;">
+getTransition(state: ConnectionState) : String</text>
+<line x1="2778" y1="870" x2="2880" y2="870" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2778" y="869" style="font-family:Dialog; font-size:10;">
+getTransitions() : Map</text>
+<rect x="14" y="1393" width="204" height="465" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1393" width="203" height="464" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="1393" width="204" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1393" width="203" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="67" y="1408" style="font-family:Dialog; font-size:10;">
+ConnectionStatistics</text>
+<rect x="14" y="1413" width="204" height="172" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1413" width="203" height="171" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="16" y1="1430" x2="97" y2="1430" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="16" y="1429" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="16" y="1446" style="font-family:Dialog; font-size:10;">
+bytesPerSecond : int</text>
+<text x="16" y="1463" style="font-family:Dialog; font-size:10;">
+bytesReceived : long</text>
+<text x="16" y="1480" style="font-family:Dialog; font-size:10;">
+lastBytesReceived : long</text>
+<text x="16" y="1497" style="font-family:Dialog; font-size:10;">
+lastStateChange : long</text>
+<text x="16" y="1514" style="font-family:Dialog; font-size:10;">
+fileLength : long</text>
+<text x="16" y="1531" style="font-family:Dialog; font-size:10;">
+startTime : long</text>
+<text x="16" y="1548" style="font-family:Dialog; font-size:10;">
+infoBuffered : String</text>
+<text x="16" y="1565" style="font-family:Dialog; font-size:10;">
+lastUpdate : long</text>
+<text x="16" y="1582" style="font-family:Dialog; font-size:10;">
+startLocation : long</text>
+<rect x="14" y="1584" width="204" height="274" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1584" width="203" height="273" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="1600" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ConnectionStatistics()</text>
+<text x="16" y="1617" style="font-family:Dialog; font-size:10;">
+getBytesPerSecond() : int</text>
+<text x="16" y="1634" style="font-family:Dialog; font-size:10;">
+getBytesReceived() : long</text>
+<text x="16" y="1651" style="font-family:Dialog; font-size:10;">
+getLastBytesReceived() : long</text>
+<text x="16" y="1668" style="font-family:Dialog; font-size:10;">
+getLastStateChange() : long</text>
+<text x="16" y="1685" style="font-family:Dialog; font-size:10;">
+setBytesPerSecond(i: int) : void</text>
+<text x="16" y="1702" style="font-family:Dialog; font-size:10;">
+setBytesReceived(l: long) : void</text>
+<text x="16" y="1719" style="font-family:Dialog; font-size:10;">
+setLastBytesReceived(l: long) : void</text>
+<text x="16" y="1736" style="font-family:Dialog; font-size:10;">
+setLastStateChange(l: long) : void</text>
+<text x="16" y="1753" style="font-family:Dialog; font-size:10;">
+getConnectionInfo() : String</text>
+<text x="16" y="1770" style="font-family:Dialog; font-size:10;">
+getFileLength() : long</text>
+<text x="16" y="1787" style="font-family:Dialog; font-size:10;">
+setFileLength(l: long) : void</text>
+<text x="16" y="1804" style="font-family:Dialog; font-size:10;">
+getStartTime() : long</text>
+<text x="16" y="1821" style="font-family:Dialog; font-size:10;">
+setStartTime(l: long) : void</text>
+<text x="16" y="1838" style="font-family:Dialog; font-size:10;">
+setStartLocation(startLocation: long) : void</text>
+<text x="16" y="1855" style="font-family:Dialog; font-size:10;">
+getStartLocation() : long</text>
+<rect x="14" y="14" width="376" height="159" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="14" width="375" height="158" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="14" width="376" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="14" width="375" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="169" y="29" style="font-family:Dialog; font-size:10; font-style:italic;">
+AbstractClient</text>
+<rect x="14" y="34" width="376" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="34" width="375" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="50" style="font-family:Dialog; font-size:10;">
+host : HostInfo</text>
+<rect x="14" y="51" width="376" height="122" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="51" width="375" height="121" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="67" style="font-family:Dialog; font-size:10;">
+fireBrowseListDownloaded(dr: DownloadRequest) : void</text>
+<text x="16" y="84" style="font-family:Dialog; font-size:10;">
+fireDownloadAdded(dr: DownloadRequest) : void</text>
+<text x="16" y="101" style="font-family:Dialog; font-size:10;">
+fireDownloadRemoved(dr: DownloadRequest) : void</text>
+<text x="16" y="118" style="font-family:Dialog; font-size:10;">
+fireReceivedNick() : void</text>
+<text x="16" y="135" style="font-family:Dialog; font-size:10;">
+fireConnectionRequested(isServer: boolean,listener: ConnectionListener) : void</text>
+<text x="16" y="152" style="font-family:Dialog; font-size:10;">
+equals(obj: Object) : boolean</text>
+<text x="16" y="169" style="font-family:Dialog; font-size:10;">
+getListenerClass() : Class</text>
+<rect x="470" y="14" width="323" height="108" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="470" y="14" width="322" height="107" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="470" y="14" width="323" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="470" y="14" width="322" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="565" y="29" style="font-family:Dialog; font-size:10; font-style:italic;">
+AbstractConnectionManager</text>
+<rect x="470" y="34" width="323" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="470" y="34" width="322" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="470" y="51" width="323" height="71" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="470" y="51" width="322" height="70" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="472" y="67" style="font-family:Dialog; font-size:10;">
+fireClientConnectionAdded(connection: IConnection) : void</text>
+<text x="472" y="84" style="font-family:Dialog; font-size:10;">
+fireClientConnectionStateChanged(connection: IConnection) : void</text>
+<text x="472" y="101" style="font-family:Dialog; font-size:10;">
+fireClientConnectionRemoved(connection: IConnection) : void</text>
+<text x="472" y="118" style="font-family:Dialog; font-size:10;">
+getListenerClass() : Class</text>
+<rect x="873" y="14" width="147" height="176" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="873" y="14" width="146" height="175" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="873" y="14" width="147" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="873" y="14" width="146" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="900" y="29" style="font-family:Dialog; font-size:10; font-style:italic;">
+AbstractConnection</text>
+<rect x="873" y="34" width="147" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="873" y="34" width="146" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="873" y="51" width="147" height="139" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="873" y="51" width="146" height="138" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="875" y="67" style="font-family:Dialog; font-size:10;">
+fireDownloadComplete() : void</text>
+<text x="875" y="84" style="font-family:Dialog; font-size:10;">
+fireDownloadFailed() : void</text>
+<text x="875" y="101" style="font-family:Dialog; font-size:10;">
+fireStateChanged() : void</text>
+<text x="875" y="118" style="font-family:Dialog; font-size:10;">
+fireDisconnected() : void</text>
+<text x="875" y="135" style="font-family:Dialog; font-size:10;">
+fireUploadComplete() : void</text>
+<text x="875" y="152" style="font-family:Dialog; font-size:10;">
+fireUploadFailed() : void</text>
+<text x="875" y="169" style="font-family:Dialog; font-size:10;">
+equals(obj: Object) : boolean</text>
+<text x="875" y="186" style="font-family:Dialog; font-size:10;">
+getListenerClass() : Class</text>
+<rect x="894" y="372" width="1136" height="941" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="894" y="372" width="1135" height="940" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="894" y="372" width="1136" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="894" y="372" width="1135" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1434" y="387" style="font-family:Dialog; font-size:10;">
+Connection</text>
+<rect x="894" y="392" width="1136" height="308" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="894" y="392" width="1135" height="307" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="896" y1="409" x2="977" y2="409" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="896" y="408" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="896" y="425" style="font-family:Dialog; font-size:10;">
+downloadRequest : DownloadRequest</text>
+<text x="896" y="442" style="font-family:Dialog; font-size:10;">
+uploadRequest : UploadRequest</text>
+<text x="896" y="459" style="font-family:Dialog; font-size:10;">
+localFile : RandomAccessFile</text>
+<text x="896" y="476" style="font-family:Dialog; font-size:10;">
+disconnectTask : IClientTask</text>
+<text x="896" y="493" style="font-family:Dialog; font-size:10;">
+isServer : boolean</text>
+<text x="896" y="510" style="font-family:Dialog; font-size:10;">
+reader : TokenInputStream</text>
+<text x="896" y="527" style="font-family:Dialog; font-size:10;">
+serverSocket : ServerSocket</text>
+<text x="896" y="544" style="font-family:Dialog; font-size:10;">
+socket : Socket</text>
+<text x="896" y="561" style="font-family:Dialog; font-size:10;">
+writer : ExtendedBufferedOutputStream</text>
+<text x="896" y="578" style="font-family:Dialog; font-size:10;">
+statistics : ConnectionStatistics</text>
+<text x="896" y="595" style="font-family:Dialog; font-size:10;">
+state : ConnectionState</text>
+<text x="896" y="612" style="font-family:Dialog; font-size:10;">
+client : Client</text>
+<text x="896" y="629" style="font-family:Dialog; font-size:10;">
+connectionInfo : ConnectionInfo</text>
+<text x="896" y="646" style="font-family:Dialog; font-size:10;">
+taskManager : ITaskManager</text>
+<text x="896" y="663" style="font-family:Dialog; font-size:10;">
+clientConnectionManager : IConnectionManager</text>
+<text x="896" y="680" style="font-family:Dialog; font-size:10;">
+clientManager : IClientManager</text>
+<text x="896" y="697" style="font-family:Dialog; font-size:10;">
+clientTaskFactory : IClientTaskFactory</text>
+<rect x="894" y="699" width="1136" height="614" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="894" y="699" width="1135" height="613" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="896" y="715" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; Connection(_client: Client,listener: ConnectionListener,_isServer: boolean,_taskManager: ITaskManager,_clientConnectionManager: IConnectionManager,_clientManager: IClientManager,_clientTaskFactory: IClientTaskFactory)</text>
+<text x="896" y="732" style="font-family:Dialog; font-size:10;">
+closeFile() : void</text>
+<text x="896" y="749" style="font-family:Dialog; font-size:10;">
+disconnect() : void</text>
+<text x="896" y="766" style="font-family:Dialog; font-size:10;">
+getClient() : Client</text>
+<text x="896" y="783" style="font-family:Dialog; font-size:10;">
+getDownload() : DownloadRequest</text>
+<text x="896" y="800" style="font-family:Dialog; font-size:10;">
+getDownloadRequest() : DownloadRequest</text>
+<text x="896" y="817" style="font-family:Dialog; font-size:10;">
+getLocalFile() : RandomAccessFile</text>
+<text x="896" y="834" style="font-family:Dialog; font-size:10;">
+getReader() : TokenInputStream</text>
+<text x="896" y="851" style="font-family:Dialog; font-size:10;">
+getServerSocket() : ServerSocket</text>
+<text x="896" y="868" style="font-family:Dialog; font-size:10;">
+getSocket() : Socket</text>
+<text x="896" y="885" style="font-family:Dialog; font-size:10;">
+getState() : ConnectionState</text>
+<text x="896" y="902" style="font-family:Dialog; font-size:10;">
+getWriter() : ExtendedBufferedOutputStream</text>
+<text x="896" y="919" style="font-family:Dialog; font-size:10;">
+isServer() : boolean</text>
+<text x="896" y="936" style="font-family:Dialog; font-size:10;">
+processCommand(cmdString: String) : void</text>
+<text x="896" y="953" style="font-family:Dialog; font-size:10;">
+requestDirection(direction: String,force: boolean) : boolean</text>
+<text x="896" y="970" style="font-family:Dialog; font-size:10;">
+run() : void</text>
+<text x="896" y="987" style="font-family:Dialog; font-size:10;">
+establishConnection() : void</text>
+<text x="896" y="1004" style="font-family:Dialog; font-size:10;">
+runTask() : void</text>
+<text x="896" y="1021" style="font-family:Dialog; font-size:10;">
+runActiveTask(taskString: String) : void</text>
+<text x="896" y="1038" style="font-family:Dialog; font-size:10;">
+runPassiveTask(useTimeout: boolean) : void</text>
+<text x="896" y="1055" style="font-family:Dialog; font-size:10;">
+sendCommand(command: String,data: String) : void</text>
+<text x="896" y="1072" style="font-family:Dialog; font-size:10;">
+serverConnect() : void</text>
+<text x="896" y="1089" style="font-family:Dialog; font-size:10;">
+setDownload(dr: DownloadRequest) : void</text>
+<text x="896" y="1106" style="font-family:Dialog; font-size:10;">
+setDownloadRequest(request: DownloadRequest) : void</text>
+<text x="896" y="1123" style="font-family:Dialog; font-size:10;">
+setLocalFile(file: RandomAccessFile) : void</text>
+<text x="896" y="1140" style="font-family:Dialog; font-size:10;">
+setReader(stream: TokenInputStream) : void</text>
+<text x="896" y="1157" style="font-family:Dialog; font-size:10;">
+setServerSocket(socket: ServerSocket) : void</text>
+<text x="896" y="1174" style="font-family:Dialog; font-size:10;">
+setSocket(_socket: Socket) : void</text>
+<text x="896" y="1191" style="font-family:Dialog; font-size:10;">
+setState(_state: ConnectionState) : void</text>
+<text x="896" y="1208" style="font-family:Dialog; font-size:10;">
+setWriter(stream: ExtendedBufferedOutputStream) : void</text>
+<text x="896" y="1225" style="font-family:Dialog; font-size:10;">
+getStatistics() : ConnectionStatistics</text>
+<text x="896" y="1242" style="font-family:Dialog; font-size:10;">
+updateConnectionInfo() : void</text>
+<text x="896" y="1259" style="font-family:Dialog; font-size:10;">
+getUploadRequest() : UploadRequest</text>
+<text x="896" y="1276" style="font-family:Dialog; font-size:10;">
+setUploadRequest(uploadRequest: UploadRequest) : void</text>
+<text x="896" y="1293" style="font-family:Dialog; font-size:10;">
+getConnectionInfo() : ConnectionInfo</text>
+<text x="896" y="1310" style="font-family:Dialog; font-size:10;">
+toString() : String</text>
+<rect x="298" y="1393" width="250" height="346" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="298" y="1393" width="249" height="345" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="298" y="1393" width="250" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="298" y="1393" width="249" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="386" y="1408" style="font-family:Dialog; font-size:10;">
+ConnectionInfo</text>
+<rect x="298" y="1413" width="250" height="103" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="298" y="1413" width="249" height="102" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="300" y="1429" style="font-family:Dialog; font-size:10;">
+useCompression : boolean</text>
+<text x="300" y="1446" style="font-family:Dialog; font-size:10;">
+bytesToUpload : long</text>
+<text x="300" y="1463" style="font-family:Dialog; font-size:10;">
+verifyResumeSize : int</text>
+<text x="300" y="1480" style="font-family:Dialog; font-size:10;">
+currentDirection : String</text>
+<text x="300" y="1497" style="font-family:Dialog; font-size:10;">
+remoteKey : String</text>
+<text x="300" y="1514" style="font-family:Dialog; font-size:10;">
+info : String</text>
+<rect x="298" y="1515" width="250" height="224" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="298" y="1515" width="249" height="223" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="300" y="1531" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ConnectionInfo()</text>
+<text x="300" y="1548" style="font-family:Dialog; font-size:10;">
+getBytesToUpload() : long</text>
+<text x="300" y="1565" style="font-family:Dialog; font-size:10;">
+setBytesToUpload(bytesToUpload: long) : void</text>
+<text x="300" y="1582" style="font-family:Dialog; font-size:10;">
+getCurrentDirection() : String</text>
+<text x="300" y="1599" style="font-family:Dialog; font-size:10;">
+setCurrentDirection(currentDirection: String) : void</text>
+<text x="300" y="1616" style="font-family:Dialog; font-size:10;">
+getInfo() : String</text>
+<text x="300" y="1633" style="font-family:Dialog; font-size:10;">
+setInfo(info: String) : void</text>
+<text x="300" y="1650" style="font-family:Dialog; font-size:10;">
+getRemoteKey() : String</text>
+<text x="300" y="1667" style="font-family:Dialog; font-size:10;">
+setRemoteKey(remoteKey: String) : void</text>
+<text x="300" y="1684" style="font-family:Dialog; font-size:10;">
+isUseCompression() : boolean</text>
+<text x="300" y="1701" style="font-family:Dialog; font-size:10;">
+setUseCompression(useCompression: boolean) : void</text>
+<text x="300" y="1718" style="font-family:Dialog; font-size:10;">
+getVerifyResumeSize() : int</text>
+<text x="300" y="1735" style="font-family:Dialog; font-size:10;">
+setVerifyResumeSize(verifyResumeSize: int) : void</text>
+<rect x="628" y="1393" width="249" height="142" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="628" y="1393" width="248" height="141" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="628" y="1393" width="249" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="628" y="1393" width="248" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="699" y="1408" style="font-family:Dialog; font-size:10;">
+MyConnectionListener</text>
+<rect x="628" y="1413" width="249" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="628" y="1413" width="248" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="628" y="1430" width="249" height="105" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="628" y="1430" width="248" height="104" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="630" y="1446" style="font-family:Dialog; font-size:10;">
+disconnected(connection: IConnection) : void</text>
+<text x="630" y="1463" style="font-family:Dialog; font-size:10;">
+stateChanged(connection: IConnection) : void</text>
+<text x="630" y="1480" style="font-family:Dialog; font-size:10;">
+downloadComplete(connection: IConnection) : void</text>
+<text x="630" y="1497" style="font-family:Dialog; font-size:10;">
+downloadFailed(connection: IConnection) : void</text>
+<text x="630" y="1514" style="font-family:Dialog; font-size:10;">
+uploadComplete(connection: IConnection) : void</text>
+<text x="630" y="1531" style="font-family:Dialog; font-size:10;">
+uploadFailed(connection: IConnection) : void</text>
+<rect x="14" y="372" width="304" height="533" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="372" width="303" height="532" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="372" width="304" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="372" width="303" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="152" y="387" style="font-family:Dialog; font-size:10;">
+Client</text>
+<rect x="14" y="392" width="304" height="120" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="392" width="303" height="119" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="16" y1="409" x2="97" y2="409" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="16" y="408" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="16" y="425" style="font-family:Dialog; font-size:10;">
+downloads : List</text>
+<text x="16" y="442" style="font-family:Dialog; font-size:10;">
+connection : IConnection</text>
+<text x="16" y="459" style="font-family:Dialog; font-size:10;">
+nick : String</text>
+<text x="16" y="476" style="font-family:Dialog; font-size:10;">
+bZSupport : boolean</text>
+<text x="16" y="493" style="font-family:Dialog; font-size:10;">
+connectionListener : ConnectionListener</text>
+<text x="16" y="510" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<rect x="14" y="511" width="304" height="394" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="511" width="303" height="393" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="527" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; Client(_host: HostInfo,_settings: ISettings)</text>
+<text x="16" y="544" style="font-family:Dialog; font-size:10;">
+addDownload(dr: DownloadRequest) : void</text>
+<text x="16" y="561" style="font-family:Dialog; font-size:10;">
+addDownloads(drs: DownloadRequest[]) : void</text>
+<text x="16" y="578" style="font-family:Dialog; font-size:10;">
+checkDownloads() : void</text>
+<text x="16" y="595" style="font-family:Dialog; font-size:10;">
+connect() : void</text>
+<text x="16" y="612" style="font-family:Dialog; font-size:10;">
+disconnect() : void</text>
+<text x="16" y="629" style="font-family:Dialog; font-size:10;">
+getDownload(index: int) : DownloadRequest</text>
+<text x="16" y="646" style="font-family:Dialog; font-size:10;">
+getDownloads() : DownloadRequest[]</text>
+<text x="16" y="663" style="font-family:Dialog; font-size:10;">
+getHost() : HostInfo</text>
+<text x="16" y="680" style="font-family:Dialog; font-size:10;">
+getLastDownloadInQueue() : DownloadRequest</text>
+<text x="16" y="697" style="font-family:Dialog; font-size:10;">
+getNick() : String</text>
+<text x="16" y="714" style="font-family:Dialog; font-size:10;">
+hasDownloads() : boolean</text>
+<text x="16" y="731" style="font-family:Dialog; font-size:10;">
+removeAllDownloads() : void</text>
+<text x="16" y="748" style="font-family:Dialog; font-size:10;">
+removeDownload(dr: DownloadRequest) : void</text>
+<text x="16" y="765" style="font-family:Dialog; font-size:10;">
+removeDownload(index: int) : void</text>
+<text x="16" y="782" style="font-family:Dialog; font-size:10;">
+setHost(updatedHost: HostInfo) : void</text>
+<text x="16" y="799" style="font-family:Dialog; font-size:10;">
+setNick(nick: String) : void</text>
+<text x="16" y="816" style="font-family:Dialog; font-size:10;">
+updateDownloadRequestStates(connection: IConnection) : void</text>
+<text x="16" y="833" style="font-family:Dialog; font-size:10;">
+isBZSupport() : boolean</text>
+<text x="16" y="850" style="font-family:Dialog; font-size:10;">
+setBZSupport(b: boolean) : void</text>
+<text x="16" y="867" style="font-family:Dialog; font-size:10;">
+getConnection() : IConnection</text>
+<text x="16" y="884" style="font-family:Dialog; font-size:10;">
+setConnection(connection: IConnection) : void</text>
+<text x="16" y="901" style="font-family:Dialog; font-size:10;">
+toString() : String</text>
+<polyline style="fill:none; stroke:#000000; stroke-width:1" points="644,372 644,340 631,340 631,122"/>
+<polygon style="fill:#ffffff; stroke:#ffffff; stroke-width:1" points="631,122 638,134 624,134"/>
+<polygon style="fill:none; stroke:#000000; stroke-width:1" points="631,122 638,134 624,134"/>
+<polyline style="fill:none; stroke:#000000; stroke-width:1" points="1462,372 1462,340 946,340 946,190"/>
+<polygon style="fill:#ffffff; stroke:#ffffff; stroke-width:1" points="946,190 953,202 939,202"/>
+<polygon style="fill:none; stroke:#000000; stroke-width:1" points="946,190 953,202 939,202"/>
+<polyline style="fill:none; stroke:#000000; stroke-width:1" points="166,372 166,340 202,340 202,173"/>
+<polygon style="fill:#ffffff; stroke:#ffffff; stroke-width:1" points="202,173 209,185 195,185"/>
+<polygon style="fill:none; stroke:#000000; stroke-width:1" points="202,173 209,185 195,185"/>
+</svg>

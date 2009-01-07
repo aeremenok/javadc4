@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 20001102//EN' 'http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd'>
+<svg xmlns="http://www.w3.org/2000/svg" width="1702" height="452">
+<rect x="14" y="194" width="253" height="227" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="194" width="252" height="226" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="194" width="253" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="194" width="252" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="103" y="209" style="font-family:Dialog; font-size:10; font-style:italic;">
+BaseClientTask</text>
+<rect x="14" y="214" width="253" height="70" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="214" width="252" height="69" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="16" y1="231" x2="97" y2="231" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="16" y="230" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="16" y="247" style="font-family:Dialog; font-size:10;">
+clientConnection : IConnection</text>
+<text x="16" y="264" style="font-family:Dialog; font-size:10;">
+cmdData : String</text>
+<text x="16" y="281" style="font-family:Dialog; font-size:10;">
+exceptions : List</text>
+<rect x="14" y="283" width="253" height="138" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="283" width="252" height="137" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="299" style="font-family:Dialog; font-size:10;">
+getClientConnection() : IConnection</text>
+<text x="16" y="316" style="font-family:Dialog; font-size:10;">
+getCmdData() : String</text>
+<text x="16" y="333" style="font-family:Dialog; font-size:10;">
+runTask() : void</text>
+<text x="16" y="350" style="font-family:Dialog; font-size:10; font-style:italic;">
+runTaskTemplate() : void</text>
+<text x="16" y="367" style="font-family:Dialog; font-size:10;">
+sendCommand(command: String,data: String) : void</text>
+<text x="16" y="384" style="font-family:Dialog; font-size:10;">
+setClientConnection(connection: IConnection) : void</text>
+<text x="16" y="401" style="font-family:Dialog; font-size:10;">
+setCmdData(string: String) : void</text>
+<text x="16" y="418" style="font-family:Dialog; font-size:10;">
+getExceptions() : List</text>
+<rect x="347" y="194" width="250" height="244" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="347" y="194" width="249" height="243" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="347" y="194" width="250" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="347" y="194" width="249" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="439" y="209" style="font-family:Dialog; font-size:10; font-style:italic;">
+BaseHubTask</text>
+<rect x="347" y="214" width="250" height="69" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="347" y="214" width="249" height="68" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="349" y1="231" x2="430" y2="231" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="349" y="230" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="349" y="247" style="font-family:Dialog; font-size:10;">
+cmdData : String</text>
+<text x="349" y="264" style="font-family:Dialog; font-size:10;">
+hub : IHub</text>
+<text x="349" y="281" style="font-family:Dialog; font-size:10;">
+exceptions : List</text>
+<rect x="347" y="282" width="250" height="156" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="347" y="282" width="249" height="155" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="349" y="298" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; BaseHubTask()</text>
+<text x="349" y="315" style="font-family:Dialog; font-size:10;">
+getCmdData() : String</text>
+<text x="349" y="332" style="font-family:Dialog; font-size:10;">
+getHub() : IHub</text>
+<text x="349" y="349" style="font-family:Dialog; font-size:10;">
+runTask() : void</text>
+<text x="349" y="366" style="font-family:Dialog; font-size:10; font-style:italic;">
+runTaskTemplate() : void</text>
+<text x="349" y="383" style="font-family:Dialog; font-size:10;">
+sendCommand(command: String,data: String) : void</text>
+<text x="349" y="400" style="font-family:Dialog; font-size:10;">
+setCmdData(string: String) : void</text>
+<text x="349" y="417" style="font-family:Dialog; font-size:10;">
+setHub(hub: IHub) : void</text>
+<text x="349" y="434" style="font-family:Dialog; font-size:10;">
+getExceptions() : List</text>
+<rect x="677" y="194" width="207" height="142" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="677" y="194" width="206" height="141" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="677" y="194" width="207" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="677" y="194" width="206" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="743" y="209" style="font-family:Dialog; font-size:10;">
+HubTaskFactory</text>
+<rect x="677" y="214" width="207" height="35" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="677" y="214" width="206" height="34" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="679" y1="231" x2="760" y2="231" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="679" y="230" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="679" y="247" style="font-family:Dialog; font-size:10;">
+factory : HubTaskObjectFactory</text>
+<rect x="677" y="248" width="207" height="88" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="677" y="248" width="206" height="87" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="679" y="264" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; HubTaskFactory()</text>
+<text x="679" y="281" style="font-family:Dialog; font-size:10;">
+borrowObject(key: Object) : Object</text>
+<text x="679" y="298" style="font-family:Dialog; font-size:10;">
+returnObject(key: Object,obj: Object) : void</text>
+<text x="679" y="315" style="font-family:Dialog; font-size:10;">
+start() : void</text>
+<text x="679" y="332" style="font-family:Dialog; font-size:10;">
+stop() : void</text>
+<rect x="964" y="194" width="183" height="108" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="964" y="194" width="182" height="107" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="964" y="194" width="183" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="964" y="194" width="182" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="997" y="209" style="font-family:Dialog; font-size:10;">
+ClientTaskObjectFactory</text>
+<rect x="964" y="214" width="183" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="964" y="214" width="182" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="966" y1="231" x2="1047" y2="231" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="966" y="230" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="966" y="247" style="font-family:Dialog; font-size:10;">
+componentAdapters : Map</text>
+<rect x="964" y="249" width="183" height="53" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="964" y="249" width="182" height="52" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="966" y="265" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ClientTaskObjectFactory()</text>
+<text x="966" y="282" style="font-family:Dialog; font-size:10;">
+initialize() : void</text>
+<text x="966" y="299" style="font-family:Dialog; font-size:10;">
+makeObject(arg0: Object) : Object</text>
+<rect x="1227" y="194" width="174" height="108" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1227" y="194" width="173" height="107" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1227" y="194" width="174" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1227" y="194" width="173" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1260" y="209" style="font-family:Dialog; font-size:10;">
+HubTaskObjectFactory</text>
+<rect x="1227" y="214" width="174" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1227" y="214" width="173" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1229" y1="231" x2="1310" y2="231" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1229" y="230" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="1229" y="247" style="font-family:Dialog; font-size:10;">
+componentAdapters : Map</text>
+<rect x="1227" y="249" width="174" height="53" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1227" y="249" width="173" height="52" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1229" y="265" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; HubTaskObjectFactory()</text>
+<text x="1229" y="282" style="font-family:Dialog; font-size:10;">
+initialize() : void</text>
+<text x="1229" y="299" style="font-family:Dialog; font-size:10;">
+makeObject(arg0: Object) : Object</text>
+<rect x="1481" y="194" width="207" height="142" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1481" y="194" width="206" height="141" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1481" y="194" width="207" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1481" y="194" width="206" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1542" y="209" style="font-family:Dialog; font-size:10;">
+ClientTaskFactory</text>
+<rect x="1481" y="214" width="207" height="35" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1481" y="214" width="206" height="34" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1483" y1="231" x2="1564" y2="231" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1483" y="230" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="1483" y="247" style="font-family:Dialog; font-size:10;">
+factory : ClientTaskObjectFactory</text>
+<rect x="1481" y="248" width="207" height="88" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1481" y="248" width="206" height="87" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1483" y="264" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ClientTaskFactory()</text>
+<text x="1483" y="281" style="font-family:Dialog; font-size:10;">
+borrowObject(key: Object) : Object</text>
+<text x="1483" y="298" style="font-family:Dialog; font-size:10;">
+returnObject(key: Object,obj: Object) : void</text>
+<text x="1483" y="315" style="font-family:Dialog; font-size:10;">
+start() : void</text>
+<text x="1483" y="332" style="font-family:Dialog; font-size:10;">
+stop() : void</text>
+<rect x="14" y="14" width="90" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="14" width="89" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="15" y="29" style="font-family:Dialog; font-size:10;">
+client</text>
+<rect x="14" y="34" width="140" height="80" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="34" width="139" height="79" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="234" y="14" width="90" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="234" y="14" width="89" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="235" y="29" style="font-family:Dialog; font-size:10;">
+client</text>
+<rect x="234" y="34" width="140" height="80" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="234" y="34" width="139" height="79" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="454" y="14" width="90" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="454" y="14" width="89" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="455" y="29" style="font-family:Dialog; font-size:10;">
+hub</text>
+<rect x="454" y="34" width="140" height="80" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="454" y="34" width="139" height="79" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="674" y="14" width="90" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="674" y="14" width="89" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="675" y="29" style="font-family:Dialog; font-size:10;">
+hub</text>
+<rect x="674" y="34" width="140" height="80" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="674" y="34" width="139" height="79" style="fill: none; stroke:#000000; stroke-width:1"/>
+</svg>

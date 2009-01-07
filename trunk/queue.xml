@@ -1,0 +1,810 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.4.2_05" class="java.beans.XMLDecoder"> 
+ <object class="java.util.ArrayList"> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.SearchResultInfo"> 
+    <void property="fileSize"> 
+     <long>6561280</long> 
+    </void> 
+    <void property="filename"> 
+     <string>temp\Victoria Silvstedt - Calendar 2004.avi</string> 
+    </void> 
+    <void property="host"> 
+     <object class="net.sf.javadc.net.hub.HostInfo"> 
+      <void property="host"> 
+       <string>62.72.253.178</string> 
+      </void> 
+      <void property="port"> 
+       <int>2000</int> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="hub"> 
+     <object class="net.sf.javadc.net.hub.HubInfo"> 
+      <void property="address"> 
+       <object id="HostInfo0" class="net.sf.javadc.net.hub.HostInfo"> 
+        <void property="host"> 
+         <string>liberty4.mine.nu</string> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="name"> 
+       <string>[BBB]Sweden Liberty #04 - Liberty3.mine.nu is now up and running again =)</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="nick"> 
+     <string>BurzumX</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.SearchResultInfo"> 
+    <void property="fileSize"> 
+     <long>397744128</long> 
+    </void> 
+    <void property="filename"> 
+     <string>anders mapp\Movies\xXx\jennyMcCarthy_playboy[3].DVDrip-TIAWR (streamload).avi</string> 
+    </void> 
+    <void property="host"> 
+     <object class="net.sf.javadc.net.hub.HostInfo"> 
+      <void property="host"> 
+       <string>213.65.194.120</string> 
+      </void> 
+      <void property="port"> 
+       <int>12295</int> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="hub"> 
+     <object class="net.sf.javadc.net.hub.HubInfo"> 
+      <void property="address"> 
+       <object idref="HostInfo0"/> 
+      </void> 
+      <void property="name"> 
+       <string>[BBB]Sweden Liberty #04 - Liberty3.mine.nu is now up and running again =)</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="nick"> 
+     <string>Shamsky</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.SearchResultInfo"> 
+    <void property="fileSize"> 
+     <long>10789029</long> 
+    </void> 
+    <void property="filename"> 
+     <string>new files\PlayboyTracySmithSpanish.avi</string> 
+    </void> 
+    <void property="host"> 
+     <object class="net.sf.javadc.net.hub.HostInfo"> 
+      <void property="host"> 
+       <string>220.240.119.89</string> 
+      </void> 
+      <void property="port"> 
+       <int>1700</int> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="hub"> 
+     <object class="net.sf.javadc.net.hub.HubInfo"> 
+      <void property="address"> 
+       <object idref="HostInfo0"/> 
+      </void> 
+      <void property="name"> 
+       <string>[BBB]Sweden Liberty #04 - Liberty3.mine.nu is now up and running again =)</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="nick"> 
+     <string>[AUS]StarrDog</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.SearchResultInfo"> 
+    <void property="fileSize"> 
+     <long>2543616</long> 
+    </void> 
+    <void property="filename"> 
+     <string>xxx\Striptease - Lisa Boyle.mpeg</string> 
+    </void> 
+    <void property="host"> 
+     <object class="net.sf.javadc.net.hub.HostInfo"> 
+      <void property="host"> 
+       <string>213.89.93.130</string> 
+      </void> 
+      <void property="port"> 
+       <int>5594</int> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="hub"> 
+     <object class="net.sf.javadc.net.hub.HubInfo"> 
+      <void property="address"> 
+       <object id="HostInfo1" class="net.sf.javadc.net.hub.HostInfo"> 
+        <void property="host"> 
+         <string>hub8.lightnetwork.org</string> 
+        </void> 
+        <void property="port"> 
+         <int>5415</int> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="description"> 
+       <string>&lt;R:100%,S:Online,C:se&gt; [NEW ADRESS] Min 1gb</string> 
+      </void> 
+      <void property="name"> 
+       <string>[LightNetwork] DSL#08</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="nick"> 
+     <string>Saeed</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.SearchResultInfo"> 
+    <void property="fileSize"> 
+     <long>27334656</long> 
+    </void> 
+    <void property="filename"> 
+     <string>d:\Documents and Settings\fireman\Desktop\£illa £ia\music\Sexy Babes - Playboy - Blonde Dream.avi</string> 
+    </void> 
+    <void property="host"> 
+     <object class="net.sf.javadc.net.hub.HostInfo"> 
+      <void property="host"> 
+       <string>213.100.238.116</string> 
+      </void> 
+      <void property="port"> 
+       <int>3087</int> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="hub"> 
+     <object class="net.sf.javadc.net.hub.HubInfo"> 
+      <void property="address"> 
+       <object idref="HostInfo1"/> 
+      </void> 
+      <void property="description"> 
+       <string>&lt;R:100%,S:Online,C:se&gt; [NEW ADRESS] Min 1gb</string> 
+      </void> 
+      <void property="name"> 
+       <string>[LightNetwork] #08</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="nick"> 
+     <string>[tele2]fishicman</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.SearchResultInfo"> 
+    <void property="fileSize"> 
+     <long>8646660</long> 
+    </void> 
+    <void property="filename"> 
+     <string>moje\kania  filmy\CFF\XXX\Playboy Casting Call(College Girls).mpg</string> 
+    </void> 
+    <void property="host"> 
+     <object class="net.sf.javadc.net.hub.HostInfo"> 
+      <void property="host"> 
+       <string>83.29.82.55</string> 
+      </void> 
+      <void property="port"> 
+       <int>4659</int> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="hub"> 
+     <object class="net.sf.javadc.net.hub.HubInfo"> 
+      <void property="address"> 
+       <object idref="HostInfo1"/> 
+      </void> 
+      <void property="description"> 
+       <string>&lt;R:100%,S:Online,C:se&gt; [NEW ADRESS] Min 1gb</string> 
+      </void> 
+      <void property="name"> 
+       <string>[LightNetwork] #08 - Visit our website @ http://www.lightnetwork.org</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="nick"> 
+     <string>...:::husky...::::</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.SearchResultInfo"> 
+    <void property="fileSize"> 
+     <long>2401872</long> 
+    </void> 
+    <void property="filename"> 
+     <string>download\jessica simpson nude - Making of playboy (1).asf</string> 
+    </void> 
+    <void property="host"> 
+     <object class="net.sf.javadc.net.hub.HostInfo"> 
+      <void property="host"> 
+       <string>172.189.58.114</string> 
+      </void> 
+      <void property="port"> 
+       <int>8024</int> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="hub"> 
+     <object class="net.sf.javadc.net.hub.HubInfo"> 
+      <void property="address"> 
+       <object id="HostInfo2" class="net.sf.javadc.net.hub.HostInfo"> 
+        <void property="host"> 
+         <string>195.38.5.86</string> 
+        </void> 
+        <void property="port"> 
+         <int>7880</int> 
+        </void> 
+       </object> 
+      </void> 
+      <void property="name"> 
+       <string>RepliCa][1GB][Camelot - 20 GB Original Realeses? PM [RepliCa]MadDude [VIP]Malm or [RepliCa]Beck for a reg to our RAR hub</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="nick"> 
+     <string>Mouserockstheparty</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.SearchResultInfo"> 
+    <void property="fileSize"> 
+     <long>5850144</long> 
+    </void> 
+    <void property="filename"> 
+     <string>programmer etc\ebooks\(ebook) - Stephen King - Black House.pdf</string> 
+    </void> 
+    <void property="host"> 
+     <object class="net.sf.javadc.net.hub.HostInfo"> 
+      <void property="host"> 
+       <string>84.118.237.52</string> 
+      </void> 
+      <void property="port"> 
+       <int>22301</int> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="hub"> 
+     <object class="net.sf.javadc.net.hub.HubInfo"> 
+      <void property="address"> 
+       <object idref="HostInfo1"/> 
+      </void> 
+      <void property="description"> 
+       <string>&lt;R:100%,S:Online,C:se&gt; [NEW ADRESS] Min 1gb</string> 
+      </void> 
+      <void property="name"> 
+       <string>[LightNetwork] #08 - Visit our website @ http://www.lightnetwork.org</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="nick"> 
+     <string>Kaare</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.SearchResultInfo"> 
+    <void property="fileSize"> 
+     <long>653332480</long> 
+    </void> 
+    <void property="filename"> 
+     <string>incoming\Krista Allen - Emmanuelle V - A Time To Dream 2CH DKWWL DivX.avi</string> 
+    </void> 
+    <void property="host"> 
+     <object class="net.sf.javadc.net.hub.HostInfo"> 
+      <void property="host"> 
+       <string>81.59.128.231</string> 
+      </void> 
+      <void property="port"> 
+       <int>1836</int> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="hub"> 
+     <object class="net.sf.javadc.net.hub.HubInfo"> 
+      <void property="address"> 
+       <object idref="HostInfo1"/> 
+      </void> 
+      <void property="description"> 
+       <string>&lt;R:100%,S:Online,C:se&gt; [NEW ADRESS] Min 1gb</string> 
+      </void> 
+      <void property="name"> 
+       <string>[LightNetwork] DSL#08</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="nick"> 
+     <string>SHARKK</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.SearchResultInfo"> 
+    <void property="fileSize"> 
+     <long>68031600</long> 
+    </void> 
+    <void property="filename"> 
+     <string>små program\Games Plus! for Windows XP\My ISO Files\spel\filer\Deus Ex - Invisible War\SaveGames\curent save\Veronica Zemanova - Strip&amp;Tease (1).mpg</string> 
+    </void> 
+    <void property="host"> 
+     <object class="net.sf.javadc.net.hub.HostInfo"> 
+      <void property="host"> 
+       <string>81.224.101.115</string> 
+      </void> 
+      <void property="port"> 
+       <int>23644</int> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="hub"> 
+     <object class="net.sf.javadc.net.hub.HubInfo"> 
+      <void property="address"> 
+       <object idref="HostInfo2"/> 
+      </void> 
+      <void property="name"> 
+       <string>RepliCa][1GB][Camelot</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="nick"> 
+     <string>ADSL_VASO(SWE)</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.SearchResultInfo"> 
+    <void property="fileSize"> 
+     <long>16753664</long> 
+    </void> 
+    <void property="filename"> 
+     <string>d:\Klara\Amatörer framför webcam\LINDA\Linda_strippar_2-ILR.avi</string> 
+    </void> 
+    <void property="host"> 
+     <object class="net.sf.javadc.net.hub.HostInfo"> 
+      <void property="host"> 
+       <string>213.67.231.206</string> 
+      </void> 
+      <void property="port"> 
+       <int>4358</int> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="hub"> 
+     <object class="net.sf.javadc.net.hub.HubInfo"> 
+      <void property="address"> 
+       <object idref="HostInfo2"/> 
+      </void> 
+      <void property="name"> 
+       <string>RepliCa][1GB][Camelot - 20 GB Original Realeses? PM [RepliCa]MadDude [VIP]Malm or [RepliCa]Beck for a reg to our RAR hub</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="nick"> 
+     <string>[DSL]raggare</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.SearchResultInfo"> 
+    <void property="fileSize"> 
+     <long>39569412</long> 
+    </void> 
+    <void property="filename"> 
+     <string>movies\Videóklippek\Snoop Doggy Dogg - Gin and Juice.mpg</string> 
+    </void> 
+    <void property="host"> 
+     <object class="net.sf.javadc.net.hub.HostInfo"> 
+      <void property="host"> 
+       <string>81.182.163.215</string> 
+      </void> 
+      <void property="port"> 
+       <int>12866</int> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="hub"> 
+     <object class="net.sf.javadc.net.hub.HubInfo"> 
+      <void property="address"> 
+       <object idref="HostInfo1"/> 
+      </void> 
+      <void property="description"> 
+       <string>&lt;R:100%,S:Online,C:se&gt; [NEW ADRESS] Min 1gb</string> 
+      </void> 
+      <void property="name"> 
+       <string>[LightNetwork] #08</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="nick"> 
+     <string>[HUN]sheet</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.SearchResultInfo"> 
+    <void property="fileSize"> 
+     <long>3858432</long> 
+    </void> 
+    <void property="filename"> 
+     <string>my videos\HOT BABE gets naked while riding around in car she spanks her shaved pussy big tits ass kayla kream amateur porn sex gone wild fuck girls doggy style suck dick blowjob sexy you.mpg</string> 
+    </void> 
+    <void property="host"> 
+     <object class="net.sf.javadc.net.hub.HostInfo"> 
+      <void property="host"> 
+       <string>24.218.166.225</string> 
+      </void> 
+      <void property="port"> 
+       <int>29492</int> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="hub"> 
+     <object class="net.sf.javadc.net.hub.HubInfo"> 
+      <void property="address"> 
+       <object idref="HostInfo1"/> 
+      </void> 
+      <void property="description"> 
+       <string>&lt;R:100%,S:Online,C:se&gt; [NEW ADRESS] Min 1gb</string> 
+      </void> 
+      <void property="name"> 
+       <string>[LightNetwork] #08</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="nick"> 
+     <string>jasminevw</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.SearchResultInfo"> 
+    <void property="fileSize"> 
+     <long>8446840</long> 
+    </void> 
+    <void property="filename"> 
+     <string>pron v2.5\porn\vids\playmates\Playboy - The Dahm Triplets.asf</string> 
+    </void> 
+    <void property="host"> 
+     <object class="net.sf.javadc.net.hub.HostInfo"> 
+      <void property="host"> 
+       <string>24.21.55.151</string> 
+      </void> 
+      <void property="port"> 
+       <int>4662</int> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="hub"> 
+     <object class="net.sf.javadc.net.hub.HubInfo"> 
+      <void property="address"> 
+       <object idref="HostInfo1"/> 
+      </void> 
+      <void property="description"> 
+       <string>&lt;R:100%,S:Online,C:se&gt; [NEW ADRESS] Min 1gb</string> 
+      </void> 
+      <void property="name"> 
+       <string>[LightNetwork] #08</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="nick"> 
+     <string>jdubsweb</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.SearchResultInfo"> 
+    <void property="fileSize"> 
+     <long>16521297</long> 
+    </void> 
+    <void property="filename"> 
+     <string>videot\Playboy Video - Victoria Silvstedt.mpeg</string> 
+    </void> 
+    <void property="host"> 
+     <object id="HostInfo3" class="net.sf.javadc.net.hub.HostInfo"> 
+      <void property="host"> 
+       <string>82.181.32.5</string> 
+      </void> 
+      <void property="port"> 
+       <int>7665</int> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="hub"> 
+     <object class="net.sf.javadc.net.hub.HubInfo"> 
+      <void property="address"> 
+       <object idref="HostInfo1"/> 
+      </void> 
+      <void property="description"> 
+       <string>&lt;R:100%,S:Online,C:se&gt; [NEW ADRESS] Min 1gb</string> 
+      </void> 
+      <void property="name"> 
+       <string>[LightNetwork] #08</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="nick"> 
+     <string>pete78</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.SearchResultInfo"> 
+    <void property="fileSize"> 
+     <long>3665920</long> 
+    </void> 
+    <void property="filename"> 
+     <string>videot\Playboy Video - Victoria Silvstedt 1.mpeg</string> 
+    </void> 
+    <void property="host"> 
+     <object idref="HostInfo3"/> 
+    </void> 
+    <void property="hub"> 
+     <object class="net.sf.javadc.net.hub.HubInfo"> 
+      <void property="address"> 
+       <object idref="HostInfo1"/> 
+      </void> 
+      <void property="description"> 
+       <string>&lt;R:100%,S:Online,C:se&gt; [NEW ADRESS] Min 1gb</string> 
+      </void> 
+      <void property="name"> 
+       <string>[LightNetwork] #08</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="nick"> 
+     <string>pete78</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.SearchResultInfo"> 
+    <void property="fileSize"> 
+     <long>7694340</long> 
+    </void> 
+    <void property="filename"> 
+     <string>ado-files\Conficuration\videos\Krista Allen Emmanuelle (Doggy Style On Bed).mpeg</string> 
+    </void> 
+    <void property="host"> 
+     <object id="HostInfo4" class="net.sf.javadc.net.hub.HostInfo"> 
+      <void property="host"> 
+       <string>80.221.115.168</string> 
+      </void> 
+      <void property="port"> 
+       <int>8578</int> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="hub"> 
+     <object class="net.sf.javadc.net.hub.HubInfo"> 
+      <void property="address"> 
+       <object idref="HostInfo1"/> 
+      </void> 
+      <void property="description"> 
+       <string>&lt;R:100%,S:Online,C:se&gt; [NEW ADRESS] Min 1gb</string> 
+      </void> 
+      <void property="name"> 
+       <string>[LightNetwork] #08 - Is it really that hard to understand the rules Especially all of them but mostly # 17 &amp; 19</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="nick"> 
+     <string>Don</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.SearchResultInfo"> 
+    <void property="fileSize"> 
+     <long>3600388</long> 
+    </void> 
+    <void property="filename"> 
+     <string>ado-files\Conficuration\videos\KRISTA ALLEN EMMANUELLE (RIDING SOME GUY).MPEG</string> 
+    </void> 
+    <void property="host"> 
+     <object idref="HostInfo4"/> 
+    </void> 
+    <void property="hub"> 
+     <object class="net.sf.javadc.net.hub.HubInfo"> 
+      <void property="address"> 
+       <object idref="HostInfo1"/> 
+      </void> 
+      <void property="description"> 
+       <string>&lt;R:100%,S:Online,C:se&gt; [NEW ADRESS] Min 1gb</string> 
+      </void> 
+      <void property="name"> 
+       <string>[LightNetwork] #08 - Is it really that hard to understand the rules Especially all of them but mostly # 17 &amp; 19</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="nick"> 
+     <string>Don</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.SearchResultInfo"> 
+    <void property="fileSize"> 
+     <long>606125</long> 
+    </void> 
+    <void property="filename"> 
+     <string>guitar lessons\JDM Jazz Fakebook Index.pdf</string> 
+    </void> 
+    <void property="host"> 
+     <object class="net.sf.javadc.net.hub.HostInfo"> 
+      <void property="host"> 
+       <string>82.41.196.34</string> 
+      </void> 
+      <void property="port"> 
+       <int>13043</int> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="hub"> 
+     <object class="net.sf.javadc.net.hub.HubInfo"> 
+      <void property="address"> 
+       <object idref="HostInfo1"/> 
+      </void> 
+      <void property="description"> 
+       <string>&lt;R:100%,S:Online,C:se&gt; [NEW ADRESS] Min 1gb</string> 
+      </void> 
+      <void property="name"> 
+       <string>[LightNetwork] #08 - Is it really that hard to understand the rules Especially all of them but mostly # 17 &amp; 19</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="nick"> 
+     <string>[256k]rar</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.SearchResultInfo"> 
+    <void property="fileSize"> 
+     <long>9866685</long> 
+    </void> 
+    <void property="filename"> 
+     <string>books\The.Art.and.Science.of.Computer.Animation.eBook-EEn.pdf</string> 
+    </void> 
+    <void property="host"> 
+     <object class="net.sf.javadc.net.hub.HostInfo"> 
+      <void property="host"> 
+       <string>150.140.212.112</string> 
+      </void> 
+      <void property="port"> 
+       <int>20</int> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="hub"> 
+     <object class="net.sf.javadc.net.hub.HubInfo"> 
+      <void property="address"> 
+       <object idref="HostInfo2"/> 
+      </void> 
+      <void property="name"> 
+       <string>RepliCa][1GB][Camelot</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="nick"> 
+     <string>kakos11</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.SearchResultInfo"> 
+    <void property="fileSize"> 
+     <long>3708932</long> 
+    </void> 
+    <void property="filename"> 
+     <string>01nice34\masturbation\Krista Allen Emmanuelle (fingering herself on couch.mpeg</string> 
+    </void> 
+    <void property="host"> 
+     <object class="net.sf.javadc.net.hub.HostInfo"> 
+      <void property="host"> 
+       <string>211.30.124.143</string> 
+      </void> 
+      <void property="port"> 
+       <int>16953</int> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="hub"> 
+     <object class="net.sf.javadc.net.hub.HubInfo"> 
+      <void property="address"> 
+       <object idref="HostInfo1"/> 
+      </void> 
+      <void property="description"> 
+       <string>&lt;R:100%,S:Online,C:se&gt; [NEW ADRESS] Min 1gb</string> 
+      </void> 
+      <void property="name"> 
+       <string>[LightNetwork] DSL#08 - Is it really that hard to understand the rules Especially all of them but mostly # 17 &amp; 19</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="nick"> 
+     <string>Peesapiss</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.SearchResultInfo"> 
+    <void property="fileSize"> 
+     <long>89086568</long> 
+    </void> 
+    <void property="filename"> 
+     <string>uusi kansio\Jackass\Extreme\Pamela Anderson with Tommy Lee.mpg</string> 
+    </void> 
+    <void property="host"> 
+     <object class="net.sf.javadc.net.hub.HostInfo"> 
+      <void property="host"> 
+       <string>83.148.193.208</string> 
+      </void> 
+      <void property="port"> 
+       <int>21945</int> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="hub"> 
+     <object class="net.sf.javadc.net.hub.HubInfo"> 
+      <void property="address"> 
+       <object idref="HostInfo0"/> 
+      </void> 
+      <void property="name"> 
+       <string>[BBB]Sweden Liberty #04 - Liberty3.mine.nu is now up and running again =)</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="nick"> 
+     <string>erik</string> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.SearchResultInfo"> 
+    <void property="fileSize"> 
+     <long>72355063</long> 
+    </void> 
+    <void property="filename"> 
+     <string>film\spara2\torrents\Playboy-March.2004.eBook-neS.pdf</string> 
+    </void> 
+    <void property="host"> 
+     <object class="net.sf.javadc.net.hub.HostInfo"> 
+      <void property="host"> 
+       <string>213.67.253.86</string> 
+      </void> 
+      <void property="port"> 
+       <int>29434</int> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="hub"> 
+     <object class="net.sf.javadc.net.hub.HubInfo"> 
+      <void property="address"> 
+       <object idref="HostInfo0"/> 
+      </void> 
+      <void property="name"> 
+       <string>[BBB]Sweden Liberty #04 - Liberty3.mine.nu is now up and running again =)</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="nick"> 
+     <string>[Telia]peber34</string> 
+    </void> 
+   </object> 
+  </void> 
+ </object> 
+</java> 

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.5.0_04" class="java.beans.XMLDecoder"> 
+ <object class="java.util.ArrayList"> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.SearchResultInfo"> 
+    <void property="TTH"> 
+     <string>dksjaLHFLJKE</string> 
+    </void> 
+    <void property="filename"> 
+     <string>test1</string> 
+    </void> 
+    <void property="host"> 
+     <object class="net.sf.javadc.net.hub.HostInfo"/> 
+    </void> 
+    <void property="localFilename"> 
+     <string>/tmp/test4</string> 
+    </void> 
+   </object> 
+  </void> 
+ </object> 
+</java> 

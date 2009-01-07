@@ -1,0 +1,1727 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 20001102//EN' 'http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd'>
+<svg xmlns="http://www.w3.org/2000/svg" width="3398" height="5397">
+<rect x="504" y="194" width="252" height="108" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="504" y="194" width="251" height="107" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="504" y="194" width="252" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="504" y="194" width="251" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="604" y="209" style="font-family:Dialog; font-size:10;">
+BasePanel</text>
+<rect x="504" y="214" width="252" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="504" y="214" width="251" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="506" y="230" style="font-family:Dialog; font-size:10;">
+iconsize : int</text>
+<rect x="504" y="231" width="252" height="71" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="504" y="231" width="251" height="70" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="506" y="247" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; BasePanel()</text>
+<text x="506" y="264" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; BasePanel(layout: LayoutManager)</text>
+<text x="506" y="281" style="font-family:Dialog; font-size:10;">
+getUserIcons() : ImageIcon[]</text>
+<text x="506" y="298" style="font-family:Dialog; font-size:10;">
+getImage(path: String,shaded: boolean) : ImageIcon</text>
+<rect x="1958" y="194" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1958" y="194" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1958" y="194" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1958" y="194" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1985" y="209" style="font-family:Dialog; font-size:10;">
+2</text>
+<rect x="1958" y="214" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1958" y="214" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1958" y="232" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1958" y="232" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2098" y="194" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2098" y="194" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2098" y="194" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2098" y="194" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2125" y="209" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="2098" y="214" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2098" y="214" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2098" y="232" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2098" y="232" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2238" y="194" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2238" y="194" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2238" y="194" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2238" y="194" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2265" y="209" style="font-family:Dialog; font-size:10;">
+3</text>
+<rect x="2238" y="214" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2238" y="214" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2238" y="232" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2238" y="232" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2678" y="604" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2678" y="604" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2678" y="604" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2678" y="604" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2705" y="619" style="font-family:Dialog; font-size:10;">
+2</text>
+<rect x="2678" y="624" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2678" y="624" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2678" y="642" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2678" y="642" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2818" y="604" width="426" height="176" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2818" y="604" width="425" height="175" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2818" y="604" width="426" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2818" y="604" width="425" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2980" y="619" style="font-family:Dialog; font-size:10;">
+DownloadComponent</text>
+<rect x="2818" y="624" width="426" height="87" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2818" y="624" width="425" height="86" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="2820" y1="641" x2="2901" y2="641" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2820" y="640" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="2820" y="657" style="font-family:Dialog; font-size:10;">
+model : DownloadTreeModelAdapter</text>
+<text x="2820" y="674" style="font-family:Dialog; font-size:10;">
+list : JTreeTable</text>
+<text x="2820" y="691" style="font-family:Dialog; font-size:10;">
+requestsModel : IRequestsModel</text>
+<text x="2820" y="708" style="font-family:Dialog; font-size:10;">
+taskManager : ITaskManager</text>
+<rect x="2818" y="710" width="426" height="70" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2818" y="710" width="425" height="69" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2820" y="726" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; DownloadComponent(_taskManager: ITaskManager,_model: IRequestsModel)</text>
+<text x="2820" y="743" style="font-family:Dialog; font-size:10;">
+showConnectionPopup(cc: IConnection,pos: Point) : void</text>
+<text x="2820" y="760" style="font-family:Dialog; font-size:10;">
+showPopup(e: MouseEvent) : void</text>
+<text x="2820" y="777" style="font-family:Dialog; font-size:10;">
+showQueuePopup(cc: IConnection,dr: DownloadRequest,pos: Point) : void</text>
+<rect x="3324" y="604" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="3324" y="604" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="3324" y="604" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="3324" y="604" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="3351" y="619" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="3324" y="624" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="3324" y="624" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="3324" y="642" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="3324" y="642" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="1030" width="221" height="261" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1030" width="220" height="260" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="1030" width="221" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1030" width="220" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="47" y="1045" style="font-family:Dialog; font-size:10;">
+DownloadComponentSimulation</text>
+<rect x="14" y="1050" width="221" height="173" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1050" width="220" height="172" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="1066" style="font-family:Dialog; font-size:10;">
+downloadComponent : DownloadComponent</text>
+<text x="16" y="1083" style="font-family:Dialog; font-size:10;">
+taskManager : ITaskManager</text>
+<text x="16" y="1100" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="16" y="1117" style="font-family:Dialog; font-size:10;">
+connectionManager : IConnectionManager</text>
+<text x="16" y="1134" style="font-family:Dialog; font-size:10;">
+incompletesLoader : IIncompletesLoader</text>
+<text x="16" y="1151" style="font-family:Dialog; font-size:10;">
+clientTaskFactory : IClientTaskFactory</text>
+<text x="16" y="1168" style="font-family:Dialog; font-size:10;">
+clientManager : IClientManager</text>
+<text x="16" y="1185" style="font-family:Dialog; font-size:10;">
+connectionFactory : IConnectionFactory</text>
+<text x="16" y="1202" style="font-family:Dialog; font-size:10;">
+downloadManager : IDownloadManager</text>
+<text x="16" y="1219" style="font-family:Dialog; font-size:10;">
+model : IRequestsModel</text>
+<rect x="14" y="1222" width="221" height="69" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1222" width="220" height="68" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="1238" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; DownloadComponentSimulation()</text>
+<text x="16" y="1255" style="font-family:Dialog; font-size:10;">
+setupDownloadConnection() : void</text>
+<text x="16" y="1272" style="font-family:Dialog; font-size:10;">
+setupUploadConnection() : void</text>
+<line x1="16" y1="1290" x2="134" y2="1290" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="16" y="1289" style="font-family:Dialog; font-size:10;">
+main(args: String[]) : void</text>
+<rect x="315" y="1030" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="315" y="1030" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="315" y="1030" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="315" y="1030" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="342" y="1045" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="315" y="1050" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="315" y="1050" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="315" y="1068" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="315" y="1068" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="455" y="1030" width="100" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="455" y="1030" width="99" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="455" y="1030" width="100" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="455" y="1030" width="99" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="456" y="1045" style="font-family:Dialog; font-size:10;">
+MyTreeCellRenderer</text>
+<rect x="455" y="1050" width="100" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="455" y="1050" width="99" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="455" y="1068" width="100" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="455" y="1068" width="99" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="457" y="1084" style="font-family:Dialog; font-size:10;">
+getLeafIcon() : Icon</text>
+<rect x="635" y="1030" width="292" height="74" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="635" y="1030" width="291" height="73" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="635" y="1030" width="292" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="635" y="1030" width="291" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="721" y="1045" style="font-family:Dialog; font-size:10;">
+MySortableTableListener</text>
+<rect x="635" y="1050" width="292" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="635" y="1050" width="291" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="635" y="1068" width="292" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="635" y="1068" width="291" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="637" y="1084" style="font-family:Dialog; font-size:10;">
+cellSelected(row: int,column: int) : void</text>
+<text x="637" y="1101" style="font-family:Dialog; font-size:10;">
+showPopupClicked(row: int,column: int,e: MouseEvent) : void</text>
+<rect x="1007" y="1030" width="230" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1007" y="1030" width="229" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1007" y="1030" width="230" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1007" y="1030" width="229" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1062" y="1045" style="font-family:Dialog; font-size:10;">
+MyTreeSelectionListener</text>
+<rect x="1007" y="1050" width="230" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1007" y="1050" width="229" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1007" y="1068" width="230" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1007" y="1068" width="229" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1009" y="1084" style="font-family:Dialog; font-size:10;">
+valueChanged(arg0: TreeSelectionEvent) : void</text>
+<rect x="1317" y="1030" width="549" height="329" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1317" y="1030" width="548" height="328" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1317" y="1030" width="549" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1317" y="1030" width="548" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1538" y="1045" style="font-family:Dialog; font-size:10;">
+FileBrowseComponent</text>
+<rect x="1317" y="1050" width="549" height="224" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1317" y="1050" width="548" height="223" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1319" y1="1067" x2="1400" y2="1067" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1319" y="1066" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="1319" y="1083" style="font-family:Dialog; font-size:10;">
+hub : IHub</text>
+<text x="1319" y="1100" style="font-family:Dialog; font-size:10;">
+tree : JTree</text>
+<text x="1319" y="1117" style="font-family:Dialog; font-size:10;">
+fileTableLabel : JLabel</text>
+<text x="1319" y="1134" style="font-family:Dialog; font-size:10;">
+fileTable : SortableTable</text>
+<text x="1319" y="1151" style="font-family:Dialog; font-size:10;">
+nick : String</text>
+<text x="1319" y="1168" style="font-family:Dialog; font-size:10;">
+fileListTableListener : SortableTableListener</text>
+<text x="1319" y="1185" style="font-family:Dialog; font-size:10;">
+treeSelectionListener : TreeSelectionListener</text>
+<text x="1319" y="1202" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="1319" y="1219" style="font-family:Dialog; font-size:10;">
+fileListModel : FileListModel</text>
+<text x="1319" y="1236" style="font-family:Dialog; font-size:10;">
+fileListTreeModel : FileListTreeModel</text>
+<text x="1319" y="1253" style="font-family:Dialog; font-size:10;">
+fileListTableModel : FileListTableModel</text>
+<text x="1319" y="1270" style="font-family:Dialog; font-size:10;">
+downloadManager : IDownloadManager</text>
+<rect x="1317" y="1273" width="549" height="86" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1317" y="1273" width="548" height="85" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1319" y="1289" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; FileBrowseComponent(_settings: ISettings,_downloadManager: IDownloadManager)</text>
+<text x="1319" y="1306" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; FileBrowseComponent(hub: IHub,nick: String,settings: ISettings,downloadManager: IDownloadManager)</text>
+<text x="1319" y="1323" style="font-family:Dialog; font-size:10;">
+setupComponents() : void</text>
+<text x="1319" y="1340" style="font-family:Dialog; font-size:10;">
+showDownloadPopup(filename: String,size: int,e: MouseEvent) : void</text>
+<text x="1319" y="1357" style="font-family:Dialog; font-size:10;">
+showPopup(e: MouseEvent) : void</text>
+<rect x="14" y="1439" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1439" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="1439" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1439" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="41" y="1454" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="14" y="1459" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1459" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="1477" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1477" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="154" y="1439" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="154" y="1439" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="154" y="1439" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="154" y="1439" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="181" y="1454" style="font-family:Dialog; font-size:10;">
+2</text>
+<rect x="154" y="1459" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="154" y="1459" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="154" y="1477" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="154" y="1477" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="294" y="1439" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="294" y="1439" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="294" y="1439" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="294" y="1439" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="321" y="1454" style="font-family:Dialog; font-size:10;">
+3</text>
+<rect x="294" y="1459" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="294" y="1459" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="294" y="1477" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="294" y="1477" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="434" y="1439" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="434" y="1439" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="434" y="1439" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="434" y="1439" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="461" y="1454" style="font-family:Dialog; font-size:10;">
+4</text>
+<rect x="434" y="1459" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="434" y="1459" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="434" y="1477" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="434" y="1477" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="574" y="1439" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="574" y="1439" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="574" y="1439" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="574" y="1439" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="601" y="1454" style="font-family:Dialog; font-size:10;">
+5</text>
+<rect x="574" y="1459" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="574" y="1459" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="574" y="1477" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="574" y="1477" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="714" y="1439" width="628" height="431" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="714" y="1439" width="627" height="430" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="714" y="1439" width="628" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="714" y="1439" width="627" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="983" y="1454" style="font-family:Dialog; font-size:10;">
+HubListComponent</text>
+<rect x="714" y="1459" width="628" height="343" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="714" y="1459" width="627" height="342" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="716" y1="1476" x2="797" y2="1476" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="716" y="1475" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="716" y="1492" style="font-family:Dialog; font-size:10;">
+model : RowTableModel</text>
+<text x="716" y="1509" style="font-family:Dialog; font-size:10;">
+modelFavorites : RowTableModel</text>
+<text x="716" y="1526" style="font-family:Dialog; font-size:10;">
+hubListTableListener : HubListTableListener</text>
+<text x="716" y="1543" style="font-family:Dialog; font-size:10;">
+hubFavoritesTableListener : HubFavoritesTableListener</text>
+<text x="716" y="1560" style="font-family:Dialog; font-size:10;">
+hubsTable : SortableTable</text>
+<text x="716" y="1577" style="font-family:Dialog; font-size:10;">
+hubsTableFavorites : SortableTable</text>
+<text x="716" y="1594" style="font-family:Dialog; font-size:10;">
+hubsTablePanel : JPanel</text>
+<text x="716" y="1611" style="font-family:Dialog; font-size:10;">
+hubsTableFavoritesPanel : JPanel</text>
+<text x="716" y="1628" style="font-family:Dialog; font-size:10;">
+hubListLabel : JLabel</text>
+<text x="716" y="1645" style="font-family:Dialog; font-size:10;">
+hubFavoritesLabel : JLabel</text>
+<text x="716" y="1662" style="font-family:Dialog; font-size:10;">
+toolBar : JToolBar</text>
+<text x="716" y="1679" style="font-family:Dialog; font-size:10;">
+hostField : JTextField</text>
+<text x="716" y="1696" style="font-family:Dialog; font-size:10;">
+updateButton : JButton</text>
+<text x="716" y="1713" style="font-family:Dialog; font-size:10;">
+filterButton : JButton</text>
+<text x="716" y="1730" style="font-family:Dialog; font-size:10;">
+filterText : JComboBox</text>
+<text x="716" y="1747" style="font-family:Dialog; font-size:10;">
+hubList : IHubList</text>
+<text x="716" y="1764" style="font-family:Dialog; font-size:10;">
+hubFavoritesList : IHubFavoritesList</text>
+<text x="716" y="1781" style="font-family:Dialog; font-size:10;">
+hubFactory : IHubFactory</text>
+<text x="716" y="1798" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<rect x="714" y="1801" width="628" height="69" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="714" y="1801" width="627" height="68" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="716" y="1817" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; HubListComponent(_hubList: IHubList,_hubFavoritesList: IHubFavoritesList,_hubFactory: IHubFactory,_settings: ISettings)</text>
+<text x="716" y="1834" style="font-family:Dialog; font-size:10;">
+addListener(listener: HubListComponentListener) : void</text>
+<text x="716" y="1851" style="font-family:Dialog; font-size:10;">
+getHubColumns(hubInfo: IHubInfo) : Object[]</text>
+<text x="716" y="1868" style="font-family:Dialog; font-size:10;">
+update() : void</text>
+<rect x="14" y="1950" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1950" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="1950" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1950" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="41" y="1965" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="14" y="1970" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1970" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="1988" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1988" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="154" y="1950" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="154" y="1950" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="154" y="1950" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="154" y="1950" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="181" y="1965" style="font-family:Dialog; font-size:10;">
+2</text>
+<rect x="154" y="1970" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="154" y="1970" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="154" y="1988" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="154" y="1988" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="294" y="1950" width="617" height="227" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="294" y="1950" width="616" height="226" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="294" y="1950" width="617" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="294" y="1950" width="616" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="548" y="1965" style="font-family:Dialog; font-size:10;">
+IncompleteComponent</text>
+<rect x="294" y="1970" width="617" height="87" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="294" y="1970" width="616" height="86" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="296" y1="1987" x2="377" y2="1987" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="296" y="1986" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="296" y="2003" style="font-family:Dialog; font-size:10;">
+model : RowTableModelAdapter</text>
+<text x="296" y="2020" style="font-family:Dialog; font-size:10;">
+incompleteTable : SortableTable</text>
+<text x="296" y="2037" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="296" y="2054" style="font-family:Dialog; font-size:10;">
+downloadManager : IDownloadManager</text>
+<rect x="294" y="2056" width="617" height="121" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="294" y="2056" width="616" height="120" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="296" y="2072" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; IncompleteComponent(_settings: ISettings,_requestsModel: IRequestsModel,_downloadManager: IDownloadManager)</text>
+<text x="296" y="2089" style="font-family:Dialog; font-size:10;">
+cancel(row: int) : void</text>
+<text x="296" y="2106" style="font-family:Dialog; font-size:10;">
+cellSelected(row: int,column: int) : void</text>
+<text x="296" y="2123" style="font-family:Dialog; font-size:10;">
+keyPressed(ke: KeyEvent) : void</text>
+<text x="296" y="2140" style="font-family:Dialog; font-size:10;">
+keyReleased(ke: KeyEvent) : void</text>
+<text x="296" y="2157" style="font-family:Dialog; font-size:10;">
+keyTyped(ke: KeyEvent) : void</text>
+<text x="296" y="2174" style="font-family:Dialog; font-size:10;">
+showPopupClicked(row: int,column: int,e: MouseEvent) : void</text>
+<rect x="991" y="1950" width="510" height="312" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="991" y="1950" width="509" height="311" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="991" y="1950" width="510" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="991" y="1950" width="509" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1212" y="1965" style="font-family:Dialog; font-size:10;">
+MainMenuBar</text>
+<rect x="991" y="1970" width="510" height="52" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="991" y="1970" width="509" height="51" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="993" y="1986" style="font-family:Dialog; font-size:10;">
+dcFrame : ActionListener</text>
+<text x="993" y="2003" style="font-family:Dialog; font-size:10;">
+themeManager : ThemeManager</text>
+<text x="993" y="2020" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<rect x="991" y="2021" width="510" height="241" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="991" y="2021" width="509" height="240" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="993" y="2037" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; MainMenuBar(_dcFrame: ActionListener,_themeManager: ThemeManager,_settings: ISettings)</text>
+<text x="993" y="2054" style="font-family:Dialog; font-size:10;">
+buildViewMenu() : JMenu</text>
+<text x="993" y="2071" style="font-family:Dialog; font-size:10;">
+buildNavigationMenu() : JMenu</text>
+<text x="993" y="2088" style="font-family:Dialog; font-size:10;">
+buildFileMenu() : JMenu</text>
+<text x="993" y="2105" style="font-family:Dialog; font-size:10;">
+createSubMenu(text: String) : JMenu</text>
+<text x="993" y="2122" style="font-family:Dialog; font-size:10;">
+createMenu(text: String,mnemonic: char) : JMenu</text>
+<text x="993" y="2139" style="font-family:Dialog; font-size:10;">
+createMenuItem(text: String,mnemonic: char) : JMenuItem</text>
+<text x="993" y="2156" style="font-family:Dialog; font-size:10;">
+createMenuItem(text: String,icon: Icon,mnemonic: char) : JMenuItem</text>
+<text x="993" y="2173" style="font-family:Dialog; font-size:10;">
+createMenuItem(text: String,icon: Icon,mnemonic: char,key: KeyStroke) : JMenuItem</text>
+<text x="993" y="2190" style="font-family:Dialog; font-size:10;">
+createRadioButtonMenuItem(text: String,selected: boolean) : JRadioButtonMenuItem</text>
+<text x="993" y="2207" style="font-family:Dialog; font-size:10;">
+isQuitInOSMenu() : boolean</text>
+<text x="993" y="2224" style="font-family:Dialog; font-size:10;">
+isAboutInOSMenu() : boolean</text>
+<text x="993" y="2241" style="font-family:Dialog; font-size:10;">
+createRadioItem(label: String,selected: boolean) : JRadioButtonMenuItem</text>
+<text x="993" y="2258" style="font-family:Dialog; font-size:10;">
+readImageIcon(filename: String) : ImageIcon</text>
+<rect x="1581" y="1950" width="144" height="74" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1581" y="1950" width="143" height="73" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1581" y="1950" width="144" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1581" y="1950" width="143" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1627" y="1965" style="font-family:Dialog; font-size:10;">
+MySettings</text>
+<rect x="1581" y="1970" width="144" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1581" y="1970" width="143" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1583" y="1986" style="font-family:Dialog; font-size:10;">
+guiSettings : GuiSettings</text>
+<rect x="1581" y="1988" width="144" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1581" y="1988" width="143" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1583" y="2004" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; MySettings()</text>
+<text x="1583" y="2021" style="font-family:Dialog; font-size:10;">
+getGuiSettings() : GuiSettings</text>
+<rect x="1805" y="1950" width="186" height="125" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1805" y="1950" width="185" height="124" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1805" y="1950" width="186" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1805" y="1950" width="185" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1838" y="1965" style="font-family:Dialog; font-size:10;">
+MainMenuBarSimulation</text>
+<rect x="1805" y="1970" width="186" height="71" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1805" y="1970" width="185" height="70" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1807" y="1986" style="font-family:Dialog; font-size:10;">
+frame : JFrame</text>
+<text x="1807" y="2003" style="font-family:Dialog; font-size:10;">
+menuBar : JMenuBar</text>
+<text x="1807" y="2020" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="1807" y="2037" style="font-family:Dialog; font-size:10;">
+themeManager : ThemeManager</text>
+<rect x="1805" y="2040" width="186" height="35" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1805" y="2040" width="185" height="34" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1807" y="2056" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; MainMenuBarSimulation()</text>
+<line x1="1807" y1="2074" x2="1925" y2="2074" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1807" y="2073" style="font-family:Dialog; font-size:10;">
+main(args: String[]) : void</text>
+<rect x="14" y="2342" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="2342" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="2342" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="2342" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="41" y="2357" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="14" y="2362" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="2362" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="2380" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="2380" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="154" y="2342" width="188" height="91" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="154" y="2342" width="187" height="90" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="154" y="2342" width="188" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="154" y="2342" width="187" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="210" y="2357" style="font-family:Dialog; font-size:10;">
+ExtendedFrame</text>
+<rect x="154" y="2362" width="188" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="154" y="2362" width="187" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="156" y1="2379" x2="284" y2="2379" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="156" y="2378" style="font-family:Dialog; font-size:10;">
+CLOSING_STRING : String</text>
+<rect x="154" y="2379" width="188" height="54" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="154" y="2379" width="187" height="53" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="156" y="2395" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ExtendedFrame()</text>
+<text x="156" y="2412" style="font-family:Dialog; font-size:10;">
+actionPerformed(e: ActionEvent) : void</text>
+<text x="156" y="2429" style="font-family:Dialog; font-size:10;">
+closeApplication() : void</text>
+<rect x="1732" y="467" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1732" y="467" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1732" y="467" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1732" y="467" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1759" y="482" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="1732" y="487" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1732" y="487" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1732" y="505" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1732" y="505" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="422" y="2342" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="422" y="2342" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="422" y="2342" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="422" y="2342" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="449" y="2357" style="font-family:Dialog; font-size:10;">
+2</text>
+<rect x="422" y="2362" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="422" y="2362" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="422" y="2380" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="422" y="2380" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="562" y="2342" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="562" y="2342" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="562" y="2342" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="562" y="2342" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="589" y="2357" style="font-family:Dialog; font-size:10;">
+3</text>
+<rect x="562" y="2362" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="562" y="2362" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="562" y="2380" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="562" y="2380" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="702" y="2342" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="702" y="2342" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="702" y="2342" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="702" y="2342" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="729" y="2357" style="font-family:Dialog; font-size:10;">
+4</text>
+<rect x="702" y="2362" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="702" y="2362" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="702" y="2380" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="702" y="2380" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="842" y="2342" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="842" y="2342" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="842" y="2342" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="842" y="2342" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="869" y="2357" style="font-family:Dialog; font-size:10;">
+5</text>
+<rect x="842" y="2362" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="842" y="2362" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="842" y="2380" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="842" y="2380" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="2513" width="206" height="91" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="2513" width="205" height="90" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="2513" width="206" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="2513" width="205" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="82" y="2528" style="font-family:Dialog; font-size:10;">
+MyHubListener</text>
+<rect x="14" y="2533" width="206" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="2533" width="205" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="2549" style="font-family:Dialog; font-size:10;">
+updated : boolean</text>
+<rect x="14" y="2550" width="206" height="54" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="2550" width="205" height="53" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="2566" style="font-family:Dialog; font-size:10;">
+userAdded(hub: IHub,ui: HubUser) : void</text>
+<text x="16" y="2583" style="font-family:Dialog; font-size:10;">
+userRemoved(hub: IHub,ui: HubUser) : void</text>
+<text x="16" y="2600" style="font-family:Dialog; font-size:10;">
+update(hub: IHub) : void</text>
+<rect x="300" y="2513" width="148" height="74" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="300" y="2513" width="147" height="73" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="300" y="2513" width="148" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="300" y="2513" width="147" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="318" y="2528" style="font-family:Dialog; font-size:10;">
+MyHubManagerListener</text>
+<rect x="300" y="2533" width="148" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="300" y="2533" width="147" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="300" y="2551" width="148" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="300" y="2551" width="147" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="302" y="2567" style="font-family:Dialog; font-size:10;">
+hubAdded(hub: IHub) : void</text>
+<text x="302" y="2584" style="font-family:Dialog; font-size:10;">
+hubRemoved(hub: IHub) : void</text>
+<rect x="528" y="2513" width="951" height="244" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="528" y="2513" width="950" height="243" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="528" y="2513" width="951" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="528" y="2513" width="950" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="955" y="2528" style="font-family:Dialog; font-size:10;">
+ManagerComponent</text>
+<rect x="528" y="2533" width="951" height="173" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="528" y="2533" width="950" height="172" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="530" y1="2550" x2="611" y2="2550" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="530" y="2549" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="530" y="2566" style="font-family:Dialog; font-size:10;">
+hubListener : MyHubListener</text>
+<text x="530" y="2583" style="font-family:Dialog; font-size:10;">
+hubListComponent : HubListComponent</text>
+<text x="530" y="2600" style="font-family:Dialog; font-size:10;">
+hubManager : IHubManager</text>
+<text x="530" y="2617" style="font-family:Dialog; font-size:10;">
+hubs : List</text>
+<text x="530" y="2634" style="font-family:Dialog; font-size:10;">
+popup : JPopupMenu</text>
+<text x="530" y="2651" style="font-family:Dialog; font-size:10;">
+tabPane : JTabbedPane</text>
+<text x="530" y="2668" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="530" y="2685" style="font-family:Dialog; font-size:10;">
+hubFavoritesList : IHubFavoritesList</text>
+<text x="530" y="2702" style="font-family:Dialog; font-size:10;">
+downloadManager : IDownloadManager</text>
+<rect x="528" y="2705" width="951" height="52" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="528" y="2705" width="950" height="51" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="530" y="2721" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ManagerComponent(_hubManager: IHubManager,_hubFavoritesList: IHubFavoritesList,_hubListComponent: HubListComponent,_settings: ISettings,_downloadManager: IDownloadManager)</text>
+<text x="530" y="2738" style="font-family:Dialog; font-size:10;">
+getIndexOf(hub: IHub) : int</text>
+<text x="530" y="2755" style="font-family:Dialog; font-size:10;">
+getTabString(hub: IHub) : String</text>
+<rect x="1559" y="2513" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1559" y="2513" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1559" y="2513" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1559" y="2513" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1586" y="2528" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="1559" y="2533" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1559" y="2533" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1559" y="2551" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1559" y="2551" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1699" y="2513" width="542" height="278" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1699" y="2513" width="541" height="277" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1699" y="2513" width="542" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1699" y="2513" width="541" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1922" y="2528" style="font-family:Dialog; font-size:10;">
+MessageComponent</text>
+<rect x="1699" y="2533" width="542" height="173" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1699" y="2533" width="541" height="172" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1701" y1="2550" x2="1782" y2="2550" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1701" y="2549" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="1701" y="2566" style="font-family:Dialog; font-size:10;">
+dateFormat : DateFormat</text>
+<text x="1701" y="2583" style="font-family:Dialog; font-size:10;">
+firstMessage : boolean</text>
+<text x="1701" y="2600" style="font-family:Dialog; font-size:10;">
+from : String</text>
+<text x="1701" y="2617" style="font-family:Dialog; font-size:10;">
+hubComponent : HubComponent</text>
+<text x="1701" y="2634" style="font-family:Dialog; font-size:10;">
+inputField : JTextField</text>
+<text x="1701" y="2651" style="font-family:Dialog; font-size:10;">
+messages : JTextPane</text>
+<text x="1701" y="2668" style="font-family:Dialog; font-size:10;">
+scrollPane : JScrollPane</text>
+<text x="1701" y="2685" style="font-family:Dialog; font-size:10;">
+showFromColumn : boolean</text>
+<text x="1701" y="2702" style="font-family:Dialog; font-size:10;">
+user : IUserInfo</text>
+<rect x="1699" y="2705" width="542" height="86" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1699" y="2705" width="541" height="85" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1701" y="2721" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; MessageComponent(hc: HubComponent,_showFromColumn: boolean,_from: String,settings: ISettings)</text>
+<text x="1701" y="2738" style="font-family:Dialog; font-size:10;">
+addMessage(message: Message) : void</text>
+<text x="1701" y="2755" style="font-family:Dialog; font-size:10;">
+cellSelected(row: int,column: int) : void</text>
+<text x="1701" y="2772" style="font-family:Dialog; font-size:10;">
+onInputField() : void</text>
+<text x="1701" y="2789" style="font-family:Dialog; font-size:10;">
+showPopupClicked(row: int,column: int,e: MouseEvent) : void</text>
+<rect x="2321" y="2513" width="594" height="125" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2321" y="2513" width="593" height="124" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2321" y="2513" width="594" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2321" y="2513" width="593" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2572" y="2528" style="font-family:Dialog; font-size:10;">
+MonitorComponent</text>
+<rect x="2321" y="2533" width="594" height="88" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2321" y="2533" width="593" height="87" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2323" y="2549" style="font-family:Dialog; font-size:10;">
+splitPane : SplitPane</text>
+<text x="2323" y="2566" style="font-family:Dialog; font-size:10;">
+downloadPanel : JPanel</text>
+<text x="2323" y="2583" style="font-family:Dialog; font-size:10;">
+incompletesPanel : JPanel</text>
+<text x="2323" y="2600" style="font-family:Dialog; font-size:10;">
+downloadComponent : DownloadComponent</text>
+<text x="2323" y="2617" style="font-family:Dialog; font-size:10;">
+incompleteComponent : IncompleteComponent</text>
+<rect x="2321" y="2620" width="594" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2321" y="2620" width="593" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2323" y="2636" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; MonitorComponent(downloadComponent: DownloadComponent,incompleteComponent: IncompleteComponent)</text>
+<rect x="14" y="2871" width="532" height="159" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="2871" width="531" height="158" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="2871" width="532" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="2871" width="531" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="223" y="2886" style="font-family:Dialog; font-size:10;">
+MultiSearchComponent</text>
+<rect x="14" y="2891" width="532" height="122" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="2891" width="531" height="121" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="2907" style="font-family:Dialog; font-size:10;">
+hub : IHub</text>
+<text x="16" y="2924" style="font-family:Dialog; font-size:10;">
+searchComponent : SearchComponent</text>
+<text x="16" y="2941" style="font-family:Dialog; font-size:10;">
+splitPane : SplitPane</text>
+<text x="16" y="2958" style="font-family:Dialog; font-size:10;">
+toolBar : JToolBar</text>
+<text x="16" y="2975" style="font-family:Dialog; font-size:10;">
+userList : UserListComponent</text>
+<text x="16" y="2992" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="16" y="3009" style="font-family:Dialog; font-size:10;">
+downloadManager : IDownloadManager</text>
+<rect x="14" y="3012" width="532" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="3012" width="531" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="3028" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; MultiSearchComponent(_hub: AllHubs,_settings: ISettings,_downloadManager: IDownloadManager)</text>
+<rect x="626" y="2871" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="626" y="2871" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="626" y="2871" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="626" y="2871" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="653" y="2886" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="626" y="2891" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="626" y="2891" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="626" y="2909" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="626" y="2909" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="766" y="2871" width="371" height="329" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="766" y="2871" width="370" height="328" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="766" y="2871" width="371" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="766" y="2871" width="370" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="920" y="2886" style="font-family:Dialog; font-size:10;">
+SearchPanel</text>
+<rect x="766" y="2891" width="371" height="224" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="766" y="2891" width="370" height="223" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="768" y1="2908" x2="849" y2="2908" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="768" y="2907" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="768" y="2924" style="font-family:Dialog; font-size:10;">
+nameField : JComboBox</text>
+<text x="768" y="2941" style="font-family:Dialog; font-size:10;">
+pathField : JTextField</text>
+<text x="768" y="2958" style="font-family:Dialog; font-size:10;">
+extensionField : JTextField</text>
+<text x="768" y="2975" style="font-family:Dialog; font-size:10;">
+sizeField : JTextField</text>
+<text x="768" y="2992" style="font-family:Dialog; font-size:10;">
+sizeType : JComboBox</text>
+<text x="768" y="3009" style="font-family:Dialog; font-size:10;">
+minSlots : JComboBox</text>
+<text x="768" y="3026" style="font-family:Dialog; font-size:10;">
+type : JComboBox</text>
+<text x="768" y="3043" style="font-family:Dialog; font-size:10;">
+freeSlots : JCheckBox</text>
+<text x="768" y="3060" style="font-family:Dialog; font-size:10;">
+searchButton : JButton</text>
+<text x="768" y="3077" style="font-family:Dialog; font-size:10;">
+sizeMultiplier : JComboBox</text>
+<text x="768" y="3094" style="font-family:Dialog; font-size:10;">
+hub : IHub</text>
+<text x="768" y="3111" style="font-family:Dialog; font-size:10;">
+searchComponent : SearchComponent</text>
+<rect x="766" y="3114" width="371" height="86" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="766" y="3114" width="370" height="85" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="768" y="3130" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; SearchPanel(_hub: IHub,_searchComponent: SearchComponent)</text>
+<text x="768" y="3147" style="font-family:Dialog; font-size:10;">
+search() : void</text>
+<text x="768" y="3164" style="font-family:Dialog; font-size:10;">
+getSizeField() : JTextField</text>
+<text x="768" y="3181" style="font-family:Dialog; font-size:10;">
+getSizeMultiplier() : JComboBox</text>
+<text x="768" y="3198" style="font-family:Dialog; font-size:10;">
+getFileSize() : long</text>
+<rect x="1217" y="2871" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1217" y="2871" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1217" y="2871" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1217" y="2871" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1244" y="2886" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="1217" y="2891" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1217" y="2891" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1217" y="2909" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1217" y="2909" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1357" y="2871" width="193" height="142" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1357" y="2871" width="192" height="141" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1357" y="2871" width="193" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1357" y="2871" width="192" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1396" y="2886" style="font-family:Dialog; font-size:10;">
+SearchPanelSimulation</text>
+<rect x="1357" y="2891" width="193" height="88" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1357" y="2891" width="192" height="87" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1359" y="2907" style="font-family:Dialog; font-size:10;">
+hub : IHub</text>
+<text x="1359" y="2924" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="1359" y="2941" style="font-family:Dialog; font-size:10;">
+downloadManager : IDownloadManager</text>
+<text x="1359" y="2958" style="font-family:Dialog; font-size:10;">
+searchComponent : SearchComponent</text>
+<text x="1359" y="2975" style="font-family:Dialog; font-size:10;">
+searchPanel : SearchPanel</text>
+<rect x="1357" y="2978" width="193" height="35" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1357" y="2978" width="192" height="34" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1359" y="2994" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; SearchPanelSimulation()</text>
+<line x1="1359" y1="3012" x2="1477" y2="3012" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1359" y="3011" style="font-family:Dialog; font-size:10;">
+main(args: String[]) : void</text>
+<rect x="1630" y="2871" width="641" height="159" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1630" y="2871" width="640" height="158" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1630" y="2871" width="641" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1630" y="2871" width="640" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1894" y="2886" style="font-family:Dialog; font-size:10;">
+SearchResultsController</text>
+<rect x="1630" y="2891" width="641" height="87" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1630" y="2891" width="640" height="86" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1632" y1="2908" x2="1713" y2="2908" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1632" y="2907" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="1632" y="2924" style="font-family:Dialog; font-size:10;">
+model : RowTableModel</text>
+<text x="1632" y="2941" style="font-family:Dialog; font-size:10;">
+hub : IHub</text>
+<text x="1632" y="2958" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="1632" y="2975" style="font-family:Dialog; font-size:10;">
+downloadManager : IDownloadManager</text>
+<rect x="1630" y="2977" width="641" height="53" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1630" y="2977" width="640" height="52" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1632" y="2993" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; SearchResultsController(_hub: IHub,_settings: ISettings,_downloadManager: IDownloadManager,_model: RowTableModel)</text>
+<text x="1632" y="3010" style="font-family:Dialog; font-size:10;">
+cellSelected(row: int,column: int) : void</text>
+<text x="1632" y="3027" style="font-family:Dialog; font-size:10;">
+showPopupClicked(row: int,column: int,e: MouseEvent) : void</text>
+<rect x="14" y="3280" width="248" height="125" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="3280" width="247" height="124" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="3280" width="248" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="3280" width="247" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="77" y="3295" style="font-family:Dialog; font-size:10;">
+MyShareManagerListener</text>
+<rect x="14" y="3300" width="248" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="3300" width="247" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="3317" width="248" height="88" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="3317" width="247" height="87" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="3333" style="font-family:Dialog; font-size:10;">
+directoryAdded(directory: String) : void</text>
+<text x="16" y="3350" style="font-family:Dialog; font-size:10;">
+creatingBrowseList() : void</text>
+<text x="16" y="3367" style="font-family:Dialog; font-size:10;">
+browseListCreated() : void</text>
+<text x="16" y="3384" style="font-family:Dialog; font-size:10;">
+fileHashed(filename: String) : void</text>
+<text x="16" y="3401" style="font-family:Dialog; font-size:10;">
+hashingFile(filename: String,percent: double) : void</text>
+<rect x="1326" y="194" width="326" height="193" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1326" y="194" width="325" height="192" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1326" y="194" width="326" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1326" y="194" width="325" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1435" y="209" style="font-family:Dialog; font-size:10;">
+ShareManagerWindow</text>
+<rect x="1326" y="214" width="326" height="156" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1326" y="214" width="325" height="155" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1328" y="230" style="font-family:Dialog; font-size:10;">
+screenWidth : int</text>
+<text x="1328" y="247" style="font-family:Dialog; font-size:10;">
+screenHeight : int</text>
+<text x="1328" y="264" style="font-family:Dialog; font-size:10;">
+frameWidth : int</text>
+<text x="1328" y="281" style="font-family:Dialog; font-size:10;">
+frameHeight : int</text>
+<text x="1328" y="298" style="font-family:Dialog; font-size:10;">
+mainPanel : JPanel</text>
+<text x="1328" y="315" style="font-family:Dialog; font-size:10;">
+label : JLabel</text>
+<text x="1328" y="332" style="font-family:Dialog; font-size:10;">
+logo : JLabel</text>
+<text x="1328" y="349" style="font-family:Dialog; font-size:10;">
+shareManagerListener : ShareManagerListener</text>
+<text x="1328" y="366" style="font-family:Dialog; font-size:10;">
+shareManager : IShareManager</text>
+<rect x="1326" y="369" width="326" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1326" y="369" width="325" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1328" y="385" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ShareManagerWindow(_shareManager: IShareManager)</text>
+<rect x="342" y="3280" width="161" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="342" y="3280" width="160" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="342" y="3280" width="161" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="342" y="3280" width="160" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="343" y="3295" style="font-family:Dialog; font-size:10;">
+ShareManagerWindowSimulation</text>
+<rect x="342" y="3300" width="161" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="342" y="3300" width="160" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="342" y="3318" width="161" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="342" y="3318" width="160" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="344" y1="3335" x2="462" y2="3335" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="344" y="3334" style="font-family:Dialog; font-size:10;">
+main(args: String[]) : void</text>
+<rect x="583" y="3280" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="583" y="3280" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="583" y="3280" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="583" y="3280" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="610" y="3295" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="583" y="3300" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="583" y="3300" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="583" y="3318" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="583" y="3318" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1326" y="604" width="182" height="74" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1326" y="604" width="181" height="73" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1326" y="604" width="182" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1326" y="604" width="181" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1359" y="619" style="font-family:Dialog; font-size:10;">
+MyShareManagerDialog</text>
+<rect x="1326" y="624" width="182" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1326" y="624" width="181" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1326" y="642" width="182" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1326" y="642" width="181" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1328" y="658" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; MyShareManagerDialog()</text>
+<text x="1328" y="675" style="font-family:Dialog; font-size:10;">
+closeApplication() : void</text>
+<rect x="723" y="3280" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="723" y="3280" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="723" y="3280" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="723" y="3280" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="750" y="3295" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="723" y="3300" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="723" y="3300" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="723" y="3318" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="723" y="3318" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="863" y="3280" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="863" y="3280" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="863" y="3280" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="863" y="3280" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="890" y="3295" style="font-family:Dialog; font-size:10;">
+2</text>
+<rect x="863" y="3300" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="863" y="3300" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="863" y="3318" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="863" y="3318" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1003" y="3280" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1003" y="3280" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1003" y="3280" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1003" y="3280" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1030" y="3295" style="font-family:Dialog; font-size:10;">
+3</text>
+<rect x="1003" y="3300" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1003" y="3300" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1003" y="3318" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1003" y="3318" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="3485" width="251" height="176" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="3485" width="250" height="175" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="3485" width="251" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="3485" width="250" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="104" y="3500" style="font-family:Dialog; font-size:10;">
+MyHubListener</text>
+<rect x="14" y="3505" width="251" height="70" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="3505" width="250" height="69" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="3521" style="font-family:Dialog; font-size:10;">
+model : RowTableModel</text>
+<text x="16" y="3538" style="font-family:Dialog; font-size:10;">
+added : ArrayList</text>
+<text x="16" y="3555" style="font-family:Dialog; font-size:10;">
+removed : ArrayList</text>
+<text x="16" y="3572" style="font-family:Dialog; font-size:10;">
+updated : boolean</text>
+<rect x="14" y="3574" width="251" height="87" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="3574" width="250" height="86" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="3590" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; MyHubListener(model: RowTableModel)</text>
+<text x="16" y="3607" style="font-family:Dialog; font-size:10;">
+userAdded(hub: IHub,ui: HubUser) : void</text>
+<text x="16" y="3624" style="font-family:Dialog; font-size:10;">
+userRemoved(hub: IHub,ui: HubUser) : void</text>
+<text x="16" y="3641" style="font-family:Dialog; font-size:10;">
+addUpdateTimer() : void</text>
+<text x="16" y="3658" style="font-family:Dialog; font-size:10;">
+update() : void</text>
+<rect x="14" y="604" width="658" height="210" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="604" width="657" height="209" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="604" width="658" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="604" width="657" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="297" y="619" style="font-family:Dialog; font-size:10;">
+UserListComponent</text>
+<rect x="14" y="624" width="658" height="121" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="624" width="657" height="120" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="16" y1="641" x2="97" y2="641" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="16" y="640" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="16" y="657" style="font-family:Dialog; font-size:10;">
+hub : IHub</text>
+<text x="16" y="674" style="font-family:Dialog; font-size:10;">
+hubComponent : HubComponent</text>
+<text x="16" y="691" style="font-family:Dialog; font-size:10;">
+model : RowTableModel</text>
+<text x="16" y="708" style="font-family:Dialog; font-size:10;">
+list : SortableTable</text>
+<text x="16" y="725" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="16" y="742" style="font-family:Dialog; font-size:10;">
+downloadManager : IDownloadManager</text>
+<rect x="14" y="744" width="658" height="70" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="744" width="657" height="69" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="760" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; UserListComponent(_hub: IHub,_hubComponent: HubComponent,_settings: ISettings,_downloadManager: IDownloadManager)</text>
+<text x="16" y="777" style="font-family:Dialog; font-size:10;">
+cellSelected(row: int,column: int) : void</text>
+<text x="16" y="794" style="font-family:Dialog; font-size:10;">
+getUserColumns(user: HubUser) : Object[]</text>
+<text x="16" y="811" style="font-family:Dialog; font-size:10;">
+showPopupClicked(row: int,column: int,e: MouseEvent) : void</text>
+<rect x="345" y="3485" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="345" y="3485" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="345" y="3485" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="345" y="3485" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="372" y="3500" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="345" y="3505" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="345" y="3505" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="345" y="3523" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="345" y="3523" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="485" y="3485" width="239" height="142" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="485" y="3485" width="238" height="141" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="485" y="3485" width="239" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="485" y="3485" width="238" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="522" y="3500" style="font-family:Dialog; font-size:10;">
+MultiSearchComponentSimulation</text>
+<rect x="485" y="3505" width="239" height="88" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="485" y="3505" width="238" height="87" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="487" y="3521" style="font-family:Dialog; font-size:10;">
+multiSearchComponent : MultiSearchComponent</text>
+<text x="487" y="3538" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="487" y="3555" style="font-family:Dialog; font-size:10;">
+hubManager : IHubManager</text>
+<text x="487" y="3572" style="font-family:Dialog; font-size:10;">
+allHubs : AllHubs</text>
+<text x="487" y="3589" style="font-family:Dialog; font-size:10;">
+downloadManager : IDownloadManager</text>
+<rect x="485" y="3592" width="239" height="35" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="485" y="3592" width="238" height="34" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="487" y="3608" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; MultiSearchComponentSimulation()</text>
+<line x1="487" y1="3626" x2="605" y2="3626" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="487" y="3625" style="font-family:Dialog; font-size:10;">
+main(args: String[]) : void</text>
+<rect x="1732" y="194" width="146" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1732" y="194" width="145" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1732" y="194" width="146" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1732" y="194" width="145" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1772" y="209" style="font-family:Dialog; font-size:10;">
+&lt;&lt;Interface&gt;&gt;</text>
+<rect x="1732" y="212" width="146" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1732" y="212" width="145" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1741" y="227" style="font-family:Dialog; font-size:10;">
+HubListComponentListener</text>
+<rect x="1733" y="212" width="144" height="2" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1733" y="212" width="143" height="1" style="fill: none; stroke:#ffffff; stroke-width:1"/>
+<rect x="1732" y="232" width="146" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1732" y="232" width="145" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1734" y="248" style="font-family:Dialog; font-size:10;">
+hubSelected(hub: IHub) : void</text>
+<rect x="804" y="3485" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="804" y="3485" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="804" y="3485" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="804" y="3485" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="831" y="3500" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="804" y="3505" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="804" y="3505" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="804" y="3523" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="804" y="3523" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="944" y="3485" width="206" height="74" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="944" y="3485" width="205" height="73" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="944" y="3485" width="206" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="944" y="3485" width="205" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1021" y="3500" style="font-family:Dialog; font-size:10;">
+MySettings</text>
+<rect x="944" y="3505" width="206" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="944" y="3505" width="205" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="946" y="3521" style="font-family:Dialog; font-size:10;">
+advanced : AdvancedSettings</text>
+<rect x="944" y="3523" width="206" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="944" y="3523" width="205" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="946" y="3539" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; MySettings()</text>
+<text x="946" y="3556" style="font-family:Dialog; font-size:10;">
+getAdvancedSettings() : AdvancedSettings</text>
+<rect x="1230" y="3485" width="130" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1230" y="3485" width="129" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1230" y="3485" width="130" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1230" y="3485" width="129" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1245" y="3500" style="font-family:Dialog; font-size:10;">
+MyAdvancedSettings</text>
+<rect x="1230" y="3505" width="130" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1230" y="3505" width="129" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1230" y="3523" width="130" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1230" y="3523" width="129" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1232" y="3539" style="font-family:Dialog; font-size:10;">
+getHublistAddress() : String</text>
+<rect x="14" y="3741" width="209" height="159" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="3741" width="208" height="158" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="3741" width="209" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="3741" width="208" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="47" y="3756" style="font-family:Dialog; font-size:10;">
+HubListComponentSimulation</text>
+<rect x="14" y="3761" width="209" height="105" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="3761" width="208" height="104" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="3777" style="font-family:Dialog; font-size:10;">
+hubFavoritesList : IHubFavoritesList</text>
+<text x="16" y="3794" style="font-family:Dialog; font-size:10;">
+hubFactory : IHubFactory</text>
+<text x="16" y="3811" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="16" y="3828" style="font-family:Dialog; font-size:10;">
+taskManager : TaskManager</text>
+<text x="16" y="3845" style="font-family:Dialog; font-size:10;">
+hubList : HubList</text>
+<text x="16" y="3862" style="font-family:Dialog; font-size:10;">
+hublistComponent : HubListComponent</text>
+<rect x="14" y="3865" width="209" height="35" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="3865" width="208" height="34" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="3881" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; HubListComponentSimulation()</text>
+<line x1="16" y1="3899" x2="134" y2="3899" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="16" y="3898" style="font-family:Dialog; font-size:10;">
+main(args: String[]) : void</text>
+<rect x="303" y="3741" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="303" y="3741" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="303" y="3741" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="303" y="3741" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="330" y="3756" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="303" y="3761" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="303" y="3761" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="303" y="3779" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="303" y="3779" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="443" y="3741" width="225" height="125" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="443" y="3741" width="224" height="124" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="443" y="3741" width="225" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="443" y="3741" width="224" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="476" y="3756" style="font-family:Dialog; font-size:10;">
+FileBrowseComponentSimulation</text>
+<rect x="443" y="3761" width="225" height="71" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="443" y="3761" width="224" height="70" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="445" y="3777" style="font-family:Dialog; font-size:10;">
+hubManager : IHubManager</text>
+<text x="445" y="3794" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="445" y="3811" style="font-family:Dialog; font-size:10;">
+downloadManager : IDownloadManager</text>
+<text x="445" y="3828" style="font-family:Dialog; font-size:10;">
+fileBrowseComponent : FileBrowseComponent</text>
+<rect x="443" y="3831" width="225" height="35" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="443" y="3831" width="224" height="34" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="445" y="3847" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; FileBrowseComponentSimulation()</text>
+<line x1="445" y1="3865" x2="563" y2="3865" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="445" y="3864" style="font-family:Dialog; font-size:10;">
+main(args: String[]) : void</text>
+<rect x="748" y="3741" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="748" y="3741" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="748" y="3741" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="748" y="3741" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="775" y="3756" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="748" y="3761" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="748" y="3761" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="748" y="3779" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="748" y="3779" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="888" y="3741" width="188" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="888" y="3741" width="187" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="888" y="3741" width="188" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="888" y="3741" width="187" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="941" y="3756" style="font-family:Dialog; font-size:10;">
+MyActionListener</text>
+<rect x="888" y="3761" width="188" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="888" y="3761" width="187" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="888" y="3779" width="188" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="888" y="3779" width="187" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="890" y="3795" style="font-family:Dialog; font-size:10;">
+actionPerformed(e: ActionEvent) : void</text>
+<rect x="1156" y="3741" width="233" height="74" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1156" y="3741" width="232" height="73" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1156" y="3741" width="233" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1156" y="3741" width="232" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1228" y="3756" style="font-family:Dialog; font-size:10;">
+MySettingsListener</text>
+<rect x="1156" y="3761" width="233" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1156" y="3761" width="232" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1156" y="3779" width="233" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1156" y="3779" width="232" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1158" y="3795" style="font-family:Dialog; font-size:10;">
+downloadSlotsChanged(used: int,total: int) : void</text>
+<text x="1158" y="3812" style="font-family:Dialog; font-size:10;">
+uploadSlotsChanged(used: int,total: int) : void</text>
+<rect x="14" y="3980" width="248" height="74" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="3980" width="247" height="73" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="3980" width="248" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="3980" width="247" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="82" y="3995" style="font-family:Dialog; font-size:10;">
+MyTreeHashingListener</text>
+<rect x="14" y="4000" width="248" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="4000" width="247" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="4018" width="248" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="4018" width="247" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="4034" style="font-family:Dialog; font-size:10;">
+hashingFile(filename: String,percent: double) : void</text>
+<text x="16" y="4051" style="font-family:Dialog; font-size:10;">
+fileHashed(filename: String) : void</text>
+<rect x="342" y="3980" width="283" height="125" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="342" y="3980" width="282" height="124" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="342" y="3980" width="283" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="342" y="3980" width="282" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="426" y="3995" style="font-family:Dialog; font-size:10;">
+MySysTrayMenuListener</text>
+<rect x="342" y="4000" width="283" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="342" y="4000" width="282" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="344" y="4016" style="font-family:Dialog; font-size:10;">
+mainFrame : JFrame</text>
+<rect x="342" y="4017" width="283" height="88" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="342" y="4017" width="282" height="87" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="344" y="4033" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; MySysTrayMenuListener(_mainFrame: JFrame)</text>
+<text x="344" y="4050" style="font-family:Dialog; font-size:10;">
+showhide() : void</text>
+<text x="344" y="4067" style="font-family:Dialog; font-size:10;">
+menuItemSelected() : void</text>
+<text x="344" y="4084" style="font-family:Dialog; font-size:10;">
+iconLeftClicked() : void</text>
+<text x="344" y="4101" style="font-family:Dialog; font-size:10;">
+iconLeftDoubleClicked() : void</text>
+<rect x="705" y="3980" width="1600" height="397" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="705" y="3980" width="1599" height="396" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="705" y="3980" width="1600" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="705" y="3980" width="1599" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1478" y="3995" style="font-family:Dialog; font-size:10;">
+MainFrame</text>
+<rect x="705" y="4000" width="1600" height="309" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="705" y="4000" width="1599" height="308" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="707" y1="4017" x2="762" y2="4017" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="707" y="4016" style="font-family:Dialog; font-size:10;">
+title : String</text>
+<line x1="707" y1="4034" x2="788" y2="4034" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="707" y="4033" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="707" y="4050" style="font-family:Dialog; font-size:10;">
+tabPane : JTabbedPane</text>
+<text x="707" y="4067" style="font-family:Dialog; font-size:10;">
+settingsListener : SettingsListener</text>
+<text x="707" y="4084" style="font-family:Dialog; font-size:10;">
+shareManagerListener : ShareManagerListener</text>
+<text x="707" y="4101" style="font-family:Dialog; font-size:10;">
+menuListener : ActionListener</text>
+<text x="707" y="4118" style="font-family:Dialog; font-size:10;">
+hubManagerComponent : ManagerComponent</text>
+<text x="707" y="4135" style="font-family:Dialog; font-size:10;">
+multiSearchComponent : MultiSearchComponent</text>
+<text x="707" y="4152" style="font-family:Dialog; font-size:10;">
+slotComponent : MonitorComponent</text>
+<text x="707" y="4169" style="font-family:Dialog; font-size:10;">
+incompleteComponent : IncompleteComponent</text>
+<text x="707" y="4186" style="font-family:Dialog; font-size:10;">
+fileBrowseComponent : FileBrowseComponent</text>
+<text x="707" y="4203" style="font-family:Dialog; font-size:10;">
+statusBar : StatusBar</text>
+<text x="707" y="4220" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="707" y="4237" style="font-family:Dialog; font-size:10;">
+shareManager : IShareManager</text>
+<text x="707" y="4254" style="font-family:Dialog; font-size:10;">
+themeManager : ThemeManager</text>
+<text x="707" y="4271" style="font-family:Dialog; font-size:10;">
+settingsDialog : SettingsDialog</text>
+<text x="707" y="4288" style="font-family:Dialog; font-size:10;">
+downloadManager : IDownloadManager</text>
+<text x="707" y="4305" style="font-family:Dialog; font-size:10;">
+sysTrayMenuListener : MySysTrayMenuListener</text>
+<rect x="705" y="4308" width="1600" height="69" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="705" y="4308" width="1599" height="68" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="707" y="4324" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; MainFrame(_settings: ISettings,_incompleteComponent: IncompleteComponent,_themeManager: ThemeManager,_slotComponent: MonitorComponent,_hubManagerComponent: ManagerComponent,_multiSearchComponent: MultiSearchComponent,_shareManager: IShareManager,_downloadManager: IDownloadManager)</text>
+<text x="707" y="4341" style="font-family:Dialog; font-size:10;">
+setupComponents() : void</text>
+<text x="707" y="4358" style="font-family:Dialog; font-size:10;">
+start() : void</text>
+<text x="707" y="4375" style="font-family:Dialog; font-size:10;">
+stop() : void</text>
+<rect x="2385" y="3980" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2385" y="3980" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2385" y="3980" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2385" y="3980" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2412" y="3995" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="2385" y="4000" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2385" y="4000" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2385" y="4018" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2385" y="4018" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2525" y="3980" width="216" height="244" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2525" y="3980" width="215" height="243" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2525" y="3980" width="216" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2525" y="3980" width="215" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2558" y="3995" style="font-family:Dialog; font-size:10;">
+ManagerComponentSimulation</text>
+<rect x="2525" y="4000" width="216" height="190" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2525" y="4000" width="215" height="189" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2527" y="4016" style="font-family:Dialog; font-size:10;">
+taskManager : TaskManager</text>
+<text x="2527" y="4033" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="2527" y="4050" style="font-family:Dialog; font-size:10;">
+hubManager : IHubManager</text>
+<text x="2527" y="4067" style="font-family:Dialog; font-size:10;">
+hubFavoritesLoader : IHubFavoritesLoader</text>
+<text x="2527" y="4084" style="font-family:Dialog; font-size:10;">
+hubFavoritesList : IHubFavoritesList</text>
+<text x="2527" y="4101" style="font-family:Dialog; font-size:10;">
+hubList : IHubList</text>
+<text x="2527" y="4118" style="font-family:Dialog; font-size:10;">
+hubTaskFactory : IHubTaskFactory</text>
+<text x="2527" y="4135" style="font-family:Dialog; font-size:10;">
+hubFactory : IHubFactory</text>
+<text x="2527" y="4152" style="font-family:Dialog; font-size:10;">
+hubListComponent : HubListComponent</text>
+<text x="2527" y="4169" style="font-family:Dialog; font-size:10;">
+downloadManager : IDownloadManager</text>
+<text x="2527" y="4186" style="font-family:Dialog; font-size:10;">
+managerComponent : ManagerComponent</text>
+<rect x="2525" y="4189" width="216" height="35" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2525" y="4189" width="215" height="34" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2527" y="4205" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ManagerComponentSimulation()</text>
+<line x1="2527" y1="4223" x2="2645" y2="4223" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="2527" y="4222" style="font-family:Dialog; font-size:10;">
+main(args: String[]) : void</text>
+<rect x="2821" y="3980" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2821" y="3980" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2821" y="3980" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2821" y="3980" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2848" y="3995" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="2821" y="4000" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2821" y="4000" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2821" y="4018" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2821" y="4018" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="4457" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="4457" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="4457" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="4457" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="41" y="4472" style="font-family:Dialog; font-size:10;">
+2</text>
+<rect x="14" y="4477" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="4477" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="4495" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="4495" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="154" y="4457" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="154" y="4457" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="154" y="4457" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="154" y="4457" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="181" y="4472" style="font-family:Dialog; font-size:10;">
+3</text>
+<rect x="154" y="4477" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="154" y="4477" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="154" y="4495" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="154" y="4495" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="294" y="4457" width="335" height="108" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="294" y="4457" width="334" height="107" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="294" y="4457" width="335" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="294" y="4457" width="334" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="426" y="4472" style="font-family:Dialog; font-size:10;">
+MyHubListener</text>
+<rect x="294" y="4477" width="335" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="294" y="4477" width="334" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="296" y="4493" style="font-family:Dialog; font-size:10;">
+messageComponent : MessageComponent</text>
+<rect x="294" y="4494" width="335" height="71" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="294" y="4494" width="334" height="70" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="296" y="4510" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; MyHubListener(messageComponent: MessageComponent)</text>
+<text x="296" y="4527" style="font-family:Dialog; font-size:10;">
+hubDisconnected(hub: IHub) : void</text>
+<text x="296" y="4544" style="font-family:Dialog; font-size:10;">
+gotMessage(hub: IHub,message: Message) : void</text>
+<text x="296" y="4561" style="font-family:Dialog; font-size:10;">
+gotUserMessage(hub: IHub,message: Message) : void</text>
+<rect x="709" y="4457" width="479" height="397" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="709" y="4457" width="478" height="396" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="709" y="4457" width="479" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="709" y="4457" width="478" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="911" y="4472" style="font-family:Dialog; font-size:10;">
+HubComponent</text>
+<rect x="709" y="4477" width="479" height="240" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="709" y="4477" width="478" height="239" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="711" y1="4494" x2="792" y2="4494" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="711" y="4493" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="711" y="4510" style="font-family:Dialog; font-size:10;">
+disconnectButton : JButton</text>
+<text x="711" y="4527" style="font-family:Dialog; font-size:10;">
+messageComponent : MessageComponent</text>
+<text x="711" y="4544" style="font-family:Dialog; font-size:10;">
+popup : JPopupMenu</text>
+<text x="711" y="4561" style="font-family:Dialog; font-size:10;">
+searchComponent : SearchComponent</text>
+<text x="711" y="4578" style="font-family:Dialog; font-size:10;">
+splitPane : SplitPane</text>
+<text x="711" y="4595" style="font-family:Dialog; font-size:10;">
+tabPane : JTabbedPane</text>
+<text x="711" y="4612" style="font-family:Dialog; font-size:10;">
+toolBar : JToolBar</text>
+<text x="711" y="4629" style="font-family:Dialog; font-size:10;">
+userList : UserListComponent</text>
+<text x="711" y="4646" style="font-family:Dialog; font-size:10;">
+hubListener : HubListener</text>
+<text x="711" y="4663" style="font-family:Dialog; font-size:10;">
+active : boolean</text>
+<text x="711" y="4680" style="font-family:Dialog; font-size:10;">
+hub : IHub</text>
+<text x="711" y="4697" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="711" y="4714" style="font-family:Dialog; font-size:10;">
+downloadManager : IDownloadManager</text>
+<rect x="709" y="4716" width="479" height="138" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="709" y="4716" width="478" height="137" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="711" y="4732" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; HubComponent(_hub: IHub,_settings: ISettings,_downloadManager: IDownloadManager)</text>
+<text x="711" y="4749" style="font-family:Dialog; font-size:10;">
+addUserBrowseTab(nick: String) : void</text>
+<text x="711" y="4766" style="font-family:Dialog; font-size:10;">
+addUserMessageTab(name: String) : MessageComponent</text>
+<text x="711" y="4783" style="font-family:Dialog; font-size:10;">
+browseListDecoded(hub: IHub,ui: HubUser) : void</text>
+<text x="711" y="4800" style="font-family:Dialog; font-size:10;">
+getHub() : IHub</text>
+<text x="711" y="4817" style="font-family:Dialog; font-size:10;">
+getIndexOfUserMessageComponent(name: String) : int</text>
+<text x="711" y="4834" style="font-family:Dialog; font-size:10;">
+isActive() : boolean</text>
+<text x="711" y="4851" style="font-family:Dialog; font-size:10;">
+setActive(active: boolean) : void</text>
+<rect x="1268" y="4457" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1268" y="4457" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1268" y="4457" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1268" y="4457" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1295" y="4472" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="1268" y="4477" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1268" y="4477" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1268" y="4495" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1268" y="4495" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1408" y="4457" width="193" height="125" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1408" y="4457" width="192" height="124" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1408" y="4457" width="193" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1408" y="4457" width="192" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1441" y="4472" style="font-family:Dialog; font-size:10;">
+HubComponentSimulation</text>
+<rect x="1408" y="4477" width="193" height="71" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1408" y="4477" width="192" height="70" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1410" y="4493" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="1410" y="4510" style="font-family:Dialog; font-size:10;">
+hubManager : IHubManager</text>
+<text x="1410" y="4527" style="font-family:Dialog; font-size:10;">
+downloadManager : IDownloadManager</text>
+<text x="1410" y="4544" style="font-family:Dialog; font-size:10;">
+hubComponent : HubComponent</text>
+<rect x="1408" y="4547" width="193" height="35" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1408" y="4547" width="192" height="34" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1410" y="4563" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; HubComponentSimulation()</text>
+<line x1="1410" y1="4581" x2="1528" y2="4581" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1410" y="4580" style="font-family:Dialog; font-size:10;">
+main(args: String[]) : void</text>
+<rect x="14" y="4934" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="4934" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="4934" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="4934" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="41" y="4949" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="14" y="4954" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="4954" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="4972" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="4972" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="154" y="4934" width="444" height="74" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="154" y="4934" width="443" height="73" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="154" y="4934" width="444" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="154" y="4934" width="443" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="333" y="4949" style="font-family:Dialog; font-size:10;">
+ResultAndRequest</text>
+<rect x="154" y="4954" width="444" height="37" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="154" y="4954" width="443" height="36" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="156" y="4970" style="font-family:Dialog; font-size:10;">
+searchResult : SearchResult</text>
+<text x="156" y="4988" style="font-family:Dialog; font-size:10;">
+searchRequest : SearchRequest</text>
+<rect x="154" y="4990" width="444" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="154" y="4990" width="443" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="156" y="5006" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ResultAndRequest(_searchResult: SearchResult,_searchRequest: SearchRequest)</text>
+<rect x="678" y="4934" width="454" height="227" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="678" y="4934" width="453" height="226" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="678" y="4934" width="454" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="678" y="4934" width="453" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="832" y="4949" style="font-family:Dialog; font-size:10;">
+SearchComponentHubListener</text>
+<rect x="678" y="4954" width="454" height="104" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="678" y="4954" width="453" height="103" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="680" y1="4971" x2="761" y2="4971" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="680" y="4970" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="680" y="4987" style="font-family:Dialog; font-size:10;">
+searchComponent : SearchComponent</text>
+<text x="680" y="5004" style="font-family:Dialog; font-size:10;">
+hub : IHub</text>
+<text x="680" y="5021" style="font-family:Dialog; font-size:10;">
+added : List</text>
+<text x="680" y="5038" style="font-family:Dialog; font-size:10;">
+searchRequests : List</text>
+<text x="680" y="5055" style="font-family:Dialog; font-size:10;">
+isAllHubs : boolean</text>
+<rect x="678" y="5057" width="454" height="104" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="678" y="5057" width="453" height="103" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="680" y="5073" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; SearchComponentHubListener(_searchComponent: SearchComponent,_hub: IHub)</text>
+<text x="680" y="5090" style="font-family:Dialog; font-size:10;">
+searchResultAdded(_hub: IHub,sr: SearchResult,searchRequest: SearchRequest) : void</text>
+<text x="680" y="5107" style="font-family:Dialog; font-size:10;">
+addSearchRequest(_hub: IHub,searchRequest: SearchRequest) : void</text>
+<text x="680" y="5124" style="font-family:Dialog; font-size:10;">
+__searchRequestAdded(_hub: IHub,sr: SearchRequest) : void</text>
+<text x="680" y="5141" style="font-family:Dialog; font-size:10;">
+searchResultsCleared(_hub: IHub) : void</text>
+<text x="680" y="5158" style="font-family:Dialog; font-size:10;">
+update() : void</text>
+<rect x="752" y="604" width="494" height="346" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="752" y="604" width="493" height="345" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="752" y="604" width="494" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="752" y="604" width="493" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="954" y="619" style="font-family:Dialog; font-size:10;">
+SearchComponent</text>
+<rect x="752" y="624" width="494" height="155" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="752" y="624" width="493" height="154" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="754" y1="641" x2="835" y2="641" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="754" y="640" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="754" y="657" style="font-family:Dialog; font-size:10;">
+hubListener : SearchComponentHubListener</text>
+<text x="754" y="674" style="font-family:Dialog; font-size:10;">
+models : List</text>
+<text x="754" y="691" style="font-family:Dialog; font-size:10;">
+searchRequests : List</text>
+<text x="754" y="708" style="font-family:Dialog; font-size:10;">
+tabbedPane : JTabbedPane</text>
+<text x="754" y="725" style="font-family:Dialog; font-size:10;">
+initialized : boolean</text>
+<text x="754" y="742" style="font-family:Dialog; font-size:10;">
+hub : IHub</text>
+<text x="754" y="759" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="754" y="776" style="font-family:Dialog; font-size:10;">
+downloadManager : IDownloadManager</text>
+<rect x="752" y="778" width="494" height="172" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="752" y="778" width="493" height="171" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="754" y="794" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; SearchComponent(_hub: IHub,_settings: ISettings,_downloadManager: IDownloadManager)</text>
+<text x="754" y="811" style="font-family:Dialog; font-size:10;">
+getSearchColumns(sr: SearchResult) : Object[]</text>
+<text x="754" y="828" style="font-family:Dialog; font-size:10;">
+initializeSortableTable(table: SortableTable) : void</text>
+<text x="754" y="845" style="font-family:Dialog; font-size:10;">
+updateModel(searchRequest: SearchRequest) : SortableTable</text>
+<text x="754" y="862" style="font-family:Dialog; font-size:10;">
+addSearch(searchRequest: SearchRequest) : void</text>
+<text x="754" y="879" style="font-family:Dialog; font-size:10;">
+findSearchRequestIndex(searchResult: SearchResult) : int</text>
+<text x="754" y="896" style="font-family:Dialog; font-size:10;">
+getModels() : List</text>
+<text x="754" y="913" style="font-family:Dialog; font-size:10;">
+getSearchRequests() : List</text>
+<text x="754" y="930" style="font-family:Dialog; font-size:10;">
+getTabbedPane() : JTabbedPane</text>
+<text x="754" y="947" style="font-family:Dialog; font-size:10;">
+getHubListener() : SearchComponentHubListener</text>
+<rect x="1212" y="4934" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1212" y="4934" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1212" y="4934" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1212" y="4934" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1239" y="4949" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="1212" y="4954" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1212" y="4954" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1212" y="4972" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1212" y="4972" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1352" y="4934" width="208" height="125" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1352" y="4934" width="207" height="124" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1352" y="4934" width="208" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1352" y="4934" width="207" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1385" y="4949" style="font-family:Dialog; font-size:10;">
+SearchComponentSimulation</text>
+<rect x="1352" y="4954" width="208" height="71" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1352" y="4954" width="207" height="70" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1354" y="4970" style="font-family:Dialog; font-size:10;">
+hub : IHub</text>
+<text x="1354" y="4987" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="1354" y="5004" style="font-family:Dialog; font-size:10;">
+downloadManager : IDownloadManager</text>
+<text x="1354" y="5021" style="font-family:Dialog; font-size:10;">
+searchComponent : SearchComponent</text>
+<rect x="1352" y="5024" width="208" height="35" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1352" y="5024" width="207" height="34" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1354" y="5040" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; SearchComponentSimulation()</text>
+<line x1="1354" y1="5058" x2="1472" y2="5058" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1354" y="5057" style="font-family:Dialog; font-size:10;">
+main(args: String[]) : void</text>
+<rect x="1640" y="4934" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1640" y="4934" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1640" y="4934" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1640" y="4934" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1667" y="4949" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="1640" y="4954" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1640" y="4954" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1640" y="4972" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1640" y="4972" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="5241" width="231" height="142" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="5241" width="230" height="141" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="5241" width="231" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="5241" width="230" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="76" y="5256" style="font-family:Dialog; font-size:10;">
+IncompleteSimulation</text>
+<rect x="14" y="5261" width="231" height="88" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="5261" width="230" height="87" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="5277" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="16" y="5294" style="font-family:Dialog; font-size:10;">
+incompleteComponent : IncompleteComponent</text>
+<text x="16" y="5311" style="font-family:Dialog; font-size:10;">
+hubManager : IHubManager</text>
+<text x="16" y="5328" style="font-family:Dialog; font-size:10;">
+downloadManager : IDownloadManager</text>
+<text x="16" y="5345" style="font-family:Dialog; font-size:10;">
+requestsModel : IRequestsModel</text>
+<rect x="14" y="5348" width="231" height="35" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="5348" width="230" height="34" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="5364" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; IncompleteSimulation()</text>
+<line x1="16" y1="5382" x2="134" y2="5382" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="16" y="5381" style="font-family:Dialog; font-size:10;">
+main(args: String[]) : void</text>
+<rect x="14" y="14" width="90" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="14" width="89" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="15" y="29" style="font-family:Dialog; font-size:10;">
+util</text>
+<rect x="14" y="34" width="140" height="80" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="34" width="139" height="79" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="234" y="14" width="90" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="234" y="14" width="89" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="235" y="29" style="font-family:Dialog; font-size:10;">
+util</text>
+<rect x="234" y="34" width="140" height="80" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="234" y="34" width="139" height="79" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="454" y="14" width="90" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="454" y="14" width="89" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="455" y="29" style="font-family:Dialog; font-size:10;">
+model</text>
+<rect x="454" y="34" width="140" height="80" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="454" y="34" width="139" height="79" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="674" y="14" width="90" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="674" y="14" width="89" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="675" y="29" style="font-family:Dialog; font-size:10;">
+model</text>
+<rect x="674" y="34" width="140" height="80" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="674" y="34" width="139" height="79" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1792" y1="467" x2="1792" y2="462" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="1792" y1="457" x2="1792" y2="452" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="1792" y1="447" x2="1792" y2="442" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="1792" y1="437" x2="1792" y2="432" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="1792" y1="427" x2="1792" y2="422" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="1792" y1="417" x2="1792" y2="412" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="1792" y1="407" x2="1792" y2="402" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="1792" y1="397" x2="1792" y2="392" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="1792" y1="387" x2="1792" y2="382" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="1792" y1="377" x2="1792" y2="372" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="1792" y1="367" x2="1792" y2="362" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="1792" y1="357" x2="1792" y2="352" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="1792" y1="347" x2="1792" y2="342" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="1792" y1="337" x2="1792" y2="332" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="1792" y1="327" x2="1792" y2="322" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="1792" y1="317" x2="1792" y2="312" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="1792" y1="307" x2="1792" y2="302" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="1792" y1="297" x2="1792" y2="292" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="1792" y1="287" x2="1792" y2="282" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="1792" y1="277" x2="1792" y2="272" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="1792" y1="267" x2="1792" y2="262" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="1792" y1="257" x2="1792" y2="252" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="1799" y1="263" x2="1792" y2="251" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="1785" y1="263" x2="1792" y2="251" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1754" y="365" style="font-family:Dialog; font-size:10;">
+&lt;&lt;realize&gt;&gt;</text>
+<polyline style="fill:none; stroke:#000000; stroke-width:1" points="1417,604 1417,572 1489,572 1489,387"/>
+<polygon style="fill:#ffffff; stroke:#ffffff; stroke-width:1" points="1489,387 1496,399 1482,399"/>
+<polygon style="fill:none; stroke:#000000; stroke-width:1" points="1489,387 1496,399 1482,399"/>
+<polyline style="fill:none; stroke:#000000; stroke-width:1" points="343,604 343,572 630,572 630,302"/>
+<polygon style="fill:#ffffff; stroke:#ffffff; stroke-width:1" points="630,302 637,314 623,314"/>
+<polygon style="fill:none; stroke:#000000; stroke-width:1" points="630,302 637,314 623,314"/>
+<polyline style="fill:none; stroke:#000000; stroke-width:1" points="999,604 999,572 630,572 630,302"/>
+<polygon style="fill:#ffffff; stroke:#ffffff; stroke-width:1" points="630,302 637,314 623,314"/>
+<polygon style="fill:none; stroke:#000000; stroke-width:1" points="630,302 637,314 623,314"/>
+</svg>

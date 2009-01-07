@@ -1,0 +1,6 @@
+
+# default without any custom themes
+# java -jar javadc3.jar
+
+# uses simple theme
+java -Dswing.metacitythemename=Bluecurve -Dswing.gtkthemefile=fc_custom.gtkrc -jar javadc3.jar

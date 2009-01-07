@@ -1,0 +1,9 @@
+#!/bin/bash
+
+RESOURCE=""
+for var in `ls $JAVADC/lib/*.jar`
+do
+	RESOURCE=$var:$RESOURCE
+done
+
+java -classpath .:$RESOURCE net.sf.javadc.Main > log &

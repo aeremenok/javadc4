@@ -1,0 +1,70 @@
+
+TODO 
+
+- GENERAL : optimize performance for
+    Search
+    
+
+- NET : check support for UTF-8 charset in Hub messages
+
+    TODO
+
+- NET : limit the amount of parallel client connections
+
+    TODO
+    
+- NET : when download requests are removed from the DownloadQueue, they need also be removed from
+  the list of ongoing downloads
+
+    TODO
+
+- GENERAL : releasing of upload slots does not yet work properly
+
+    TODO    
+
+- GUI : use the TTH hash information to create menus for Resume
+
+    TODO
+    
+- NET : ensure that one file can't be used for more than one download
+
+    TODO
+    
+-------------------------------------------------------------------------------
+
+- NET : improved unit tests for the following client tasks
+
+   GetZBlock
+   UGetBlock
+   UGetZBlock
+
+   Uploading
+   ZUploading
+   
+- NET : make uploading of testSUR<nickname> requests work
+        
+    TODO    
+                
+- GUI : better Sharing settings dialog 
+
+    > ?
+    
+- NET : separate public and private hubs
+
+    > Nigini    
+    
+- NET : use DC++ extensions to Direct Connect protocol
+
+  http://sourceforge.net/docman/display_doc.php?docid=22246&group_id=40287
+      
+    GetZBlock / UGetZBlock / UGetBlock
+
+      > prototypes are ready
+      
+- NET : support for XML file lists (import and export)
+
+    > ?
+    
+- GUI : offer connect-to-on-startup option for favorite hubs
+
+    > ?     
