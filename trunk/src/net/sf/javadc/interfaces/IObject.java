@@ -6,17 +6,18 @@ package net.sf.javadc.interfaces;
 /**
  * @author Timo Westkämper
  */
-public interface IObject {
+public interface IObject
+{
+    /**
+     * @param obj
+     * @return
+     */
+    public boolean equals(
+        Object obj );
 
     /**
      * @return
      */
     public int hashCode();
-
-    /**
-     * @param obj
-     * @return
-     */
-    public boolean equals(Object obj);
 
 }

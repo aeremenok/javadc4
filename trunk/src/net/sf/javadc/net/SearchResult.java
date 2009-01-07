@@ -1,21 +1,11 @@
 /*
- * Copyright (C) 2001 Stefan Görling, stefan@gorling.se
- *
- * Copyright (C) 2004 Timo Westkämper
- *
- * This program is free software;      you can redistribute it and/or modify it
- * under the terms of the   GNU General Public License as published by the Free
- * Software Foundation;    either version 2 of the License, or (at your option)
- * any later version.
- *
- *  This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY;   without even the implied warranty of MERCHANTABILITY or FIT-
- * NESS FOR A PARTICULAR PURPOSE.   See the GNU General Public License for more
- * details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program; if not, write to the Free Software Foundation, Inc.,
- * 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ * Copyright (C) 2001 Stefan Görling, stefan@gorling.se Copyright (C) 2004 Timo Westkämper This program is free
+ * software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or (at your option) any later version. This program is
+ * distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FIT- NESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You
+ * should have received a copy of the GNU General Public License along with this program; if not, write to the Free
+ * Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
 // $Id: SearchResult.java,v 1.21 2005/10/02 11:42:27 timowest Exp $
@@ -36,87 +26,85 @@ import net.sf.javadc.util.FileInfo;
 import org.apache.log4j.Category;
 
 /**
- * <code>SearchResult</code> holds information about a search result and or
- * the download status of it.
+ * <code>SearchResult</code> holds information about a search result and or the download status of it.
  */
-public class SearchResult {
-
-    private final static Category logger = Category
-            .getInstance(SearchResult.class);
+public class SearchResult
+{
+    private final static Category logger   = Category.getInstance( SearchResult.class );
 
     // private boolean bDir = false;
     /**
      * 
      */
-    private Date date;
+    private Date                  date;
 
     /**
      * 
      */
-    private String filename = new String();
+    private String                filename = new String();
+
+    /**
+     *  
+     */
+    private long                  fileSize;
 
     /**
      * 
      */
-    private long fileSize;
+    private int                   freeSlotCount;
 
     /**
      * 
      */
-    private int freeSlotCount;
-
-    /**
-     * 
-     */
-    private HostInfo host = new HostInfo();
+    private HostInfo              host     = new HostInfo();
 
     // components
     /**
      * 
      */
-    private IHub hub;
+    private IHub                  hub;
 
     /**
      * 
      */
-    private int maxSlotCount;
+    private int                   maxSlotCount;
 
     /**
      * 
      */
-    private String nick;
+    private String                nick;
 
     /**
      * 
      */
-    private int ping;
+    private int                   ping;
 
     /**
      * 
      */
-    private ISettings settings;
+    private ISettings             settings;
 
     /**
      * 
      */
-    private String tempDownloadDir;
+    private String                tempDownloadDir;
 
     /**
      * 
      */
-    private String tth;
+    private String                tth;
 
     /**
      * 
      */
-    private File tempDownloadFile;
+    private File                  tempDownloadFile;
 
     /**
-     * Creates an empty instance of <CODE>SearchResult</CODE> the empty
-     * instance is used for loading <CODE>SearchResult</CODE> s from the
-     * serialized XML version
+     * Creates an empty instance of <CODE>SearchResult</CODE> the empty instance is used for loading
+     * <CODE>SearchResult</CODE> s from the serialized XML version
      */
-    public SearchResult() {
+    public SearchResult()
+    {
         maxSlotCount = 3;
 
         // ?
@@ -124,18 +112,22 @@ public class SearchResult {
 
     /**
      * Creates a <CODE>SearchResult</CODE> object from the given <CODE>
-     * FileInfo</CODE>,<CODE>SearchRequest</CODE> and <CODE>ISettings
-     * </CODE> this constructor is used from the <CODE>ShareManager</CODE>
-     * component to construct sets of search results
+     * FileInfo</CODE>,<CODE>SearchRequest</CODE> and
+     * <CODE>ISettings
+     * </CODE> this constructor is used from the <CODE>ShareManager</CODE> component to construct sets of search results
      */
-    public SearchResult(FileInfo fileInfo, SearchRequest sr, ISettings _settings) {
+    public SearchResult(
+        FileInfo fileInfo,
+        SearchRequest sr,
+        ISettings _settings )
+    {
         this();
         settings = _settings;
 
         nick = sr.getRespondAddress();
         filename = fileInfo.getName();
         fileSize = (int) fileInfo.getLength();
-        host = new HostInfo("");
+        host = new HostInfo( "" );
 
         tth = fileInfo.getHash().getRoot();
 
@@ -149,47 +141,55 @@ public class SearchResult {
      * Creates a <CODE>SearchResult</CODE> object from the given <CODE>IHub
      * </CODE>, search result and <CODE>ISettings</CODE>
      */
-    public SearchResult(IHub _hub, String sresult, ISettings _settings)
-            throws Exception {
+    public SearchResult(
+        IHub _hub,
+        String sresult,
+        ISettings _settings )
+        throws Exception
+    {
         this();
         settings = _settings;
 
         hub = _hub;
         host = hub.getHost();
 
-        StringTokenizer st = new StringTokenizer(sresult, String
-                .valueOf((char) 5));
+        StringTokenizer st = new StringTokenizer( sresult, String.valueOf( (char) 5 ) );
 
         // nick and filename information
         String tmp = st.nextToken();
 
-        nick = tmp.substring(0, tmp.indexOf(" "));
+        nick = tmp.substring( 0, tmp.indexOf( " " ) );
 
         // if the string contains also information about the slots,
         // don't use the next token
-        if (tmp.matches(".+\\s\\d+/\\d+")) {
-            filename = tmp
-                    .substring(tmp.indexOf(" ") + 1, tmp.lastIndexOf(" "));
-            tmp = tmp.substring(tmp.lastIndexOf(" ") + 1);
+        if ( tmp.matches( ".+\\s\\d+/\\d+" ) )
+        {
+            filename = tmp.substring( tmp.indexOf( " " ) + 1, tmp.lastIndexOf( " " ) );
+            tmp = tmp.substring( tmp.lastIndexOf( " " ) + 1 );
 
             // use the next token
-        } else {
-            filename = tmp.substring(tmp.indexOf(" ") + 1);
+        }
+        else
+        {
+            filename = tmp.substring( tmp.indexOf( " " ) + 1 );
             tmp = st.nextToken();
 
         }
 
-        if (tmp.matches("\\d+\\s\\d+/\\d+")) { // digits digits/digits
+        if ( tmp.matches( "\\d+\\s\\d+/\\d+" ) )
+        { // digits digits/digits
 
-            try {
-                fileSize = Long.parseLong(tmp.substring(0, tmp.indexOf(" ")));
+            try
+            {
+                fileSize = Long.parseLong( tmp.substring( 0, tmp.indexOf( " " ) ) );
 
-            } catch (Throwable e) {
-                String error = "Catched " + e.getClass().getName()
-                        + " when trying " + "parse " + tmp;
+            }
+            catch ( Throwable e )
+            {
+                String error = "Catched " + e.getClass().getName() + " when trying " + "parse " + tmp;
 
-                logger.error(error);
-                logger.error(e);
+                logger.error( error );
+                logger.error( e );
 
                 // this probably means we got a Directory instead of a file
                 // bDir = true;
@@ -199,22 +199,25 @@ public class SearchResult {
                 // tmp = filename;
             }
 
-        } else {
-            logger.debug("No filesize information was contained in " + sresult);
+        }
+        else
+        {
+            logger.debug( "No filesize information was contained in " + sresult );
 
         }
 
-        tmp = tmp.substring(tmp.lastIndexOf(" ") + 1);
+        tmp = tmp.substring( tmp.lastIndexOf( " " ) + 1 );
 
-        freeSlotCount = Integer.parseInt(tmp.substring(0, tmp.indexOf("/")));
-        maxSlotCount = Integer.parseInt(tmp.substring(tmp.indexOf("/") + 1));
+        freeSlotCount = Integer.parseInt( tmp.substring( 0, tmp.indexOf( "/" ) ) );
+        maxSlotCount = Integer.parseInt( tmp.substring( tmp.indexOf( "/" ) + 1 ) );
 
         tmp = st.nextToken();
 
         // hashing information
 
-        if (tmp.startsWith("TTH:")) {
-            tth = tmp.substring(4, tmp.indexOf(" "));
+        if ( tmp.startsWith( "TTH:" ) )
+        {
+            tth = tmp.substring( 4, tmp.indexOf( " " ) );
 
         }
 
@@ -225,13 +228,16 @@ public class SearchResult {
     }
 
     /**
-     * Creates a <CODE>SearchResult</CODE> from the given <CODE>IHub</CODE>,
-     * client nick, filename and <CODE>ISettings</CODE>
-     * 
-     * used by <CODE>FileBrowseComponent</CODE>
+     * Creates a <CODE>SearchResult</CODE> from the given <CODE>IHub</CODE>, client nick, filename and
+     * <CODE>ISettings</CODE> used by <CODE>FileBrowseComponent</CODE>
      */
-    public SearchResult(IHub _hub, String _nick, String _filename,
-            ISettings _settings, int _freeSlotCount) {
+    public SearchResult(
+        IHub _hub,
+        String _nick,
+        String _filename,
+        ISettings _settings,
+        int _freeSlotCount )
+    {
         this();
 
         hub = _hub;
@@ -250,21 +256,29 @@ public class SearchResult {
      * 
      * @see java.lang.Object#equals(java.lang.Object)
      */
-    public final boolean equals(Object obj) {
-        if (obj instanceof SearchResult) {
+    @Override
+    public final boolean equals(
+        Object obj )
+    {
+        if ( obj instanceof SearchResult )
+        {
             SearchResult sr = (SearchResult) obj;
 
             // we want to avoid NullPointerExceptions in the next statement
-            if (obj == null) {
+            if ( obj == null )
+            {
                 return false;
 
-            } else {
-                return filename.equals(sr.filename) && fileSize == sr.fileSize
-                        && host.equals(sr.host);
+            }
+            else
+            {
+                return filename.equals( sr.filename ) && fileSize == sr.fileSize && host.equals( sr.host );
 
             }
 
-        } else { // obj is not SearchResult
+        }
+        else
+        { // obj is not SearchResult
 
             return false;
 
@@ -277,7 +291,8 @@ public class SearchResult {
      * 
      * @return
      */
-    public final Date getDate() {
+    public final Date getDate()
+    {
         return date;
 
     }
@@ -287,7 +302,8 @@ public class SearchResult {
      * 
      * @return
      */
-    public final String getFilename() {
+    public final String getFilename()
+    {
         return filename;
 
     }
@@ -297,7 +313,8 @@ public class SearchResult {
      * 
      * @return
      */
-    public final long getFileSize() {
+    public final long getFileSize()
+    {
         return fileSize;
 
     }
@@ -307,7 +324,8 @@ public class SearchResult {
      * 
      * @return
      */
-    public final int getFreeSlotCount() {
+    public final int getFreeSlotCount()
+    {
         return freeSlotCount;
 
     }
@@ -317,7 +335,8 @@ public class SearchResult {
      * 
      * @return
      */
-    public final HostInfo getHost() {
+    public final HostInfo getHost()
+    {
         return host;
 
     }
@@ -327,7 +346,8 @@ public class SearchResult {
      * 
      * @return
      */
-    public final IHub getHub() {
+    public final IHub getHub()
+    {
         return hub;
 
     }
@@ -337,7 +357,8 @@ public class SearchResult {
      * 
      * @return
      */
-    public final int getMaxSlotCount() {
+    public final int getMaxSlotCount()
+    {
         return maxSlotCount;
 
     }
@@ -347,7 +368,8 @@ public class SearchResult {
      * 
      * @return
      */
-    public final String getNick() {
+    public final String getNick()
+    {
         return nick;
 
     }
@@ -357,7 +379,8 @@ public class SearchResult {
      * 
      * @return
      */
-    public final long getPing() {
+    public final long getPing()
+    {
         return ping;
 
     }
@@ -368,76 +391,51 @@ public class SearchResult {
      * @param hub
      * @return
      */
-    public final String getSearchResponse(IHub hub) {
+    public final String getSearchResponse(
+        IHub hub )
+    {
         StringBuffer str = new StringBuffer();
 
         // filename
-        str.append(filename);
-        str.append(ConstantSettings.SEARCHRESULT_SEP_CHAR);
+        str.append( filename );
+        str.append( ConstantSettings.SEARCHRESULT_SEP_CHAR );
 
         // filesize, free slot count and max slot count
-        str.append(fileSize).append(" ");
-        str.append(freeSlotCount).append("/").append(maxSlotCount);
-        str.append(ConstantSettings.SEARCHRESULT_SEP_CHAR);
+        str.append( fileSize ).append( " " );
+        str.append( freeSlotCount ).append( "/" ).append( maxSlotCount );
+        str.append( ConstantSettings.SEARCHRESULT_SEP_CHAR );
 
         // tth if available
-        if (tth != null)
-            str.append("TTH:").append(tth).append(" ");
+        if ( tth != null )
+        {
+            str.append( "TTH:" ).append( tth ).append( " " );
+        }
 
         // hub name
-        str.append(hub.getName()).append(" (").append(hub.getHost())
-                .append(")");
+        str.append( hub.getName() ).append( " (" ).append( hub.getHost() ).append( ")" );
 
         return str.toString();
 
     }
 
     /**
-     * Create the File object for the temporary download file
-     */
-    private void createTempDownloadFile() {
-        String _localfilename = filename;
-
-        if (_localfilename.indexOf("\\") > -1) {
-            logger.debug("Truncating path " + _localfilename);
-
-            _localfilename = _localfilename.substring(_localfilename
-                    .lastIndexOf("\\") + 1);
-
-            // truncating (Windows style paths)
-        } else if (_localfilename.indexOf("/") > -1) {
-            logger.debug("Truncating path " + _localfilename);
-
-            _localfilename = _localfilename.substring(_localfilename
-                    .lastIndexOf("/") + 1);
-
-            // no truncating
-        } else {
-            logger.debug("No truncating needed for " + _localfilename);
-
-        }
-
-        tempDownloadFile = new File(tempDownloadDir, _localfilename);
-    }
-
-    /**
-     * Return the download size of the temporary file related to this
-     * SearchResult
-     * 
-     * (instead the getTemplateFileSize() of the DownloadRequest) should be
-     * used, as the SearchResult might refer to a different file name)
+     * Return the download size of the temporary file related to this SearchResult (instead the getTemplateFileSize() of
+     * the DownloadRequest) should be used, as the SearchResult might refer to a different file name)
      * 
      * @return
      */
-    public final long getTempFileSize() {
+    public final long getTempFileSize()
+    {
         /*
          * if (tempDownloadDir == null) throw new
          * NullPointerException("tempDownloadDir was null.");
          */
 
         // lazy creation
-        if (tempDownloadFile == null)
+        if ( tempDownloadFile == null )
+        {
             createTempDownloadFile();
+        }
 
         // logger.info(tempDownloadFile.getPath());
 
@@ -446,13 +444,21 @@ public class SearchResult {
     }
 
     /**
-     * Retrieve the HubUser instance related to the client which posted this
-     * SearchRequest
+     * @return
+     */
+    public String getTTH()
+    {
+        return tth;
+    }
+
+    /**
+     * Retrieve the HubUser instance related to the client which posted this SearchRequest
      * 
      * @return
      */
-    public final HubUser getUser() {
-        return hub.getUser(nick);
+    public final HubUser getUser()
+    {
+        return hub.getUser( nick );
 
     }
 
@@ -461,13 +467,15 @@ public class SearchResult {
      * 
      * @see java.lang.Object#hashCode()
      */
-    public final int hashCode() {
+    @Override
+    public final int hashCode()
+    {
         // Decent hash function
         int r = 17;
 
-        r = (37 * r) + filename.hashCode();
-        r = (37 * r) + (int) fileSize;
-        r = (37 * r) + host.hashCode();
+        r = 37 * r + filename.hashCode();
+        r = 37 * r + (int) fileSize;
+        r = 37 * r + host.hashCode();
 
         return r;
 
@@ -497,7 +505,9 @@ public class SearchResult {
     /**
      * @param d
      */
-    public final void setDate(Date d) {
+    public final void setDate(
+        Date d )
+    {
         date = d;
 
     }
@@ -505,7 +515,9 @@ public class SearchResult {
     /**
      * @param filename
      */
-    public final void setFilename(String filename) {
+    public final void setFilename(
+        String filename )
+    {
         this.filename = filename;
 
     }
@@ -513,7 +525,9 @@ public class SearchResult {
     /**
      * @param fileSize
      */
-    public final void setFileSize(long fileSize) {
+    public final void setFileSize(
+        long fileSize )
+    {
         this.fileSize = fileSize;
 
     }
@@ -521,7 +535,9 @@ public class SearchResult {
     /**
      * @param host
      */
-    public final void setHost(HostInfo host) {
+    public final void setHost(
+        HostInfo host )
+    {
         this.host = host;
 
     }
@@ -529,7 +545,9 @@ public class SearchResult {
     /**
      * @param hub
      */
-    public final void setHub(Hub hub) {
+    public final void setHub(
+        Hub hub )
+    {
         this.hub = hub;
 
     }
@@ -537,7 +555,9 @@ public class SearchResult {
     /**
      * @param hub
      */
-    public final void setHub(IHub hub) {
+    public final void setHub(
+        IHub hub )
+    {
         this.hub = hub;
 
     }
@@ -545,7 +565,9 @@ public class SearchResult {
     /**
      * @param slots
      */
-    public final void setMaxSlotCount(int slots) {
+    public final void setMaxSlotCount(
+        int slots )
+    {
         this.maxSlotCount = slots;
 
     }
@@ -553,7 +575,9 @@ public class SearchResult {
     /**
      * @param nick
      */
-    public final void setNick(String nick) {
+    public final void setNick(
+        String nick )
+    {
         this.nick = nick;
 
     }
@@ -561,7 +585,9 @@ public class SearchResult {
     /**
      * @param time
      */
-    public final void setPing(int time) {
+    public final void setPing(
+        int time )
+    {
         ping = time;
 
     }
@@ -569,10 +595,21 @@ public class SearchResult {
     /**
      * @param _settings
      */
-    public void setSettings(ISettings _settings) {
+    public void setSettings(
+        ISettings _settings )
+    {
         settings = _settings;
 
         tempDownloadDir = settings.getTempDownloadDir();
+    }
+
+    /**
+     * @param tth
+     */
+    public void setTTH(
+        String tth )
+    {
+        this.tth = tth;
     }
 
     /*
@@ -580,35 +617,48 @@ public class SearchResult {
      * 
      * @see java.lang.Object#toString()
      */
-    public final String toString() {
+    @Override
+    public final String toString()
+    {
         return filename;
 
     }
 
     /**
-     * @return
+     * Create the File object for the temporary download file
      */
-    public String getTTH() {
-        return tth;
-    }
+    private void createTempDownloadFile()
+    {
+        String _localfilename = filename;
 
-    /**
-     * @param tth
-     */
-    public void setTTH(String tth) {
-        this.tth = tth;
+        if ( _localfilename.indexOf( "\\" ) > -1 )
+        {
+            logger.debug( "Truncating path " + _localfilename );
+
+            _localfilename = _localfilename.substring( _localfilename.lastIndexOf( "\\" ) + 1 );
+
+            // truncating (Windows style paths)
+        }
+        else if ( _localfilename.indexOf( "/" ) > -1 )
+        {
+            logger.debug( "Truncating path " + _localfilename );
+
+            _localfilename = _localfilename.substring( _localfilename.lastIndexOf( "/" ) + 1 );
+
+            // no truncating
+        }
+        else
+        {
+            logger.debug( "No truncating needed for " + _localfilename );
+
+        }
+
+        tempDownloadFile = new File( tempDownloadDir, _localfilename );
     }
 
 }
 
 /*******************************************************************************
- * $Log: SearchResult.java,v $
- * Revision 1.21  2005/10/02 11:42:27  timowest
- * updated sources and tests
- * Revision 1.20 2005/09/30 15:59:53 timowest
- * updated sources and tests
- * 
- * Revision 1.19 2005/09/12 21:12:02 timowest added log block
- * 
- * 
+ * $Log: SearchResult.java,v $ Revision 1.21 2005/10/02 11:42:27 timowest updated sources and tests Revision 1.20
+ * 2005/09/30 15:59:53 timowest updated sources and tests Revision 1.19 2005/09/12 21:12:02 timowest added log block
  */

@@ -10,23 +10,68 @@ import com.jgoodies.plaf.plastic.theme.DarkStar;
 /**
  * @author Timo Westkämper
  */
-public class DarkTheme extends DarkStar {
+public class DarkTheme
+    extends DarkStar
+{
 
-    private static final ColorUIResource DARK_GRAY = new ColorUIResource(64,
-            64, 64);
+    private static final ColorUIResource DARK_GRAY  = new ColorUIResource( 64, 64, 64 );
 
-    private static final ColorUIResource LIGHT_GRAY = new ColorUIResource(192,
-            192, 192);
+    private static final ColorUIResource LIGHT_GRAY = new ColorUIResource( 192, 192, 192 );
 
-    private static final ColorUIResource WHITE = new ColorUIResource(
-            ColorUIResource.WHITE);
+    private static final ColorUIResource WHITE      = new ColorUIResource( ColorUIResource.WHITE );
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see javax.swing.plaf.metal.MetalTheme#getControlInfo()
+     */
+    @Override
+    public final ColorUIResource getControlInfo()
+    {
+        return DARK_GRAY;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see javax.swing.plaf.metal.MetalTheme#getControlTextColor()
+     */
+    @Override
+    public final ColorUIResource getControlTextColor()
+    {
+        return LIGHT_GRAY;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see javax.swing.plaf.metal.MetalTheme#getHighlightedTextColor()
+     */
+    @Override
+    public final ColorUIResource getHighlightedTextColor()
+    {
+        return LIGHT_GRAY;
+    }
+
+    /*
+     * (non-Javadoc)
+     * 
+     * @see javax.swing.plaf.metal.MetalTheme#getMenuForeground()
+     */
+    @Override
+    public final ColorUIResource getMenuForeground()
+    {
+        return WHITE;
+    }
 
     /*
      * (non-Javadoc)
      * 
      * @see javax.swing.plaf.metal.MetalTheme#getName()
      */
-    public final String getName() {
+    @Override
+    public final String getName()
+    {
         return "Dark Theme";
     }
 
@@ -35,7 +80,9 @@ public class DarkTheme extends DarkStar {
      * 
      * @see com.jgoodies.plaf.plastic.PlasticTheme#getSimpleInternalFrameBackground()
      */
-    public final ColorUIResource getSimpleInternalFrameBackground() {
+    @Override
+    public final ColorUIResource getSimpleInternalFrameBackground()
+    {
         return DARK_GRAY;
 
     }
@@ -45,37 +92,11 @@ public class DarkTheme extends DarkStar {
      * 
      * @see com.jgoodies.plaf.plastic.PlasticTheme#getSimpleInternalFrameForeground()
      */
-    public final ColorUIResource getSimpleInternalFrameForeground() {
+    @Override
+    public final ColorUIResource getSimpleInternalFrameForeground()
+    {
         return DARK_GRAY;
 
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see javax.swing.plaf.metal.MetalTheme#getWindowBackground()
-     */
-    public final ColorUIResource getWindowBackground() {
-        return DARK_GRAY;
-
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see javax.swing.plaf.metal.MetalTheme#getControlInfo()
-     */
-    public final ColorUIResource getControlInfo() {
-        return DARK_GRAY;
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
-     * @see com.jgoodies.plaf.plastic.PlasticTheme#getTitleTextColor()
-     */
-    public final ColorUIResource getTitleTextColor() {
-        return LIGHT_GRAY;
     }
 
     /*
@@ -83,46 +104,38 @@ public class DarkTheme extends DarkStar {
      * 
      * @see javax.swing.plaf.metal.MetalTheme#getSystemTextColor()
      */
-    public final ColorUIResource getSystemTextColor() {
+    @Override
+    public final ColorUIResource getSystemTextColor()
+    {
         return LIGHT_GRAY;
     }
 
     /*
      * (non-Javadoc)
      * 
-     * @see javax.swing.plaf.metal.MetalTheme#getHighlightedTextColor()
+     * @see com.jgoodies.plaf.plastic.PlasticTheme#getTitleTextColor()
      */
-    public final ColorUIResource getHighlightedTextColor() {
+    @Override
+    public final ColorUIResource getTitleTextColor()
+    {
         return LIGHT_GRAY;
     }
 
     /*
      * (non-Javadoc)
      * 
-     * @see javax.swing.plaf.metal.MetalTheme#getControlTextColor()
+     * @see javax.swing.plaf.metal.MetalTheme#getWindowBackground()
      */
-    public final ColorUIResource getControlTextColor() {
-        return LIGHT_GRAY;
-    }
+    @Override
+    public final ColorUIResource getWindowBackground()
+    {
+        return DARK_GRAY;
 
-    /*
-     * (non-Javadoc)
-     * 
-     * @see javax.swing.plaf.metal.MetalTheme#getMenuForeground()
-     */
-    public final ColorUIResource getMenuForeground() {
-        return WHITE;
     }
 
 }
 
 /*******************************************************************************
- * $Log: DarkTheme.java,v $
- * Revision 1.6  2005/10/02 11:42:28  timowest
- * updated sources and tests
- * Revision 1.5 2005/09/14 07:11:50 timowest updated
- * sources
- * 
- * 
- * 
+ * $Log: DarkTheme.java,v $ Revision 1.6 2005/10/02 11:42:28 timowest updated sources and tests Revision 1.5 2005/09/14
+ * 07:11:50 timowest updated sources
  */

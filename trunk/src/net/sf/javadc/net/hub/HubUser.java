@@ -1,21 +1,11 @@
 /*
- * Copyright (C) 2001 Stefan G�rling, stefan@gorling.se
- *
- * Copyright (C) 2004 Timo Westkämper
- *
- * This program is free software;      you can redistribute it and/or modify it
- * under the terms of the   GNU General Public License as published by the Free
- * Software Foundation;    either version 2 of the License, or (at your option)
- * any later version.
- *
- *  This program is distributed in the hope that it will be useful, but WITHOUT
- * ANY WARRANTY;   without even the implied warranty of MERCHANTABILITY or FIT-
- * NESS FOR A PARTICULAR PURPOSE.   See the GNU General Public License for more
- * details.
- *
- * You should have received a copy of the GNU General Public License along with
- * this program; if not, write to the Free Software Foundation, Inc.,
- * 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
+ * Copyright (C) 2001 Stefan G�rling, stefan@gorling.se Copyright (C) 2004 Timo Westkämper This program is free
+ * software; you can redistribute it and/or modify it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation; either version 2 of the License, or (at your option) any later version. This program is
+ * distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FIT- NESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details. You
+ * should have received a copy of the GNU General Public License along with this program; if not, write to the Free
+ * Software Foundation, Inc., 59 Temple Place - Suite 330, Boston, MA 02111-1307, USA.
  */
 
 // $Id: HubUser.java,v 1.18 2005/10/02 11:42:28 timowest Exp $
@@ -39,23 +29,68 @@ import org.apache.log4j.Category;
 import org.apache.log4j.Logger;
 
 /**
- * <code>HubUser</code> represents user information about a single remote
- * client connected to a <code>Hub</code> the local client is also connected
- * to.
+ * <code>HubUser</code> represents user information about a single remote client connected to a <code>Hub</code> the
+ * local client is also connected to.
  */
-public class HubUser extends UserInfo {
+public class HubUser
+    extends UserInfo
+{
 
-    private final static Category logger = Logger.getLogger(HubUser.class);
+    private class MyClientListener
+        extends ClientListenerBase
+    {
+
+        /*
+         * (non-Javadoc)
+         * 
+         * @see net.sf.javadc.listeners.ClientListener#disconnected()
+         */
+        @Override
+        public void disconnected(
+            List downloads )
+        {
+            if ( client == null )
+            {
+                logger.debug( "Client was not set" );
+                return;
+            }
+
+            client.removeListener( clientListener );
+
+            // set client to null
+            client = null;
+
+            // no more downloads available
+            if ( downloads.isEmpty() )
+            {
+                logger.info( "No more downloads available" );
+                return;
+
+                // still downloads available
+            }
+            else
+            {
+                HubUser.this.downloads.addAll( downloads );
+
+                requestConnection( ((DownloadRequest) downloads.get( 0 )).getSearchResult() );
+
+            }
+
+        }
+
+    }
+
+    private final static Category    logger         = Logger.getLogger( HubUser.class );
 
     /**
      * 
      */
-    private transient int ipTries = 0;
+    private transient int            ipTries        = 0;
 
     /**
      * 
      */
-    private final transient List downloads = new ArrayList();
+    private final transient List     downloads      = new ArrayList();
 
     // ClientListener
     /**
@@ -67,70 +102,61 @@ public class HubUser extends UserInfo {
     /**
      * 
      */
-    private transient Client client;
+    private transient Client         client;
 
     /**
      * 
      */
-    private final IHub hub;
+    private final IHub               hub;
+
+    /** ********************************************************************** */
 
     /**
      * Creates a <CODE>HubUser</CODE> instance for the given <CODE>IHub
      * </CODE>
      */
-    public HubUser(IHub hub) {
-        if (hub == null)
-            throw new NullPointerException("hub was null.");
+    public HubUser(
+        IHub hub )
+    {
+        if ( hub == null )
+        {
+            throw new NullPointerException( "hub was null." );
+        }
 
         this.hub = hub;
 
     }
 
-    /** ********************************************************************** */
-
     /**
      * Add the given DownloadRequest to the related Client or the internal queue
      * 
-     * @param dr
-     *            DownloadRequest instance to be added
+     * @param dr DownloadRequest instance to be added
      * @throws IOException
      */
-    public final void addDownload(DownloadRequest dr) throws IOException {
-        if (dr == null) {
-            throw new InvalidArgumentException("DownloadRequest was null.");
+    public final void addDownload(
+        DownloadRequest dr )
+        throws IOException
+    {
+        if ( dr == null )
+        {
+            throw new InvalidArgumentException( "DownloadRequest was null." );
 
-        } else if (client != null) {
-            client.addDownload(dr);
+        }
+        else if ( client != null )
+        {
+            client.addDownload( dr );
 
-        } else {
+        }
+        else
+        {
             // add the given DownloadRequest to the queue of downloads which
             // will be given to the Client, when a connection has been
             // established
-            downloads.add(dr);
+            downloads.add( dr );
 
             // request a connection to the remote client
-            hub.requestConnection(dr.getSearchResult().getNick());
+            hub.requestConnection( dr.getSearchResult().getNick() );
         }
-
-    }
-
-    /**
-     * Get IP tries
-     * 
-     * @return
-     */
-    public final int getIpTries() {
-        return ipTries;
-
-    }
-
-    /**
-     * Set IP tries
-     * 
-     * @param ipTries
-     */
-    public final void setIpTries(int ipTries) {
-        this.ipTries = ipTries;
 
     }
 
@@ -139,49 +165,9 @@ public class HubUser extends UserInfo {
      * 
      * @return
      */
-    public final IClient getClient() {
+    public final IClient getClient()
+    {
         return client;
-
-    }
-
-    /**
-     * Set the associated Client
-     * 
-     * @param c
-     */
-    public final void setClient(Client _client) {
-        if (_client == null) {
-            throw new InvalidArgumentException("Client was null.");
-        }
-
-        client = _client;
-        client.addListener(clientListener);
-
-        // set the nick of the client, if it is empty
-        if (client.getNick().equals(""))
-            client.setNick(getNick());
-
-        if (!downloads.isEmpty()) {
-            try {
-                logger.debug("Moving download queue to Client instance.");
-
-                // add downloads to client
-                client.addDownloads((DownloadRequest[]) downloads
-                        .toArray(new DownloadRequest[downloads.size()]));
-
-                downloads.clear(); // clear downloads
-
-            } catch (IOException e) {
-                logger.error("Download queue could not be moved.");
-                logger.error(e);
-
-            }
-
-        } else {
-            logger.debug("There were no download to be moved "
-                    + "to the Client instance");
-
-        }
 
     }
 
@@ -190,46 +176,81 @@ public class HubUser extends UserInfo {
      * 
      * @return Returns the downloads.
      */
-    public List getDownloads() {
+    public List getDownloads()
+    {
         return downloads;
     }
 
     /**
-     * Request a new Connection to download the given SearchResult
+     * Get IP tries
      * 
-     * <p>For active connections the request has been done via the Hub</p>
-     * 
-     * @param sr
+     * @return
      */
-    private void requestConnection(final SearchResult sr) {
-        // request a connection from the Hub
+    public final int getIpTries()
+    {
+        return ipTries;
 
-        if (client != null){
-            logger.info("Requesting a new connection to " + client.getNick());
-        }else{
-            logger.info("Requesting a new connection");    
-        }        
+    }
 
-        new Thread(new Runnable() {
+    /**
+     * Set the associated Client
+     * 
+     * @param c
+     */
+    public final void setClient(
+        Client _client )
+    {
+        if ( _client == null )
+        {
+            throw new InvalidArgumentException( "Client was null." );
+        }
 
-            public void run() {
-                try {
-                    // postpone the request for 1s
-                    Thread.sleep(1000);
-                } catch (InterruptedException e1) {
-                    logger.error("Caught " + e1.getClass().getName(), e1);
-                }
+        client = _client;
+        client.addListener( clientListener );
 
-                try {
-                    hub.requestConnection(sr.getNick());
+        // set the nick of the client, if it is empty
+        if ( client.getNick().equals( "" ) )
+        {
+            client.setNick( getNick() );
+        }
 
-                } catch (IOException e) {
-                    logger.error("Caught " + e.getClass().getName(), e);
-                }
+        if ( !downloads.isEmpty() )
+        {
+            try
+            {
+                logger.debug( "Moving download queue to Client instance." );
+
+                // add downloads to client
+                client.addDownloads( (DownloadRequest[]) downloads.toArray( new DownloadRequest[downloads.size()] ) );
+
+                downloads.clear(); // clear downloads
+
+            }
+            catch ( IOException e )
+            {
+                logger.error( "Download queue could not be moved." );
+                logger.error( e );
 
             }
 
-        }).start();
+        }
+        else
+        {
+            logger.debug( "There were no download to be moved " + "to the Client instance" );
+
+        }
+
+    }
+
+    /**
+     * Set IP tries
+     * 
+     * @param ipTries
+     */
+    public final void setIpTries(
+        int ipTries )
+    {
+        this.ipTries = ipTries;
 
     }
 
@@ -238,67 +259,76 @@ public class HubUser extends UserInfo {
      * 
      * @see java.lang.Object#toString()
      */
-    public final String toString() {
+    @Override
+    public final String toString()
+    {
 
         // return MessageRenderer.getInstance().toString(this);
-        return "$ALL " + getNick() + " " + getDescription() + getTag() + "$ $"
-                + getSpeed() + getSpeedCode() + "$" + getEmail() + "$"
-                + getSharedSize() + "$";
+        return "$ALL " + getNick() + " " + getDescription() + getTag() + "$ $" + getSpeed() + getSpeedCode() + "$" +
+            getEmail() + "$" + getSharedSize() + "$";
 
     }
 
     // /////////////////////////////////////////////////////////////////////////
 
-    private class MyClientListener extends ClientListenerBase {
+    /**
+     * Request a new Connection to download the given SearchResult
+     * <p>
+     * For active connections the request has been done via the Hub
+     * </p>
+     * 
+     * @param sr
+     */
+    private void requestConnection(
+        final SearchResult sr )
+    {
+        // request a connection from the Hub
 
-        /*
-         * (non-Javadoc)
-         * 
-         * @see net.sf.javadc.listeners.ClientListener#disconnected()
-         */
-        public void disconnected(List downloads) {
-            if (client == null) {
-                logger.debug("Client was not set");
-                return;
-            }
-
-            client.removeListener(clientListener);
-
-            // set client to null
-            client = null;
-
-            // no more downloads available
-            if (downloads.isEmpty()) {
-                logger.info("No more downloads available");
-                return;
-
-                // still downloads available
-            } else {
-                HubUser.this.downloads.addAll(downloads);
-
-                requestConnection(((DownloadRequest) downloads.get(0))
-                        .getSearchResult());
-
-            }
-
+        if ( client != null )
+        {
+            logger.info( "Requesting a new connection to " + client.getNick() );
         }
+        else
+        {
+            logger.info( "Requesting a new connection" );
+        }
+
+        new Thread( new Runnable()
+        {
+
+            public void run()
+            {
+                try
+                {
+                    // postpone the request for 1s
+                    Thread.sleep( 1000 );
+                }
+                catch ( InterruptedException e1 )
+                {
+                    logger.error( "Caught " + e1.getClass().getName(), e1 );
+                }
+
+                try
+                {
+                    hub.requestConnection( sr.getNick() );
+
+                }
+                catch ( IOException e )
+                {
+                    logger.error( "Caught " + e.getClass().getName(), e );
+                }
+
+            }
+
+        } ).start();
 
     }
 
 }
 
 /*******************************************************************************
- * $Log: HubUser.java,v $
- * Revision 1.18  2005/10/02 11:42:28  timowest
- * updated sources and tests
- * Revision 1.17 2005/09/30 15:59:53 timowest updated
- * sources and tests
- * 
- * Revision 1.16 2005/09/26 17:19:52 timowest updated sources and tests
- * 
- * Revision 1.15 2005/09/25 16:40:58 timowest updated sources and tests
- * 
- * Revision 1.14 2005/09/12 21:12:02 timowest added log block
- * 
- * 
+ * $Log: HubUser.java,v $ Revision 1.18 2005/10/02 11:42:28 timowest updated sources and tests Revision 1.17 2005/09/30
+ * 15:59:53 timowest updated sources and tests Revision 1.16 2005/09/26 17:19:52 timowest updated sources and tests
+ * Revision 1.15 2005/09/25 16:40:58 timowest updated sources and tests Revision 1.14 2005/09/12 21:12:02 timowest added
+ * log block
  */

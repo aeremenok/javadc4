@@ -13,23 +13,21 @@ import org.apache.log4j.Logger;
 /**
  * @author Timo Westkämper
  */
-public class SafeInputStreamReader extends InputStreamReader {
+public class SafeInputStreamReader
+    extends InputStreamReader
+{
 
-    private final static Category logger = Logger
-            .getLogger(SafeInputStreamReader.class);
+    private final static Category logger = Logger.getLogger( SafeInputStreamReader.class );
 
     /**
      * Create a new SafeInputStreamReader instance
      * 
      * @param arg0
      */
-    public SafeInputStreamReader(InputStream arg0) {
-        super(arg0);
-        // TODO Auto-generated constructor stub
-    }
-
-    private void error(Exception e) {
-        logger.error("Caught " + e.getClass().getName(), e);
+    public SafeInputStreamReader(
+        InputStream arg0 )
+    {
+        super( arg0 );
     }
 
     /*
@@ -37,12 +35,18 @@ public class SafeInputStreamReader extends InputStreamReader {
      * 
      * @see java.io.Reader#read()
      */
-    public int read() throws IOException {
+    @Override
+    public int read()
+        throws IOException
+    {
 
-        try {
+        try
+        {
             return super.read();
-        } catch (Exception e) {
-            logger.error(e);
+        }
+        catch ( Exception e )
+        {
+            logger.error( e );
         }
 
         // The character read, as an integer in the range 0 to 65535
@@ -53,32 +57,21 @@ public class SafeInputStreamReader extends InputStreamReader {
     /*
      * (non-Javadoc)
      * 
-     * @see java.io.Reader#read(char[], int, int)
-     */
-    public int read(char[] cbuf, int offset, int length) throws IOException {
-
-        try {
-            return super.read(cbuf, offset, length);
-        } catch (Exception e) {
-            error(e);
-        }
-
-        // The number of characters read, or -1 if the end of the stream has
-        // been reached
-        return length;
-    }
-
-    /*
-     * (non-Javadoc)
-     * 
      * @see java.io.Reader#read(char[])
      */
-    public int read(char[] cbuf) throws IOException {
+    @Override
+    public int read(
+        char[] cbuf )
+        throws IOException
+    {
 
-        try {
-            return super.read(cbuf);
-        } catch (Exception e) {
-            error(e);
+        try
+        {
+            return super.read( cbuf );
+        }
+        catch ( Exception e )
+        {
+            error( e );
         }
 
         // The number of characters read, or -1 if the end of the stream has
@@ -87,16 +80,42 @@ public class SafeInputStreamReader extends InputStreamReader {
         return cbuf.length;
     }
 
+    /*
+     * (non-Javadoc)
+     * 
+     * @see java.io.Reader#read(char[], int, int)
+     */
+    @Override
+    public int read(
+        char[] cbuf,
+        int offset,
+        int length )
+        throws IOException
+    {
+
+        try
+        {
+            return super.read( cbuf, offset, length );
+        }
+        catch ( Exception e )
+        {
+            error( e );
+        }
+
+        // The number of characters read, or -1 if the end of the stream has
+        // been reached
+        return length;
+    }
+
+    private void error(
+        Exception e )
+    {
+        logger.error( "Caught " + e.getClass().getName(), e );
+    }
+
 }
 
 /*******************************************************************************
- * $Log: SafeInputStreamReader.java,v $
- * Revision 1.6  2005/10/02 11:42:28  timowest
- * updated sources and tests
- * Revision 1.5 2005/09/26 17:19:52
- * timowest updated sources and tests
- * 
- * Revision 1.4 2005/09/12 21:12:02 timowest added log block
- * 
- * 
+ * $Log: SafeInputStreamReader.java,v $ Revision 1.6 2005/10/02 11:42:28 timowest updated sources and tests Revision 1.5
+ * 2005/09/26 17:19:52 timowest updated sources and tests Revision 1.4 2005/09/12 21:12:02 timowest added log block
  */
