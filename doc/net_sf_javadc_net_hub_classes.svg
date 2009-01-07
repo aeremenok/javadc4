@@ -1,0 +1,637 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 20001102//EN' 'http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd'>
+<svg xmlns="http://www.w3.org/2000/svg" width="2651" height="2314">
+<rect x="685" y="14" width="196" height="312" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="685" y="14" width="195" height="311" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="685" y="14" width="196" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="685" y="14" width="195" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="764" y="29" style="font-family:Dialog; font-size:10;">
+HostInfo</text>
+<rect x="685" y="34" width="196" height="69" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="685" y="34" width="195" height="68" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="687" y1="51" x2="768" y2="51" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="687" y="50" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="687" y="67" style="font-family:Dialog; font-size:10;">
+port : int</text>
+<text x="687" y="84" style="font-family:Dialog; font-size:10;">
+alternatePort : int</text>
+<text x="687" y="101" style="font-family:Dialog; font-size:10;">
+host : String</text>
+<rect x="685" y="102" width="196" height="224" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="685" y="102" width="195" height="223" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="687" y="118" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; HostInfo()</text>
+<text x="687" y="135" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; HostInfo(hostAndPort: String)</text>
+<text x="687" y="152" style="font-family:Dialog; font-size:10;">
+equals(obj: Object) : boolean</text>
+<text x="687" y="169" style="font-family:Dialog; font-size:10;">
+getHost() : String</text>
+<text x="687" y="186" style="font-family:Dialog; font-size:10;">
+getHostAndPort() : String</text>
+<text x="687" y="203" style="font-family:Dialog; font-size:10;">
+getIpString() : String</text>
+<text x="687" y="220" style="font-family:Dialog; font-size:10;">
+getPort() : int</text>
+<text x="687" y="237" style="font-family:Dialog; font-size:10;">
+hashCode() : int</text>
+<text x="687" y="254" style="font-family:Dialog; font-size:10;">
+toString() : String</text>
+<text x="687" y="271" style="font-family:Dialog; font-size:10;">
+getAlternatePort() : int</text>
+<text x="687" y="288" style="font-family:Dialog; font-size:10;">
+setAlternatePort(i: int) : void</text>
+<text x="687" y="305" style="font-family:Dialog; font-size:10;">
+setHost(string: String) : void</text>
+<text x="687" y="322" style="font-family:Dialog; font-size:10;">
+setPort(i: int) : void</text>
+<rect x="961" y="14" width="485" height="108" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="961" y="14" width="484" height="107" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="961" y="14" width="485" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="961" y="14" width="484" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1150" y="29" style="font-family:Dialog; font-size:10;">
+CreateConnectionTask</text>
+<rect x="961" y="34" width="485" height="53" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="961" y="34" width="484" height="52" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="963" y="50" style="font-family:Dialog; font-size:10;">
+hubManager : IHubManager</text>
+<text x="963" y="67" style="font-family:Dialog; font-size:10;">
+taskManager : ITaskManager</text>
+<text x="963" y="84" style="font-family:Dialog; font-size:10;">
+c : Socket</text>
+<rect x="961" y="86" width="485" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="961" y="86" width="484" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="963" y="102" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; CreateConnectionTask(hubManager: IHubManager,taskManager: ITaskManager,c: Socket)</text>
+<text x="963" y="119" style="font-family:Dialog; font-size:10;">
+runTask() : void</text>
+<rect x="424" y="406" width="692" height="1128" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="424" y="406" width="691" height="1127" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="424" y="406" width="692" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="424" y="406" width="691" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="760" y="421" style="font-family:Dialog; font-size:10;">
+Hub</text>
+<rect x="424" y="426" width="692" height="341" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="424" y="426" width="691" height="340" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="426" y1="443" x2="507" y2="443" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="426" y="442" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="426" y="459" style="font-family:Dialog; font-size:10;">
+clientListener : ClientListener</text>
+<text x="426" y="476" style="font-family:Dialog; font-size:10;">
+connection : Socket</text>
+<text x="426" y="493" style="font-family:Dialog; font-size:10;">
+opList : List</text>
+<text x="426" y="510" style="font-family:Dialog; font-size:10;">
+startPing : long</text>
+<text x="426" y="527" style="font-family:Dialog; font-size:10;">
+description : String</text>
+<text x="426" y="544" style="font-family:Dialog; font-size:10;">
+name : String</text>
+<text x="426" y="561" style="font-family:Dialog; font-size:10;">
+userCount : int</text>
+<text x="426" y="578" style="font-family:Dialog; font-size:10;">
+searchResults : List</text>
+<text x="426" y="595" style="font-family:Dialog; font-size:10;">
+users : Map</text>
+<text x="426" y="612" style="font-family:Dialog; font-size:10;">
+searchRequest : SearchRequest</text>
+<text x="426" y="629" style="font-family:Dialog; font-size:10;">
+disconnectTask : IHubTask</text>
+<text x="426" y="646" style="font-family:Dialog; font-size:10;">
+reader : TokenInputStream</text>
+<text x="426" y="663" style="font-family:Dialog; font-size:10;">
+writer : OutputStream</text>
+<text x="426" y="680" style="font-family:Dialog; font-size:10;">
+host : HostInfo</text>
+<text x="426" y="697" style="font-family:Dialog; font-size:10;">
+encryptionHandler : DCEncryptionHandler</text>
+<text x="426" y="714" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="426" y="731" style="font-family:Dialog; font-size:10;">
+hubManager : IHubManager</text>
+<text x="426" y="748" style="font-family:Dialog; font-size:10;">
+hubTaskFactory : IHubTaskFactory</text>
+<text x="426" y="765" style="font-family:Dialog; font-size:10;">
+taskManager : ITaskManager</text>
+<rect x="424" y="766" width="692" height="768" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="424" y="766" width="691" height="767" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="426" y="782" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; Hub(_host: HostInfo,_taskManager: ITaskManager,_hubManager: IHubManager,_hubTaskFactory: IHubTaskFactory,_settings: ISettings)</text>
+<text x="426" y="799" style="font-family:Dialog; font-size:10;">
+addSearchResult(sr: SearchResult) : void</text>
+<text x="426" y="816" style="font-family:Dialog; font-size:10;">
+addUser(ui: HubUser) : void</text>
+<text x="426" y="833" style="font-family:Dialog; font-size:10;">
+clearSearchResults() : void</text>
+<text x="426" y="850" style="font-family:Dialog; font-size:10;">
+connect() : void</text>
+<text x="426" y="867" style="font-family:Dialog; font-size:10;">
+createInputStream(host: String,port: int) : void</text>
+<text x="426" y="884" style="font-family:Dialog; font-size:10;">
+disconnect() : void</text>
+<text x="426" y="901" style="font-family:Dialog; font-size:10;">
+equals(obj: Object) : boolean</text>
+<text x="426" y="918" style="font-family:Dialog; font-size:10;">
+getConnection() : Socket</text>
+<text x="426" y="935" style="font-family:Dialog; font-size:10;">
+getDescription() : String</text>
+<text x="426" y="952" style="font-family:Dialog; font-size:10;">
+getHost() : HostInfo</text>
+<text x="426" y="969" style="font-family:Dialog; font-size:10;">
+getListenerClass() : Class</text>
+<text x="426" y="986" style="font-family:Dialog; font-size:10;">
+getName() : String</text>
+<text x="426" y="1003" style="font-family:Dialog; font-size:10;">
+getOpList() : List</text>
+<text x="426" y="1020" style="font-family:Dialog; font-size:10;">
+getSearchResults() : SearchResult[]</text>
+<text x="426" y="1037" style="font-family:Dialog; font-size:10;">
+getStartPing() : long</text>
+<text x="426" y="1054" style="font-family:Dialog; font-size:10;">
+getUser(nick: String) : HubUser</text>
+<text x="426" y="1071" style="font-family:Dialog; font-size:10;">
+getUserCount() : int</text>
+<text x="426" y="1088" style="font-family:Dialog; font-size:10;">
+getUsers() : Map</text>
+<text x="426" y="1105" style="font-family:Dialog; font-size:10;">
+isConnected() : boolean</text>
+<text x="426" y="1122" style="font-family:Dialog; font-size:10;">
+processCommand(cmdString: String) : void</text>
+<text x="426" y="1139" style="font-family:Dialog; font-size:10;">
+receivedNick(client: Client) : void</text>
+<text x="426" y="1156" style="font-family:Dialog; font-size:10;">
+reconnect() : void</text>
+<text x="426" y="1173" style="font-family:Dialog; font-size:10;">
+removeUser(ui: HubUser) : void</text>
+<text x="426" y="1190" style="font-family:Dialog; font-size:10;">
+requestConnection(user: String) : void</text>
+<text x="426" y="1207" style="font-family:Dialog; font-size:10;">
+requestDownload(dr: DownloadRequest) : boolean</text>
+<text x="426" y="1224" style="font-family:Dialog; font-size:10;">
+run() : void</text>
+<text x="426" y="1241" style="font-family:Dialog; font-size:10;">
+runTask() : void</text>
+<text x="426" y="1258" style="font-family:Dialog; font-size:10;">
+search(sr: SearchRequest) : void</text>
+<text x="426" y="1275" style="font-family:Dialog; font-size:10;">
+sendChatMessage(message: String) : void</text>
+<text x="426" y="1292" style="font-family:Dialog; font-size:10;">
+sendCommand(command: String,data: String) : void</text>
+<text x="426" y="1309" style="font-family:Dialog; font-size:10;">
+sendPrivateMessage(message: String,nick: String) : void</text>
+<text x="426" y="1326" style="font-family:Dialog; font-size:10;">
+sendSearchResult(result: String,to_nick: String) : void</text>
+<text x="426" y="1343" style="font-family:Dialog; font-size:10;">
+setConnection(socket: Socket) : void</text>
+<text x="426" y="1360" style="font-family:Dialog; font-size:10;">
+setDescription(description: String) : void</text>
+<text x="426" y="1377" style="font-family:Dialog; font-size:10;">
+setHost(_host: HostInfo) : void</text>
+<text x="426" y="1394" style="font-family:Dialog; font-size:10;">
+setName(_name: String) : void</text>
+<text x="426" y="1411" style="font-family:Dialog; font-size:10;">
+setSearchResults(list: List) : void</text>
+<text x="426" y="1428" style="font-family:Dialog; font-size:10;">
+setStartPing(l: long) : void</text>
+<text x="426" y="1445" style="font-family:Dialog; font-size:10;">
+setUserCount(_userCount: int) : void</text>
+<text x="426" y="1462" style="font-family:Dialog; font-size:10;">
+getWriter() : OutputStream</text>
+<text x="426" y="1479" style="font-family:Dialog; font-size:10;">
+setWriter(writer: OutputStream) : void</text>
+<text x="426" y="1496" style="font-family:Dialog; font-size:10;">
+getReader() : TokenInputStream</text>
+<text x="426" y="1513" style="font-family:Dialog; font-size:10;">
+setReader(reader: TokenInputStream) : void</text>
+<text x="426" y="1530" style="font-family:Dialog; font-size:10;">
+toString() : String</text>
+<rect x="1526" y="14" width="376" height="108" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1526" y="14" width="375" height="107" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1526" y="14" width="376" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1526" y="14" width="375" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1672" y="29" style="font-family:Dialog; font-size:10;">
+HubClientListener</text>
+<rect x="1526" y="34" width="376" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1526" y="34" width="375" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1528" y1="51" x2="1609" y2="51" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1528" y="50" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="1528" y="67" style="font-family:Dialog; font-size:10;">
+hub : Hub</text>
+<rect x="1526" y="69" width="376" height="53" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1526" y="69" width="375" height="52" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1528" y="85" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; HubClientListener(hub: Hub)</text>
+<text x="1528" y="102" style="font-family:Dialog; font-size:10;">
+browseListDownloaded(client: Client,dr: DownloadRequest,host: HostInfo) : void</text>
+<text x="1528" y="119" style="font-family:Dialog; font-size:10;">
+receivedNick(client: Client) : void</text>
+<rect x="1982" y="14" width="655" height="142" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1982" y="14" width="654" height="141" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1982" y="14" width="655" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1982" y="14" width="654" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2282" y="29" style="font-family:Dialog; font-size:10;">
+HubFactory</text>
+<rect x="1982" y="34" width="655" height="70" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1982" y="34" width="654" height="69" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1984" y="50" style="font-family:Dialog; font-size:10;">
+hubManager : IHubManager</text>
+<text x="1984" y="67" style="font-family:Dialog; font-size:10;">
+hubTaskFactory : IHubTaskFactory</text>
+<text x="1984" y="84" style="font-family:Dialog; font-size:10;">
+taskManager : ITaskManager</text>
+<text x="1984" y="101" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<rect x="1982" y="103" width="655" height="53" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1982" y="103" width="654" height="52" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1984" y="119" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; HubFactory(_taskManager: ITaskManager,_hubManager: IHubManager,_hubTaskFactory: IHubTaskFactory,_settings: ISettings)</text>
+<text x="1984" y="136" style="font-family:Dialog; font-size:10;">
+createHub(hostInfo: HostInfo) : IHub</text>
+<text x="1984" y="153" style="font-family:Dialog; font-size:10;">
+createHub(hubInfo: IHubInfo) : IHub</text>
+<rect x="1196" y="406" width="283" height="244" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1196" y="406" width="282" height="243" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1196" y="406" width="283" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1196" y="406" width="282" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1299" y="421" style="font-family:Dialog; font-size:10;">
+HubFavoritesList</text>
+<rect x="1196" y="426" width="283" height="52" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1196" y="426" width="282" height="51" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1198" y1="443" x2="1279" y2="443" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1198" y="442" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="1198" y="459" style="font-family:Dialog; font-size:10;">
+hubInfos : List</text>
+<text x="1198" y="476" style="font-family:Dialog; font-size:10;">
+loader : IHubFavoritesLoader</text>
+<rect x="1196" y="477" width="283" height="173" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1196" y="477" width="282" height="172" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1198" y="493" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; HubFavoritesList(_loader: IHubFavoritesLoader)</text>
+<text x="1198" y="510" style="font-family:Dialog; font-size:10;">
+getListenerClass() : Class</text>
+<text x="1198" y="527" style="font-family:Dialog; font-size:10;">
+fireHubListChanged() : void</text>
+<text x="1198" y="544" style="font-family:Dialog; font-size:10;">
+update() : void</text>
+<text x="1198" y="561" style="font-family:Dialog; font-size:10;">
+addHubInfo(hubInfo: IHubInfo) : void</text>
+<text x="1198" y="578" style="font-family:Dialog; font-size:10;">
+removeHub(hubInfo: IHubInfo) : void</text>
+<text x="1198" y="595" style="font-family:Dialog; font-size:10;">
+getHubInfos() : List</text>
+<text x="1198" y="612" style="font-family:Dialog; font-size:10;">
+setHubInfos(list: List) : void</text>
+<text x="1198" y="629" style="font-family:Dialog; font-size:10;">
+start() : void</text>
+<text x="1198" y="646" style="font-family:Dialog; font-size:10;">
+stop() : void</text>
+<rect x="1559" y="406" width="277" height="125" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1559" y="406" width="276" height="124" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1559" y="406" width="277" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1559" y="406" width="276" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1650" y="421" style="font-family:Dialog; font-size:10;">
+HubFavoritesLoader</text>
+<rect x="1559" y="426" width="277" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1559" y="426" width="276" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1561" y1="443" x2="1642" y2="443" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1561" y="442" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="1561" y="459" style="font-family:Dialog; font-size:10;">
+configFileName : String</text>
+<rect x="1559" y="461" width="277" height="70" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1559" y="461" width="276" height="69" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1561" y="477" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; HubFavoritesLoader()</text>
+<text x="1561" y="494" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; HubFavoritesLoader(_configFileName: String)</text>
+<text x="1561" y="511" style="font-family:Dialog; font-size:10;">
+load() : List</text>
+<text x="1561" y="528" style="font-family:Dialog; font-size:10;">
+save(hubInfos: List) : void</text>
+<rect x="1916" y="406" width="164" height="295" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1916" y="406" width="163" height="294" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1916" y="406" width="164" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1916" y="406" width="163" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1979" y="421" style="font-family:Dialog; font-size:10;">
+HubInfo</text>
+<rect x="1916" y="426" width="164" height="69" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1916" y="426" width="163" height="68" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1918" y="442" style="font-family:Dialog; font-size:10;">
+name : String</text>
+<text x="1918" y="459" style="font-family:Dialog; font-size:10;">
+description : String</text>
+<text x="1918" y="476" style="font-family:Dialog; font-size:10;">
+address : HostInfo</text>
+<text x="1918" y="493" style="font-family:Dialog; font-size:10;">
+userCount : int</text>
+<rect x="1916" y="494" width="164" height="207" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1916" y="494" width="163" height="206" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1918" y="510" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; HubInfo()</text>
+<text x="1918" y="527" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; HubInfo(hub: IHub)</text>
+<text x="1918" y="544" style="font-family:Dialog; font-size:10;">
+getAddress() : HostInfo</text>
+<text x="1918" y="561" style="font-family:Dialog; font-size:10;">
+getHost() : HostInfo</text>
+<text x="1918" y="578" style="font-family:Dialog; font-size:10;">
+getDescription() : String</text>
+<text x="1918" y="595" style="font-family:Dialog; font-size:10;">
+getName() : String</text>
+<text x="1918" y="612" style="font-family:Dialog; font-size:10;">
+setAddress(info: HostInfo) : void</text>
+<text x="1918" y="629" style="font-family:Dialog; font-size:10;">
+setDescription(string: String) : void</text>
+<text x="1918" y="646" style="font-family:Dialog; font-size:10;">
+setName(string: String) : void</text>
+<text x="1918" y="663" style="font-family:Dialog; font-size:10;">
+getUserCount() : int</text>
+<text x="1918" y="680" style="font-family:Dialog; font-size:10;">
+setUserCount(i: int) : void</text>
+<text x="1918" y="697" style="font-family:Dialog; font-size:10;">
+equals(obj: Object) : boolean</text>
+<rect x="2160" y="406" width="60" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2160" y="406" width="59" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2160" y="406" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2160" y="406" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2187" y="421" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="2160" y="426" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2160" y="426" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2160" y="444" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2160" y="444" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="406" width="330" height="159" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="406" width="329" height="158" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="406" width="330" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="406" width="329" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="161" y="421" style="font-family:Dialog; font-size:10;">
+HubList</text>
+<rect x="14" y="426" width="330" height="53" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="426" width="329" height="52" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="16" y1="443" x2="97" y2="443" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="16" y="442" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="16" y="459" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="16" y="476" style="font-family:Dialog; font-size:10;">
+taskManager : ITaskManager</text>
+<rect x="14" y="478" width="330" height="87" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="478" width="329" height="86" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="494" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; HubList(_settings: ISettings,_taskManager: ITaskManager)</text>
+<text x="16" y="511" style="font-family:Dialog; font-size:10;">
+createHubList() : List</text>
+<text x="16" y="528" style="font-family:Dialog; font-size:10;">
+readHubInfos(inputStream: InputStream) : List</text>
+<text x="16" y="545" style="font-family:Dialog; font-size:10;">
+run() : void</text>
+<text x="16" y="562" style="font-family:Dialog; font-size:10;">
+readFileHeader(bis: InputStream) : boolean</text>
+<rect x="14" y="1614" width="168" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1614" width="167" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="1614" width="168" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1614" width="167" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="63" y="1629" style="font-family:Dialog; font-size:10;">
+MyHubListener</text>
+<rect x="14" y="1634" width="168" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1634" width="167" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="1652" width="168" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1652" width="167" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="1668" style="font-family:Dialog; font-size:10;">
+hubDisconnected(hub: IHub) : void</text>
+<rect x="262" y="1614" width="164" height="278" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="262" y="1614" width="163" height="277" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="262" y="1614" width="164" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="262" y="1614" width="163" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="313" y="1629" style="font-family:Dialog; font-size:10;">
+HubManager</text>
+<rect x="262" y="1634" width="164" height="52" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="262" y="1634" width="163" height="51" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="264" y1="1651" x2="345" y2="1651" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="264" y="1650" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="264" y="1667" style="font-family:Dialog; font-size:10;">
+hubs : List</text>
+<text x="264" y="1684" style="font-family:Dialog; font-size:10;">
+hubListener : HubListener</text>
+<rect x="262" y="1685" width="164" height="207" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="262" y="1685" width="163" height="206" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="264" y="1701" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; HubManager()</text>
+<text x="264" y="1718" style="font-family:Dialog; font-size:10;">
+getListenerClass() : Class</text>
+<text x="264" y="1735" style="font-family:Dialog; font-size:10;">
+getHub(index: int) : IHub</text>
+<text x="264" y="1752" style="font-family:Dialog; font-size:10;">
+getHubCount() : int</text>
+<text x="264" y="1769" style="font-family:Dialog; font-size:10;">
+addHub(hub: IHub) : void</text>
+<text x="264" y="1786" style="font-family:Dialog; font-size:10;">
+fireHubAdded(hub: IHub) : void</text>
+<text x="264" y="1803" style="font-family:Dialog; font-size:10;">
+removeHub(hub: IHub) : void</text>
+<text x="264" y="1820" style="font-family:Dialog; font-size:10;">
+fireHubRemoved(hub: IHub) : void</text>
+<text x="264" y="1837" style="font-family:Dialog; font-size:10;">
+getHubWithIP(ip: String) : IHub</text>
+<text x="264" y="1854" style="font-family:Dialog; font-size:10;">
+getHub(hub: IHub) : IHub</text>
+<text x="264" y="1871" style="font-family:Dialog; font-size:10;">
+start() : void</text>
+<text x="264" y="1888" style="font-family:Dialog; font-size:10;">
+stop() : void</text>
+<rect x="506" y="1614" width="204" height="244" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="506" y="1614" width="203" height="243" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="506" y="1614" width="204" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="506" y="1614" width="203" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="588" y="1629" style="font-family:Dialog; font-size:10;">
+HubUser</text>
+<rect x="506" y="1634" width="204" height="87" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="506" y="1634" width="203" height="86" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="508" y1="1651" x2="589" y2="1651" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="508" y="1650" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="508" y="1667" style="font-family:Dialog; font-size:10;">
+ipTries : int</text>
+<text x="508" y="1684" style="font-family:Dialog; font-size:10;">
+downloads : List</text>
+<text x="508" y="1701" style="font-family:Dialog; font-size:10;">
+client : Client</text>
+<text x="508" y="1718" style="font-family:Dialog; font-size:10;">
+hub : IHub</text>
+<rect x="506" y="1720" width="204" height="138" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="506" y="1720" width="203" height="137" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="508" y="1736" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; HubUser(hub: IHub)</text>
+<text x="508" y="1753" style="font-family:Dialog; font-size:10;">
+addDownload(dr: DownloadRequest) : void</text>
+<text x="508" y="1770" style="font-family:Dialog; font-size:10;">
+getIpTries() : int</text>
+<text x="508" y="1787" style="font-family:Dialog; font-size:10;">
+setIpTries(ipTries: int) : void</text>
+<text x="508" y="1804" style="font-family:Dialog; font-size:10;">
+getClient() : Client</text>
+<text x="508" y="1821" style="font-family:Dialog; font-size:10;">
+setClient(_client: Client) : void</text>
+<text x="508" y="1838" style="font-family:Dialog; font-size:10;">
+getDownloads() : List</text>
+<text x="508" y="1855" style="font-family:Dialog; font-size:10;">
+toString() : String</text>
+<rect x="14" y="14" width="137" height="210" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="14" width="136" height="209" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="14" width="137" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="14" width="136" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="45" y="29" style="font-family:Dialog; font-size:10; font-style:italic;">
+AbstractHubList</text>
+<rect x="14" y="34" width="137" height="87" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="34" width="136" height="86" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="16" y1="51" x2="97" y2="51" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="16" y="50" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="16" y="67" style="font-family:Dialog; font-size:10;">
+hubInfos : List</text>
+<text x="16" y="84" style="font-family:Dialog; font-size:10;">
+filteredHubInfos : List</text>
+<text x="16" y="101" style="font-family:Dialog; font-size:10;">
+update : boolean</text>
+<text x="16" y="118" style="font-family:Dialog; font-size:10;">
+filter : String</text>
+<rect x="14" y="120" width="137" height="104" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="120" width="136" height="103" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="136" style="font-family:Dialog; font-size:10;">
+fireHubListChanged() : void</text>
+<text x="16" y="153" style="font-family:Dialog; font-size:10;">
+getListenerClass() : Class</text>
+<text x="16" y="170" style="font-family:Dialog; font-size:10;">
+getHubInfos() : List</text>
+<text x="16" y="187" style="font-family:Dialog; font-size:10;">
+isUpdated() : boolean</text>
+<text x="16" y="204" style="font-family:Dialog; font-size:10;">
+update() : void</text>
+<text x="16" y="221" style="font-family:Dialog; font-size:10;">
+setFilter(_filter: String) : void</text>
+<rect x="231" y="14" width="374" height="176" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="231" y="14" width="373" height="175" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="231" y="14" width="374" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="231" y="14" width="373" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="389" y="29" style="font-family:Dialog; font-size:10; font-style:italic;">
+AbstractHub</text>
+<rect x="231" y="34" width="374" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="231" y="34" width="373" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="231" y="51" width="374" height="139" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="231" y="51" width="373" height="138" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="233" y="67" style="font-family:Dialog; font-size:10;">
+fireBrowseListDecoded(ui: HubUser) : void</text>
+<text x="233" y="84" style="font-family:Dialog; font-size:10;">
+fireGotMessage(msg: Message) : void</text>
+<text x="233" y="101" style="font-family:Dialog; font-size:10;">
+fireGotUserMessage(msg: Message) : void</text>
+<text x="233" y="118" style="font-family:Dialog; font-size:10;">
+fireHubDisconnected() : void</text>
+<text x="233" y="135" style="font-family:Dialog; font-size:10;">
+fireSearchResultAdded(sr: SearchResult,searchRequest: SearchRequest) : void</text>
+<text x="233" y="152" style="font-family:Dialog; font-size:10;">
+fireSearchResultsCleared() : void</text>
+<text x="233" y="169" style="font-family:Dialog; font-size:10;">
+fireUserAdded(ui: HubUser) : void</text>
+<text x="233" y="186" style="font-family:Dialog; font-size:10;">
+fireUserRemoved(ui: HubUser) : void</text>
+<rect x="790" y="1614" width="349" height="686" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="790" y="1614" width="348" height="685" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="790" y="1614" width="349" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="790" y="1614" width="348" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="946" y="1629" style="font-family:Dialog; font-size:10;">
+AllHubs</text>
+<rect x="790" y="1634" width="349" height="52" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="790" y="1634" width="348" height="51" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="792" y="1650" style="font-family:Dialog; font-size:10;">
+hubDescription : String</text>
+<text x="792" y="1667" style="font-family:Dialog; font-size:10;">
+hubName : String</text>
+<text x="792" y="1684" style="font-family:Dialog; font-size:10;">
+hubManager : IHubManager</text>
+<rect x="790" y="1685" width="349" height="615" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="790" y="1685" width="348" height="614" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="792" y="1701" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; AllHubs(_hubManager: IHubManager)</text>
+<text x="792" y="1718" style="font-family:Dialog; font-size:10;">
+browseListDecoded(hub: IHub,ui: HubUser) : void</text>
+<text x="792" y="1735" style="font-family:Dialog; font-size:10;">
+connect() : void</text>
+<text x="792" y="1752" style="font-family:Dialog; font-size:10;">
+disconnect() : void</text>
+<text x="792" y="1769" style="font-family:Dialog; font-size:10;">
+getDescription() : String</text>
+<text x="792" y="1786" style="font-family:Dialog; font-size:10;">
+getHost() : HostInfo</text>
+<text x="792" y="1803" style="font-family:Dialog; font-size:10;">
+equals(obj: Object) : boolean</text>
+<text x="792" y="1820" style="font-family:Dialog; font-size:10;">
+getInfo(nick: String) : void</text>
+<text x="792" y="1837" style="font-family:Dialog; font-size:10;">
+getMyNick() : String</text>
+<text x="792" y="1854" style="font-family:Dialog; font-size:10;">
+getName() : String</text>
+<text x="792" y="1871" style="font-family:Dialog; font-size:10;">
+getSearchResults() : SearchResult[]</text>
+<text x="792" y="1888" style="font-family:Dialog; font-size:10;">
+getUser(nick: String) : HubUser</text>
+<text x="792" y="1905" style="font-family:Dialog; font-size:10;">
+getUserCount() : int</text>
+<text x="792" y="1922" style="font-family:Dialog; font-size:10;">
+gotMessage(hub: IHub,message: Message) : void</text>
+<text x="792" y="1939" style="font-family:Dialog; font-size:10;">
+gotUserMessage(hub: IHub,message: Message) : void</text>
+<text x="792" y="1956" style="font-family:Dialog; font-size:10;">
+hubAdded(hub: IHub) : void</text>
+<text x="792" y="1973" style="font-family:Dialog; font-size:10;">
+hubDisconnected(hub: IHub) : void</text>
+<text x="792" y="1990" style="font-family:Dialog; font-size:10;">
+hubRemoved(hub: IHub) : void</text>
+<text x="792" y="2007" style="font-family:Dialog; font-size:10;">
+addListenersTo(hub: IHub) : void</text>
+<text x="792" y="2024" style="font-family:Dialog; font-size:10;">
+removeListenersFrom(hub: IHub) : void</text>
+<text x="792" y="2041" style="font-family:Dialog; font-size:10;">
+isConnected() : boolean</text>
+<text x="792" y="2058" style="font-family:Dialog; font-size:10;">
+logout() : boolean</text>
+<text x="792" y="2075" style="font-family:Dialog; font-size:10;">
+reconnect() : void</text>
+<text x="792" y="2092" style="font-family:Dialog; font-size:10;">
+requestConnection(user: String) : void</text>
+<text x="792" y="2109" style="font-family:Dialog; font-size:10;">
+search(sr: SearchRequest) : void</text>
+<text x="792" y="2126" style="font-family:Dialog; font-size:10;">
+searchResultAdded(hub: IHub,sr: SearchResult,ser: SearchRequest) : void</text>
+<text x="792" y="2143" style="font-family:Dialog; font-size:10;">
+searchResultsCleared(hub: IHub) : void</text>
+<text x="792" y="2160" style="font-family:Dialog; font-size:10;">
+sendChatMessage(message: String) : void</text>
+<text x="792" y="2177" style="font-family:Dialog; font-size:10;">
+sendPrivateMessage(message: String,nick: String) : void</text>
+<text x="792" y="2194" style="font-family:Dialog; font-size:10;">
+sendSearchResult(message: String,nick: String) : void</text>
+<text x="792" y="2211" style="font-family:Dialog; font-size:10;">
+setDescription(description: String) : void</text>
+<text x="792" y="2228" style="font-family:Dialog; font-size:10;">
+setName(name: String) : void</text>
+<text x="792" y="2245" style="font-family:Dialog; font-size:10;">
+userAdded(hub: IHub,ui: HubUser) : void</text>
+<text x="792" y="2262" style="font-family:Dialog; font-size:10;">
+userRemoved(hub: IHub,ui: HubUser) : void</text>
+<text x="792" y="2279" style="font-family:Dialog; font-size:10;">
+setUserCount(userCount: int) : void</text>
+<text x="792" y="2296" style="font-family:Dialog; font-size:10;">
+getListenerClass() : Class</text>
+<polyline style="fill:none; stroke:#000000; stroke-width:1" points="770,406 770,374 418,374 418,190"/>
+<polygon style="fill:#ffffff; stroke:#ffffff; stroke-width:1" points="418,190 425,202 411,202"/>
+<polygon style="fill:none; stroke:#000000; stroke-width:1" points="418,190 425,202 411,202"/>
+<polyline style="fill:none; stroke:#000000; stroke-width:1" points="179,406 179,374 82,374 82,224"/>
+<polygon style="fill:#ffffff; stroke:#ffffff; stroke-width:1" points="82,224 89,236 75,236"/>
+<polygon style="fill:none; stroke:#000000; stroke-width:1" points="82,224 89,236 75,236"/>
+</svg>

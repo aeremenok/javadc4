@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 20001102//EN' 'http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd'>
+<svg xmlns="http://www.w3.org/2000/svg" width="2325" height="886">
+<rect x="458" y="14" width="220" height="193" style="fill:#00ffff; stroke:#00ffff; stroke-width:1"/>
+<rect x="458" y="14" width="219" height="192" style="fill: none; stroke:#00ffff; stroke-width:1"/>
+<rect x="458" y="14" width="220" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="458" y="14" width="219" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="515" y="29" style="font-family:Dialog; font-size:10; font-style:italic;">
+AbstractSettingsPanel</text>
+<rect x="458" y="34" width="220" height="53" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="458" y="34" width="219" height="52" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="460" y1="51" x2="541" y2="51" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="460" y="50" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="460" y="67" style="font-family:Dialog; font-size:10;">
+changed : boolean</text>
+<text x="460" y="84" style="font-family:Dialog; font-size:10;">
+stateChangedListener : StateChangedListener</text>
+<rect x="458" y="86" width="220" height="121" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="458" y="86" width="219" height="120" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="460" y="102" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; AbstractSettingsPanel()</text>
+<text x="460" y="119" style="font-family:Dialog; font-size:10; font-style:italic;">
+initPanel() : void</text>
+<text x="460" y="136" style="font-family:Dialog; font-size:10; font-style:italic;">
+jbInit() : void</text>
+<text x="460" y="153" style="font-family:Dialog; font-size:10; font-style:italic;">
+onCancel() : void</text>
+<text x="460" y="170" style="font-family:Dialog; font-size:10; font-style:italic;">
+onOK() : void</text>
+<text x="460" y="187" style="font-family:Dialog; font-size:10;">
+isChanged() : boolean</text>
+<text x="460" y="204" style="font-family:Dialog; font-size:10;">
+setChanged(b: boolean) : void</text>
+<rect x="1203" y="14" width="60" height="57" style="fill:#00ffff; stroke:#00ffff; stroke-width:1"/>
+<rect x="1203" y="14" width="59" height="56" style="fill: none; stroke:#00ffff; stroke-width:1"/>
+<rect x="1203" y="14" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1203" y="14" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1230" y="29" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="1203" y="34" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1203" y="34" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1203" y="52" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1203" y="52" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1343" y="14" width="60" height="57" style="fill:#00ffff; stroke:#00ffff; stroke-width:1"/>
+<rect x="1343" y="14" width="59" height="56" style="fill: none; stroke:#00ffff; stroke-width:1"/>
+<rect x="1343" y="14" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1343" y="14" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1370" y="29" style="font-family:Dialog; font-size:10;">
+2</text>
+<rect x="1343" y="34" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1343" y="34" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1343" y="52" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1343" y="52" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="287" width="276" height="312" style="fill:#00ffff; stroke:#00ffff; stroke-width:1"/>
+<rect x="14" y="287" width="275" height="311" style="fill: none; stroke:#00ffff; stroke-width:1"/>
+<rect x="14" y="287" width="276" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="287" width="275" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="91" y="302" style="font-family:Dialog; font-size:10;">
+ConnectionSettingsPanel</text>
+<rect x="14" y="307" width="276" height="138" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="307" width="275" height="137" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="16" y1="324" x2="97" y2="324" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="16" y="323" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="16" y="340" style="font-family:Dialog; font-size:10;">
+radioActive : JRadioButton</text>
+<text x="16" y="357" style="font-family:Dialog; font-size:10;">
+radioPassive : JRadioButton</text>
+<text x="16" y="374" style="font-family:Dialog; font-size:10;">
+txtForceIP : JTextField</text>
+<text x="16" y="391" style="font-family:Dialog; font-size:10;">
+txtForcePort : JTextField</text>
+<text x="16" y="408" style="font-family:Dialog; font-size:10;">
+txtUploadSlots : JTextField</text>
+<text x="16" y="425" style="font-family:Dialog; font-size:10;">
+txtDownloadSlots : JTextField</text>
+<text x="16" y="442" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<rect x="14" y="444" width="276" height="155" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="444" width="275" height="154" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="460" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ConnectionSettingsPanel(_settings: ISettings)</text>
+<text x="16" y="477" style="font-family:Dialog; font-size:10;">
+enableActiveOptions(b: boolean) : void</text>
+<text x="16" y="494" style="font-family:Dialog; font-size:10;">
+getActiveSettingsPanel() : JPanel</text>
+<text x="16" y="511" style="font-family:Dialog; font-size:10;">
+getConnectionModePanel() : JPanel</text>
+<text x="16" y="528" style="font-family:Dialog; font-size:10;">
+getSlotsPanel() : JPanel</text>
+<text x="16" y="545" style="font-family:Dialog; font-size:10;">
+initPanel() : void</text>
+<text x="16" y="562" style="font-family:Dialog; font-size:10;">
+jbInit() : void</text>
+<text x="16" y="579" style="font-family:Dialog; font-size:10;">
+onCancel() : void</text>
+<text x="16" y="596" style="font-family:Dialog; font-size:10;">
+onOK() : void</text>
+<rect x="370" y="287" width="259" height="312" style="fill:#00ffff; stroke:#00ffff; stroke-width:1"/>
+<rect x="370" y="287" width="258" height="311" style="fill: none; stroke:#00ffff; stroke-width:1"/>
+<rect x="370" y="287" width="259" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="370" y="287" width="258" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="447" y="302" style="font-family:Dialog; font-size:10;">
+GeneralSettingsPanel</text>
+<rect x="370" y="307" width="259" height="172" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="370" y="307" width="258" height="171" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="372" y1="324" x2="453" y2="324" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="372" y="323" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="372" y="340" style="font-family:Dialog; font-size:10;">
+speeds : String[]</text>
+<text x="372" y="357" style="font-family:Dialog; font-size:10;">
+comboConnection : JComboBox</text>
+<text x="372" y="374" style="font-family:Dialog; font-size:10;">
+txtDescription : JTextField</text>
+<text x="372" y="391" style="font-family:Dialog; font-size:10;">
+txtEmail : JTextField</text>
+<text x="372" y="408" style="font-family:Dialog; font-size:10;">
+txtNick : JTextField</text>
+<text x="372" y="425" style="font-family:Dialog; font-size:10;">
+txtTag : JTextField</text>
+<text x="372" y="442" style="font-family:Dialog; font-size:10;">
+txtHubList : JTextField</text>
+<text x="372" y="459" style="font-family:Dialog; font-size:10;">
+checkForceMove : JCheckBox</text>
+<text x="372" y="476" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<rect x="370" y="478" width="259" height="121" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="370" y="478" width="258" height="120" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="372" y="494" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; GeneralSettingsPanel(_settings: ISettings)</text>
+<text x="372" y="511" style="font-family:Dialog; font-size:10;">
+getOtherSettingsPanel() : JPanel</text>
+<text x="372" y="528" style="font-family:Dialog; font-size:10;">
+getUserSettingsPanel() : JPanel</text>
+<text x="372" y="545" style="font-family:Dialog; font-size:10;">
+initPanel() : void</text>
+<text x="372" y="562" style="font-family:Dialog; font-size:10;">
+jbInit() : void</text>
+<text x="372" y="579" style="font-family:Dialog; font-size:10;">
+onCancel() : void</text>
+<text x="372" y="596" style="font-family:Dialog; font-size:10;">
+onOK() : void</text>
+<rect x="1483" y="14" width="60" height="57" style="fill:#00ffff; stroke:#00ffff; stroke-width:1"/>
+<rect x="1483" y="14" width="59" height="56" style="fill: none; stroke:#00ffff; stroke-width:1"/>
+<rect x="1483" y="14" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1483" y="14" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1510" y="29" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="1483" y="34" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1483" y="34" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1483" y="52" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1483" y="52" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1623" y="14" width="60" height="57" style="fill:#00ffff; stroke:#00ffff; stroke-width:1"/>
+<rect x="1623" y="14" width="59" height="56" style="fill: none; stroke:#00ffff; stroke-width:1"/>
+<rect x="1623" y="14" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1623" y="14" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1650" y="29" style="font-family:Dialog; font-size:10;">
+2</text>
+<rect x="1623" y="34" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1623" y="34" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1623" y="52" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1623" y="52" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1763" y="14" width="60" height="57" style="fill:#00ffff; stroke:#00ffff; stroke-width:1"/>
+<rect x="1763" y="14" width="59" height="56" style="fill: none; stroke:#00ffff; stroke-width:1"/>
+<rect x="1763" y="14" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1763" y="14" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1790" y="29" style="font-family:Dialog; font-size:10;">
+3</text>
+<rect x="1763" y="34" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1763" y="34" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1763" y="52" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1763" y="52" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1203" y="287" width="579" height="329" style="fill:#00ffff; stroke:#00ffff; stroke-width:1"/>
+<rect x="1203" y="287" width="578" height="328" style="fill: none; stroke:#00ffff; stroke-width:1"/>
+<rect x="1203" y="287" width="579" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1203" y="287" width="578" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1458" y="302" style="font-family:Dialog; font-size:10;">
+SettingsDialog</text>
+<rect x="1203" y="307" width="579" height="240" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1203" y="307" width="578" height="239" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1205" y1="324" x2="1286" y2="324" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1205" y="323" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="1205" y="340" style="font-family:Dialog; font-size:10;">
+buttonPanel : Panel</text>
+<text x="1205" y="357" style="font-family:Dialog; font-size:10;">
+okButton : JButton</text>
+<text x="1205" y="374" style="font-family:Dialog; font-size:10;">
+cancelButton : JButton</text>
+<text x="1205" y="391" style="font-family:Dialog; font-size:10;">
+applyButton : JButton</text>
+<text x="1205" y="408" style="font-family:Dialog; font-size:10;">
+doRefresh : boolean</text>
+<text x="1205" y="425" style="font-family:Dialog; font-size:10;">
+flowLayout1 : FlowLayout</text>
+<text x="1205" y="442" style="font-family:Dialog; font-size:10;">
+generalSettingsPanel : GeneralSettingsPanel</text>
+<text x="1205" y="459" style="font-family:Dialog; font-size:10;">
+connectionSettingsPanel : ConnectionSettingsPanel</text>
+<text x="1205" y="476" style="font-family:Dialog; font-size:10;">
+transferSettingsPanel : TransferSettingsPanel</text>
+<text x="1205" y="493" style="font-family:Dialog; font-size:10;">
+mainPanel : JPanel</text>
+<text x="1205" y="510" style="font-family:Dialog; font-size:10;">
+tabPane : JTabbedPane</text>
+<text x="1205" y="527" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="1205" y="544" style="font-family:Dialog; font-size:10;">
+shareManager : IShareManager</text>
+<rect x="1203" y="546" width="579" height="70" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1203" y="546" width="578" height="69" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1205" y="562" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; SettingsDialog(owner: Frame,title: String,modal: boolean,_settings: ISettings,_shareManager: IShareManager)</text>
+<text x="1205" y="579" style="font-family:Dialog; font-size:10;">
+jbInit() : void</text>
+<text x="1205" y="596" style="font-family:Dialog; font-size:10;">
+onOK() : void</text>
+<text x="1205" y="613" style="font-family:Dialog; font-size:10;">
+showSettings() : void</text>
+<rect x="1862" y="287" width="309" height="108" style="fill:#00ffff; stroke:#00ffff; stroke-width:1"/>
+<rect x="1862" y="287" width="308" height="107" style="fill: none; stroke:#00ffff; stroke-width:1"/>
+<rect x="1862" y="287" width="309" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1862" y="287" width="308" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1964" y="302" style="font-family:Dialog; font-size:10;">
+StateChangedListener</text>
+<rect x="1862" y="307" width="309" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1862" y="307" width="308" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="1864" y1="324" x2="1945" y2="324" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1864" y="323" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="1864" y="340" style="font-family:Dialog; font-size:10;">
+panel : AbstractSettingsPanel</text>
+<rect x="1862" y="342" width="309" height="53" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1862" y="342" width="308" height="52" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1864" y="358" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; StateChangedListener(panel: AbstractSettingsPanel)</text>
+<text x="1864" y="375" style="font-family:Dialog; font-size:10;">
+actionPerformed(e: ActionEvent) : void</text>
+<text x="1864" y="392" style="font-family:Dialog; font-size:10;">
+getPanel() : AbstractSettingsPanel</text>
+<rect x="2251" y="287" width="60" height="57" style="fill:#00ffff; stroke:#00ffff; stroke-width:1"/>
+<rect x="2251" y="287" width="59" height="56" style="fill: none; stroke:#00ffff; stroke-width:1"/>
+<rect x="2251" y="287" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2251" y="287" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="2278" y="302" style="font-family:Dialog; font-size:10;">
+1</text>
+<rect x="2251" y="307" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2251" y="307" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="2251" y="325" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="2251" y="325" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="815" width="60" height="57" style="fill:#00ffff; stroke:#00ffff; stroke-width:1"/>
+<rect x="14" y="815" width="59" height="56" style="fill: none; stroke:#00ffff; stroke-width:1"/>
+<rect x="14" y="815" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="815" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="41" y="830" style="font-family:Dialog; font-size:10;">
+2</text>
+<rect x="14" y="835" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="835" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="853" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="853" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="154" y="815" width="60" height="57" style="fill:#00ffff; stroke:#00ffff; stroke-width:1"/>
+<rect x="154" y="815" width="59" height="56" style="fill: none; stroke:#00ffff; stroke-width:1"/>
+<rect x="154" y="815" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="154" y="815" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="181" y="830" style="font-family:Dialog; font-size:10;">
+3</text>
+<rect x="154" y="835" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="154" y="835" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="154" y="853" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="154" y="853" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="294" y="815" width="60" height="57" style="fill:#00ffff; stroke:#00ffff; stroke-width:1"/>
+<rect x="294" y="815" width="59" height="56" style="fill: none; stroke:#00ffff; stroke-width:1"/>
+<rect x="294" y="815" width="60" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="294" y="815" width="59" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="321" y="830" style="font-family:Dialog; font-size:10;">
+4</text>
+<rect x="294" y="835" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="294" y="835" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="294" y="853" width="60" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="294" y="853" width="59" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="709" y="287" width="414" height="448" style="fill:#00ffff; stroke:#00ffff; stroke-width:1"/>
+<rect x="709" y="287" width="413" height="447" style="fill: none; stroke:#00ffff; stroke-width:1"/>
+<rect x="709" y="287" width="414" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="709" y="287" width="413" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="864" y="302" style="font-family:Dialog; font-size:10;">
+TransferSettingsPanel</text>
+<rect x="709" y="307" width="414" height="223" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="709" y="307" width="413" height="222" style="fill: none; stroke:#000000; stroke-width:1"/>
+<line x1="711" y1="324" x2="792" y2="324" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="711" y="323" style="font-family:Dialog; font-size:10;">
+logger : Category</text>
+<text x="711" y="340" style="font-family:Dialog; font-size:10;">
+addShareButton : JButton</text>
+<text x="711" y="357" style="font-family:Dialog; font-size:10;">
+tempDownloadDirButton : JButton</text>
+<text x="711" y="374" style="font-family:Dialog; font-size:10;">
+downloadDirButton : JButton</text>
+<text x="711" y="391" style="font-family:Dialog; font-size:10;">
+txtDownloadDir : JTextField</text>
+<text x="711" y="408" style="font-family:Dialog; font-size:10;">
+removeShareButton : JButton</text>
+<text x="711" y="425" style="font-family:Dialog; font-size:10;">
+shareList : JList</text>
+<text x="711" y="442" style="font-family:Dialog; font-size:10;">
+shareModel : DirectoryListModel</text>
+<text x="711" y="459" style="font-family:Dialog; font-size:10;">
+shareScrollPane : JScrollPane</text>
+<text x="711" y="476" style="font-family:Dialog; font-size:10;">
+txtTempDownloadDir : JTextField</text>
+<text x="711" y="493" style="font-family:Dialog; font-size:10;">
+uploadPanel : JPanel</text>
+<text x="711" y="510" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="711" y="527" style="font-family:Dialog; font-size:10;">
+shareManager : IShareManager</text>
+<rect x="709" y="529" width="414" height="206" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="709" y="529" width="413" height="205" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="711" y="545" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; TransferSettingsPanel(_settings: ISettings,_shareManager: IShareManager)</text>
+<text x="711" y="562" style="font-family:Dialog; font-size:10;">
+browseDir() : String</text>
+<text x="711" y="579" style="font-family:Dialog; font-size:10;">
+getDownloadPreferences() : JPanel</text>
+<text x="711" y="596" style="font-family:Dialog; font-size:10;">
+getUploadPreferences() : JPanel</text>
+<text x="711" y="613" style="font-family:Dialog; font-size:10;">
+initPanel() : void</text>
+<text x="711" y="630" style="font-family:Dialog; font-size:10;">
+jbInit() : void</text>
+<text x="711" y="647" style="font-family:Dialog; font-size:10;">
+moveBrowseButton_actionPerformed(e: ActionEvent) : void</text>
+<text x="711" y="664" style="font-family:Dialog; font-size:10;">
+onBrowseDir(download: boolean) : void</text>
+<text x="711" y="681" style="font-family:Dialog; font-size:10;">
+onCancel() : void</text>
+<text x="711" y="698" style="font-family:Dialog; font-size:10;">
+onOK() : void</text>
+<text x="711" y="715" style="font-family:Dialog; font-size:10;">
+onRemoveShare() : void</text>
+<text x="711" y="732" style="font-family:Dialog; font-size:10;">
+populateShareList(dirs: String[]) : void</text>
+<polyline style="fill:none; stroke:#000000; stroke-width:1" points="152,287 152,255 568,255 568,207"/>
+<polygon style="fill:#ffffff; stroke:#ffffff; stroke-width:1" points="568,207 575,219 561,219"/>
+<polygon style="fill:none; stroke:#000000; stroke-width:1" points="568,207 575,219 561,219"/>
+<polyline style="fill:none; stroke:#000000; stroke-width:1" points="499,287 499,255 568,255 568,207"/>
+<polygon style="fill:#ffffff; stroke:#ffffff; stroke-width:1" points="568,207 575,219 561,219"/>
+<polygon style="fill:none; stroke:#000000; stroke-width:1" points="568,207 575,219 561,219"/>
+<polyline style="fill:none; stroke:#000000; stroke-width:1" points="916,287 916,255 568,255 568,207"/>
+<polygon style="fill:#ffffff; stroke:#ffffff; stroke-width:1" points="568,207 575,219 561,219"/>
+<polygon style="fill:none; stroke:#000000; stroke-width:1" points="568,207 575,219 561,219"/>
+</svg>

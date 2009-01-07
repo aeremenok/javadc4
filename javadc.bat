@@ -1,0 +1,2 @@
+@echo off
+java -classpath .;./build/classes;./lib/commons-collections.jar;./lib/commons-pool-1.2.jar;./lib/systray4j.jar;./lib/picocontainer-1.0-beta-5.jar;./lib/tigertree-1.0.jar;./lib/cryptix-jce-provider.jar;./lib/kunststoff.jar;./lib/looks-1.2.2.jar;./lib/spin.jar;./lib/log4j-1.2.8.jar net.sf.javadc.Main

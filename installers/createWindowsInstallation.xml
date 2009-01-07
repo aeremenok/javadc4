@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="javaDC3.createWindowsInstallation" basedir="." default="create.installation">
+
+    <property name="launch4j.dir" location="windows/tools/launch4j" />
+    <taskdef name="launch4j"
+             classname="net.sf.launch4j.ant.Launch4jTask"
+             classpath="${launch4j.dir}/launch4j.jar:${launch4j.dir}/lib/xstream.jar" />
+
+    <target name="create.jar">
+        <ant dir=".." antfile="build.xml" target="jar"/>
+    </target>
+
+    <target name="create.exe" >
+
+        <!-- Dirty hacked launch4j version is used to workarond relative jar path bug. See http://sourceforge.net/tracker/index.php?func=detail&aid=1497453&group_id=95944&atid=613100 for details -->
+        <launch4j jar="..\lib\javadc3.jar">
+            <config headerType="0" dontWrapJar="true"
+                    outfile="../build/JavaDC3.exe"
+                    icon="windows/conf/main2.ico"
+                    errTitle=""
+                    jarArgs=""
+                    chdir=""
+                    customProcName="false"
+                    stayAlive="false"
+                    >
+                <jre
+                    path="jre"
+                    minVersion="1.4.0"
+                    maxVersion=""
+                    initialHeapSize="0"
+                    maxHeapSize="0"
+                    args=""
+                />
+                <splash
+                    file="../src/images/JavaDCLogo.bmp"
+                    waitForWindow="true"
+                    timeout="60"
+                    timeoutErr="true"
+                />
+                <versionInfo
+                        fileVersion="0.0.0.0"
+                        txtFileVersion="Initial version"
+                        fileDescription="P2P Client Java Direct Connect 3 executable"
+                        copyright="GNU"
+                        productVersion="0.0.0.0"
+                        txtProductVersion="Initial version"
+                        productName="P2P Client Java Direct Connect 3"
+                        companyName="GNU Software"
+                        internalName="JavaDC3"
+                        originalFilename="JavaDC3.exe"
+                        />
+            </config>
+        </launch4j>
+    </target>
+
+    <target name="create.installation.withjre" depends="create.jar, create.exe">
+        <echo message="${os.name}" />
+        <exec executable="windows\tools\nsis\makensis.exe">
+             <!--os="Windows*"-->
+            <arg value="/DINCLUDE_JRE=true"/>
+            <arg value="windows\conf\NSISInstallerConfiguration.nsi"/>
+        </exec>
+    </target>
+
+    <target name="create.installation.nojre" depends="create.jar, create.exe">
+        <exec executable="windows\tools\nsis\makensis.exe" >
+            <!--os="Windows*"-->
+            <arg value="windows\conf\NSISInstallerConfiguration.nsi"/>
+        </exec>
+    </target>
+
+    <target name="create.installation" depends="create.installation.nojre, create.installation.withjre" />
+
+</project>

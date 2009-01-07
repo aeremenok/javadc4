@@ -1,0 +1,18 @@
+INFO  net.sf.javadc.net.client.Connection: Connected to 80.221.182.207:5100
+
+INFO  C2C: s : $MyNick timowest()
+INFO  C2C: s : $Lock EXTENDEDPROTOCOLABCABCABCABCABCABC Pk=DCPLUSPLUS0.242ABCABC()
+
+INFO  C2C: r : $MyNick Totteli()
+INFO  C2C: r : $Lock EXTENDEDPROTOCOLABCABCABCABCABCABC Pk=DCPLUSPLUS0.668ABCABC(Totteli)
+
+INFO  C2C: s : $MyNick timowest(Totteli)
+INFO  C2C: s : $Lock EXTENDEDPROTOCOLABCABCABCABCABCABC Pk=DCPLUSPLUS0.242ABCABC(Totteli)
+
+INFO  C2C: r : $Supports MiniSlots XmlBZList ADCGet TTHL TTHF GetZBlock ZLIG (Totteli)
+INFO  C2C: r : $Direction Upload 30688(Totteli)
+INFO  C2C: r : $Key ÑÀ° A Ñ±±ÀÀ0Ð0 0 0 0 0 0(Totteli)
+
+INFO  C2C: s : $Get jako1\elokuvat\Perhe\Jersey Girl.avi$514509841(Totteli)
+
+INFO  C2C: r : $MaxedOut(Totteli)

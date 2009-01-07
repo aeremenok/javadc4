@@ -1,0 +1,228 @@
+
+latest improvements are at the end
+
+- CRITICAL : Reduce log output of net.sf.javadc.hub.Hub
+
+    DONE    
+    
+    		net.sf.javadc.net.hub.Hub
+
+- GENERAL : organize a eazy way of making a release package
+
+    DONE	
+    
+    		build.xml
+    
+- GUI : provide a "running since <time>" label on the statusbar
+
+    DONE
+    
+    		?
+    
+- NET : information about resume mappings should be saved in the persistent 
+    version of the download queue
+    
+    DONE    
+    		?
+    		
+- CRITICAL : timeout for ongoing downloads and upload
+
+    > ?
+    
+    		?
+    
+- NET : read commands also before active state transitionns (S*) in Connection
+
+    DONE
+    
+    		?
+    
+- NET : skip SRemotelyQueued in activeTask intermediate command check
+
+    DONE    
+    
+    		?
+    
+- NET : ensure that DownloadManager is running properly
+
+    DONE    
+    
+    		?
+    
+- GENERAL : better javadocs for net.sf.javadc.gui.util           
+
+    DONE
+    
+- CRITICAL : make TaskManager log task execution times
+
+    DONE    
+
+- GENERAL : When Download is removed from DownloadQueue, remove also the related File
+
+    DONE
+    
+            net.sf.javadc.net.RequestsModelCleanupListenerTest
+
+- GUI : HubComponent stays open when Hub disconnects
+
+    DONE
+    
+    		?
+    
+- GUI : HubComponent related tab has "Add to Favorites" option
+
+    DONE
+    
+    		?
+    
+- GENERAL : don't remove files from the temp directory, if the download directory 
+  is the same and handle the moving of the files as well in the RequestsModelCleanupListener
+  
+    DONE    
+    
+    		net.sf.javadc.net.RequestsModelCleanupListenerTest
+    
+- CRITICAL : fix locking bug happening when the following log messages appear
+
+    net.sf.javadc.net.client.Connection : Connecting to <IP:port>
+    net.sf.javadc.net.client.Connection : Connected to <IP:port>
+    
+    DONE    
+    
+- GUI : avoid the following Exception
+
+    java.lang.IndexOutOfBoundsException: bitIndex < 0: -2147483648
+        at java.util.BitSet.get(Unknown Source)
+        at javax.swing.DefaultListSelectionModel.removeIndexInterval(Unknown Sourc
+        at javax.swing.JTable.tableRowsDeleted(Unknown Source)
+        at javax.swing.JTable.tableChanged(Unknown Source)
+        at javax.swing.table.AbstractTableModel.fireTableChanged(Unknown Source)        
+        at net.sf.javadc.gui.model.TableMap.tableChanged(TableMap.java:153)
+        at net.sf.javadc.gui.util.TableSorter.deleteRows(TableSorter.java:502)
+        at net.sf.javadc.gui.util.TableSorter.tableChanged(TableSorter.java:371)
+        at javax.swing.table.AbstractTableModel.fireTableChanged(Unknown Source)    
+        
+- NET : disconnect after Upload
+
+    > Timo        
+    
+    		?
+    
+- GENERAL : Delete files in temporary directory with zero size at startup        
+
+     DONE   
+     
+     		? 
+     
+-GUI : make Search results tab pane work better
+
+     DONE     
+     
+- CRITICAL : change HubListener interface
+
+    DONE     
+    
+- CRITICAL : make file size visible in incompletes view also when the search 
+  result uses a different filenam
+
+    DONE
+    
+    		net.sf.javadc.gui.model.RowTableModelAdapterTest
+    
+- CRITICAL : catch NoRouteToHostExceptions in Connection.run()
+
+    DONE    
+    
+    		?
+    
+- CIRTICAL : download in blocks of 50mbytes
+
+    DONE    
+    
+    		net.sf.javadc.tasks.client.SDownloadingTaskTest
+    		
+- GENERAL : disconnect if Download Connection stays for a certain time in low 
+traffic mode
+
+    DONE
+    
+    		?    		
+    		
+- GUI : multi selection for search results
+
+    DONE
+    
+    		?
+
+- GUI : multi selection for incomplete downloads
+
+    DONE
+    
+    		?
+
+- GUI : multi selection for favorite hubs
+
+    DONE    
+    
+    		?		
+    
+- NET : communication between RequestsModel and SegmentManager
+
+    RequestsModel has a SegmentManagerListener instance
+
+    SegmentManagerListener
+
+      public void dropDownload(DownloadRequest dr)
+
+        called if a segment is too long inactive
+
+      public void startDownload(DownloadRequest dr)
+
+        called if a segment finishes 
+        (has same remote client data as the finished download)
+        
+- NET : segmented download
+
+    DownloadManager uses map of hash to download request
+    
+    if a new seach result is added to a download request then
+    the related client is given a new segment
+    
+      if the client finishes a segment it can query the segment manager for a new
+      segment
+      
+- GUI : connection info needs to be refactored to fit the requirements of
+    segmented downloads
+
+    DONE    
+        
+            net.sf.javadc.net.client.ConnectionStatisticsTest
+            net.sf.javadc.net.ConnectionTest      
+            
+- NET : no Hub searching before connection has been established
+
+    DONE    
+    
+    		net.sf.javadc.net.hub.HubTest
+    		
+- NET : provide support for $Supports in the Hub connection
+ 
+    DONE
+    
+    		net.sf.javadc.tasks.hub.ISupportsTaskTest
+    		
+- GUI : DownloadQueue has "Search for Alternates" option
+
+    DONE    		
+    
+- NET : provide mapping of TTH to FileInfo instance in ShareManager
+
+    DONE    
+    		
+- GUI : old search request tabs are deprecated
+
+    DONE 15.09.2005
+
+- GENERAL : use coverage tool such as Emma
+
+    DONE            

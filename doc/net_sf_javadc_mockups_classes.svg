@@ -1,0 +1,454 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 20001102//EN' 'http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd'>
+<svg xmlns="http://www.w3.org/2000/svg" width="1861" height="1906">
+<rect x="14" y="14" width="468" height="159" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="14" width="467" height="158" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="14" width="468" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="14" width="467" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="201" y="29" style="font-family:Dialog; font-size:10;">
+BaseClientManager</text>
+<rect x="14" y="34" width="468" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="34" width="467" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="51" width="468" height="122" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="51" width="467" height="121" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="67" style="font-family:Dialog; font-size:10;">
+addListener(listener: EventListener) : void</text>
+<text x="16" y="84" style="font-family:Dialog; font-size:10;">
+getClient(host: HostInfo) : Client</text>
+<text x="16" y="101" style="font-family:Dialog; font-size:10;">
+addClient(info: HostInfo,c: Client) : void</text>
+<text x="16" y="118" style="font-family:Dialog; font-size:10;">
+removeClient(info: HostInfo) : void</text>
+<text x="16" y="135" style="font-family:Dialog; font-size:10;">
+createClientConnection(client: Client,listener: ConnectionListener,isServer: boolean) : Connection</text>
+<text x="16" y="152" style="font-family:Dialog; font-size:10;">
+fireClientAdded(c: Client) : void</text>
+<text x="16" y="169" style="font-family:Dialog; font-size:10;">
+fireClientRemoved(c: Client) : void</text>
+<rect x="562" y="14" width="207" height="74" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="562" y="14" width="206" height="73" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="562" y="14" width="207" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="562" y="14" width="206" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="612" y="29" style="font-family:Dialog; font-size:10;">
+BaseClientTaskFactory</text>
+<rect x="562" y="34" width="207" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="562" y="34" width="206" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="562" y="52" width="207" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="562" y="52" width="206" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="564" y="68" style="font-family:Dialog; font-size:10;">
+borrowObject(key: Object) : Object</text>
+<text x="564" y="85" style="font-family:Dialog; font-size:10;">
+returnObject(key: Object,obj: Object) : void</text>
+<rect x="849" y="14" width="266" height="754" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="849" y="14" width="265" height="753" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="849" y="14" width="266" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="849" y="14" width="265" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="961" y="29" style="font-family:Dialog; font-size:10;">
+BaseHub</text>
+<rect x="849" y="34" width="266" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="849" y="34" width="265" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="851" y="50" style="font-family:Dialog; font-size:10;">
+name : String</text>
+<rect x="849" y="51" width="266" height="717" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="849" y="51" width="265" height="716" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="851" y="67" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; BaseHub()</text>
+<text x="851" y="84" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; BaseHub(name: String)</text>
+<text x="851" y="101" style="font-family:Dialog; font-size:10;">
+addUser(ui: HubUser) : void</text>
+<text x="851" y="118" style="font-family:Dialog; font-size:10;">
+addSearchResult(sr: SearchResult) : void</text>
+<text x="851" y="135" style="font-family:Dialog; font-size:10;">
+clearSearchResults() : void</text>
+<text x="851" y="152" style="font-family:Dialog; font-size:10;">
+connect() : void</text>
+<text x="851" y="169" style="font-family:Dialog; font-size:10;">
+disconnect() : void</text>
+<text x="851" y="186" style="font-family:Dialog; font-size:10;">
+getConnection() : Socket</text>
+<text x="851" y="203" style="font-family:Dialog; font-size:10;">
+getDescription() : String</text>
+<text x="851" y="220" style="font-family:Dialog; font-size:10;">
+getHost() : HostInfo</text>
+<text x="851" y="237" style="font-family:Dialog; font-size:10;">
+getName() : String</text>
+<text x="851" y="254" style="font-family:Dialog; font-size:10;">
+getOpList() : List</text>
+<text x="851" y="271" style="font-family:Dialog; font-size:10;">
+getSearchResults() : SearchResult[]</text>
+<text x="851" y="288" style="font-family:Dialog; font-size:10;">
+getStartPing() : long</text>
+<text x="851" y="305" style="font-family:Dialog; font-size:10;">
+getUser(nick: String) : HubUser</text>
+<text x="851" y="322" style="font-family:Dialog; font-size:10;">
+getUserCount() : int</text>
+<text x="851" y="339" style="font-family:Dialog; font-size:10;">
+isConnected() : boolean</text>
+<text x="851" y="356" style="font-family:Dialog; font-size:10;">
+processCommand(cmdString: String) : void</text>
+<text x="851" y="373" style="font-family:Dialog; font-size:10;">
+receivedNick(client: Client) : void</text>
+<text x="851" y="390" style="font-family:Dialog; font-size:10;">
+reconnect() : void</text>
+<text x="851" y="407" style="font-family:Dialog; font-size:10;">
+removeUser(ui: HubUser) : void</text>
+<text x="851" y="424" style="font-family:Dialog; font-size:10;">
+requestConnection(user: String) : void</text>
+<text x="851" y="441" style="font-family:Dialog; font-size:10;">
+run() : void</text>
+<text x="851" y="458" style="font-family:Dialog; font-size:10;">
+runTask() : void</text>
+<text x="851" y="475" style="font-family:Dialog; font-size:10;">
+search(sr: SearchRequest) : void</text>
+<text x="851" y="492" style="font-family:Dialog; font-size:10;">
+sendChatMessage(message: String) : void</text>
+<text x="851" y="509" style="font-family:Dialog; font-size:10;">
+sendCommand(command: String,data: String) : void</text>
+<text x="851" y="526" style="font-family:Dialog; font-size:10;">
+sendPrivateMessage(message: String,nick: String) : void</text>
+<text x="851" y="543" style="font-family:Dialog; font-size:10;">
+sendSearchResult(result: String,to_nick: String) : void</text>
+<text x="851" y="560" style="font-family:Dialog; font-size:10;">
+setConnection(socket: Socket) : void</text>
+<text x="851" y="577" style="font-family:Dialog; font-size:10;">
+setDescription(description: String) : void</text>
+<text x="851" y="594" style="font-family:Dialog; font-size:10;">
+setHost(host: HostInfo) : void</text>
+<text x="851" y="611" style="font-family:Dialog; font-size:10;">
+setName(name: String) : void</text>
+<text x="851" y="628" style="font-family:Dialog; font-size:10;">
+setStartPing(l: long) : void</text>
+<text x="851" y="645" style="font-family:Dialog; font-size:10;">
+setUserCount(userCount: int) : void</text>
+<text x="851" y="662" style="font-family:Dialog; font-size:10;">
+getUsers() : Map</text>
+<text x="851" y="679" style="font-family:Dialog; font-size:10;">
+getListenerClass() : Class</text>
+<text x="851" y="696" style="font-family:Dialog; font-size:10;">
+setSearchResults(list: List) : void</text>
+<text x="851" y="713" style="font-family:Dialog; font-size:10;">
+getWriter() : OutputStream</text>
+<text x="851" y="730" style="font-family:Dialog; font-size:10;">
+setWriter(writer: OutputStream) : void</text>
+<text x="851" y="747" style="font-family:Dialog; font-size:10;">
+getReader() : TokenInputStream</text>
+<text x="851" y="764" style="font-family:Dialog; font-size:10;">
+setReader(reader: TokenInputStream) : void</text>
+<rect x="1195" y="14" width="172" height="74" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1195" y="14" width="171" height="73" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1195" y="14" width="172" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1195" y="14" width="171" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1242" y="29" style="font-family:Dialog; font-size:10;">
+BaseHubFactory</text>
+<rect x="1195" y="34" width="172" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1195" y="34" width="171" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1195" y="52" width="172" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1195" y="52" width="171" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1197" y="68" style="font-family:Dialog; font-size:10;">
+createHub(hostInfo: HostInfo) : IHub</text>
+<text x="1197" y="85" style="font-family:Dialog; font-size:10;">
+createHub(hubInfo: IHubInfo) : IHub</text>
+<rect x="1447" y="14" width="198" height="176" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1447" y="14" width="197" height="175" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1447" y="14" width="198" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1447" y="14" width="197" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1496" y="29" style="font-family:Dialog; font-size:10;">
+BaseHubFavoritesList</text>
+<rect x="1447" y="34" width="198" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1447" y="34" width="197" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1447" y="51" width="198" height="139" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1447" y="51" width="197" height="138" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1449" y="67" style="font-family:Dialog; font-size:10;">
+addListener(listener: EventListener) : void</text>
+<text x="1449" y="84" style="font-family:Dialog; font-size:10;">
+update() : void</text>
+<text x="1449" y="101" style="font-family:Dialog; font-size:10;">
+addHubInfo(hubInfo: IHubInfo) : void</text>
+<text x="1449" y="118" style="font-family:Dialog; font-size:10;">
+removeHub(hubInfo: IHubInfo) : void</text>
+<text x="1449" y="135" style="font-family:Dialog; font-size:10;">
+getHubInfos() : List</text>
+<text x="1449" y="152" style="font-family:Dialog; font-size:10;">
+setHubInfos(list: List) : void</text>
+<text x="1449" y="169" style="font-family:Dialog; font-size:10;">
+start() : void</text>
+<text x="1449" y="186" style="font-family:Dialog; font-size:10;">
+stop() : void</text>
+<rect x="1725" y="14" width="122" height="74" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1725" y="14" width="121" height="73" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1725" y="14" width="122" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1725" y="14" width="121" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1727" y="29" style="font-family:Dialog; font-size:10;">
+BaseHubFavoritesLoader</text>
+<rect x="1725" y="34" width="122" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1725" y="34" width="121" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1725" y="52" width="122" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1725" y="52" width="121" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1727" y="68" style="font-family:Dialog; font-size:10;">
+load() : List</text>
+<text x="1727" y="85" style="font-family:Dialog; font-size:10;">
+save(hubInfos: List) : void</text>
+<rect x="14" y="848" width="91" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="848" width="90" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="848" width="91" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="848" width="90" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="30" y="863" style="font-family:Dialog; font-size:10;">
+BaseHubList</text>
+<rect x="14" y="868" width="91" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="868" width="90" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="884" style="font-family:Dialog; font-size:10;">
+names : String[]</text>
+<rect x="14" y="886" width="91" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="886" width="90" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="902" style="font-family:Dialog; font-size:10;">
+getHubInfos() : List</text>
+<rect x="185" y="848" width="207" height="74" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="185" y="848" width="206" height="73" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="185" y="848" width="207" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="185" y="848" width="206" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="239" y="863" style="font-family:Dialog; font-size:10;">
+BaseHubTaskFactory</text>
+<rect x="185" y="868" width="207" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="185" y="868" width="206" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="185" y="886" width="207" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="185" y="886" width="206" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="187" y="902" style="font-family:Dialog; font-size:10;">
+borrowObject(key: Object) : Object</text>
+<text x="187" y="919" style="font-family:Dialog; font-size:10;">
+returnObject(key: Object,obj: Object) : void</text>
+<rect x="472" y="848" width="132" height="74" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="472" y="848" width="131" height="73" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="472" y="848" width="132" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="472" y="848" width="131" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="481" y="863" style="font-family:Dialog; font-size:10;">
+BaseIncompletesLoader</text>
+<rect x="472" y="868" width="132" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="472" y="868" width="131" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="472" y="886" width="132" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="472" y="886" width="131" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="474" y="902" style="font-family:Dialog; font-size:10;">
+load() : List</text>
+<text x="474" y="919" style="font-family:Dialog; font-size:10;">
+save(downloads: List) : void</text>
+<rect x="684" y="848" width="265" height="754" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="684" y="848" width="264" height="753" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="684" y="848" width="265" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="684" y="848" width="264" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="786" y="863" style="font-family:Dialog; font-size:10;">
+BaseSettings</text>
+<rect x="684" y="868" width="265" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="684" y="868" width="264" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="686" y="884" style="font-family:Dialog; font-size:10;">
+windowsStyle : boolean</text>
+<rect x="684" y="885" width="265" height="717" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="684" y="885" width="264" height="716" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="686" y="901" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; BaseSettings(_windowsStyle: boolean)</text>
+<text x="686" y="918" style="font-family:Dialog; font-size:10;">
+getAdvancedSettings() : AdvancedSettings</text>
+<text x="686" y="935" style="font-family:Dialog; font-size:10;">
+getDownloadDir() : String</text>
+<text x="686" y="952" style="font-family:Dialog; font-size:10;">
+getDownloadSlots() : int</text>
+<text x="686" y="969" style="font-family:Dialog; font-size:10;">
+getDownloadSpeed() : int</text>
+<text x="686" y="986" style="font-family:Dialog; font-size:10;">
+getFreeDownloadSlotCount() : int</text>
+<text x="686" y="1003" style="font-family:Dialog; font-size:10;">
+getFreeUploadSlotCount() : int</text>
+<text x="686" y="1020" style="font-family:Dialog; font-size:10;">
+getIP() : String</text>
+<text x="686" y="1037" style="font-family:Dialog; font-size:10;">
+getLogDir() : String</text>
+<text x="686" y="1054" style="font-family:Dialog; font-size:10;">
+getTempDownloadDir() : String</text>
+<text x="686" y="1071" style="font-family:Dialog; font-size:10;">
+getUploadDirs() : List</text>
+<text x="686" y="1088" style="font-family:Dialog; font-size:10;">
+getUploadSlots() : int</text>
+<text x="686" y="1105" style="font-family:Dialog; font-size:10;">
+getUploadSpeed() : int</text>
+<text x="686" y="1122" style="font-family:Dialog; font-size:10;">
+getUsedDownloadSlots() : int</text>
+<text x="686" y="1139" style="font-family:Dialog; font-size:10;">
+getUsedUploadSlots() : int</text>
+<text x="686" y="1156" style="font-family:Dialog; font-size:10;">
+getUserInfo() : IUserInfo</text>
+<text x="686" y="1173" style="font-family:Dialog; font-size:10;">
+isActive() : boolean</text>
+<text x="686" y="1190" style="font-family:Dialog; font-size:10;">
+releaseDownloadSlot() : void</text>
+<text x="686" y="1207" style="font-family:Dialog; font-size:10;">
+releaseUploadSlot() : void</text>
+<text x="686" y="1224" style="font-family:Dialog; font-size:10;">
+reserveDownloadSlot() : boolean</text>
+<text x="686" y="1241" style="font-family:Dialog; font-size:10;">
+reserveUploadSlot() : boolean</text>
+<text x="686" y="1258" style="font-family:Dialog; font-size:10;">
+setActive(b: boolean) : void</text>
+<text x="686" y="1275" style="font-family:Dialog; font-size:10;">
+setAdvancedSettings(settings: AdvancedSettings) : void</text>
+<text x="686" y="1292" style="font-family:Dialog; font-size:10;">
+setDownloadDir(dir: String) : void</text>
+<text x="686" y="1309" style="font-family:Dialog; font-size:10;">
+setDownloadSlots(slots: int) : void</text>
+<text x="686" y="1326" style="font-family:Dialog; font-size:10;">
+setDownloadSpeed(i: int) : void</text>
+<text x="686" y="1343" style="font-family:Dialog; font-size:10;">
+setIP(string: String) : void</text>
+<text x="686" y="1360" style="font-family:Dialog; font-size:10;">
+setLogDir(string: String) : void</text>
+<text x="686" y="1377" style="font-family:Dialog; font-size:10;">
+setTempDownloadDir(string: String) : void</text>
+<text x="686" y="1394" style="font-family:Dialog; font-size:10;">
+setUploadDirs(dirs: List) : void</text>
+<text x="686" y="1411" style="font-family:Dialog; font-size:10;">
+setUploadSlots(i: int) : void</text>
+<text x="686" y="1428" style="font-family:Dialog; font-size:10;">
+setUploadSpeed(i: int) : void</text>
+<text x="686" y="1445" style="font-family:Dialog; font-size:10;">
+setUsedDownloadSlots(i: int) : void</text>
+<text x="686" y="1462" style="font-family:Dialog; font-size:10;">
+setUsedUploadSlots(i: int) : void</text>
+<text x="686" y="1479" style="font-family:Dialog; font-size:10;">
+setUserInfo(userInfo: IUserInfo) : void</text>
+<text x="686" y="1496" style="font-family:Dialog; font-size:10;">
+getGuiSettings() : GuiSettings</text>
+<text x="686" y="1513" style="font-family:Dialog; font-size:10;">
+setGuiSettings(guiSettings: GuiSettings) : void</text>
+<text x="686" y="1530" style="font-family:Dialog; font-size:10;">
+removeListener(listener: EventListener) : void</text>
+<text x="686" y="1547" style="font-family:Dialog; font-size:10;">
+addListener(listener: EventListener) : void</text>
+<text x="686" y="1564" style="font-family:Dialog; font-size:10;">
+getListeners() : EventListenerList</text>
+<text x="686" y="1581" style="font-family:Dialog; font-size:10;">
+fireDownloadSlotsChanged() : void</text>
+<text x="686" y="1598" style="font-family:Dialog; font-size:10;">
+fireUploadSlotsChanged() : void</text>
+<rect x="1029" y="848" width="96" height="74" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1029" y="848" width="95" height="73" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1029" y="848" width="96" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1029" y="848" width="95" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1030" y="863" style="font-family:Dialog; font-size:10;">
+BaseSettingsLoader</text>
+<rect x="1029" y="868" width="96" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1029" y="868" width="95" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1029" y="886" width="96" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1029" y="886" width="95" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1031" y="902" style="font-family:Dialog; font-size:10;">
+load() : ISettings</text>
+<text x="1031" y="919" style="font-family:Dialog; font-size:10;">
+save() : void</text>
+<rect x="1205" y="848" width="283" height="618" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1205" y="848" width="282" height="617" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1205" y="848" width="283" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1205" y="848" width="282" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1307" y="863" style="font-family:Dialog; font-size:10;">
+BaseConnection</text>
+<rect x="1205" y="868" width="283" height="69" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1205" y="868" width="282" height="68" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1207" y="884" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<text x="1207" y="901" style="font-family:Dialog; font-size:10;">
+clientManager : IClientManager</text>
+<text x="1207" y="918" style="font-family:Dialog; font-size:10;">
+client : Client</text>
+<text x="1207" y="935" style="font-family:Dialog; font-size:10;">
+connectionInfo : ConnectionInfo</text>
+<rect x="1205" y="936" width="283" height="530" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1205" y="936" width="282" height="529" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1207" y="952" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; BaseConnection()</text>
+<text x="1207" y="969" style="font-family:Dialog; font-size:10;">
+addListener(listener: EventListener) : void</text>
+<text x="1207" y="986" style="font-family:Dialog; font-size:10;">
+closeFile() : void</text>
+<text x="1207" y="1003" style="font-family:Dialog; font-size:10;">
+disconnect() : void</text>
+<text x="1207" y="1020" style="font-family:Dialog; font-size:10;">
+getClient() : Client</text>
+<text x="1207" y="1037" style="font-family:Dialog; font-size:10;">
+getDownloadRequest() : DownloadRequest</text>
+<text x="1207" y="1054" style="font-family:Dialog; font-size:10;">
+getListeners() : EventListenerList</text>
+<text x="1207" y="1071" style="font-family:Dialog; font-size:10;">
+getLocalFile() : RandomAccessFile</text>
+<text x="1207" y="1088" style="font-family:Dialog; font-size:10;">
+getReader() : TokenInputStream</text>
+<text x="1207" y="1105" style="font-family:Dialog; font-size:10;">
+getServerSocket() : ServerSocket</text>
+<text x="1207" y="1122" style="font-family:Dialog; font-size:10;">
+getSocket() : Socket</text>
+<text x="1207" y="1139" style="font-family:Dialog; font-size:10;">
+getState() : ConnectionState</text>
+<text x="1207" y="1156" style="font-family:Dialog; font-size:10;">
+getStatistics() : ConnectionStatistics</text>
+<text x="1207" y="1173" style="font-family:Dialog; font-size:10;">
+getWriter() : ExtendedBufferedOutputStream</text>
+<text x="1207" y="1190" style="font-family:Dialog; font-size:10;">
+isServer() : boolean</text>
+<text x="1207" y="1207" style="font-family:Dialog; font-size:10;">
+removeListener(listener: EventListener) : void</text>
+<text x="1207" y="1224" style="font-family:Dialog; font-size:10;">
+requestDirection(direction: String,force: boolean) : boolean</text>
+<text x="1207" y="1241" style="font-family:Dialog; font-size:10;">
+run() : void</text>
+<text x="1207" y="1258" style="font-family:Dialog; font-size:10;">
+runTask() : void</text>
+<text x="1207" y="1275" style="font-family:Dialog; font-size:10;">
+sendCommand(command: String,data: String) : void</text>
+<text x="1207" y="1292" style="font-family:Dialog; font-size:10;">
+setDownloadRequest(request: DownloadRequest) : void</text>
+<text x="1207" y="1309" style="font-family:Dialog; font-size:10;">
+setReader(stream: TokenInputStream) : void</text>
+<text x="1207" y="1326" style="font-family:Dialog; font-size:10;">
+setServerSocket(socket: ServerSocket) : void</text>
+<text x="1207" y="1343" style="font-family:Dialog; font-size:10;">
+setSocket(socket: Socket) : void</text>
+<text x="1207" y="1360" style="font-family:Dialog; font-size:10;">
+setState(state: ConnectionState) : void</text>
+<text x="1207" y="1377" style="font-family:Dialog; font-size:10;">
+setWriter(stream: ExtendedBufferedOutputStream) : void</text>
+<text x="1207" y="1394" style="font-family:Dialog; font-size:10;">
+updateConnectionInfo() : void</text>
+<text x="1207" y="1411" style="font-family:Dialog; font-size:10;">
+getUploadRequest() : UploadRequest</text>
+<text x="1207" y="1428" style="font-family:Dialog; font-size:10;">
+setUploadRequest(u: UploadRequest) : void</text>
+<text x="1207" y="1445" style="font-family:Dialog; font-size:10;">
+getConnectionInfo() : ConnectionInfo</text>
+<text x="1207" y="1462" style="font-family:Dialog; font-size:10;">
+setLocalFile(file: RandomAccessFile) : void</text>
+<rect x="14" y="1682" width="348" height="210" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1682" width="347" height="209" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="1682" width="348" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1682" width="347" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="140" y="1697" style="font-family:Dialog; font-size:10;">
+BaseRequestsModel</text>
+<rect x="14" y="1702" width="348" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1702" width="347" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="1719" width="348" height="173" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1719" width="347" height="172" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="1735" style="font-family:Dialog; font-size:10;">
+getActiveConnections() : List</text>
+<text x="16" y="1752" style="font-family:Dialog; font-size:10;">
+getAllDownloads() : List</text>
+<text x="16" y="1769" style="font-family:Dialog; font-size:10;">
+removeDownloadRequest(dr: DownloadRequest) : void</text>
+<text x="16" y="1786" style="font-family:Dialog; font-size:10;">
+getListenerClass() : Class</text>
+<text x="16" y="1803" style="font-family:Dialog; font-size:10;">
+fireRequestAdded(client: Client,dr: DownloadRequest,index: int) : void</text>
+<text x="16" y="1820" style="font-family:Dialog; font-size:10;">
+fireRequestRemoved(client: Client,dr: DownloadRequest,index: int) : void</text>
+<text x="16" y="1837" style="font-family:Dialog; font-size:10;">
+fireRequestChanged(client: Client,dr: DownloadRequest,index: int) : void</text>
+<text x="16" y="1854" style="font-family:Dialog; font-size:10;">
+fireConnectionAdded(connection: IConnection,index: int) : void</text>
+<text x="16" y="1871" style="font-family:Dialog; font-size:10;">
+fireConnectionChanged(connection: IConnection,index: int) : void</text>
+<text x="16" y="1888" style="font-family:Dialog; font-size:10;">
+fireConnectionRemoved(connection: IConnection,index: int) : void</text>
+</svg>

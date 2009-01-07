@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<java version="1.4.2_05" class="java.beans.XMLDecoder"> 
+ <object class="java.util.ArrayList"> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.hub.HubInfo"> 
+    <void property="address"> 
+     <object class="net.sf.javadc.net.hub.HostInfo"> 
+      <void property="host"> 
+       <string>ilotalo.no-ip.org</string> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="description"> 
+     <string>&lt;R: 95%,S:Online&gt; 5gb , 2 slottii /1 per hub</string> 
+    </void> 
+    <void property="name"> 
+     <string>Fin-ilotalo</string> 
+    </void> 
+    <void property="userCount"> 
+     <int>460</int> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.hub.HubInfo"> 
+    <void property="address"> 
+     <object class="net.sf.javadc.net.hub.HostInfo"> 
+      <void property="host"> 
+       <string>replica-2.no-ip.com</string> 
+      </void> 
+      <void property="port"> 
+       <int>7880</int> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="description"> 
+     <string>&lt;R: 86%,S:Online,C:se&gt; [PdoX™][RepliCa™Network][minshare:5GB][minslot:1][users:3100+]Very Welcome</string> 
+    </void> 
+    <void property="name"> 
+     <string>[RepliCa™]Mpower - do /fav to add us</string> 
+    </void> 
+    <void property="userCount"> 
+     <int>2132</int> 
+    </void> 
+   </object> 
+  </void> 
+  <void method="add"> 
+   <object class="net.sf.javadc.net.hub.HubInfo"> 
+    <void property="address"> 
+     <object class="net.sf.javadc.net.hub.HostInfo"> 
+      <void property="host"> 
+       <string>hub8.lightnetwork.org</string> 
+      </void> 
+      <void property="port"> 
+       <int>5415</int> 
+      </void> 
+     </object> 
+    </void> 
+    <void property="description"> 
+     <string>&lt;R:100%,S:Online,C:se&gt; [NEW ADRESS] Min 1gb</string> 
+    </void> 
+    <void property="name"> 
+     <string>[Light™] Sweden #08</string> 
+    </void> 
+    <void property="userCount"> 
+     <int>4040</int> 
+    </void> 
+   </object> 
+  </void> 
+ </object> 
+</java> 

@@ -1,0 +1,381 @@
+<project name="javadc3" default="compile" basedir=".">
+
+    <property name="src.dir" value="src"/>
+    <property name="build.dir" value="build"/>
+    <property name="lib.dir" value="lib"/>
+
+    <property name="src.java.dir" value="${src.dir}"/>
+    <property name="src.test.dir" value="test"/>
+	
+    <property name="build.java.dir" value="${build.dir}/classes"/>
+    <property name="build.test.dir" value="${build.dir}/test"/>
+    <property name="build.docs.dir" value="${build.dir}/javadoc"/>
+
+
+    <path id="build_cp">
+        <pathelement location="${build.dir}/classes"/>
+    </path>
+
+    <path id="classpath">
+        <pathelement location="${build.java.dir}"/>
+        <pathelement location="${build.test.dir}"/>
+        <fileset dir="${lib.dir}" id="classpath.files">
+            <include name="*.jar"/>
+        </fileset>
+    </path>
+
+    <!-- directory that contains emma.jar and emma_ant.jar: -->
+    <property name="emma.dir" value="emma-2.0.5312/lib"/>
+
+    <path id="emma.lib">
+        <pathelement location="${emma.dir}/emma.jar"/>
+        <pathelement location="${emma.dir}/emma_ant.jar"/>
+    </path>
+
+    <!-- output directory used for EMMA coverage reports: -->
+    <property name="build.coverage.dir" value="${build.test.dir}/coverage"/>
+
+    <taskdef resource="emma_ant.properties" classpathref="emma.lib"/>
+
+
+    <!-- TODO : create a class path property for test compilation and execution -->
+
+    <target name="init">
+        <echo>
+*******************************************************************************
+* init the build *
+*******************************************************************************
+        </echo>
+
+        <tstamp/>
+        <mkdir dir="${build.dir}"/>
+        <mkdir dir="${build.java.dir}"/>
+        <mkdir dir="${build.test.dir}"/>
+
+        <tstamp>
+            <format property="dstamp.uk" pattern="yyyy-dd-MM" locale="en"/>
+        </tstamp>
+
+    </target>
+
+    <target name="clean">
+        <delete dir="${build.dir}"/>
+    </target>
+
+
+    <target name="compile" depends="init">
+        <echo>
+*******************************************************************************
+* compile the application classes *
+*******************************************************************************
+        </echo>
+
+        <javac srcdir="${src.java.dir}" debug="on"
+               deprecation="on" destdir="${build.java.dir}" classpathref="classpath"/>
+
+        <copy todir="${build.java.dir}/images">
+            <fileset dir="${src.java.dir}/images"/>
+        </copy>
+
+        <copy todir="${build.java.dir}/net/sf/javadc/resources">
+            <fileset dir="${src.java.dir}/net/sf/javadc/resources"/>
+        </copy>
+
+    </target>
+
+
+    <target name="compile_tests" depends="compile">
+        <echo>
+*******************************************************************************
+* compile the test cases *
+*******************************************************************************
+        </echo>
+
+        <javac srcdir="${src.test.dir}" debug="on"
+               deprecation="on" destdir="${build.test.dir}" classpathref="classpath"/>
+    </target>
+
+
+    <target name="runtest" depends="compile_tests">
+        <echo>
+*******************************************************************************
+* run unit test *
+*******************************************************************************
+        </echo>
+
+        <junit printsummary="on" fork="true" haltonfailure="false"
+               failureproperty="tests.failed" showoutput="true">
+
+            <classpath refid="classpath"/>
+            <formatter type="brief" usefile="false"/>
+
+            <test name="${class}"/>
+
+        </junit>
+
+    </target>
+
+
+    <target name="run_tests" depends="compile_tests" description="Run JUnit Tests">
+        <echo>
+*******************************************************************************
+* run the unit test suite *
+*******************************************************************************
+        </echo>
+
+        <junit printsummary="on" fork="true" haltonfailure="false"
+               showoutput="false">
+
+            <classpath refid="classpath"/>
+            <formatter type="xml"/>
+
+            <batchtest todir="${build.test.dir}">
+                <fileset dir="${build.test.dir}">
+                    <include name="**/*Test.*"/>
+                    <exclude name="**/Abstract*Test.*"/>
+                </fileset>
+            </batchtest>
+
+        </junit>
+
+        <!-- <fail if="tests.failed">
+          ***********************************************************
+          ****  One or more tests failed!  Check the output ...  ****
+          ***********************************************************
+          </fail> -->
+
+    </target>
+
+
+    <target name="report">
+        <echo>
+*******************************************************************************
+* report the test results *
+*******************************************************************************
+        </echo>
+
+        <mkdir dir="${build.test.dir}/html"/>
+
+        <junitreport todir="${build.test.dir}">
+            <fileset dir="${build.test.dir}">
+                <include name="TEST-*.xml"/>
+            </fileset>
+
+            <report format="frames" todir="${build.test.dir}/html"/>
+
+        </junitreport>
+
+    </target>
+
+
+    <!-- turn on EMMA -->
+
+    <target name="emma" description="turns on EMMA's on-the-fly instrumentation mode">
+        <property name="emma.enabled" value="true"/>
+        <property name="out.instr.dir" value="outinstr"/>
+    </target>
+
+    <!-- run EMMA -->
+    <!--
+      <target name="emmarun" depends="emma" description="runs the examples" >
+
+          <mkdir dir="${coverage.dir}"/>
+
+        <emmajava enabled="${emma.enabled}" libclasspathref="emma.lib"
+            sourcepath="${src}" classname="${class}" classpathref="classpath">
+
+            <filter includes="net.sf.javadc.*" excludes="*Test*" />
+
+            <html outfile="${coverage.dir}/coverage.html"  />
+
+        </emmajava>
+      </target>
+    -->
+    <!--
+      <target name="emma_runtests" depends="compile_tests">
+
+          <property name="class" value="net.sf.javadc.AllTests"/>
+
+          <antcall target="emmarun"/>
+
+      </target>
+    -->
+
+
+    <target name="emma_runtests" depends="compile_tests,emma">
+        <echo>
+*******************************************************************************
+* Run the test suite via EMMA
+*******************************************************************************
+        </echo>
+
+        <delete dir="${out.instr.dir}"/>
+        <mkdir dir="${out.instr.dir}"/>
+
+        <delete dir="${build.coverage.dir}"/>
+        <mkdir dir="${build.coverage.dir}"/>
+
+        <!-- only net.sf.javadc.* classes are instrumented -->
+
+        <emma enabled="${emma.enabled}">
+            <instr instrpathref="build_cp"
+                   destdir="${out.instr.dir}"
+                   metadatafile="${build.coverage.dir}/metadata.emma"
+                   merge="true">
+                <filter excludes="*Test*"/>
+            </instr>
+        </emma>
+
+        <java classname="net.sf.javadc.AllTests" fork="true">
+            <classpath>
+                <pathelement location="${out.instr.dir}"/>
+                <path refid="classpath"/>
+                <path refid="emma.lib"/>
+            </classpath>
+            <jvmarg value="-Demma.coverage.out.file=${build.coverage.dir}/coverage.emma"/>
+            <jvmarg value="-Demma.coverage.out.merge=false"/>
+        </java>
+
+    </target>
+
+
+    <target name="emma_report" depends="emma">
+
+        <emma enabled="${emma.enabled}">
+            <report sourcepath="${src.java.dir}">
+                <fileset dir="${build.coverage.dir}">
+                    <include name="*.emma"/>
+                </fileset>
+
+                <html outfile="${build.test.dir}/coverage.html"/>
+            </report>
+        </emma>
+
+    </target>
+
+
+    <target name="run" depends="compile">
+        <echo>
+*******************************************************************************
+* run the main program *
+*******************************************************************************
+        </echo>
+
+        <java classname="net.sf.javadc.Main" fork="true" classpathref="classpath"/>
+    </target>
+
+
+    <target name="javadoc" depends="init">
+        <echo>
+*******************************************************************************
+* create the javadoc documentation *
+*******************************************************************************
+        </echo>
+
+        <mkdir dir="${build.docs.dir}"/>
+
+        <javadoc packagenames="net.sf.javadc.*" classpathref="classpath" destdir="${build.docs.dir}">
+            <fileset dir="${src.java.dir}"/>
+            <!-- <fileset dir="${test}"/> -->
+        </javadoc>
+    </target>
+
+
+    <!-- TODO : better documentation for this target -->
+
+    <target name="jar" depends="compile" description="Creates JavaDC3 jar file">
+
+        <echo>
+*******************************************************************************
+* create the jar file *
+*******************************************************************************
+        </echo>
+
+        <pathconvert property="lib.dir.converted" >
+            <path path="${basedir}/${lib.dir}/." />
+        </pathconvert>
+        <pathconvert dirsep="" pathsep=" " property="libfiles" refid="classpath.files">
+            <map from="${lib.dir.converted}" to=""/>
+        </pathconvert>
+
+        <jar destfile="${build.dir}/javadc3.jar">
+            <manifest>
+                <attribute name="Manifest-Version" value="1.0.0.0"/>
+                <attribute name="Created-By" value="JavaDC3 Team"/>
+                <attribute name="Class-Path" value="${libfiles}"/>
+                <attribute name="Main-Class" value="net.sf.javadc.Main"/>
+                <attribute name="Implementation-Version" value="1.0.0.0. Date:${dstamp.uk}"/>
+            </manifest>
+            <fileset dir="${build.java.dir}">
+                <include name="**/*.*"/>
+                <exclude name="**/*.properties"/>
+            </fileset>
+        </jar>
+    </target>
+
+
+    <!--
+    Next task is deprecated because of separate installers existence for different platforms
+     See installers directory
+    -->
+    <target name="release" depends="clean,jar">
+        <echo>
+*******************************************************************************
+* create the release file *
+*******************************************************************************
+        </echo>
+
+        <!-- create the releases directory, if not yet available -->
+        <mkdir dir="./releases"/>
+        <tstamp/>
+        <property name="rel_dir" value="./releases/javadc-${DSTAMP}"/>
+        <mkdir dir="${rel_dir}"/>
+        <mkdir dir="${rel_dir}/log"/>
+
+        <!-- copy the necessary files into the release directory -->
+
+        <copy todir="${rel_dir}/lib">
+            <fileset dir="${lib.dir}"/>
+        </copy>
+
+        <!-- copy connection.properties from src -->
+
+        <copy todir="${rel_dir}">
+            <fileset dir="${src.java.dir}">
+                <include name="connection.properties"/>
+            </fileset>
+        </copy>
+
+        <!-- copy license texts -->
+
+        <copy todir="${rel_dir}/licenses">
+            <fileset dir="./licenses"/>
+        </copy>
+
+        <copy file="javadc3.jar" todir="${rel_dir}"/>
+
+        <!--
+            <copy file="runjavadc.bat" todir="${rel_dir}"/>
+            <copy file="runjavadc" todir="${rel_dir}"/>
+            <copy file="systray4j.dll" todir="${rel_dir}"/>
+        -->
+
+        <!-- copy contents of etc -->
+
+        <copy todir="${rel_dir}">
+            <fileset dir="etc"/>
+        </copy>
+
+        <!-- log4j.properties are included in jar file -->
+        <!-- copy file="log4j.properties" todir="${rel_dir}"/ -->
+
+        <!-- create a zip compressed version of the release -->
+
+        <zip destfile="./releases/javadc-${DSTAMP}.zip"
+             basedir="${rel_dir}"/>
+
+    </target>
+
+
+</project>
+

@@ -1,0 +1,574 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE svg PUBLIC '-//W3C//DTD SVG 20001102//EN' 'http://www.w3.org/TR/2000/CR-SVG-20001102/DTD/svg-20001102.dtd'>
+<svg xmlns="http://www.w3.org/2000/svg" width="1682" height="1532">
+<rect x="14" y="729" width="143" height="635" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="729" width="142" height="634" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="14" y="729" width="143" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="729" width="142" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="58" y="744" style="font-family:Dialog; font-size:10;">
+BlackColors</text>
+<rect x="14" y="749" width="143" height="308" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="749" width="142" height="307" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="765" style="font-family:Dialog; font-size:10;">
+prim1 : ColorUIResource</text>
+<text x="16" y="782" style="font-family:Dialog; font-size:10;">
+prim2 : ColorUIResource</text>
+<text x="16" y="799" style="font-family:Dialog; font-size:10;">
+prim3 : ColorUIResource</text>
+<text x="16" y="816" style="font-family:Dialog; font-size:10;">
+sec1 : ColorUIResource</text>
+<text x="16" y="833" style="font-family:Dialog; font-size:10;">
+sec2 : ColorUIResource</text>
+<text x="16" y="850" style="font-family:Dialog; font-size:10;">
+sec3 : ColorUIResource</text>
+<text x="16" y="867" style="font-family:Dialog; font-size:10;">
+win1 : ColorUIResource</text>
+<text x="16" y="884" style="font-family:Dialog; font-size:10;">
+win2 : ColorUIResource</text>
+<text x="16" y="901" style="font-family:Dialog; font-size:10;">
+win3 : ColorUIResource</text>
+<text x="16" y="918" style="font-family:Dialog; font-size:10;">
+win4 : ColorUIResource</text>
+<text x="16" y="935" style="font-family:Dialog; font-size:10;">
+win5 : ColorUIResource</text>
+<text x="16" y="952" style="font-family:Dialog; font-size:10;">
+win6 : ColorUIResource</text>
+<text x="16" y="969" style="font-family:Dialog; font-size:10;">
+win7 : ColorUIResource</text>
+<text x="16" y="986" style="font-family:Dialog; font-size:10;">
+win8 : ColorUIResource</text>
+<text x="16" y="1003" style="font-family:Dialog; font-size:10;">
+win9 : ColorUIResource</text>
+<text x="16" y="1020" style="font-family:Dialog; font-size:10;">
+win10 : ColorUIResource</text>
+<text x="16" y="1037" style="font-family:Dialog; font-size:10;">
+win11 : ColorUIResource</text>
+<text x="16" y="1054" style="font-family:Dialog; font-size:10;">
+win12 : ColorUIResource</text>
+<rect x="14" y="1056" width="143" height="308" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="14" y="1056" width="142" height="307" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="16" y="1072" style="font-family:Dialog; font-size:10;">
+getPrim1() : ColorUIResource</text>
+<text x="16" y="1089" style="font-family:Dialog; font-size:10;">
+getPrim2() : ColorUIResource</text>
+<text x="16" y="1106" style="font-family:Dialog; font-size:10;">
+getPrim3() : ColorUIResource</text>
+<text x="16" y="1123" style="font-family:Dialog; font-size:10;">
+getSec1() : ColorUIResource</text>
+<text x="16" y="1140" style="font-family:Dialog; font-size:10;">
+getSec2() : ColorUIResource</text>
+<text x="16" y="1157" style="font-family:Dialog; font-size:10;">
+getSec3() : ColorUIResource</text>
+<text x="16" y="1174" style="font-family:Dialog; font-size:10;">
+getWin1() : ColorUIResource</text>
+<text x="16" y="1191" style="font-family:Dialog; font-size:10;">
+getWin10() : ColorUIResource</text>
+<text x="16" y="1208" style="font-family:Dialog; font-size:10;">
+getWin11() : ColorUIResource</text>
+<text x="16" y="1225" style="font-family:Dialog; font-size:10;">
+getWin12() : ColorUIResource</text>
+<text x="16" y="1242" style="font-family:Dialog; font-size:10;">
+getWin2() : ColorUIResource</text>
+<text x="16" y="1259" style="font-family:Dialog; font-size:10;">
+getWin3() : ColorUIResource</text>
+<text x="16" y="1276" style="font-family:Dialog; font-size:10;">
+getWin4() : ColorUIResource</text>
+<text x="16" y="1293" style="font-family:Dialog; font-size:10;">
+getWin5() : ColorUIResource</text>
+<text x="16" y="1310" style="font-family:Dialog; font-size:10;">
+getWin6() : ColorUIResource</text>
+<text x="16" y="1327" style="font-family:Dialog; font-size:10;">
+getWin7() : ColorUIResource</text>
+<text x="16" y="1344" style="font-family:Dialog; font-size:10;">
+getWin8() : ColorUIResource</text>
+<text x="16" y="1361" style="font-family:Dialog; font-size:10;">
+getWin9() : ColorUIResource</text>
+<rect x="126" y="14" width="143" height="346" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="126" y="14" width="142" height="345" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="126" y="14" width="143" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="126" y="14" width="142" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="164" y="29" style="font-family:Dialog; font-size:10;">
+&lt;&lt;Interface&gt;&gt;</text>
+<rect x="126" y="32" width="143" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="126" y="32" width="142" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="183" y="47" style="font-family:Dialog; font-size:10;">
+Colors</text>
+<rect x="127" y="32" width="141" height="2" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="127" y="32" width="140" height="1" style="fill: none; stroke:#ffffff; stroke-width:1"/>
+<rect x="126" y="52" width="143" height="308" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="126" y="52" width="142" height="307" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="128" y="68" style="font-family:Dialog; font-size:10;">
+getPrim1() : ColorUIResource</text>
+<text x="128" y="85" style="font-family:Dialog; font-size:10;">
+getPrim2() : ColorUIResource</text>
+<text x="128" y="102" style="font-family:Dialog; font-size:10;">
+getPrim3() : ColorUIResource</text>
+<text x="128" y="119" style="font-family:Dialog; font-size:10;">
+getSec1() : ColorUIResource</text>
+<text x="128" y="136" style="font-family:Dialog; font-size:10;">
+getSec2() : ColorUIResource</text>
+<text x="128" y="153" style="font-family:Dialog; font-size:10;">
+getSec3() : ColorUIResource</text>
+<text x="128" y="170" style="font-family:Dialog; font-size:10;">
+getWin1() : ColorUIResource</text>
+<text x="128" y="187" style="font-family:Dialog; font-size:10;">
+getWin2() : ColorUIResource</text>
+<text x="128" y="204" style="font-family:Dialog; font-size:10;">
+getWin3() : ColorUIResource</text>
+<text x="128" y="221" style="font-family:Dialog; font-size:10;">
+getWin4() : ColorUIResource</text>
+<text x="128" y="238" style="font-family:Dialog; font-size:10;">
+getWin5() : ColorUIResource</text>
+<text x="128" y="255" style="font-family:Dialog; font-size:10;">
+getWin6() : ColorUIResource</text>
+<text x="128" y="272" style="font-family:Dialog; font-size:10;">
+getWin7() : ColorUIResource</text>
+<text x="128" y="289" style="font-family:Dialog; font-size:10;">
+getWin8() : ColorUIResource</text>
+<text x="128" y="306" style="font-family:Dialog; font-size:10;">
+getWin9() : ColorUIResource</text>
+<text x="128" y="323" style="font-family:Dialog; font-size:10;">
+getWin10() : ColorUIResource</text>
+<text x="128" y="340" style="font-family:Dialog; font-size:10;">
+getWin11() : ColorUIResource</text>
+<text x="128" y="357" style="font-family:Dialog; font-size:10;">
+getWin12() : ColorUIResource</text>
+<rect x="237" y="729" width="143" height="635" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="237" y="729" width="142" height="634" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="237" y="729" width="143" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="237" y="729" width="142" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="277" y="744" style="font-family:Dialog; font-size:10;">
+DefaultColors</text>
+<rect x="237" y="749" width="143" height="308" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="237" y="749" width="142" height="307" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="239" y="765" style="font-family:Dialog; font-size:10;">
+prim1 : ColorUIResource</text>
+<text x="239" y="782" style="font-family:Dialog; font-size:10;">
+prim2 : ColorUIResource</text>
+<text x="239" y="799" style="font-family:Dialog; font-size:10;">
+prim3 : ColorUIResource</text>
+<text x="239" y="816" style="font-family:Dialog; font-size:10;">
+sec1 : ColorUIResource</text>
+<text x="239" y="833" style="font-family:Dialog; font-size:10;">
+sec2 : ColorUIResource</text>
+<text x="239" y="850" style="font-family:Dialog; font-size:10;">
+sec3 : ColorUIResource</text>
+<text x="239" y="867" style="font-family:Dialog; font-size:10;">
+win1 : ColorUIResource</text>
+<text x="239" y="884" style="font-family:Dialog; font-size:10;">
+win2 : ColorUIResource</text>
+<text x="239" y="901" style="font-family:Dialog; font-size:10;">
+win3 : ColorUIResource</text>
+<text x="239" y="918" style="font-family:Dialog; font-size:10;">
+win4 : ColorUIResource</text>
+<text x="239" y="935" style="font-family:Dialog; font-size:10;">
+win5 : ColorUIResource</text>
+<text x="239" y="952" style="font-family:Dialog; font-size:10;">
+win6 : ColorUIResource</text>
+<text x="239" y="969" style="font-family:Dialog; font-size:10;">
+win7 : ColorUIResource</text>
+<text x="239" y="986" style="font-family:Dialog; font-size:10;">
+win8 : ColorUIResource</text>
+<text x="239" y="1003" style="font-family:Dialog; font-size:10;">
+win9 : ColorUIResource</text>
+<text x="239" y="1020" style="font-family:Dialog; font-size:10;">
+win10 : ColorUIResource</text>
+<text x="239" y="1037" style="font-family:Dialog; font-size:10;">
+win11 : ColorUIResource</text>
+<text x="239" y="1054" style="font-family:Dialog; font-size:10;">
+win12 : ColorUIResource</text>
+<rect x="237" y="1056" width="143" height="308" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="237" y="1056" width="142" height="307" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="239" y="1072" style="font-family:Dialog; font-size:10;">
+getPrim1() : ColorUIResource</text>
+<text x="239" y="1089" style="font-family:Dialog; font-size:10;">
+getPrim2() : ColorUIResource</text>
+<text x="239" y="1106" style="font-family:Dialog; font-size:10;">
+getPrim3() : ColorUIResource</text>
+<text x="239" y="1123" style="font-family:Dialog; font-size:10;">
+getSec1() : ColorUIResource</text>
+<text x="239" y="1140" style="font-family:Dialog; font-size:10;">
+getSec2() : ColorUIResource</text>
+<text x="239" y="1157" style="font-family:Dialog; font-size:10;">
+getSec3() : ColorUIResource</text>
+<text x="239" y="1174" style="font-family:Dialog; font-size:10;">
+getWin1() : ColorUIResource</text>
+<text x="239" y="1191" style="font-family:Dialog; font-size:10;">
+getWin10() : ColorUIResource</text>
+<text x="239" y="1208" style="font-family:Dialog; font-size:10;">
+getWin11() : ColorUIResource</text>
+<text x="239" y="1225" style="font-family:Dialog; font-size:10;">
+getWin12() : ColorUIResource</text>
+<text x="239" y="1242" style="font-family:Dialog; font-size:10;">
+getWin2() : ColorUIResource</text>
+<text x="239" y="1259" style="font-family:Dialog; font-size:10;">
+getWin3() : ColorUIResource</text>
+<text x="239" y="1276" style="font-family:Dialog; font-size:10;">
+getWin4() : ColorUIResource</text>
+<text x="239" y="1293" style="font-family:Dialog; font-size:10;">
+getWin5() : ColorUIResource</text>
+<text x="239" y="1310" style="font-family:Dialog; font-size:10;">
+getWin6() : ColorUIResource</text>
+<text x="239" y="1327" style="font-family:Dialog; font-size:10;">
+getWin7() : ColorUIResource</text>
+<text x="239" y="1344" style="font-family:Dialog; font-size:10;">
+getWin8() : ColorUIResource</text>
+<text x="239" y="1361" style="font-family:Dialog; font-size:10;">
+getWin9() : ColorUIResource</text>
+<rect x="807" y="14" width="264" height="635" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="807" y="14" width="263" height="634" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="807" y="14" width="264" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="807" y="14" width="263" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="910" y="29" style="font-family:Dialog; font-size:10;">
+LimeTheme</text>
+<rect x="807" y="34" width="264" height="137" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="807" y="34" width="263" height="136" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="809" y="50" style="font-family:Dialog; font-size:10;">
+colors : Colors</text>
+<text x="809" y="67" style="font-family:Dialog; font-size:10;">
+controlFont : FontUIResource</text>
+<text x="809" y="84" style="font-family:Dialog; font-size:10;">
+systemFont : FontUIResource</text>
+<text x="809" y="101" style="font-family:Dialog; font-size:10;">
+windowTitleFont : FontUIResource</text>
+<text x="809" y="118" style="font-family:Dialog; font-size:10;">
+userFont : FontUIResource</text>
+<text x="809" y="135" style="font-family:Dialog; font-size:10;">
+smallFont : FontUIResource</text>
+<text x="809" y="152" style="font-family:Dialog; font-size:10;">
+menuFont : FontUIResource</text>
+<text x="809" y="169" style="font-family:Dialog; font-size:10;">
+emphasisFont : FontUIResource</text>
+<rect x="807" y="170" width="264" height="479" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="807" y="170" width="263" height="478" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="809" y="186" style="font-family:Dialog; font-size:10;">
+getName() : String</text>
+<text x="809" y="203" style="font-family:Dialog; font-size:10;">
+getPrimary1() : ColorUIResource</text>
+<text x="809" y="220" style="font-family:Dialog; font-size:10;">
+getPrimary2() : ColorUIResource</text>
+<text x="809" y="237" style="font-family:Dialog; font-size:10;">
+getPrimary3() : ColorUIResource</text>
+<text x="809" y="254" style="font-family:Dialog; font-size:10;">
+getSecondary1() : ColorUIResource</text>
+<text x="809" y="271" style="font-family:Dialog; font-size:10;">
+getSecondary2() : ColorUIResource</text>
+<text x="809" y="288" style="font-family:Dialog; font-size:10;">
+getSecondary3() : ColorUIResource</text>
+<text x="809" y="305" style="font-family:Dialog; font-size:10;">
+getSystemTextColor() : ColorUIResource</text>
+<text x="809" y="322" style="font-family:Dialog; font-size:10;">
+getControl() : ColorUIResource</text>
+<text x="809" y="339" style="font-family:Dialog; font-size:10;">
+getControlHighlight() : ColorUIResource</text>
+<text x="809" y="356" style="font-family:Dialog; font-size:10;">
+getControlTextColor() : ColorUIResource</text>
+<text x="809" y="373" style="font-family:Dialog; font-size:10;">
+getControlInfo() : ColorUIResource</text>
+<text x="809" y="390" style="font-family:Dialog; font-size:10;">
+getWindowBackground() : ColorUIResource</text>
+<text x="809" y="407" style="font-family:Dialog; font-size:10;">
+getWindowTitleInactiveForeground() : ColorUIResource</text>
+<text x="809" y="424" style="font-family:Dialog; font-size:10;">
+getUserTextColor() : ColorUIResource</text>
+<text x="809" y="441" style="font-family:Dialog; font-size:10;">
+getMenuForeground() : ColorUIResource</text>
+<text x="809" y="458" style="font-family:Dialog; font-size:10;">
+getMenuSelectedForeground() : ColorUIResource</text>
+<text x="809" y="475" style="font-family:Dialog; font-size:10;">
+getDesktopColor() : ColorUIResource</text>
+<text x="809" y="492" style="font-family:Dialog; font-size:10;">
+getMenuBackground() : ColorUIResource</text>
+<text x="809" y="509" style="font-family:Dialog; font-size:10;">
+getControlTextFont() : FontUIResource</text>
+<text x="809" y="526" style="font-family:Dialog; font-size:10;">
+getSystemTextFont() : FontUIResource</text>
+<text x="809" y="543" style="font-family:Dialog; font-size:10;">
+getUserTextFont() : FontUIResource</text>
+<text x="809" y="560" style="font-family:Dialog; font-size:10;">
+getMenuTextFont() : FontUIResource</text>
+<text x="809" y="577" style="font-family:Dialog; font-size:10;">
+getEmphasisTextFont() : FontUIResource</text>
+<text x="809" y="594" style="font-family:Dialog; font-size:10;">
+getSubTextFont() : FontUIResource</text>
+<text x="809" y="611" style="font-family:Dialog; font-size:10;">
+getWindowTitleFont() : FontUIResource</text>
+<text x="809" y="628" style="font-family:Dialog; font-size:10;">
+getColors() : Colors</text>
+<text x="809" y="645" style="font-family:Dialog; font-size:10;">
+setColors(colors: Colors) : void</text>
+<rect x="460" y="729" width="267" height="193" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="460" y="729" width="266" height="192" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="460" y="729" width="267" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="460" y="729" width="266" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="543" y="744" style="font-family:Dialog; font-size:10;">
+MetalThemeWrapper</text>
+<rect x="460" y="749" width="267" height="18" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="460" y="749" width="266" height="17" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="462" y="765" style="font-family:Dialog; font-size:10;">
+theme : MetalTheme</text>
+<rect x="460" y="766" width="267" height="156" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="460" y="766" width="266" height="155" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="462" y="782" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; MetalThemeWrapper(theme: MetalTheme)</text>
+<text x="462" y="799" style="font-family:Dialog; font-size:10;">
+install() : void</text>
+<text x="462" y="816" style="font-family:Dialog; font-size:10;">
+getClassName() : String</text>
+<text x="462" y="833" style="font-family:Dialog; font-size:10;">
+getName() : String</text>
+<text x="462" y="850" style="font-family:Dialog; font-size:10;">
+getTheme() : MetalTheme</text>
+<text x="462" y="867" style="font-family:Dialog; font-size:10;">
+isConfigurable() : boolean</text>
+<text x="462" y="884" style="font-family:Dialog; font-size:10;">
+isIconTheme() : boolean</text>
+<text x="462" y="901" style="font-family:Dialog; font-size:10;">
+showConfigurationDialog(parent: Component) : boolean</text>
+<text x="462" y="918" style="font-family:Dialog; font-size:10;">
+toString() : String</text>
+<rect x="460" y="14" width="267" height="142" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="460" y="14" width="266" height="141" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="460" y="14" width="267" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="460" y="14" width="266" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="560" y="29" style="font-family:Dialog; font-size:10;">
+&lt;&lt;Interface&gt;&gt;</text>
+<rect x="460" y="32" width="267" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="460" y="32" width="266" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="576" y="47" style="font-family:Dialog; font-size:10;">
+Theme</text>
+<rect x="461" y="32" width="265" height="2" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="461" y="32" width="264" height="1" style="fill: none; stroke:#ffffff; stroke-width:1"/>
+<rect x="460" y="52" width="267" height="104" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="460" y="52" width="266" height="103" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="462" y="68" style="font-family:Dialog; font-size:10;">
+install() : void</text>
+<text x="462" y="85" style="font-family:Dialog; font-size:10;">
+getClassName() : String</text>
+<text x="462" y="102" style="font-family:Dialog; font-size:10;">
+getName() : String</text>
+<text x="462" y="119" style="font-family:Dialog; font-size:10;">
+isConfigurable() : boolean</text>
+<text x="462" y="136" style="font-family:Dialog; font-size:10;">
+isIconTheme() : boolean</text>
+<text x="462" y="153" style="font-family:Dialog; font-size:10;">
+showConfigurationDialog(parent: Component) : boolean</text>
+<rect x="1151" y="14" width="176" height="57" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1151" y="14" width="175" height="56" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1151" y="14" width="176" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1151" y="14" width="175" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1194" y="29" style="font-family:Dialog; font-size:10;">
+ThemeComparator</text>
+<rect x="1151" y="34" width="176" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1151" y="34" width="175" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1151" y="52" width="176" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1151" y="52" width="175" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1153" y="68" style="font-family:Dialog; font-size:10;">
+compare(o1: Object,o2: Object) : int</text>
+<rect x="460" y="1444" width="115" height="74" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="460" y="1444" width="114" height="73" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="460" y="1444" width="115" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="460" y="1444" width="114" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="493" y="1459" style="font-family:Dialog; font-size:10;">
+MyTheme</text>
+<rect x="460" y="1464" width="115" height="19" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="460" y="1464" width="114" height="18" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="460" y="1482" width="115" height="36" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="460" y="1482" width="114" height="35" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="462" y="1498" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; MyTheme()</text>
+<text x="462" y="1515" style="font-family:Dialog; font-size:10;">
+install() : void</text>
+<rect x="1407" y="14" width="261" height="312" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1407" y="14" width="260" height="311" style="fill: none; stroke:#000000; stroke-width:1"/>
+<rect x="1407" y="14" width="261" height="21" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1407" y="14" width="260" height="20" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1499" y="29" style="font-family:Dialog; font-size:10;">
+ThemeManager</text>
+<rect x="1407" y="34" width="261" height="35" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1407" y="34" width="260" height="34" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1409" y="50" style="font-family:Dialog; font-size:10;">
+themes : List</text>
+<text x="1409" y="67" style="font-family:Dialog; font-size:10;">
+settings : ISettings</text>
+<rect x="1407" y="68" width="261" height="258" style="fill:#ffffff; stroke:#ffffff; stroke-width:1"/>
+<rect x="1407" y="68" width="260" height="257" style="fill: none; stroke:#000000; stroke-width:1"/>
+<text x="1409" y="84" style="font-family:Dialog; font-size:10;">
+&lt;&lt;create&gt;&gt; ThemeManager(settings: ISettings)</text>
+<text x="1409" y="101" style="font-family:Dialog; font-size:10;">
+addTheme(theme: Theme) : void</text>
+<text x="1409" y="118" style="font-family:Dialog; font-size:10;">
+installLookAndFeels() : void</text>
+<text x="1409" y="135" style="font-family:Dialog; font-size:10;">
+initialize() : void</text>
+<text x="1409" y="152" style="font-family:Dialog; font-size:10;">
+getThemeByName(themeName: String) : MetalTheme</text>
+<text x="1409" y="169" style="font-family:Dialog; font-size:10;">
+setUIDefaults() : void</text>
+<text x="1409" y="186" style="font-family:Dialog; font-size:10;">
+configureUI(lookAndFeelName: String) : void</text>
+<line x1="1409" y1="204" x2="1595" y2="204" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="1409" y="203" style="font-family:Dialog; font-size:10;">
+isInstalled(className: String) : boolean</text>
+<text x="1409" y="220" style="font-family:Dialog; font-size:10;">
+getInstalledLookAndFeels() : LookAndFeelInfo[]</text>
+<text x="1409" y="237" style="font-family:Dialog; font-size:10;">
+getThemes() : Theme[]</text>
+<text x="1409" y="254" style="font-family:Dialog; font-size:10;">
+start() : void</text>
+<text x="1409" y="271" style="font-family:Dialog; font-size:10;">
+stop() : void</text>
+<text x="1409" y="288" style="font-family:Dialog; font-size:10;">
+getLafsNames() : String[]</text>
+<text x="1409" y="305" style="font-family:Dialog; font-size:10;">
+isLafSelected() : boolean</text>
+<text x="1409" y="322" style="font-family:Dialog; font-size:10;">
+getThemeNames() : String[]</text>
+<line x1="157" y1="729" x2="157" y2="724" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="719" x2="157" y2="714" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="709" x2="157" y2="704" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="699" x2="157" y2="694" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="689" x2="157" y2="684" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="679" x2="157" y2="674" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="669" x2="157" y2="664" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="659" x2="157" y2="654" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="649" x2="157" y2="644" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="639" x2="157" y2="634" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="629" x2="157" y2="624" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="619" x2="157" y2="614" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="609" x2="157" y2="604" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="599" x2="157" y2="594" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="589" x2="157" y2="584" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="579" x2="157" y2="574" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="569" x2="157" y2="564" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="559" x2="157" y2="554" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="549" x2="157" y2="544" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="539" x2="157" y2="534" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="529" x2="157" y2="524" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="519" x2="157" y2="514" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="509" x2="157" y2="504" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="499" x2="157" y2="494" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="489" x2="157" y2="484" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="479" x2="157" y2="474" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="469" x2="157" y2="464" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="459" x2="157" y2="454" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="449" x2="157" y2="444" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="439" x2="157" y2="434" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="429" x2="157" y2="424" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="419" x2="157" y2="414" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="409" x2="157" y2="404" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="399" x2="157" y2="394" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="389" x2="157" y2="384" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="379" x2="157" y2="374" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="157" y1="369" x2="157" y2="364" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="164" y1="372" x2="157" y2="360" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="150" y1="372" x2="157" y2="360" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="119" y="551" style="font-family:Dialog; font-size:10;">
+&lt;&lt;realize&gt;&gt;</text>
+<line x1="237" y1="729" x2="237" y2="724" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="719" x2="237" y2="714" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="709" x2="237" y2="704" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="699" x2="237" y2="694" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="689" x2="237" y2="684" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="679" x2="237" y2="674" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="669" x2="237" y2="664" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="659" x2="237" y2="654" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="649" x2="237" y2="644" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="639" x2="237" y2="634" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="629" x2="237" y2="624" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="619" x2="237" y2="614" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="609" x2="237" y2="604" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="599" x2="237" y2="594" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="589" x2="237" y2="584" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="579" x2="237" y2="574" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="569" x2="237" y2="564" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="559" x2="237" y2="554" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="549" x2="237" y2="544" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="539" x2="237" y2="534" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="529" x2="237" y2="524" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="519" x2="237" y2="514" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="509" x2="237" y2="504" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="499" x2="237" y2="494" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="489" x2="237" y2="484" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="479" x2="237" y2="474" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="469" x2="237" y2="464" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="459" x2="237" y2="454" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="449" x2="237" y2="444" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="439" x2="237" y2="434" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="429" x2="237" y2="424" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="419" x2="237" y2="414" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="409" x2="237" y2="404" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="399" x2="237" y2="394" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="389" x2="237" y2="384" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="379" x2="237" y2="374" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="237" y1="369" x2="237" y2="364" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="244" y1="372" x2="237" y2="360" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="230" y1="372" x2="237" y2="360" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="199" y="551" style="font-family:Dialog; font-size:10;">
+&lt;&lt;realize&gt;&gt;</text>
+<line x1="593" y1="729" x2="593" y2="724" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="719" x2="593" y2="714" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="709" x2="593" y2="704" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="699" x2="593" y2="694" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="689" x2="593" y2="684" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="679" x2="593" y2="674" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="669" x2="593" y2="664" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="659" x2="593" y2="654" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="649" x2="593" y2="644" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="639" x2="593" y2="634" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="629" x2="593" y2="624" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="619" x2="593" y2="614" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="609" x2="593" y2="604" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="599" x2="593" y2="594" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="589" x2="593" y2="584" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="579" x2="593" y2="574" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="569" x2="593" y2="564" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="559" x2="593" y2="554" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="549" x2="593" y2="544" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="539" x2="593" y2="534" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="529" x2="593" y2="524" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="519" x2="593" y2="514" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="509" x2="593" y2="504" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="499" x2="593" y2="494" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="489" x2="593" y2="484" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="479" x2="593" y2="474" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="469" x2="593" y2="464" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="459" x2="593" y2="454" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="449" x2="593" y2="444" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="439" x2="593" y2="434" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="429" x2="593" y2="424" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="419" x2="593" y2="414" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="409" x2="593" y2="404" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="399" x2="593" y2="394" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="389" x2="593" y2="384" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="379" x2="593" y2="374" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="369" x2="593" y2="364" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="359" x2="593" y2="354" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="349" x2="593" y2="344" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="339" x2="593" y2="334" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="329" x2="593" y2="324" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="319" x2="593" y2="314" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="309" x2="593" y2="304" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="299" x2="593" y2="294" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="289" x2="593" y2="284" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="279" x2="593" y2="274" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="269" x2="593" y2="264" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="259" x2="593" y2="254" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="249" x2="593" y2="244" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="239" x2="593" y2="234" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="229" x2="593" y2="224" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="219" x2="593" y2="214" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="209" x2="593" y2="204" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="199" x2="593" y2="194" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="189" x2="593" y2="184" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="179" x2="593" y2="174" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="169" x2="593" y2="164" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="593" y1="159" x2="593" y2="156" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="600" y1="168" x2="593" y2="156" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<line x1="586" y1="168" x2="593" y2="156" style="fill:#000000; stroke:#000000; stroke-width:1"/>
+<text x="555" y="449" style="font-family:Dialog; font-size:10;">
+&lt;&lt;realize&gt;&gt;</text>
+<polyline style="fill:none; stroke:#000000; stroke-width:1" points="517,1444 517,1412 593,1412 593,922"/>
+<polygon style="fill:#ffffff; stroke:#ffffff; stroke-width:1" points="593,922 600,934 586,934"/>
+<polygon style="fill:none; stroke:#000000; stroke-width:1" points="593,922 600,934 586,934"/>
+</svg>
