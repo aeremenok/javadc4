@@ -33,55 +33,57 @@ import net.sf.javadc.net.hub.HubManager;
 /**
  * @author Timo Westk�mper
  */
-public class IncompleteSimulation {
+public class IncompleteSimulation
+{
 
-    private ISettings settings = new Settings();
+    private ISettings           settings          = new Settings();
 
-    private IHubManager hubManager = new HubManager();
+    private IHubManager         hubManager        = new HubManager();
 
-    private AllHubs allHubs = new AllHubs(hubManager);
+    private AllHubs             allHubs           = new AllHubs( hubManager );
 
-    private ISegmentManager segmentManager = new SegmentManager(settings);
+    private ISegmentManager     segmentManager    = new SegmentManager( settings );
 
-    private IDownloadManager downloadManager = new DownloadManager(hubManager,
-            segmentManager);
+    private IDownloadManager    downloadManager   = new DownloadManager( hubManager, segmentManager );
 
-    private IncompletesLoader incompletesLoader = new IncompletesLoader(
-            settings, new BaseHubFactory());
+    private IncompletesLoader   incompletesLoader = new IncompletesLoader( settings, new BaseHubFactory() );
 
-    private IClientManager clientManager = new BaseClientManager();
+    private IClientManager      clientManager     = new BaseClientManager();
 
-    private IConnectionManager connectionManager = new ConnectionManager(
-            settings);
+    private IConnectionManager  connectionManager = new ConnectionManager( settings );
 
-    private IRequestsModel requestsModel = new RequestsModel(settings,
-            clientManager, connectionManager, incompletesLoader,
-            downloadManager, segmentManager);
+    private IRequestsModel      requestsModel     =
+                                                      new RequestsModel( settings, clientManager, connectionManager,
+                                                          incompletesLoader, downloadManager, segmentManager );
 
     // component under test
 
     private IncompleteComponent incompleteComponent;
 
-    public IncompleteSimulation() {
-        settings.setTempDownloadDir("C:\\Temp");
+    public static void main(
+        String[] args )
+    {
+        new IncompleteSimulation();
+    }
 
-        DownloadRequest dr1 = new DownloadRequest(new SearchResult(), new File(
-                "test1"), settings);
+    public IncompleteSimulation()
+    {
+        settings.setTempDownloadDir( "C:\\Temp" );
 
-        DownloadRequest dr2 = new DownloadRequest(new SearchResult(), new File(
-                "test2"), settings);
+        DownloadRequest dr1 = new DownloadRequest( new SearchResult(), new File( "test1" ), settings );
 
-        requestsModel.getAllDownloads().add(dr1);
+        DownloadRequest dr2 = new DownloadRequest( new SearchResult(), new File( "test2" ), settings );
 
-        requestsModel.getAllDownloads().add(dr2);
+        requestsModel.getAllDownloads().add( dr1 );
+
+        requestsModel.getAllDownloads().add( dr2 );
 
         /*
          * public IncompleteComponent(ISettings _settings, IRequestsModel
          * _requestsModel, IDownloadManager _downloadManager)
          */
 
-        incompleteComponent = new IncompleteComponent(requestsModel,
-                downloadManager, allHubs);
+        incompleteComponent = new IncompleteComponent( requestsModel, downloadManager, allHubs );
 
         // taskManager.start();
         // hubFavoritesList.start();
@@ -90,48 +92,46 @@ public class IncompleteSimulation {
 
         JFrame frame = new JFrame();
 
-        frame.getContentPane().add(incompleteComponent);
+        frame.getContentPane().add( incompleteComponent );
 
-        frame.setLocation(100, 100);
-        frame.setSize(800, 600);
+        frame.setLocation( 100, 100 );
+        frame.setSize( 800, 600 );
 
-        frame.addWindowListener(new WindowAdapter() {
+        frame.addWindowListener( new WindowAdapter()
+        {
 
-            public void windowClosing(WindowEvent e) {
-                System.exit(0);
-
-            }
-
-        });
-
-        frame.setVisible(true);
-
-        try {
-            while (true) {
-                Thread.sleep(10000);
+            @Override
+            public void windowClosing(
+                WindowEvent e )
+            {
+                System.exit( 0 );
 
             }
 
-        } catch (InterruptedException e) {
-            // logger.error(e.toString());
-            System.out.println(e.toString());
+        } );
+
+        frame.setVisible( true );
+
+        try
+        {
+            while ( true )
+            {
+                Thread.sleep( 10000 );
+
+            }
 
         }
-    }
+        catch ( InterruptedException e )
+        {
+            // logger.error(e.toString());
+            System.out.println( e.toString() );
 
-    public static void main(String[] args) {
-        new IncompleteSimulation();
+        }
     }
 
 }
 
 /*******************************************************************************
- * $Log: IncompleteSimulation.java,v $
- * Revision 1.8  2005/10/02 11:42:28  timowest
- * updated sources and tests
- * Revision 1.7 2005/09/14 07:11:49 timowest
- * updated sources
- * 
- * 
- * 
+ * $Log: IncompleteSimulation.java,v $ Revision 1.8 2005/10/02 11:42:28 timowest updated sources and tests Revision 1.7
+ * 2005/09/14 07:11:49 timowest updated sources
  */

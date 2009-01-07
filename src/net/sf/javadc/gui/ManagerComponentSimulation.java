@@ -31,11 +31,12 @@ import net.sf.javadc.util.TaskManager;
 /**
  * @author Timo Westkämper
  */
-public class ManagerComponentSimulation {
+public class ManagerComponentSimulation
+{
 
-    private TaskManager taskManager = new TaskManager();
+    private TaskManager         taskManager        = new TaskManager();
 
-    private ISettings settings = new Settings();
+    private ISettings           settings           = new Settings();
 
     /*
      * public ManagerComponent(IHubManager _hubManager, IHubFavoritesList
@@ -43,12 +44,11 @@ public class ManagerComponentSimulation {
      * _settings, IDownloadManager _downloadManager)
      */
 
-    private IHubManager hubManager = new HubManager();
+    private IHubManager         hubManager         = new HubManager();
 
     private IHubFavoritesLoader hubFavoritesLoader = new BaseHubFavoritesLoader();
 
-    private IHubFavoritesList hubFavoritesList = new HubFavoritesList(
-            hubFavoritesLoader);
+    private IHubFavoritesList   hubFavoritesList   = new HubFavoritesList( hubFavoritesLoader );
 
     /*
      * public HubListComponent(final IHubList _hubList, final IHubFavoritesList
@@ -56,7 +56,7 @@ public class ManagerComponentSimulation {
      */
 
     // private IHubList hubList = new HubList(settings, taskManager);
-    private IHubList hubList = new BaseHubList();
+    private IHubList            hubList            = new BaseHubList();
 
     /*
      * public HubFactory(ITaskManager _taskManager, IHubManager _hubManager,
@@ -64,24 +64,28 @@ public class ManagerComponentSimulation {
      */
 
     // private IHubFactory hubFactory = new BaseHubFactory();
-    private IHubTaskFactory hubTaskFactory = new BaseHubTaskFactory();
+    private IHubTaskFactory     hubTaskFactory     = new BaseHubTaskFactory();
 
-    private IHubFactory hubFactory = new HubFactory(taskManager, hubManager,
-            hubTaskFactory, settings);
+    private IHubFactory         hubFactory         = new HubFactory( taskManager, hubManager, hubTaskFactory, settings );
 
-    private HubListComponent hubListComponent = new HubListComponent(hubList,
-            hubFavoritesList, hubFactory);
+    private HubListComponent    hubListComponent   = new HubListComponent( hubList, hubFavoritesList, hubFactory );
 
-    private ISegmentManager segmentManager = new SegmentManager(settings);
+    private ISegmentManager     segmentManager     = new SegmentManager( settings );
 
-    private IDownloadManager downloadManager = new DownloadManager(hubManager,
-            segmentManager);
+    private IDownloadManager    downloadManager    = new DownloadManager( hubManager, segmentManager );
 
-    private ManagerComponent managerComponent = new ManagerComponent(
-            hubManager, hubFavoritesList, hubListComponent, settings,
-            downloadManager);
+    private ManagerComponent    managerComponent   =
+                                                       new ManagerComponent( hubManager, hubFavoritesList,
+                                                           hubListComponent, settings, downloadManager );
 
-    public ManagerComponentSimulation() {
+    public static void main(
+        String[] args )
+    {
+        new ManagerComponentSimulation();
+    }
+
+    public ManagerComponentSimulation()
+    {
         taskManager.start();
         hubFavoritesList.start();
 
@@ -89,48 +93,46 @@ public class ManagerComponentSimulation {
 
         JFrame frame = new JFrame();
 
-        frame.getContentPane().add(managerComponent);
+        frame.getContentPane().add( managerComponent );
 
-        frame.setLocation(100, 100);
-        frame.setSize(800, 600);
+        frame.setLocation( 100, 100 );
+        frame.setSize( 800, 600 );
 
-        frame.addWindowListener(new WindowAdapter() {
+        frame.addWindowListener( new WindowAdapter()
+        {
 
-            public void windowClosing(WindowEvent e) {
-                System.exit(0);
-
-            }
-
-        });
-
-        frame.setVisible(true);
-
-        try {
-            while (true) {
-                Thread.sleep(10000);
+            @Override
+            public void windowClosing(
+                WindowEvent e )
+            {
+                System.exit( 0 );
 
             }
 
-        } catch (InterruptedException e) {
-            // logger.error(e.toString());
-            System.out.println(e.toString());
+        } );
+
+        frame.setVisible( true );
+
+        try
+        {
+            while ( true )
+            {
+                Thread.sleep( 10000 );
+
+            }
 
         }
-    }
+        catch ( InterruptedException e )
+        {
+            // logger.error(e.toString());
+            System.out.println( e.toString() );
 
-    public static void main(String[] args) {
-        new ManagerComponentSimulation();
+        }
     }
 
 }
 
 /*******************************************************************************
- * $Log: ManagerComponentSimulation.java,v $
- * Revision 1.7  2005/10/02 11:42:28  timowest
- * updated sources and tests
- * Revision 1.6 2005/09/14 07:11:49
- * timowest updated sources
- * 
- * 
- * 
+ * $Log: ManagerComponentSimulation.java,v $ Revision 1.7 2005/10/02 11:42:28 timowest updated sources and tests
+ * Revision 1.6 2005/09/14 07:11:49 timowest updated sources
  */
