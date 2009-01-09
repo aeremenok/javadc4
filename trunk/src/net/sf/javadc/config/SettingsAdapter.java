@@ -13,8 +13,10 @@ package net.sf.javadc.config;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.EventListener;
 import java.util.List;
 
+import junit.framework.Assert;
 import net.sf.javadc.interfaces.ISettings;
 import net.sf.javadc.interfaces.ISettingsLoader;
 import net.sf.javadc.interfaces.IUserInfo;
@@ -31,13 +33,13 @@ import org.apache.log4j.Logger;
 public class SettingsAdapter
     extends AbstractSettingsAdapter
 {
-    static private final Category logger = Logger.getLogger( SettingsLoader.class );
+    static private final Category          logger = Logger.getLogger( SettingsLoader.class );
 
     // components
     /**
      * 
      */
-    private final ISettings       _settings;
+    private final ISettings<EventListener> _settings;
 
     /**
      * Create a SettingsAdapter instance which uses the given ISettingsLoader instance to populate a Settings instance
@@ -47,18 +49,13 @@ public class SettingsAdapter
     public SettingsAdapter(
         ISettingsLoader _settingsLoader )
     {
-        if ( _settingsLoader == null )
-        {
-            throw new NullPointerException( "_settingsLoader was null." );
-        }
+        Assert.assertNotNull( _settingsLoader );
 
         settingsLoader = _settingsLoader;
         _settings = settingsLoader.load();
 
         clearTemporaryDownloadDirectory();
     }
-
-    /** ********************************************************************** */
 
     /*
      * (non-Javadoc)

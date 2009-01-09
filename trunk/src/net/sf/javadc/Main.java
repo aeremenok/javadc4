@@ -50,6 +50,11 @@ public class Main
         System.exit( 0 );
     }
 
+    public static MutablePicoContainer getGuiContainer()
+    {
+        return guiContainer;
+    }
+
     public static void main(
         String[] args )
     {

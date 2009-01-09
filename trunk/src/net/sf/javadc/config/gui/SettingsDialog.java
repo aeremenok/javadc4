@@ -19,6 +19,7 @@ import java.awt.Panel;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.KeyEvent;
+import java.util.EventListener;
 
 import javax.swing.JButton;
 import javax.swing.JDialog;
@@ -38,71 +39,27 @@ import org.apache.log4j.Category;
 public class SettingsDialog
     extends JDialog
 {
-    /**
-     * 
-     */
     private static final long             serialVersionUID = 5170053346711095610L;
 
     private final static Category         logger           = Category.getInstance( SettingsDialog.class );
 
-    /**
-     * 
-     */
     private final Panel                   buttonPanel      = new Panel( new FlowLayout( FlowLayout.RIGHT ) );
-
-    /**
-     * 
-     */
     private final JButton                 okButton         = new JButton( "OK" );
-
-    /**
-     * 
-     */
     private final JButton                 cancelButton     = new JButton( "Cancel" );
-
-    /**
-     * 
-     */
     private final JButton                 applyButton      = new JButton( "Apply" );
 
     // private boolean doRefresh = true;
     // private final FlowLayout flowLayout1 = new FlowLayout();
 
     // main panels
-    /**
-     * 
-     */
     private final GeneralSettingsPanel    generalSettingsPanel;
-
-    /**
-     * 
-     */
     private final ConnectionSettingsPanel connectionSettingsPanel;
-
-    /**
-     * 
-     */
     private final TransferSettingsPanel   transferSettingsPanel;
-
-    /**
-     * 
-     */
     private final JPanel                  mainPanel        = new JPanel();
-
-    /**
-     * 
-     */
     private final JTabbedPane             tabPane          = new JTabbedPane();
 
     // components
-    /**
-     * 
-     */
-    private final ISettings               settings;
-
-    /**
-     * 
-     */
+    private final ISettings<EventListener>               settings;
     private final IShareManager           shareManager;
 
     /**
@@ -119,7 +76,7 @@ public class SettingsDialog
         Frame owner,
         String title,
         boolean modal,
-        ISettings _settings,
+        ISettings<EventListener> _settings,
         IShareManager _shareManager )
     {
         super( owner, title, modal );
@@ -261,9 +218,3 @@ public class SettingsDialog
     }
 
 }
-
-/*******************************************************************************
- * $Log: SettingsDialog.java,v $ Revision 1.16 2005/10/02 11:42:28 timowest updated sources and tests Revision 1.15
- * 2005/09/30 15:59:53 timowest updated sources and tests Revision 1.14 2005/09/25 16:40:58 timowest updated sources and
- * tests Revision 1.13 2005/09/14 07:11:49 timowest updated sources
- */

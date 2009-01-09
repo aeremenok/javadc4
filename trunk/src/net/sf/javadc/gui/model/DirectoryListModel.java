@@ -16,6 +16,8 @@ import java.util.List;
 
 import javax.swing.AbstractListModel;
 
+import junit.framework.Assert;
+
 import org.apache.log4j.Logger;
 
 /**
@@ -29,24 +31,18 @@ import org.apache.log4j.Logger;
 public class DirectoryListModel
     extends AbstractListModel
 {
-    /**
-     * 
-     */
     private static final long   serialVersionUID = -1086886749372007114L;
 
     private static final Logger logger           = Logger.getLogger( DirectoryListModel.class );
 
-    private final List          shares           = new ArrayList();
+    private final List<String>  shares           = new ArrayList<String>();
 
     /**
      * Create an empty DirectoryListModel
      */
     public DirectoryListModel()
     {
-
     }
-
-    /** ********************************************************************** */
 
     /**
      * Add the given directory to the list of shared files
@@ -65,7 +61,6 @@ public class DirectoryListModel
         {
             logger.error( "Directory " + s + " was already contained" );
         }
-
     }
 
     /**
@@ -73,10 +68,9 @@ public class DirectoryListModel
      * 
      * @return
      */
-    public final List getDirList()
+    public final List<String> getDirList()
     {
         return shares;
-
     }
 
     /*
@@ -88,7 +82,6 @@ public class DirectoryListModel
         int index )
     {
         return shares.get( index );
-
     }
 
     /*
@@ -99,7 +92,6 @@ public class DirectoryListModel
     public final int getSize()
     {
         return shares.size();
-
     }
 
     /**
@@ -110,14 +102,9 @@ public class DirectoryListModel
     public final void removeDirectory(
         String s )
     {
-        if ( s == null )
-        {
-            throw new NullPointerException( "s was null." );
-        }
-
+        Assert.assertNotNull( s );
         shares.remove( s );
         update();
-
     }
 
     /**
@@ -130,7 +117,6 @@ public class DirectoryListModel
     {
         shares.remove( n );
         update();
-
     }
 
     /**
@@ -139,13 +125,5 @@ public class DirectoryListModel
     private final void update()
     {
         fireContentsChanged( this, 0, getSize() );
-
     }
-
 }
-
-/*******************************************************************************
- * $Log: DirectoryListModel.java,v $ Revision 1.11 2005/10/02 11:42:28 timowest updated sources and tests Revision 1.10
- * 2005/09/26 17:19:52 timowest updated sources and tests Revision 1.9 2005/09/15 17:32:29 timowest added null checks
- * Revision 1.8 2005/09/14 07:11:49 timowest updated sources
- */

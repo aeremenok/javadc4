@@ -10,6 +10,8 @@
 
 package net.sf.javadc.interfaces;
 
+import java.util.EventListener;
+
 /**
  * <CODE>ISettingsLoader</CODE> is the interface representation of <CODE>
  * SettingsLoader</CODE>, which is responsible of
@@ -26,7 +28,7 @@ public interface ISettingsLoader
      * 
      * @return
      */
-    public ISettings load();
+    public ISettings<EventListener> load();
 
     /**
      * Save the core application settings into a serialized version
