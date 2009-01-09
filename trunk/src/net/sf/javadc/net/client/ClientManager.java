@@ -11,7 +11,6 @@
 // $Id: ClientManager.java,v 1.19 2005/10/02 11:42:28 timowest Exp $
 package net.sf.javadc.net.client;
 
-import java.io.IOException;
 import java.util.HashMap;
 
 import net.sf.javadc.interfaces.IClient;
@@ -164,21 +163,8 @@ public class ClientManager
         ConnectionListener listener,
         boolean isServer )
     {
-        try
-        {
-            return new Connection( client, listener, isServer, taskManager, clientConnectionManager, this,
-                clientTaskFactory );
-
-        }
-        catch ( IOException e )
-        {
-            // logger.error(e.toString());
-            logger.error( "Caught " + e.getClass().getName(), e );
-
-        }
-
-        return null;
-
+        return new Connection( client, listener, isServer, taskManager, clientConnectionManager, this,
+            clientTaskFactory );
     }
 
     /*

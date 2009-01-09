@@ -54,7 +54,6 @@ public class HubList
         implements
             ErrorHandler
     {
-
         /*
          * (non-Javadoc)
          * 
@@ -62,10 +61,8 @@ public class HubList
          */
         public void error(
             SAXParseException arg0 )
-            throws SAXException
         {
             logger.error( "Caught " + arg0.getClass().getName(), arg0 );
-
         }
 
         /*
@@ -75,10 +72,8 @@ public class HubList
          */
         public void fatalError(
             SAXParseException arg0 )
-            throws SAXException
         {
             logger.error( "Caught " + arg0.getClass().getName(), arg0 );
-
         }
 
         /*
@@ -88,12 +83,9 @@ public class HubList
          */
         public void warning(
             SAXParseException arg0 )
-            throws SAXException
         {
             logger.error( "Caught " + arg0.getClass().getName(), arg0 );
-
         }
-
     }
 
     private final static Category logger         = Logger.getLogger( HubList.class );
@@ -368,7 +360,7 @@ public class HubList
         InputStream inputStream )
         throws IOException
     {
-        List newHubInfos = new ArrayList();
+        List<IHubInfo> newHubInfos = new ArrayList<IHubInfo>();
 
         // InputStreamReader instance used the default charset
 
@@ -433,55 +425,36 @@ public class HubList
      * 
      * @param inputStream
      * @return List of HubInfo instances created from the hublist
-     * @throws IOException
      */
     protected List readHubInfosFromXml(
         InputStream inputStream )
-        throws IOException
     {
-        final List newHubInfos = new ArrayList();
+        final List<IHubInfo> newHubInfos = new ArrayList<IHubInfo>();
 
         XMLReader reader = null;
 
         try
         {
             reader = XMLReaderFactory.createXMLReader();
-
         }
         catch ( SAXException e )
         {
             logger.error( "Caught " + e.getClass().getName(), e );
-            Class cl = null;
 
             try
             {
-                cl = Class.forName( "org.apache.crimson.parser.XMLReaderImpl" );
-            }
-            catch ( ClassNotFoundException e1 )
-            {
-                logger.error( "Caught " + e1.getClass().getName(), e1 );
-            }
-
-            try
-            {
+                Class cl = Class.forName( "org.apache.crimson.parser.XMLReaderImpl" );
                 reader = (XMLReader) cl.newInstance();
             }
-            catch ( InstantiationException e1 )
+            catch ( Exception e1 )
             {
-                logger.error( "Caught " + e1.getClass().getName(), e1 );
-
+                logger.error( "cannot create reader", e1 );
             }
-            catch ( IllegalAccessException e1 )
-            {
-                logger.error( "Caught " + e1.getClass().getName(), e1 );
-            }
-
         }
 
         ContentHandler contentHandler = new DefaultHandler()
         {
-
-            private List columns = new ArrayList();
+            private List<String> columns = new ArrayList<String>();
 
             @Override
             public void startElement(
@@ -489,14 +462,11 @@ public class HubList
                 String localName,
                 String qName,
                 Attributes atts )
-                throws SAXException
             {
-
                 // only handle Hub elements
                 if ( localName.equals( "Hub" ) )
                 {
                     handleHubElement( atts );
-
                 }
                 else if ( localName.equals( "Column" ) )
                 {
@@ -624,9 +594,3 @@ public class HubList
     }
 
 }
-
-/*******************************************************************************
- * $Log: HubList.java,v $ Revision 1.24 2005/10/02 11:42:28 timowest updated sources and tests Revision 1.23 2005/09/30
- * 15:59:53 timowest updated sources and tests Revision 1.22 2005/09/26 17:19:52 timowest updated sources and tests
- * Revision 1.21 2005/09/12 21:12:02 timowest added log block
- */

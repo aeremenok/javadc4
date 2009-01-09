@@ -112,7 +112,7 @@ public interface ISettings
      * 
      * @return
      */
-    public List getUploadDirs();
+    public List<String> getUploadDirs();
 
     /**
      * Get the amount of total upload slots
@@ -258,7 +258,7 @@ public interface ISettings
      * @param dirs
      */
     public void setUploadDirs(
-        List dirs );
+        List<String> dirs );
 
     /**
      * Set the amount of total upload slots

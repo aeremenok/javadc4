@@ -34,78 +34,20 @@ public class Settings
 {
     static private final Category logger           = Category.getInstance( ISettings.class );
 
-    /**
-     * 
-     */
     private boolean               active           = true;
-    /**
-     * 
-     */
     private AdvancedSettings      advancedSettings = null;
-
-    /**
-     * 
-     */
     private String                downloadDir;
-
-    /**
-     * 
-     */
     private String                tempDownloadDir;
-
-    /**
-     * 
-     */
     private String                logDir;
-
-    /**
-     * 
-     */
     private String                IP;
-
-    /**
-     * 
-     */
-    private List                  uploadDirs       = null;
-
-    /**
-     * 
-     */
+    private List<String>          uploadDirs       = null;
     private int                   uploadSlots;
-
-    /**
-     * 
-     */
     private int                   uploadSpeed;
-
-    /**
-     * 
-     */
     private int                   downloadSlots;
-
-    /**
-     * 
-     */
     private int                   downloadSpeed;
-
-    /**
-     * 
-     */
     private transient int         usedDownloadSlots;
-
-    /**
-     * 
-     */
     private transient int         usedUploadSlots;
-
-    /**
-     * 
-     */
     private IUserInfo             userInfo         = null;
-
-    /**
-     * 
-     */
     private GuiSettings           guiSettings;
 
     /**
@@ -113,7 +55,6 @@ public class Settings
      */
     public Settings()
     {
-
     }
 
     /*
@@ -241,25 +182,17 @@ public class Settings
         if ( IP != null && !IP.equals( "" ) )
         {
             return IP;
-
         }
-        else
+
+        try
         {
-            try
-            {
-                return InetAddress.getLocalHost().getHostAddress();
-
-            }
-            catch ( UnknownHostException e )
-            {
-                logger.error( e.toString() );
-
-            }
-
+            return InetAddress.getLocalHost().getHostAddress();
         }
-
-        return "0.0.0.0";
-
+        catch ( UnknownHostException e )
+        {
+            logger.error( e.toString() );
+            return "0.0.0.0";
+        }
     }
 
     /*
@@ -300,10 +233,9 @@ public class Settings
      * 
      * @see net.sf.javadc.interfaces.ISettings#getUploadDirs()
      */
-    public final List getUploadDirs()
+    public final List<String> getUploadDirs()
     {
         return uploadDirs;
-
     }
 
     /*
@@ -573,7 +505,6 @@ public class Settings
         String string )
     {
         tempDownloadDir = string;
-
     }
 
     /*
@@ -582,10 +513,9 @@ public class Settings
      * @see net.sf.javadc.interfaces.ISettings#setUploadDirs(java.util.List)
      */
     public final void setUploadDirs(
-        List dirs )
+        List<String> dirs )
     {
         uploadDirs = dirs;
-
     }
 
     /*

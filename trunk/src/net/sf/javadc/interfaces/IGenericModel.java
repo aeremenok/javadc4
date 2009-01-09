@@ -20,18 +20,17 @@ import javax.swing.event.EventListenerList;
  * 
  * @author Timo Westk�mper
  */
-public interface IGenericModel
+public interface IGenericModel<ListenerType extends EventListener>
     extends
         IObject
 {
-
     /**
      * Add the given EventListener to the list of EventListeners
      * 
      * @param listener
      */
     public abstract void addListener(
-        EventListener listener );
+        ListenerType listener );
 
     /**
      * Get the list of EventListeners
@@ -46,5 +45,5 @@ public interface IGenericModel
      * @param listener
      */
     public abstract void removeListener(
-        EventListener listener );
+        ListenerType listener );
 }

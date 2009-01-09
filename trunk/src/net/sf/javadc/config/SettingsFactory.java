@@ -58,8 +58,3 @@ public class SettingsFactory
         return settings;
     }
 }
-
-/*******************************************************************************
- * $Log: SettingsFactory.java,v $ Revision 1.8 2005/10/02 11:42:27 timowest updated sources and tests Revision 1.7
- * 2005/09/14 07:11:48 timowest updated sources
- */

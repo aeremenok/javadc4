@@ -30,13 +30,13 @@ import org.apache.log4j.Category;
 public class FileListModel
     extends AbstractFileListModel
 {
-    private final static Category logger = Category.getInstance( FileListModel.class );
+    private final static Category         logger = Category.getInstance( FileListModel.class );
 
-    private final ArrayList       files  = new ArrayList();
+    private final ArrayList<FileTreeNode> files  = new ArrayList<FileTreeNode>();
 
-    private final FileTreeNode    root   = new FileTreeNode( new File( File.separator ), 0 );
+    private final FileTreeNode            root   = new FileTreeNode( new File( File.separator ), 0 );
 
-    private BufferedReader        reader = null;
+    private BufferedReader                reader = null;
 
     /**
      * Create a FileListModel
@@ -48,7 +48,6 @@ public class FileListModel
         try
         {
             reader = new BufferedReader( new InputStreamReader( ClassLoader.getSystemResourceAsStream( sourceFile ) ) );
-
         }
         catch ( NullPointerException e )
         {
@@ -57,18 +56,16 @@ public class FileListModel
             // use example file list instead
             sourceFile = "net/sf/javadc/resources/MyList.DcLst.dec";
 
-            logger.error( "Can't use created file list in main folder, " + " using default file list " + sourceFile +
+            logger.error( "Can't use created file list in main folder, using default file list " + sourceFile +
                 " instead" );
-
-            reader = new BufferedReader( new InputStreamReader( this.getClass().getResourceAsStream( sourceFile ) ) );
-
+            reader = new BufferedReader( new InputStreamReader( ClassLoader.getSystemResourceAsStream( sourceFile ) ) );
+            // todo what if file's not found?
         }
         catch ( Exception e )
         {
             String error = "Caught " + e.getClass().getName();
             logger.error( error, e );
             throw new RuntimeException( error, e );
-
         }
     }
 
@@ -96,12 +93,8 @@ public class FileListModel
         }
         // catch (IOException io) {
         // logger.error("Error when reading file " + sourceFile, io);
-        //
         // }
-
     }
-
-    /** ********************************************************************** */
 
     /**
      * Add the given FileTreeNode to the model

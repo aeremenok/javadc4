@@ -21,9 +21,9 @@ import net.sf.javadc.util.GenericModel;
  * @author Timo Westk�mper
  */
 public abstract class AbstractShareManager
-    extends GenericModel
+    extends GenericModel<ShareManagerListener>
     implements
-        IShareManager
+        IShareManager<ShareManagerListener>
 {
 
     /*
@@ -34,13 +34,10 @@ public abstract class AbstractShareManager
     public final void fireBrowseListCreated()
     {
         ShareManagerListener[] l = listenerList.getListeners( ShareManagerListener.class );
-
-        for ( int i = 0; i < l.length; i++ )
+        for ( ShareManagerListener element : l )
         {
-            l[i].browseListCreated();
-
+            element.browseListCreated();
         }
-
     }
 
     /*
@@ -51,13 +48,10 @@ public abstract class AbstractShareManager
     public final void fireCreatingBrowseList()
     {
         ShareManagerListener[] l = listenerList.getListeners( ShareManagerListener.class );
-
-        for ( int i = 0; i < l.length; i++ )
+        for ( ShareManagerListener element : l )
         {
-            l[i].creatingBrowseList();
-
+            element.creatingBrowseList();
         }
-
     }
 
     /*
@@ -69,13 +63,10 @@ public abstract class AbstractShareManager
         String dir )
     {
         ShareManagerListener[] l = listenerList.getListeners( ShareManagerListener.class );
-
-        for ( int i = 0; i < l.length; i++ )
+        for ( ShareManagerListener element : l )
         {
-            l[i].directoryAdded( dir );
-
+            element.directoryAdded( dir );
         }
-
     }
 
     /*
@@ -87,12 +78,10 @@ public abstract class AbstractShareManager
         String filename )
     {
         ShareManagerListener[] l = listenerList.getListeners( ShareManagerListener.class );
-
-        for ( int i = 0; i < l.length; i++ )
+        for ( ShareManagerListener element : l )
         {
-            l[i].fileHashed( filename );
+            element.fileHashed( filename );
         }
-
     }
 
     /*
@@ -106,12 +95,10 @@ public abstract class AbstractShareManager
         double percent )
     {
         ShareManagerListener[] l = listenerList.getListeners( ShareManagerListener.class );
-
-        for ( int i = 0; i < l.length; i++ )
+        for ( ShareManagerListener element : l )
         {
-            l[i].hashingFile( filename, percent );
+            element.hashingFile( filename, percent );
         }
-
     }
 
     /*
@@ -120,15 +107,8 @@ public abstract class AbstractShareManager
      * @see net.sf.javadc.util.GenericModel#getListenerClass()
      */
     @Override
-    protected Class getListenerClass()
+    protected Class<ShareManagerListener> getListenerClass()
     {
         return ShareManagerListener.class;
-
     }
-
 }
-
-/*******************************************************************************
- * $Log: AbstractShareManager.java,v $ Revision 1.12 2005/10/02 11:42:27 timowest updated sources and tests Revision
- * 1.11 2005/09/12 21:12:02 timowest added log block
- */

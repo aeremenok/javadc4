@@ -1,74 +1,52 @@
 <?xml version="1.0" encoding="UTF-8"?> 
-<java version="1.4.2_05" class="java.beans.XMLDecoder"> 
+<java version="1.6.0_06" class="java.beans.XMLDecoder"> 
  <object class="net.sf.javadc.config.Settings"> 
-  <void property="active"> 
-   <boolean>false</boolean> 
-  </void> 
   <void property="advancedSettings"> 
    <object class="net.sf.javadc.config.AdvancedSettings"> 
     <void property="XLocation"> 
      <int>-4</int> 
     </void> 
     <void property="XSize"> 
-     <int>1032</int> 
+     <int>1928</int> 
     </void> 
     <void property="YLocation"> 
      <int>-4</int> 
     </void> 
     <void property="YSize"> 
-     <int>776</int> 
-    </void> 
-    <void property="clientVersion"> 
-     <string>0.1.0</string> 
+     <int>1177</int> 
     </void> 
     <void property="hublistAddress"> 
-     <string>http://fi.hublist.org/PublicHubList.config.bz2</string> 
+     <string>http://www.hublist.org/FullHubList.config.bz2</string> 
     </void> 
    </object> 
-  </void> 
-  <void property="downloadDir"> 
-   <string>E:\_ReadyToBurn</string> 
   </void> 
   <void property="downloadSlots"> 
    <int>10</int> 
   </void> 
   <void property="guiSettings"> 
    <object class="net.sf.javadc.config.GuiSettings"> 
+    <void property="lookAndFeel"> 
+     <string>Plastic XP</string> 
+    </void> 
+    <void property="plasticHighContrastFocusEnabled"> 
+     <boolean>true</boolean> 
+    </void> 
     <void property="plasticTabStyle"> 
-     <string>default</string> 
+     <string>metal</string> 
     </void> 
-    <void property="selectedLookAndFeel"> 
-     <object class="com.jgoodies.plaf.plastic.PlasticXPLookAndFeel"/> 
+    <void property="popupDropShadowEnabled"> 
+     <boolean>true</boolean> 
     </void> 
-    <void property="selectedTheme"> 
-     <object class="com.jgoodies.plaf.plastic.theme.DesertBluer"/> 
+    <void property="theme"> 
+     <string>Sky Bluer - Tahoma</string> 
     </void> 
-    <void property="tabIconsEnabled"> 
+    <void property="useSystemFonts"> 
      <boolean>true</boolean> 
     </void> 
    </object> 
   </void> 
-  <void property="tempDownloadDir"> 
-   <string>E:\_ReadyToBurn</string> 
-  </void> 
   <void property="uploadDirs"> 
-   <object class="java.util.ArrayList"> 
-    <void method="add"> 
-     <string>E:\_SharedFiles</string> 
-    </void> 
-    <void method="add"> 
-     <string>E:\Music</string> 
-    </void> 
-    <void method="add"> 
-     <string>E:\OpenSource</string> 
-    </void> 
-    <void method="add"> 
-     <string>E:\_ReadyToBurn</string> 
-    </void> 
-    <void method="add"> 
-     <string>E:\Films</string> 
-    </void> 
-   </object> 
+   <object class="java.util.ArrayList"/> 
   </void> 
   <void property="uploadSlots"> 
    <int>10</int> 
@@ -76,28 +54,16 @@
   <void property="userInfo"> 
    <object class="net.sf.javadc.config.UserInfo"> 
     <void property="description"> 
-     <string>Timo Westkämper</string> 
+     <string>Place your description here.</string> 
     </void> 
     <void property="email"> 
-     <string>west.kamper@uta.fi</string> 
+     <string>a@b.com</string> 
     </void> 
     <void property="nick"> 
-     <string>timowest</string> 
+     <string>JohnDoe</string> 
     </void> 
     <void property="port"> 
      <int>5100</int> 
-    </void> 
-    <void property="sharedSize"> 
-     <long>8648440412</long> 
-    </void> 
-    <void property="speed"> 
-     <string>LAN(T1)</string> 
-    </void> 
-    <void property="speedCode"> 
-     <byte>1</byte> 
-    </void> 
-    <void property="tag"> 
-     <string>&lt;JavaDC3&gt;</string> 
     </void> 
    </object> 
   </void> 
