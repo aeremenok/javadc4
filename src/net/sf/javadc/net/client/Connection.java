@@ -25,9 +25,7 @@ import net.sf.javadc.interfaces.IClient;
 import net.sf.javadc.interfaces.IClientManager;
 import net.sf.javadc.interfaces.IClientTask;
 import net.sf.javadc.interfaces.IClientTaskFactory;
-import net.sf.javadc.interfaces.IConnection;
 import net.sf.javadc.interfaces.IConnectionManager;
-import net.sf.javadc.interfaces.ITask;
 import net.sf.javadc.interfaces.ITaskManager;
 import net.sf.javadc.listeners.ConnectionListener;
 import net.sf.javadc.net.DownloadRequest;
@@ -45,98 +43,34 @@ import org.apache.log4j.Logger;
  */
 public class Connection
     extends AbstractConnection
-    implements
-        Runnable,
-        ITask,
-        IConnection
 {
-
     private static final Logger          clientTraffic  = Logger.getLogger( "C2C" );
-
     private static final Category        logger         = Category.getInstance( Connection.class );
 
-    /**
-     * 
-     */
     private Client                       client;
-
-    /** 
-     * 
-     */
     private final IConnectionManager     clientConnectionManager;
-
-    /**
-     * 
-     */
     private final IClientManager         clientManager;
 
-    /**
-     * 
-     */
     private final IClientTaskFactory     clientTaskFactory;
-
-    /**
-     * 
-     */
     private final ConnectionInfo         connectionInfo = new ConnectionInfo();
-
-    /**
-     * 
-     */
     private IClientTask                  disconnectTask;
-
-    /**
-     * 
-     */
     private DownloadRequest              downloadRequest;
 
     // networking stuff
-    /**
-     * 
-     */
     private boolean                      isServer;
-
-    /**
-     * 
-     */
     private RandomAccessFile             localFile;
-
-    /**
-     * 
-     */
     private TokenInputStream             reader;
 
     // private ServerSocket serverSocket;
-    /**
-     * 
-     */
     private Socket                       socket;
-
-    /**
-     * 
-     */
     private ConnectionState              state          = ConnectionState.CONNECTING;
 
     // internal components
-    /**
-     * 
-     */
     private final ConnectionStatistics   statistics     = new ConnectionStatistics();
 
     // external components
-    /**
-     * 
-     */
     private final ITaskManager           taskManager;
-
-    /**
-     * 
-     */
     private UploadRequest                uploadRequest  = new UploadRequest();
-
-    /**
-     * 
-     */
     private ExtendedBufferedOutputStream writer         = null;
 
     /**
@@ -149,7 +83,6 @@ public class Connection
      * @param _clientConnectionManager IConnectionManager to be used
      * @param _clientManager IClientManager to be used
      * @param _clientTaskFactory IClientTaskFactory to be used
-     * @throws IOException
      */
     public Connection(
         Client _client,
@@ -159,7 +92,6 @@ public class Connection
         IConnectionManager _clientConnectionManager,
         IClientManager _clientManager,
         IClientTaskFactory _clientTaskFactory )
-        throws IOException
     {
 
         if ( _taskManager == null )
@@ -816,7 +748,6 @@ public class Connection
             // add the Connection task to the TaskManager, after the MyNick
             // task has been run
             taskManager.addTask( this );
-
         }
         catch ( Exception e )
         {
@@ -824,15 +755,10 @@ public class Connection
             // logger.error(e);
 
             disconnect();
-
         }
 
         // taskManager.addEvent(task);
-        if ( task != null )
-        {
-            clientTaskFactory.returnObject( "SMyNick", task );
-
-        }
+        clientTaskFactory.returnObject( "SMyNick", task );
     }
 
     /**

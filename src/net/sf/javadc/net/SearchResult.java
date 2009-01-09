@@ -260,30 +260,18 @@ public class SearchResult
     public final boolean equals(
         Object obj )
     {
+        if ( obj == null )
+        {
+            return false;
+        }
+
         if ( obj instanceof SearchResult )
         {
             SearchResult sr = (SearchResult) obj;
-
-            // we want to avoid NullPointerExceptions in the next statement
-            if ( obj == null )
-            {
-                return false;
-
-            }
-            else
-            {
-                return filename.equals( sr.filename ) && fileSize == sr.fileSize && host.equals( sr.host );
-
-            }
-
-        }
-        else
-        { // obj is not SearchResult
-
-            return false;
-
+            return filename.equals( sr.filename ) && fileSize == sr.fileSize && host.equals( sr.host );
         }
 
+        return false;
     }
 
     /**

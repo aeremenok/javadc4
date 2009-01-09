@@ -8,6 +8,7 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+import junit.framework.Assert;
 import net.sf.javadc.util.FileInfo;
 
 /**
@@ -20,34 +21,26 @@ public class SharedFilesDictionary
     implements
         Serializable
 {
-
-    /**
-     * 
-     */
-    private static final long serialVersionUID = 3387645131279665673L;
+    private static final long     serialVersionUID = 3387645131279665673L;
 
     /**
      * Mapping of absolute file names against FileInfo instance
      */
-    private Map               name2FileInfos;
+    private Map<String, FileInfo> name2FileInfos;
 
     /**
      * Mapping of hash codes (TTH) against FileInfo instances
      */
-    private Map               hash2FileInfos;
+    private Map<String, FileInfo> hash2FileInfos;
 
     /**
      * Create a new SharedFilesDictionary
      */
     public SharedFilesDictionary()
     {
-
-        name2FileInfos = new HashMap();
-
-        hash2FileInfos = new HashMap();
+        name2FileInfos = new HashMap<String, FileInfo>();
+        hash2FileInfos = new HashMap<String, FileInfo>();
     }
-
-    // containsKey
 
     /**
      * Add the given FileInfo instance to the mappings
@@ -57,13 +50,8 @@ public class SharedFilesDictionary
     public final synchronized void add(
         FileInfo fileInfo )
     {
-        if ( fileInfo == null )
-        {
-            throw new NullPointerException( "fileInfo was null." );
-        }
-
+        Assert.assertNotNull( fileInfo );
         name2FileInfos.put( fileInfo.getAbsolutePath(), fileInfo );
-
         hash2FileInfos.put( fileInfo.getHash().getRoot(), fileInfo );
     }
 
@@ -76,12 +64,8 @@ public class SharedFilesDictionary
     public final boolean containsFileNameKey(
         String absolutePath )
     {
-
         return name2FileInfos.containsKey( absolutePath );
-
     }
-
-    // keySet
 
     /**
      * Return whether a FileInfo instance is mapped against the given hash code
@@ -92,9 +76,7 @@ public class SharedFilesDictionary
     public final boolean containsHashKey(
         String tth )
     {
-
         return hash2FileInfos.containsKey( tth );
-
     }
 
     /**
@@ -102,14 +84,10 @@ public class SharedFilesDictionary
      * 
      * @return
      */
-    public final Collection fileNameKeySet()
+    public final Collection<String> fileNameKeySet()
     {
-
         return name2FileInfos.keySet();
-
     }
-
-    // get
 
     /**
      * Return the FileInfo instance mapped against the given absolute path
@@ -120,9 +98,7 @@ public class SharedFilesDictionary
     public final FileInfo getByFileName(
         String path )
     {
-
-        return (FileInfo) name2FileInfos.get( path );
-
+        return name2FileInfos.get( path );
     }
 
     /**
@@ -134,27 +110,21 @@ public class SharedFilesDictionary
     public final FileInfo getByHash(
         String tth )
     {
-
-        return (FileInfo) hash2FileInfos.get( tth );
-
+        return hash2FileInfos.get( tth );
     }
-
-    // add
 
     /**
      * @return Returns the hash2FileInfos.
      */
-    public final Map getHash2FileInfos()
+    public final Map<String, FileInfo> getHash2FileInfos()
     {
         return hash2FileInfos;
     }
 
-    // remove
-
     /**
      * @return Returns the name2FileInfos.
      */
-    public final Map getName2FileInfos()
+    public final Map<String, FileInfo> getName2FileInfos()
     {
         return name2FileInfos;
     }
@@ -164,11 +134,9 @@ public class SharedFilesDictionary
      * 
      * @return
      */
-    public final Collection hashKeySet()
+    public final Collection<String> hashKeySet()
     {
-
         return hash2FileInfos.keySet();
-
     }
 
     /**
@@ -179,13 +147,8 @@ public class SharedFilesDictionary
     public final synchronized void remove(
         FileInfo fileInfo )
     {
-        if ( fileInfo == null )
-        {
-            throw new NullPointerException( "fileInfo was null." );
-        }
-
+        Assert.assertNotNull( fileInfo );
         name2FileInfos.remove( fileInfo.getAbsolutePath() );
-
         hash2FileInfos.remove( fileInfo.getHash().getRoot() );
     }
 
@@ -193,13 +156,9 @@ public class SharedFilesDictionary
      * @param hash2FileInfos The hash2FileInfos to set.
      */
     public final void setHash2FileInfos(
-        Map hash2FileInfos )
+        Map<String, FileInfo> hash2FileInfos )
     {
-
-        if ( hash2FileInfos == null )
-        {
-            throw new NullPointerException( "hash2FileInfos was null." );
-        }
+        Assert.assertNotNull( hash2FileInfos );
         this.hash2FileInfos = hash2FileInfos;
     }
 
@@ -207,18 +166,9 @@ public class SharedFilesDictionary
      * @param name2FileInfos The name2FileInfos to set.
      */
     public final void setName2FileInfos(
-        Map name2FileInfos )
+        Map<String, FileInfo> name2FileInfos )
     {
-
-        if ( name2FileInfos == null )
-        {
-            throw new NullPointerException( "name2FileInfos was null." );
-        }
+        Assert.assertNotNull( name2FileInfos );
         this.name2FileInfos = name2FileInfos;
     }
 }
-
-/*******************************************************************************
- * $Log: SharedFilesDictionary.java,v $ Revision 1.8 2005/10/02 11:42:27 timowest updated sources and tests Revision 1.7
- * 2005/09/26 17:19:52 timowest updated sources and tests Revision 1.6 2005/09/12 21:12:02 timowest added log block
- */

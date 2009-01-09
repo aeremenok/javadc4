@@ -289,102 +289,43 @@ public class MainFrame
 
     }
 
-    /**
-     * 
-     */
-    private static final long           serialVersionUID     = 1730490179377255746L;
+    private static final long                         serialVersionUID     = 1730490179377255746L;
 
-    private final static Category       logger               = Category.getInstance( MainFrame.class );
+    private final static Category                     logger               = Category.getInstance( MainFrame.class );
 
-    /** 
-     * 
-     */
-    private final JTabbedPane           tabPane              = new JTabbedPane();
+    private final JTabbedPane                         tabPane              = new JTabbedPane();
 
     // listeners
-    /**
-     * 
-     */
-    private final SettingsListener      settingsListener     = new MySettingsListener();
-
-    /**
-     * 
-     */
-    private final ShareManagerListener  shareManagerListener = new MyTreeHashingListener();
-
-    /**
-     * 
-     */
-    private final ActionListener        menuListener         = new MyActionListener();
+    private final SettingsListener                    settingsListener     = new MySettingsListener();
+    private final ShareManagerListener                shareManagerListener = new MyTreeHashingListener();
+    private final ActionListener                      menuListener         = new MyActionListener();
 
     // gui components
-    /**
-     * 
-     */
-    private final ManagerComponent      hubManagerComponent;
-
-    /**
-     * 
-     */
-    private final MultiSearchComponent  multiSearchComponent;
-
-    /**
-     * 
-     */
-    private final MonitorComponent      slotComponent;
+    private final ManagerComponent                    hubManagerComponent;
+    private final MultiSearchComponent                multiSearchComponent;
+    private final MonitorComponent                    slotComponent;
 
     // private final IncompleteComponent incompleteComponent;
-    /**
-     * 
-     */
-    private final FileBrowseComponent   fileBrowseComponent;
+    private final FileBrowseComponent                 fileBrowseComponent;
 
-    /**
-     * 
-     */
-    private final StatusBar             statusBar            = new StatusBar();
+    private final StatusBar                           statusBar            = new StatusBar();
 
     // private final IDownloadManager downloadManager;
 
     // other components
-    /**
-     * 
-     */
-    private final ISettings             settings;
+    private final ISettings                           settings;
 
-    /**
-     * 
-     */
-    private final IShareManager         shareManager;
+    private final IShareManager<ShareManagerListener> shareManager;
 
     // private final ITreeHashingManager treeHashingManager;
-    /**
-     * 
-     */
-    private final ThemeManager          themeManager;
+    private final ThemeManager                        themeManager;
 
-    /**
-     * 
-     */
-    private SettingsDialog              settingsDialog;
-
-    /** ********************************************************************** */
+    private SettingsDialog                            settingsDialog;
 
     // SysTray
-    /**
-     * 
-     */
-    private final MySysTrayMenuListener sysTrayMenuListener;
-
-    /**
-     * 
-     */
-    private final SysTrayMenu           sysTrayMenu;
-
-    /**
-     * 
-     */
-    private final SysTrayMenuIcon       sysTrayMenuIcon;
+    private final MySysTrayMenuListener               sysTrayMenuListener;
+    private final SysTrayMenu                         sysTrayMenu;
+    private final SysTrayMenuIcon                     sysTrayMenuIcon;
 
     /**
      * Create a MainFrame with the given components
@@ -444,7 +385,7 @@ public class MainFrame
         // incompleteComponent = _incompleteComponent;
         fileBrowseComponent = new FileBrowseComponent( _settings, _downloadManager );
 
-        shareManager = (IShareManager) Spin.off( _shareManager );
+        shareManager = (IShareManager<ShareManagerListener>) Spin.off( _shareManager );
         // treeHashingManager = (ITreeHashingManager)
         // Spin.off(_treeHashingManager);
 
@@ -496,7 +437,6 @@ public class MainFrame
         {
             logger.debug( "Using screen height as default height." );
             h = getToolkit().getScreenSize().height;
-
         }
 
         setSize( w, h );
@@ -613,12 +553,5 @@ public class MainFrame
         sysTrayMenu.addItem( itemShowHide );
 
         sysTrayMenu.showIcon();
-
     }
-
 }
-
-/*******************************************************************************
- * $Log: MainFrame.java,v $ Revision 1.31 2005/10/02 11:42:28 timowest updated sources and tests Revision 1.30
- * 2005/09/25 16:40:58 timowest updated sources and tests Revision 1.29 2005/09/14 07:11:49 timowest updated sources
- */

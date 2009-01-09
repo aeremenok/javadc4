@@ -346,9 +346,7 @@ public class FileBrowseComponent
                 sr.setFileSize( size );
 
                 downloadManager.requestDownload( new DownloadRequest( sr, settings ) );
-
             }
-
         } );
 
         popup.add( download );

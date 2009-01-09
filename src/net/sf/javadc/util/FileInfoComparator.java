@@ -20,19 +20,15 @@ import java.util.Comparator;
  */
 public class FileInfoComparator
     implements
-        Comparator
+        Comparator<FileInfo>
 {
-
     /**
      * Compare two FileInfo objects and return whether they are equal or one is smaller / greater than the other
      */
     public int compare(
-        Object o1,
-        Object o2 )
+        FileInfo f1,
+        FileInfo f2 )
     {
-        FileInfo f1 = (FileInfo) o1;
-        FileInfo f2 = (FileInfo) o2;
-
         String path1 = FileUtils.getPath( f1.getName() );
         String path2 = FileUtils.getPath( f2.getName() );
 
@@ -40,21 +36,12 @@ public class FileInfoComparator
 
         if ( comp == 0 )
         { // if the paths are equal, compare the names
-
             String name1 = FileUtils.getName( f1.getName() );
             String name2 = FileUtils.getName( f2.getName() );
 
             return name1.compareTo( name2 );
 
         }
-
         return comp;
-
     }
-
 }
-
-/*******************************************************************************
- * $Log: FileInfoComparator.java,v $ Revision 1.5 2005/10/02 11:42:28 timowest updated sources and tests Revision 1.4
- * 2005/09/14 07:11:48 timowest updated sources
- */

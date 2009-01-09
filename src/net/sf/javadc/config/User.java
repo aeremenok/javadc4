@@ -11,6 +11,7 @@
 // $Id: User.java,v 1.12 2005/10/02 11:42:27 timowest Exp $
 package net.sf.javadc.config;
 
+import junit.framework.Assert;
 import net.sf.javadc.interfaces.IHubManager;
 import net.sf.javadc.interfaces.ISettings;
 import net.sf.javadc.interfaces.IShareManager;
@@ -53,20 +54,8 @@ public class User
     {
         super( settings.getUserInfo() );
 
-        if ( settings == null )
-        {
-            throw new NullPointerException( "settings was null." );
-        }
-
-        if ( shareManager == null )
-        {
-            throw new NullPointerException( "shareManager was null." );
-        }
-
-        if ( hubManager == null )
-        {
-            throw new NullPointerException( "hubManager was null." );
-        }
+        Assert.assertNotNull( hubManager );
+        Assert.assertNotNull( shareManager );
 
         this.settings = settings;
         this.shareManager = shareManager;

@@ -10,8 +10,7 @@
 
 package net.sf.javadc.net.client;
 
-import java.io.IOException;
-
+import junit.framework.Assert;
 import net.sf.javadc.config.ConnectionSettings;
 import net.sf.javadc.interfaces.IClientManager;
 import net.sf.javadc.interfaces.IClientTaskFactory;
@@ -20,7 +19,6 @@ import net.sf.javadc.interfaces.IConnectionFactory;
 import net.sf.javadc.interfaces.IConnectionManager;
 import net.sf.javadc.interfaces.ITaskManager;
 import net.sf.javadc.listeners.ConnectionListener;
-import net.sf.javadc.net.InvalidArgumentException;
 
 import org.apache.log4j.Category;
 
@@ -37,24 +35,9 @@ public class ConnectionFactory
     private static final Category    logger = Category.getInstance( ConnectionFactory.class );
 
     // components
-    /**
-     * 
-     */
     private final ITaskManager       taskManager;
-
-    /**
-     * 
-     */
     private final IConnectionManager clientConnectionManager;
-
-    /**
-     * 
-     */
     private final IClientManager     clientManager;
-
-    /**
-     * 
-     */
     private final IClientTaskFactory clientTaskFactory;
 
     /**
@@ -71,32 +54,16 @@ public class ConnectionFactory
         IClientManager _clientManager,
         IClientTaskFactory _clientTaskFactory )
     {
-
-        if ( _taskManager == null )
-        {
-            throw new NullPointerException( "_taskManager was null." );
-        }
-        else if ( _clientConnectionManager == null )
-        {
-            throw new NullPointerException( "_clientConnectionManager was null." );
-        }
-        else if ( _clientManager == null )
-        {
-            throw new NullPointerException( "_clientManager was null." );
-        }
-        else if ( _clientTaskFactory == null )
-        {
-            throw new NullPointerException( "_clientTaskFactory was null." );
-        }
+        Assert.assertNotNull( _clientTaskFactory );
+        Assert.assertNotNull( _taskManager );
+        Assert.assertNotNull( _clientManager );
+        Assert.assertNotNull( _clientConnectionManager );
 
         taskManager = _taskManager;
         clientConnectionManager = _clientConnectionManager;
         clientManager = _clientManager;
         clientTaskFactory = _clientTaskFactory;
-
     }
-
-    /** ********************************************************************** */
 
     /*
      * (non-Javadoc)
@@ -109,12 +76,7 @@ public class ConnectionFactory
         ConnectionListener listener,
         boolean isServer )
     {
-
-        if ( client == null )
-        {
-            throw new InvalidArgumentException( "Client was null." );
-
-        }
+        Assert.assertNotNull( client );
 
         if ( clientConnectionManager.getConnectionCount() == ConnectionSettings.MAX_CONNECTION_COUNT )
         {
@@ -128,50 +90,24 @@ public class ConnectionFactory
 
         IConnection conn = null;
 
-        try
-        {
-            conn =
-                new Connection( client, listener, isServer, taskManager, clientConnectionManager, clientManager,
-                    clientTaskFactory );
+        conn =
+            new Connection( client, listener, isServer, taskManager, clientConnectionManager, clientManager,
+                clientTaskFactory );
 
-            client.setConnection( conn );
-
-        }
-        catch ( IOException e )
-        {
-            logger.error( "Error when trying to create Client Connection." );
-            logger.error( e );
-
-        }
+        client.setConnection( conn );
 
         if ( clientConnectionManager.contains( conn ) )
         {
             // ConnectionManager includes a reference to the same
             // Client Connenction
-
             String debug = "Connection was already available in " + "ConnectionManager.";
             logger.debug( debug );
 
             return clientConnectionManager.getConnection( conn );
-
-        }
-        else
-        {
-            // ConnectionManager doesn't include a reference to a Client
-            // Connection
-
-            String debug = "Connection has not yet been added to ConnectionManager";
-            logger.debug( debug );
-
-            return conn;
-
         }
 
+        String debug = "Connection has not yet been added to ConnectionManager";
+        logger.debug( debug );
+        return conn;
     }
-
 }
-
-/*******************************************************************************
- * $Log: ConnectionFactory.java,v $ Revision 1.17 2005/10/02 11:42:28 timowest updated sources and tests Revision 1.16
- * 2005/09/30 15:59:53 timowest updated sources and tests Revision 1.15 2005/09/12 21:12:02 timowest added log block
- */

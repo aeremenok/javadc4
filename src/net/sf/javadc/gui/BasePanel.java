@@ -17,6 +17,7 @@ import java.awt.LayoutManager;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 
+import junit.framework.Assert;
 import net.sf.javadc.util.FileUtils;
 
 /**
@@ -27,20 +28,15 @@ import net.sf.javadc.util.FileUtils;
 class BasePanel
     extends JPanel
 {
-    /**
-     * 
-     */
     private static final long     serialVersionUID = -1225195648999091041L;
 
     // images used to symbolize different connection types
     private static final String[] imageNames       =
-                                                       { "images/32/modem.png", "images/32/Satellite.png",
-                    "images/32/dsl.png", "images/32/Cable.png", "images/32/lan.png", "images/32/server.png",
-                    "images/32/Fireball.png", "images/32/op.png" };
+                                                       { "images/32/modem.png", "images/32/satellite.png",
+                    "images/32/isdn.png" // todo dsl.png (it's broken now)
+                    , "images/32/cable.png", "images/32/isdn.png" // todo lan.png (it's broken now)
+                    , "images/32/server.png", "images/32/fireball.png", "images/32/op.png" };
 
-    /**
-     * 
-     */
     private final int             iconsize         = 16;
 
     /**
@@ -49,7 +45,6 @@ class BasePanel
     public BasePanel()
     {
         super();
-
     }
 
     /**
@@ -61,10 +56,7 @@ class BasePanel
         LayoutManager layout )
     {
         super( layout );
-
     }
-
-    /** ********************************************************************** */
 
     /**
      * Get the image with the given part in the given form
@@ -79,17 +71,11 @@ class BasePanel
     {
         ImageIcon icon = FileUtils.loadIcon( path );
 
-        if ( icon == null )
-        {
-            throw new NullPointerException( "Could not load image for " + path );
-        }
+        Assert.assertNotNull( path, icon );
 
         Image image = icon.getImage().getScaledInstance( iconsize, iconsize, Image.SCALE_SMOOTH );
-
         icon.setImage( image );
-
         return icon;
-
     }
 
     /**
@@ -105,7 +91,6 @@ class BasePanel
         for ( int i = 0; i < buffer.length; i++ )
         {
             buffer[i] = getImage( imageNames[i % 8], (i > 7) );
-
         }
 
         return buffer;
@@ -113,10 +98,3 @@ class BasePanel
     }
 
 }
-
-/*******************************************************************************
- * $Log: BasePanel.java,v $ Revision 1.15 2006/06/02 07:46:41 timowest removed obsolete test suites Revision 1.14
- * 2005/10/02 11:42:28 timowest updated sources and tests Revision 1.13 2005/09/30 15:59:53 timowest updated sources and
- * tests Revision 1.12 2005/09/25 16:40:58 timowest updated sources and tests Revision 1.11 2005/09/15 17:32:29 timowest
- * added null checks Revision 1.10 2005/09/14 07:11:49 timowest updated sources
- */

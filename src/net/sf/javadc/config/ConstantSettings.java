@@ -24,9 +24,6 @@ public class ConstantSettings
     public final static String BROWSELIST_ZIP                  = "MyList.bz2";
 
     // public final static String HASH_INDEX_FILENAME = "hashedfilelist.xml";
-    /**
-     * 
-     */
     public final static String HASH_INDEX_FILENAME             = "hashedfilelist";
 
     /** End character of a DirectConnect command */
@@ -34,49 +31,25 @@ public class ConstantSettings
     /** Separator char of a DirectConnect command */
     public final static char   COMMAND_SEP_CHAR                = ' ';
 
-    /**
-     * 
-     */
     public final static String COMMAND_SEP                     = String.valueOf( COMMAND_SEP_CHAR );
 
     /** Path Separator for DirectConnect file lists */
     public final static char   DC_PATH_SEPARATOR               = '\\';
 
-    /**
-     * 
-     */
     public final static String DOWNLOAD_DIRECTION              = "Download";
 
-    /**
-     * 
-     */
     public final static String UPLOAD_DIRECTION                = "Upload";
 
-    /**
-     * 
-     */
     public final static char   SEARCHRESULT_SEP_CHAR           = (char) 5;
 
     // GUI related
 
-    /**
-     * 
-     */
     public final static String MAINFRAME_TITLE                 = "javadc3 - DirectConnect Java Client";
 
-    /**
-     * 
-     */
     public final static int    STATISTICS_UPDATE_INTERVAL      = 1 * 1000;
 
-    /**
-     * 
-     */
     public final static int    SEARCHRESULTS_UPDATEINTERVAL    = 1 * 1000;
 
-    /**
-     * 
-     */
     public final static int    MANAGERCOMPONENT_UPDATEINTERVAL = 1 * 1000;
 
     /** Sleeping time for the main loop */
@@ -87,19 +60,12 @@ public class ConstantSettings
      */
     public final static String HUBTASKFACTORY_PREFIX           = "net.sf.javadc.tasks.hub.";
 
-    /**
-     * 
-     */
     public final static String HUBTASKFACTORY_POSTFIX          = "Task";
 
     /**
      * Strings used to query for Task classes which are related to Client actions
      */
     public final static String CLIENTTASKFACTORY_PREFIX        = "net.sf.javadc.tasks.client.";
-
-    /**
-     * 
-     */
     public final static String CLIENTTASKFACTORY_POSTFIX       = "Task";
 
     /** represents the Default Port for Hub connections */
@@ -107,10 +73,4 @@ public class ConstantSettings
 
     /** maximum of search results that are returned for one request */
     public final static int    MAX_SEARCH_RESULTS              = 15;
-
 }
-
-/*******************************************************************************
- * $Log: ConstantSettings.java,v $ Revision 1.15 2005/10/02 11:42:27 timowest updated sources and tests Revision 1.14
- * 2005/09/30 15:59:52 timowest updated sources and tests Revision 1.13 2005/09/14 07:11:48 timowest updated sources
- */

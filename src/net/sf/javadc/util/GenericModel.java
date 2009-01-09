@@ -24,11 +24,10 @@ import net.sf.javadc.interfaces.IGenericModel;
  * @author Timo Westk�mper To change the template for this generated type comment go to
  *         Window&gt;Preferences&gt;Java&gt;Code Generation&gt;Code and Comments
  */
-public abstract class GenericModel
+public abstract class GenericModel<ListenerType extends EventListener>
     implements
-        IGenericModel
+        IGenericModel<ListenerType>
 {
-
     protected final transient EventListenerList listenerList = new EventListenerList();
 
     /* 
@@ -37,11 +36,9 @@ public abstract class GenericModel
      * @see net.sf.javadc.interfaces.IGenericModel#addListener(java.util.EventListener)
      */
     public void addListener(
-        EventListener listener )
+        ListenerType listener )
     {
-        // TODO : type checking
         listenerList.add( getListenerClass(), listener );
-
     }
 
     /*
@@ -52,7 +49,6 @@ public abstract class GenericModel
     public EventListenerList getListeners()
     {
         return listenerList;
-
     }
 
     /*
@@ -61,11 +57,9 @@ public abstract class GenericModel
      * @see net.sf.javadc.interfaces.IGenericModel#removeListener(java.util.EventListener)
      */
     public void removeListener(
-        EventListener listener )
+        ListenerType listener )
     {
-        // TODO : type checking
         listenerList.remove( getListenerClass(), listener );
-
     }
 
     /**
@@ -73,11 +67,5 @@ public abstract class GenericModel
      * 
      * @return
      */
-    protected abstract Class getListenerClass();
-
+    protected abstract Class<ListenerType> getListenerClass();
 }
-
-/*******************************************************************************
- * $Log: GenericModel.java,v $ Revision 1.9 2005/10/02 11:42:28 timowest updated sources and tests Revision 1.8
- * 2005/09/14 07:11:48 timowest updated sources
- */

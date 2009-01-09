@@ -11,6 +11,7 @@
 package net.sf.javadc.interfaces;
 
 import java.io.File;
+import java.util.EventListener;
 import java.util.List;
 
 import net.sf.javadc.net.SearchRequest;
@@ -21,11 +22,10 @@ import net.sf.javadc.net.SearchRequest;
  * 
  * @author tw70794
  */
-public interface IShareManager
+public interface IShareManager<ListenerType extends EventListener>
     extends
-        IGenericModel
+        IGenericModel<ListenerType>
 {
-
     /**
      * Notify registered listeners that the browse list has been created
      */

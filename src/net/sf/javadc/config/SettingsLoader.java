@@ -31,22 +31,14 @@ public class SettingsLoader
     implements
         ISettingsLoader
 {
+    static private final Category logger          = Category.getInstance( SettingsLoader.class );
 
     /**
      * Factory method implementation to create instance of Settings, if the XML serialized representation is not
      * available
      */
     private final SettingsFactory settingsFactory = new SettingsFactory();
-
-    static private final Category logger          = Category.getInstance( SettingsLoader.class );
-    /**
-     * 
-     */
     private final String          configFileName;
-
-    /**
-     * 
-     */
     private ISettings             settings;
 
     /**
@@ -55,7 +47,6 @@ public class SettingsLoader
     public SettingsLoader()
     {
         configFileName = "config.xml";
-
     }
 
     /**
@@ -67,10 +58,7 @@ public class SettingsLoader
         String _configFileName )
     {
         configFileName = _configFileName;
-
     }
-
-    /** ********************************************************************** */
 
     /**
      * loads the core application settings from an XML configuration file
@@ -79,12 +67,7 @@ public class SettingsLoader
      */
     public ISettings load()
     {
-        // DEBUG
-        logger.debug( "loading Settings ... " );
-
-        // System.out.println();
-        // System.out.println("loading Settings ... ");
-        // System.out.println("====================================================");
+        logger.debug( "Loading settings ... " );
 
         try
         {
@@ -93,27 +76,18 @@ public class SettingsLoader
             settings = (ISettings) d.readObject();
             d.close();
 
+            logger.info( "Settings loaded." );
         }
         catch ( Exception e )
         {
-            // logger.error("Catched " + e.getClass().getName()
-            // + " when trying to load Settings.");
-            // logger.error(e);
+            logger.error( "Cannot load settings", e );
 
-            logger.error( "Caught " + e.getClass().getName(), e );
-
-        }
-
-        if ( settings == null )
-        {
             settings = settingsFactory.createDefaultSettings();
-
+            logger.info( "Clean settings created." );
+            save();
         }
-
-        logger.info( "Settings loaded." );
 
         return settings;
-
     }
 
     /**
@@ -121,11 +95,7 @@ public class SettingsLoader
      */
     public void save()
     {
-        logger.debug( "saving Settings ... " );
-
-        // System.out.println();
-        // System.out.println("saving Settings ...");
-        // System.out.println("====================================================");
+        logger.debug( "Saving settings ... " );
 
         try
         {
@@ -135,23 +105,10 @@ public class SettingsLoader
             e.close();
 
             logger.info( "Settings saved." );
-
         }
         catch ( Exception e )
         {
-            // logger.error("Catched " + e.getClass().getName()
-            // + " when trying to save Settings.");
-            // logger.error(e);
-
-            logger.error( "Caught " + e.getClass().getName(), e );
-
+            logger.error( "cannot save settings", e );
         }
-
     }
-
 }
-
-/*******************************************************************************
- * $Log: SettingsLoader.java,v $ Revision 1.16 2005/10/02 11:42:27 timowest updated sources and tests Revision 1.15
- * 2005/09/30 15:59:52 timowest updated sources and tests Revision 1.14 2005/09/14 07:11:48 timowest updated sources
- */

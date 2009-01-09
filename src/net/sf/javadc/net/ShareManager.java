@@ -31,6 +31,7 @@ import java.util.List;
 import java.util.Set;
 import java.util.Stack;
 
+import junit.framework.Assert;
 import net.sf.javadc.config.ConstantSettings;
 import net.sf.javadc.gui.ShareManagerWindow;
 import net.sf.javadc.interfaces.ISettings;
@@ -91,9 +92,7 @@ public class ShareManager
             {
                 logger.error( "Caught " + e.getClass().getName() + " in FileHasher.", e );
                 // logger.error(e);
-
             }
-
         }
 
         private void hash()
@@ -105,7 +104,7 @@ public class ShareManager
                 FileInfo fileInfo;
                 synchronized ( fileToBeHashed )
                 {
-                    fileInfo = (FileInfo) fileToBeHashed.pop();
+                    fileInfo = fileToBeHashed.pop();
                 }
 
                 try
@@ -181,13 +180,11 @@ public class ShareManager
                 {
                     logger.error( "Unable to Hash: No algorithm", e );
                     // logger.error(e);
-
                 }
                 catch ( FileNotFoundException e )
                 {
                     logger.error( "Unable to Hash: File not found", e );
                     // logger.error(e);
-
                 }
                 catch ( IOException e )
                 {
@@ -219,26 +216,22 @@ public class ShareManager
         @Override
         public void run()
         {
-
             try
             {
                 manage();
-
             }
             catch ( Exception e )
             {
                 logger.error( "Caught " + e.getClass().getName() + " in HashedFilesManager.", e );
                 // logger.error(e);
-
             }
-
         }
 
         private void manage()
         {
             managing = true;
 
-            Set keys = new HashSet();
+            Set<String> keys = new HashSet<String>();
 
             synchronized ( hashedFiles )
             {
@@ -266,7 +259,6 @@ public class ShareManager
                     else if ( !sharedFiles.contains( fileInfo ) )
                     {
                         hashedFiles.remove( fileInfo );
-
                     }
                     else
                     {
@@ -294,54 +286,18 @@ public class ShareManager
 
     private final static Category   logger            = Category.getInstance( ShareManager.class );
 
-    // attributes
-    /**
-     * 
-     */
-    private final List              sharedFiles       = new ArrayList();
-
-    /**
-     * 
-     */
+    private final List<FileInfo>    sharedFiles       = new ArrayList<FileInfo>();
     private SharedFilesDictionary   hashedFiles;
-
-    /** 
-     * 
-     */
-    private final Stack             fileToBeHashed    = new Stack();
-
-    /**
-     * 
-     */
+    private final Stack<FileInfo>   fileToBeHashed    = new Stack<FileInfo>();
     private final BrowseListBuilder browseListBuilder = new BrowseListBuilder( sharedFiles );
-
-    /**
-     * 
-     */
     private boolean                 update            = true;
-
-    /**
-     * 
-     */
     private boolean                 running           = false;
-
-    /**
-     * 
-     */
     private boolean                 hashing           = false;
-
-    /**
-     * 
-     */
     private boolean                 managing          = false;
 
     private long                    shareSize;
 
-    // components
     private ISettings               settings;
-
-    /** ********************************************************************** */
-
     private ITaskManager            taskManager;
 
     /**
@@ -352,15 +308,8 @@ public class ShareManager
         ISettings _settings,
         ITaskManager _taskManager )
     {
-
-        if ( _settings == null )
-        {
-            throw new NullPointerException( "_settings was null." );
-        }
-        else if ( _taskManager == null )
-        {
-            throw new NullPointerException( "_taskManager was null" );
-        }
+        Assert.assertNotNull( _settings );
+        Assert.assertNotNull( _taskManager );
 
         settings = _settings;
         taskManager = _taskManager;
@@ -377,19 +326,17 @@ public class ShareManager
         // browselist
         if ( filename.equals( ConstantSettings.BROWSELIST ) )
         {
-            return new File( ConstantSettings.BROWSELIST );
-
             // compressed browse list
+            return new File( ConstantSettings.BROWSELIST );
         }
         else if ( filename.equals( ConstantSettings.BROWSELIST_ZIP ) )
         {
-            return new File( ConstantSettings.BROWSELIST_ZIP );
-
             // normal file
+            return new File( ConstantSettings.BROWSELIST_ZIP );
         }
         else
         {
-            final FileInfo[] shared = (FileInfo[]) sharedFiles.toArray( new FileInfo[sharedFiles.size()] );
+            final FileInfo[] shared = sharedFiles.toArray( new FileInfo[sharedFiles.size()] );
 
             for ( int i = 0; i < shared.length; i++ )
             {
@@ -402,17 +349,12 @@ public class ShareManager
                     if ( f.isFile() )
                     {
                         return f;
-
                     }
-
                 }
-
             }
-
         }
 
         return null;
-
     }
 
     /**
@@ -421,7 +363,6 @@ public class ShareManager
     public final long getSharedSize()
     {
         return shareSize;
-
     }
 
     /*
@@ -436,13 +377,11 @@ public class ShareManager
         try
         {
             updateSharedFiles();
-
         }
         catch ( Exception e )
         {
             logger.error( "Caught " + e.getClass().getName() + " when trying to update shared files.", e );
             // logger.error(e);
-
         }
 
         running = false;
@@ -464,11 +403,8 @@ public class ShareManager
                 update = false;
 
                 new Thread( this, "ShareManager" ).start();
-
             }
-
         }
-
     }
 
     /*
@@ -476,12 +412,12 @@ public class ShareManager
      * 
      * @see net.sf.javadc.interfaces.IShareManager#search(net.sf.javadc.net.SearchRequest)
      */
-    public final List search(
+    public final List<SearchResult> search(
         SearchRequest sr )
     {
         PerformanceContext cont = null;
 
-        List results = null;
+        List<SearchResult> results = null;
 
         // search via hash information
 
@@ -493,36 +429,33 @@ public class ShareManager
 
             if ( fileInfo != null )
             {
-                results = new ArrayList();
+                results = new ArrayList<SearchResult>();
                 results.add( new SearchResult( fileInfo, sr, settings ) );
             }
 
             // search via some other information
-
         }
         else
         {
             cont = new PerformanceContext( "ShareManager#search(SearchRequest) using standard" ).start();
 
-            FileInfo[] shared = (FileInfo[]) sharedFiles.toArray( new FileInfo[0] );
+            FileInfo[] shared = sharedFiles.toArray( new FileInfo[0] );
 
             int size = 0;
 
             for ( int i = 0; i < shared.length && size < ConstantSettings.MAX_SEARCH_RESULTS; i++ )
             {
-
                 // match
 
                 if ( sr.matches( shared[i] ) )
                 {
                     if ( results == null )
                     {
-                        results = new ArrayList();
+                        results = new ArrayList<SearchResult>();
                     }
                     results.add( new SearchResult( shared[i], sr, settings ) );
                     size++;
                 }
-
             }
 
         }
@@ -536,13 +469,9 @@ public class ShareManager
 
         if ( results == null )
         {
-            return Collections.EMPTY_LIST;
+            return Collections.emptyList();
         }
-        else
-        {
-            return results;
-        }
-
+        return results;
     }
 
     /*
@@ -553,10 +482,6 @@ public class ShareManager
     public void start()
     {
         logger.debug( "starting " + this.getClass().getName() );
-
-        // System.out.println();
-        // System.out.println("starting " + this.getClass().getName());
-        // System.out.println("====================================================");
 
         // the first update of the shared files is executed in the main thread
         // when the ShareManager is created, because the Hubs, which are
@@ -574,12 +499,10 @@ public class ShareManager
 
         logger.debug( "loading Hashed file list ... " );
 
+        String hashedFileList = ConstantSettings.HASH_INDEX_FILENAME;
         try
         {
-            String hashedFileList = ConstantSettings.HASH_INDEX_FILENAME;
-            // d = new XMLDecoder(new BufferedInputStream(new FileInputStream(
-            // hashedFileList)));
-
+            // d = new XMLDecoder(new BufferedInputStream(new FileInputStream(hashedFileList)));
             // hashedFiles = (SharedFilesDictionary) d.readObject();
 
             ois = new ObjectInputStream( new BufferedInputStream( new FileInputStream( new File( hashedFileList ) ) ) );
@@ -592,16 +515,14 @@ public class ShareManager
 
             System.out.println( cont.end() );
 
-            // System.out.println("Loaded hashed file list in " + (end - start)
-            // + " ms.");
-
+            // System.out.println("Loaded hashed file list in " + (end - start) + " ms.");
+            logger.debug( "Hashed file list loaded." );
         }
         catch ( Exception e )
         {
-            String error =
-                "Caught " + e.getClass().getName() + " when trying to " + " read hashing information from file.";
-            logger.error( error, e );
-            // logger.error(e);
+            logger.error( "cannot load hashed file list", e );
+            hashedFiles = new SharedFilesDictionary();
+            logger.debug( "new hashed file list created " );
         }
         finally
         {
@@ -615,17 +536,11 @@ public class ShareManager
                 }
                 catch ( IOException e1 )
                 {
-                    logger.error( "Caught " + e1.getClass().getName(), e1 );
+                    logger.error( "cannot close ObjectInputStream", e1 );
                 }
             }
         }
 
-        if ( hashedFiles == null )
-        {
-            hashedFiles = new SharedFilesDictionary();
-        }
-
-        logger.debug( "Hashed file list loaded." );
         updateSharedFiles();
 
         dialog.setVisible( false );
@@ -637,7 +552,6 @@ public class ShareManager
         // the update flag is set to true
         // new Thread(this).start();
         taskManager.addTask( this );
-
     }
 
     /*
@@ -649,10 +563,6 @@ public class ShareManager
     {
 
         logger.debug( "stopping " + this.getClass().getName() );
-
-        // System.out.println();
-        // System.out.println("stopping " + this.getClass().getName());
-        // System.out.println("====================================================");
 
         // Save Hashed file list
         logger.debug( "saving Hashed file list ... " );
@@ -689,12 +599,9 @@ public class ShareManager
         {
             String error = "Error when trying to save hashing information to file.";
             logger.error( error, e );
-            // logger.error(e);
-
         }
         finally
         {
-
             // if (e != null) e.close();
 
             if ( oos != null )
@@ -708,7 +615,6 @@ public class ShareManager
                     logger.error( "Caught " + e1.getClass().getName(), e1 );
                 }
             }
-
         }
     }
 
@@ -733,10 +639,8 @@ public class ShareManager
         File file,
         String name )
     {
-
         if ( !file.isDirectory() )
         { // file is File
-
             // doesn't add general filesand executables
             int fileType = SearchRequest.getFileType( name );
 
@@ -756,9 +660,7 @@ public class ShareManager
                 {
                     fileToBeHashed.push( fileInfo );
                 }
-
             }
-
         }
         else
         { // file is Directory
@@ -774,18 +676,14 @@ public class ShareManager
                     addFile( children[i], name + ConstantSettings.DC_PATH_SEPARATOR + children[i].getName() );
 
                 }
-
                 // logger.debug("Directory " + name + " added.");
                 // has no children
             }
             else
             {
-
                 // logger.error("IO-error " + file);
             }
-
         }
-
     }
 
     /**
@@ -823,28 +721,18 @@ public class ShareManager
         sharedFiles.clear();
         fileToBeHashed.clear();
 
-        List dirList = settings.getUploadDirs();
-
+        List<String> dirList = settings.getUploadDirs();
         // the list of directories can be null if Settings is a fresh instance
         if ( dirList == null )
         {
-            dirList = new ArrayList();
+            dirList = new ArrayList<String>();
         }
 
-        // parsing directory list
-        String[] dirs = (String[]) dirList.toArray( new String[0] );
-
-        for ( int i = 0; i < dirs.length; i++ )
+        for ( String dir : dirList )
         {
-            // final File file = new File(dirs[i]);
-            // addFile(file, file.getName());
-            // FileUtils version seems to be faster
-            addFile( new File( dirs[i] ), FileUtils.getName( dirs[i] ) );
-
-            logger.info( "Directory " + dirs[i] + " added." );
-
-            fireDirectoryAdded( dirs[i] );
-
+            addFile( new File( dir ), FileUtils.getName( dir ) );
+            logger.info( "Directory " + dir + " added." );
+            fireDirectoryAdded( dir );
         }
 
         // creating browselist
@@ -856,15 +744,11 @@ public class ShareManager
         {
             browseListBuilder.createBrowseList();
             logger.debug( "BrowseList created." );
-
             fireBrowseListCreated();
-
         }
         catch ( IOException e )
         {
             logger.error( "Could not create browselist.", e );
-            // logger.error(e);
-
         }
 
         if ( !hashing )
@@ -875,15 +759,7 @@ public class ShareManager
         if ( !managing )
         {
             startManagingThread();
-            // Garbage collection
             // System.gc();
         }
     }
 }
-
-/*******************************************************************************
- * $Log: ShareManager.java,v $ Revision 1.34 2005/10/02 11:42:27 timowest updated sources and tests Revision 1.33
- * 2005/09/30 15:59:53 timowest updated sources and tests Revision 1.32 2005/09/26 17:19:52 timowest updated sources and
- * tests Revision 1.31 2005/09/25 16:40:58 timowest updated sources and tests Revision 1.30 2005/09/14 07:11:50 timowest
- * updated sources Revision 1.29 2005/09/12 21:12:02 timowest added log block
- */

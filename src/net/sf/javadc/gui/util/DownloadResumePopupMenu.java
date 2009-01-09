@@ -285,7 +285,7 @@ public class DownloadResumePopupMenu
         menu.setIcon( FileUtils.loadIcon( "images/16/save_edit.gif" ) );
         final File downloadDir = new File( settings.getTempDownloadDir() );
 
-        if ( downloadDir != null & downloadDir.isDirectory() )
+        if ( downloadDir.isDirectory() )
         {
             final String[] list = downloadDir.list();
             final String remoteName = searchResult.getFilename();
