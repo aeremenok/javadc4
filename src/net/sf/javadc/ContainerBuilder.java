@@ -11,6 +11,7 @@
 // $Id: ContainerBuilder.java,v 1.26 2005/10/02 11:42:29 timowest Exp $
 package net.sf.javadc;
 
+import junit.framework.Assert;
 import net.sf.javadc.config.SettingsAdapter;
 import net.sf.javadc.config.SettingsLoader;
 import net.sf.javadc.config.User;
@@ -133,10 +134,7 @@ public class ContainerBuilder
     public final MutablePicoContainer buildGuiContainer(
         MutablePicoContainer mainContainer )
     {
-        if ( mainContainer == null )
-        {
-            throw new NullPointerException( "mainContainer was null." );
-        }
+        Assert.assertNotNull( mainContainer );
 
         final MutablePicoContainer guiContainer = new DefaultPicoContainer( mainContainer );
 

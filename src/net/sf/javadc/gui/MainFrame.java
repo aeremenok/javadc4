@@ -16,6 +16,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
 import java.text.NumberFormat;
+import java.util.EventListener;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -25,6 +26,7 @@ import javax.swing.JTabbedPane;
 import javax.swing.SwingUtilities;
 import javax.swing.border.EmptyBorder;
 
+import junit.framework.Assert;
 import net.sf.javadc.Main;
 import net.sf.javadc.config.AdvancedSettings;
 import net.sf.javadc.config.ConstantSettings;
@@ -42,11 +44,6 @@ import net.sf.javadc.util.FileUtils;
 import org.apache.log4j.Category;
 import org.picocontainer.Startable;
 
-import snoozesoft.systray4j.SysTrayMenu;
-import snoozesoft.systray4j.SysTrayMenuEvent;
-import snoozesoft.systray4j.SysTrayMenuIcon;
-import snoozesoft.systray4j.SysTrayMenuItem;
-import snoozesoft.systray4j.SysTrayMenuListener;
 import spin.Spin;
 
 /**
@@ -165,73 +162,6 @@ public class MainFrame
 
     }
 
-    private class MySysTrayMenuListener
-        implements
-            SysTrayMenuListener
-    {
-        private JFrame mainFrame;
-
-        public MySysTrayMenuListener(
-            JFrame _mainFrame )
-        {
-            mainFrame = _mainFrame;
-        }
-
-        public void iconLeftClicked(
-            SysTrayMenuEvent event )
-        {
-        }
-
-        public void iconLeftDoubleClicked(
-            SysTrayMenuEvent event )
-        {
-            showhide();
-        }
-
-        public void menuItemSelected(
-            SysTrayMenuEvent event )
-        {
-            String command = event.getActionCommand();
-
-            if ( command.equals( "exit" ) )
-            {
-                Main.close();
-            }
-
-            if ( command.equals( "showhide" ) )
-            {
-                showhide();
-            }
-
-            if ( command.equals( "settings" ) )
-            {
-                try
-                {
-                    settingsDialog = new SettingsDialog( MainFrame.this, "Preferences", true, settings, shareManager );
-                    settingsDialog.showSettings();
-
-                }
-                catch ( Exception ex )
-                {
-                    logger.debug( ex.toString() );
-                }
-            }
-        }
-
-        private void showhide()
-        {
-            boolean visible = mainFrame.isVisible();
-            mainFrame.setVisible( visible );
-            if ( visible )
-            {
-                if ( JFrame.ICONIFIED == mainFrame.getExtendedState() )
-                {
-                    mainFrame.setExtendedState( JFrame.NORMAL );
-                }
-            }
-        }
-    }
-
     private class MyTreeHashingListener
         extends ShareManagerListenerBase
     {
@@ -260,35 +190,30 @@ public class MainFrame
 
     // listeners
     private final SettingsListener                    settingsListener     = new MySettingsListener();
-    private final ShareManagerListener                shareManagerListener = new MyTreeHashingListener();
-    private final ActionListener                      menuListener         = new MyActionListener();
 
+    private final ShareManagerListener                shareManagerListener = new MyTreeHashingListener();
+
+    private final ActionListener                      menuListener         = new MyActionListener();
     // gui components
     private final ManagerComponent                    hubManagerComponent;
     private final MultiSearchComponent                multiSearchComponent;
-    private final MonitorComponent                    slotComponent;
 
+    private final MonitorComponent                    slotComponent;
     // private final IncompleteComponent incompleteComponent;
     private final FileBrowseComponent                 fileBrowseComponent;
-
     private final StatusBar                           statusBar            = new StatusBar();
 
-    // private final IDownloadManager downloadManager;
-
     // other components
-    private final ISettings                           settings;
+    private final ISettings<EventListener>            settings;
 
     private final IShareManager<ShareManagerListener> shareManager;
 
+    // private final IDownloadManager downloadManager;
+
     // private final ITreeHashingManager treeHashingManager;
-    private final LAFManager                        themeManager;
+    private final LAFManager                          themeManager;
 
     private SettingsDialog                            settingsDialog;
-
-    // SysTray
-    private final MySysTrayMenuListener               sysTrayMenuListener;
-    private final SysTrayMenu                         sysTrayMenu;
-    private final SysTrayMenuIcon                     sysTrayMenuIcon;
 
     /**
      * Create a MainFrame with the given components
@@ -302,7 +227,7 @@ public class MainFrame
      * @param _downloadManager IDownloadManager instance to be used
      */
     public MainFrame(
-        ISettings _settings,
+        ISettings<EventListener> _settings,
         LAFManager _themeManager,
         MonitorComponent _slotComponent,
         ManagerComponent _hubManagerComponent,
@@ -313,34 +238,13 @@ public class MainFrame
 
         super( ConstantSettings.MAINFRAME_TITLE );
 
-        if ( _settings == null )
-        {
-            throw new NullPointerException( "_settings was null." );
-        }
-        else if ( _themeManager == null )
-        {
-            throw new NullPointerException( "_themeManager was null." );
-        }
-        else if ( _slotComponent == null )
-        {
-            throw new NullPointerException( "_slotComponent was null." );
-        }
-        else if ( _hubManagerComponent == null )
-        {
-            throw new NullPointerException( "_hubManagerComponent was null." );
-        }
-        else if ( _multiSearchComponent == null )
-        {
-            throw new NullPointerException( "_multiSearchComponent was null." );
-        }
-        else if ( _shareManager == null )
-        {
-            throw new NullPointerException( "_shareManager was null." );
-        }
-        else if ( _downloadManager == null )
-        {
-            throw new NullPointerException( "_downloadManager was null." );
-        }
+        Assert.assertNotNull( _settings );
+        Assert.assertNotNull( _themeManager );
+        Assert.assertNotNull( _slotComponent );
+        Assert.assertNotNull( _hubManagerComponent );
+        Assert.assertNotNull( _multiSearchComponent );
+        Assert.assertNotNull( _shareManager );
+        Assert.assertNotNull( _downloadManager );
 
         hubManagerComponent = _hubManagerComponent;
         multiSearchComponent = _multiSearchComponent;
@@ -365,10 +269,6 @@ public class MainFrame
         settingsDialog = new SettingsDialog( this, "Preferences", true, settings, shareManager );
 
         // sets systray properties
-        sysTrayMenuListener = new MySysTrayMenuListener( this );
-        sysTrayMenuIcon = new SysTrayMenuIcon( getClass().getClassLoader().getResource( "images/16/javadc.ico" ) );
-        sysTrayMenuIcon.addSysTrayMenuListener( sysTrayMenuListener );
-        sysTrayMenu = new SysTrayMenu( sysTrayMenuIcon, ConstantSettings.MAINFRAME_TITLE );
 
         // sets up components
         setupComponents();
@@ -396,6 +296,26 @@ public class MainFrame
 
         setSize( w, h );
 
+        TrayMenu.createTrayMenu();
+    }
+
+    public void showhide()
+    {
+        boolean visible = isVisible();
+        setVisible( visible );
+        if ( isVisible() )
+        {
+            if ( JFrame.ICONIFIED == getExtendedState() )
+            {
+                setExtendedState( JFrame.NORMAL );
+            }
+        }
+    }
+
+    public void showSettings()
+    {
+        settingsDialog = new SettingsDialog( MainFrame.this, "Preferences", true, settings, shareManager );
+        settingsDialog.showSettings();
     }
 
     /*
@@ -437,7 +357,6 @@ public class MainFrame
         advanced.setYSize( getHeight() );
 
         setVisible( false );
-
     }
 
     /**
@@ -449,9 +368,7 @@ public class MainFrame
 
         // Tab Pane
         tabPane.addTab( "Hubs", FileUtils.loadIcon( "images/16/network_local.png" ), hubManagerComponent );
-
         tabPane.addTab( "Search", FileUtils.loadIcon( "images/16/find.png" ), multiSearchComponent );
-
         tabPane.addTab( "Monitor", FileUtils.loadIcon( "images/16/list.png" ), slotComponent );
 
         JLabel fileBrowseLabel = new JLabel( "SharedFiles" );
@@ -471,28 +388,5 @@ public class MainFrame
         getContentPane().setLayout( new BorderLayout() );
         getContentPane().add( tabPane, BorderLayout.CENTER );
         getContentPane().add( statusBar, BorderLayout.SOUTH );
-
-        // create an exit item
-        SysTrayMenuItem itemExit = new SysTrayMenuItem( "Exit", "exit" );
-
-        itemExit.addSysTrayMenuListener( sysTrayMenuListener );
-
-        // create an about item
-        SysTrayMenuItem itemAbout = new SysTrayMenuItem( "Settings...", "settings" );
-
-        itemAbout.addSysTrayMenuListener( sysTrayMenuListener );
-
-        // create an about item
-        SysTrayMenuItem itemShowHide = new SysTrayMenuItem( "Show / Hide", "showhide" );
-
-        itemShowHide.addSysTrayMenuListener( sysTrayMenuListener );
-
-        // insert items
-        sysTrayMenu.addItem( itemExit );
-        sysTrayMenu.addSeparator();
-        sysTrayMenu.addItem( itemAbout );
-        sysTrayMenu.addItem( itemShowHide );
-
-        sysTrayMenu.showIcon();
     }
 }

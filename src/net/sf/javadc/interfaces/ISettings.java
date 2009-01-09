@@ -11,6 +11,7 @@
 // $Id: ISettings.java,v 1.10 2005/10/02 11:42:27 timowest Exp $
 package net.sf.javadc.interfaces;
 
+import java.util.EventListener;
 import java.util.List;
 
 import net.sf.javadc.config.AdvancedSettings;
@@ -23,9 +24,9 @@ import net.sf.javadc.config.GuiSettings;
  * @author Timo Westk�mper
  * @version $Revision: 1.10 $ $Date: 2005/10/02 11:42:27 $
  */
-public interface ISettings
+public interface ISettings<ListenerType extends EventListener>
     extends
-        IGenericModel
+        IGenericModel<ListenerType>
 {
     /**
      * Notify the registered SettingsListeners, that the download slot count has changed

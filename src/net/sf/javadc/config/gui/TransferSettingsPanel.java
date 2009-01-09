@@ -16,6 +16,8 @@ import java.awt.Color;
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.EventListener;
+import java.util.List;
 
 import javax.swing.BorderFactory;
 import javax.swing.BoxLayout;
@@ -46,29 +48,29 @@ import org.apache.log4j.Category;
 public class TransferSettingsPanel
     extends AbstractSettingsPanel
 {
-    private static final long        serialVersionUID      = 8818041755542208208L;
+    private static final long              serialVersionUID      = 8818041755542208208L;
 
-    private final static Category    logger                = Category.getInstance( TransferSettingsPanel.class );
-    private final JButton            addShareButton        = new JButton( "Add" );
-    private final JButton            tempDownloadDirButton = new JButton( "Browse" );
-    private final JButton            downloadDirButton     = new JButton();
-    private final JTextField         txtDownloadDir        = new JTextField();
-    private final JButton            removeShareButton     = new JButton( "Remove" );
-    private final JList              shareList;                                                                  // =
+    private final static Category          logger                = Category.getInstance( TransferSettingsPanel.class );
+    private final JButton                  addShareButton        = new JButton( "Add" );
+    private final JButton                  tempDownloadDirButton = new JButton( "Browse" );
+    private final JButton                  downloadDirButton     = new JButton();
+    private final JTextField               txtDownloadDir        = new JTextField();
+    private final JButton                  removeShareButton     = new JButton( "Remove" );
+    private final JList                    shareList;                                                                  // =
     // new
     // JList();
 
-    private final DirectoryListModel shareModel            = new DirectoryListModel();
-    private final JScrollPane        shareScrollPane;                                                            // =
+    private final DirectoryListModel       shareModel            = new DirectoryListModel();
+    private final JScrollPane              shareScrollPane;                                                            // =
     // new
     // JScrollPane(shareList);
 
-    private final JTextField         txtTempDownloadDir    = new JTextField();
+    private final JTextField               txtTempDownloadDir    = new JTextField();
     // private final JPanel uploadPanel = new JPanel();
 
     // components
-    private final ISettings          settings;
-    private final IShareManager      shareManager;
+    private final ISettings<EventListener> settings;
+    private final IShareManager            shareManager;
 
     /**
      * Create a TransferSettingsPanel instance
@@ -77,7 +79,7 @@ public class TransferSettingsPanel
      * @param _shareManager IShareManager instance to be used
      */
     public TransferSettingsPanel(
-        ISettings _settings,
+        ISettings<EventListener> _settings,
         IShareManager _shareManager )
     {
         Assert.assertNotNull( _shareManager );
@@ -86,9 +88,9 @@ public class TransferSettingsPanel
         settings = _settings;
         shareManager = _shareManager;
 
-        String[] dirs = new String[settings.getUploadDirs().size()];
-
-        dirs = settings.getUploadDirs().toArray( dirs );
+        List<String> uploadDirs = settings.getUploadDirs();
+        String[] dirs = new String[uploadDirs.size()];
+        dirs = uploadDirs.toArray( dirs );
 
         populateShareList( dirs );
 
@@ -98,7 +100,6 @@ public class TransferSettingsPanel
         try
         {
             jbInit();
-
         }
         catch ( Exception ex )
         {
@@ -163,7 +164,6 @@ public class TransferSettingsPanel
     @Override
     public final void onCancel()
     {
-
     }
 
     /*
@@ -202,12 +202,8 @@ public class TransferSettingsPanel
             return chooser.getSelectedFile().getPath();
 
         }
-        else
-        {
-            return null;
 
-        }
-
+        return null;
     }
 
     /**
@@ -239,15 +235,12 @@ public class TransferSettingsPanel
 
         tempDownloadDirButton.addMouseListener( new MouseAdapter()
         {
-
             @Override
             public void mouseClicked(
                 MouseEvent e )
             {
                 onBrowseDir( true );
-
             }
-
         } );
 
         p1.add( tempDownloadDirButton, c.rcwh( 2, 6, 1, 1 ) );
@@ -259,14 +252,11 @@ public class TransferSettingsPanel
         downloadDirButton.setText( "Browse" );
         downloadDirButton.addActionListener( new java.awt.event.ActionListener()
         {
-
             public void actionPerformed(
                 ActionEvent e )
             {
-                moveBrowseButton_actionPerformed( e );
-
+                txtDownloadDir.setText( browseDir() );
             }
-
         } );
 
         p1.add( downloadDirButton, c.rcwh( 4, 6, 1, 1 ) );
@@ -306,28 +296,22 @@ public class TransferSettingsPanel
 
         addShareButton.addMouseListener( new MouseAdapter()
         {
-
             @Override
             public void mouseClicked(
                 MouseEvent e )
             {
                 onBrowseDir( false );
-
             }
-
         } );
 
         removeShareButton.addMouseListener( new MouseAdapter()
         {
-
             @Override
             public void mouseClicked(
                 MouseEvent e )
             {
                 onRemoveShare();
-
             }
-
         } );
 
         shareScrollPane.setSize( 400, 175 );
@@ -340,16 +324,6 @@ public class TransferSettingsPanel
         p1.add( shareScrollPane, c.rcwh( 2, 2, 1, 4 ) );
 
         return p1;
-
-    }
-
-    /**
-     * Description of the Method
-     */
-    private final void moveBrowseButton_actionPerformed(
-        ActionEvent e )
-    {
-        txtDownloadDir.setText( browseDir() );
 
     }
 
@@ -370,21 +344,17 @@ public class TransferSettingsPanel
             if ( download )
             {
                 txtTempDownloadDir.setText( chooser.getSelectedFile().getPath() );
-
             }
             else
             {
                 ((DirectoryListModel) shareList.getModel()).addDirectory( chooser.getSelectedFile().getPath() );
-
             }
 
         }
         else
         {
             logger.debug( "Adding directory didn't work." );
-
         }
-
     }
 
     /**
@@ -421,14 +391,11 @@ public class TransferSettingsPanel
     private final void populateShareList(
         String[] dirs )
     {
-        for ( int i = 0; i < dirs.length; i++ )
+        for ( String dir : dirs )
         {
-            shareModel.addDirectory( dirs[i] );
-
-            logger.debug( "Directory " + dirs[i] + " added." );
-
+            shareModel.addDirectory( dir );
+            logger.debug( "Directory " + dir + " added." );
         }
-
     }
 
     /*
@@ -452,11 +419,4 @@ public class TransferSettingsPanel
         this.add( p1, BorderLayout.NORTH );
 
     }
-
 }
-
-/*******************************************************************************
- * $Log: TransferSettingsPanel.java,v $ Revision 1.18 2005/10/02 11:42:28 timowest updated sources and tests Revision
- * 1.17 2005/09/30 15:59:53 timowest updated sources and tests Revision 1.16 2005/09/25 16:40:58 timowest updated
- * sources and tests Revision 1.15 2005/09/14 07:11:49 timowest updated sources
- */

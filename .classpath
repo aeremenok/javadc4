@@ -9,7 +9,6 @@
 	<classpathentry kind="lib" path="lib/log4j-1.2.8.jar"/>
 	<classpathentry kind="lib" path="lib/picocontainer-1.0-beta-5.jar"/>
 	<classpathentry kind="lib" path="lib/spin.jar"/>
-	<classpathentry kind="lib" path="lib/systray4j.jar"/>
 	<classpathentry kind="lib" path="lib/tigertree-1.0.jar"/>
 	<classpathentry kind="output" path="build"/>
 </classpath>

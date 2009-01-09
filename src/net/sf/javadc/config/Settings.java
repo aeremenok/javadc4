@@ -30,7 +30,7 @@ import org.apache.log4j.Category;
  */
 public class Settings
     implements
-        ISettings
+        ISettings<EventListener>
 {
     static private final Category logger           = Category.getInstance( ISettings.class );
 
@@ -66,7 +66,6 @@ public class Settings
         EventListener listener )
     {
         // TODO Auto-generated method stub
-
     }
 
     /*

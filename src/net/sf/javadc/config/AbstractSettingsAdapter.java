@@ -11,8 +11,6 @@
 // $Id: AbstractSettingsAdapter.java,v 1.14 2005/10/02 11:42:27 timowest Exp $
 package net.sf.javadc.config;
 
-import java.util.EventListener;
-
 import net.sf.javadc.interfaces.ISettings;
 import net.sf.javadc.interfaces.ISettingsLoader;
 import net.sf.javadc.listeners.SettingsListener;
@@ -29,9 +27,9 @@ import org.picocontainer.Startable;
  *         $
  */
 public abstract class AbstractSettingsAdapter
-    extends GenericModel
+    extends GenericModel<SettingsListener>
     implements
-        ISettings,
+        ISettings<SettingsListener>,
         Startable
 {
     /**
@@ -44,25 +42,12 @@ public abstract class AbstractSettingsAdapter
      */
     @Override
     public void addListener(
-        EventListener listener )
+        SettingsListener listener )
     {
-
-        if ( listener instanceof SettingsListener )
-        {
-            super.addListener( listener );
-
-            SettingsListener l = (SettingsListener) listener;
-
-            l.downloadSlotsChanged( getUsedDownloadSlots(), getDownloadSlots() );
-
-            l.uploadSlotsChanged( getUsedUploadSlots(), getUploadSlots() );
-
-        }
-        else
-        {
-            throw new RuntimeException( "listener is not an instance of SettingsListener" );
-        }
-
+        SettingsListener l = listener;
+        super.addListener( l );
+        l.downloadSlotsChanged( getUsedDownloadSlots(), getDownloadSlots() );
+        l.uploadSlotsChanged( getUsedUploadSlots(), getUploadSlots() );
     }
 
     /**
@@ -127,7 +112,7 @@ public abstract class AbstractSettingsAdapter
      * @see net.sf.javadc.util.GenericModel#getListenerClass()
      */
     @Override
-    protected Class getListenerClass()
+    protected Class<SettingsListener> getListenerClass()
     {
         return SettingsListener.class;
     }
