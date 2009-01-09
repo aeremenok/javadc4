@@ -238,11 +238,11 @@ public class ShareManager
                 keys.addAll( hashedFiles.fileNameKeySet() );
             }
 
-            Iterator iterator = keys.iterator();
+            Iterator<String> iterator = keys.iterator();
 
             while ( iterator.hasNext() )
             {
-                String path = (String) iterator.next();
+                String path = iterator.next();
                 FileInfo fileInfo;
 
                 synchronized ( hashedFiles )

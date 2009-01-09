@@ -10,6 +10,7 @@
 
 package net.sf.javadc.tasks;
 
+import junit.framework.Assert;
 import net.sf.javadc.interfaces.IClientTask;
 import net.sf.javadc.interfaces.IClientTaskFactory;
 import net.sf.javadc.net.InvalidArgumentException;
@@ -46,18 +47,10 @@ public class ClientTaskFactory
     public ClientTaskFactory(
         MutablePicoContainer _clientTasksContainer )
     {
-
-        if ( _clientTasksContainer == null )
-        {
-            throw new NullPointerException( "_clientTasksContainer was null." );
-        }
-
+        Assert.assertNotNull( _clientTasksContainer );
         factory = new ClientTaskObjectFactory( _clientTasksContainer );
         setFactory( factory );
-
     }
-
-    /** ********************************************************************** */
 
     /**
      * Obtain an instance from my pool for the specified key. By contract, clients MUST return the borrowed object using
@@ -77,7 +70,6 @@ public class ClientTaskFactory
             error = "key was null.";
             logger.error( error );
             throw new InvalidArgumentException( error );
-
         }
 
         if ( !(key instanceof String) )
@@ -95,7 +87,6 @@ public class ClientTaskFactory
         catch ( Exception e )
         {
             // logger.error(e);
-
             return null;
         }
 
@@ -119,7 +110,6 @@ public class ClientTaskFactory
         {
             error = "key or obj was null.";
             logger.error( error );
-
         }
 
         if ( !(key instanceof String) )
@@ -127,7 +117,6 @@ public class ClientTaskFactory
             error = "Invalid key class " + key.getClass().getName();
             logger.error( error );
             throw new InvalidArgumentException( error );
-
         }
 
         if ( !(obj instanceof IClientTask) )
@@ -140,13 +129,11 @@ public class ClientTaskFactory
         try
         {
             super.returnObject( key, obj );
-
         }
         catch ( Exception e )
         {
             logger.error( e );
         }
-
     }
 
     /*
@@ -157,7 +144,6 @@ public class ClientTaskFactory
     public void start()
     {
         factory.initialize();
-
     }
 
     /*
@@ -167,7 +153,5 @@ public class ClientTaskFactory
      */
     public void stop()
     {
-
     }
-
 }

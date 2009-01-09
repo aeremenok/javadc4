@@ -62,7 +62,7 @@ public class ClientListenerBase
      * @see net.sf.javadc.listeners.ClientListener#disconnected()
      */
     public void disconnected(
-        List downloads )
+        List<DownloadRequest> downloads )
     {
         // TODO Auto-generated method stub
     }

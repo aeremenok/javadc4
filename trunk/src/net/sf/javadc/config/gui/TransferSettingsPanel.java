@@ -28,6 +28,7 @@ import javax.swing.JScrollPane;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
+import junit.framework.Assert;
 import net.sf.javadc.gui.model.DirectoryListModel;
 import net.sf.javadc.interfaces.ISettings;
 import net.sf.javadc.interfaces.IShareManager;
@@ -45,73 +46,28 @@ import org.apache.log4j.Category;
 public class TransferSettingsPanel
     extends AbstractSettingsPanel
 {
-    /**
-     * 
-     */
     private static final long        serialVersionUID      = 8818041755542208208L;
 
     private final static Category    logger                = Category.getInstance( TransferSettingsPanel.class );
-
-    /**
-     * 
-     */
     private final JButton            addShareButton        = new JButton( "Add" );
-
-    /**
-     * 
-     */
     private final JButton            tempDownloadDirButton = new JButton( "Browse" );
-
-    /**
-     * 
-     */
     private final JButton            downloadDirButton     = new JButton();
-
-    /**
-     * 
-     */
     private final JTextField         txtDownloadDir        = new JTextField();
-
-    /**
-     * 
-     */
     private final JButton            removeShareButton     = new JButton( "Remove" );
-
-    /**
-     * 
-     */
     private final JList              shareList;                                                                  // =
-                                                                                                                  // new
-                                                                                                                  // JList();
+    // new
+    // JList();
 
-    /**
-     * 
-     */
     private final DirectoryListModel shareModel            = new DirectoryListModel();
-
-    /**
-     * 
-     */
     private final JScrollPane        shareScrollPane;                                                            // =
-                                                                                                                  // new
-                                                                                                                  // JScrollPane(shareList);
+    // new
+    // JScrollPane(shareList);
 
-    /**
-     * 
-     */
     private final JTextField         txtTempDownloadDir    = new JTextField();
-
     // private final JPanel uploadPanel = new JPanel();
 
     // components
-    /**
-     * 
-     */
     private final ISettings          settings;
-
-    /**
-     * 
-     */
     private final IShareManager      shareManager;
 
     /**
@@ -124,22 +80,15 @@ public class TransferSettingsPanel
         ISettings _settings,
         IShareManager _shareManager )
     {
-        if ( _settings == null )
-        {
-            throw new NullPointerException( "_settings was null" );
-        }
-
-        if ( _shareManager == null )
-        {
-            throw new NullPointerException( "_shareManager was null" );
-        }
+        Assert.assertNotNull( _shareManager );
+        Assert.assertNotNull( _settings );
 
         settings = _settings;
         shareManager = _shareManager;
 
         String[] dirs = new String[settings.getUploadDirs().size()];
 
-        dirs = (String[]) settings.getUploadDirs().toArray( dirs );
+        dirs = settings.getUploadDirs().toArray( dirs );
 
         populateShareList( dirs );
 
@@ -196,7 +145,7 @@ public class TransferSettingsPanel
 
         String[] strList = new String[settings.getUploadDirs().size()];
 
-        strList = (String[]) settings.getUploadDirs().toArray( strList );
+        strList = settings.getUploadDirs().toArray( strList );
 
         for ( int i = 0; i < strList.length; i++ )
         {
