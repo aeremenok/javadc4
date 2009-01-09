@@ -27,7 +27,7 @@ public interface IHubFavoritesLoader
      * 
      * @return
      */
-    public abstract List load();
+    public abstract List<IHubInfo> load();
 
     /**
      * Serialize the given list of favorite hubs into an XML file
@@ -35,6 +35,5 @@ public interface IHubFavoritesLoader
      * @param hubs
      */
     public abstract void save(
-        List hubInfos );
-
+        List<IHubInfo> hubInfos );
 }

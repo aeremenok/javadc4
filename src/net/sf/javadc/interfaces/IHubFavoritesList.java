@@ -47,7 +47,7 @@ public interface IHubFavoritesList
      * 
      * @return
      */
-    public List getHubInfos();
+    public List<IHubInfo> getHubInfos();
 
     /**
      * Remove the given HubInfo from the list of favorite Hubs
@@ -63,7 +63,7 @@ public interface IHubFavoritesList
      * @param list
      */
     public void setHubInfos(
-        List list );
+        List<IHubInfo> list );
 
     /*
      * (non-Javadoc)

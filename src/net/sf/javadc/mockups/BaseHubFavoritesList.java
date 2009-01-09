@@ -54,7 +54,7 @@ public class BaseHubFavoritesList
      * 
      * @see net.sf.javadc.interfaces.IHubFavoritesList#getHubInfos()
      */
-    public List getHubInfos()
+    public List<IHubInfo> getHubInfos()
     {
         // TODO Auto-generated method stub
         return null;

@@ -16,50 +16,18 @@ package net.sf.javadc.config;
  */
 public class GuiSettings
 {
-    /**
-     * 
-     */
     private Boolean useSystemFonts;
 
     // private FontSizeHints fontSizeHints;
     // private String font;
-    /**
-     *  
-     */
     private boolean useNarrowButtons;
-
-    /**
-     * 
-     */
     private boolean tabIconsEnabled;
-
-    /**
-     * 
-     */
     private Boolean popupDropShadowEnabled;
 
-    /**
-     * 
-     */
-    private String  plasticTabStyle;
-
-    /**
-     * 
-     */
-    private boolean plasticHighContrastFocusEnabled;
-
     // private HashMap font;
-    /**
-     * 
-     */
     private String  theme;
 
-    /**
-     * 
-     */
     private String  lookAndFeel;
-
-    // Instance Creation ******************************************************
 
     /**
      * Create a GuiSettings instance
@@ -69,8 +37,6 @@ public class GuiSettings
         // createDefault();
     }
 
-    // Accessors **************************************************************
-
     /**
      * Get the look-and-feel used by javadc3
      * 
@@ -79,16 +45,6 @@ public class GuiSettings
     public String getLookAndFeel()
     {
         return lookAndFeel;
-    }
-
-    /**
-     * Get the plastic tab style
-     * 
-     * @return
-     */
-    public String getPlasticTabStyle()
-    {
-        return plasticTabStyle;
     }
 
     /**
@@ -119,16 +75,6 @@ public class GuiSettings
     public Boolean getUseSystemFonts()
     {
         return useSystemFonts;
-    }
-
-    /**
-     * Get whether the plastic high contract focus is enabled
-     * 
-     * @return
-     */
-    public boolean isPlasticHighContrastFocusEnabled()
-    {
-        return plasticHighContrastFocusEnabled;
     }
 
     /**
@@ -180,28 +126,6 @@ public class GuiSettings
         String lookAndFeel )
     {
         this.lookAndFeel = lookAndFeel;
-    }
-
-    /**
-     * Set whether the plastic hight contrast focus is enabled
-     * 
-     * @param plasticHighContrastFocusEnabled
-     */
-    public void setPlasticHighContrastFocusEnabled(
-        boolean plasticHighContrastFocusEnabled )
-    {
-        this.plasticHighContrastFocusEnabled = plasticHighContrastFocusEnabled;
-    }
-
-    /**
-     * Set the plastic tab style
-     * 
-     * @param plasticTabStyle
-     */
-    public void setPlasticTabStyle(
-        String plasticTabStyle )
-    {
-        this.plasticTabStyle = plasticTabStyle;
     }
 
     /**

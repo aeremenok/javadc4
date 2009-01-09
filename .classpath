@@ -6,9 +6,7 @@
 	<classpathentry kind="lib" path="lib/commons-pool-1.2.jar"/>
 	<classpathentry kind="lib" path="lib/cryptix-jce-provider.jar"/>
 	<classpathentry kind="lib" path="lib/junit.jar"/>
-	<classpathentry kind="lib" path="lib/kunststoff.jar"/>
 	<classpathentry kind="lib" path="lib/log4j-1.2.8.jar"/>
-	<classpathentry kind="lib" path="lib/looks-1.2.2.jar"/>
 	<classpathentry kind="lib" path="lib/picocontainer-1.0-beta-5.jar"/>
 	<classpathentry kind="lib" path="lib/spin.jar"/>
 	<classpathentry kind="lib" path="lib/systray4j.jar"/>
