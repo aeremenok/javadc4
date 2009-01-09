@@ -58,7 +58,7 @@ public interface ClientListener
      * @param downloads TODO
      */
     void disconnected(
-        List downloads );
+        List<DownloadRequest> downloads );
 
     /**
      * A DownloadRequest for the given Client has been added

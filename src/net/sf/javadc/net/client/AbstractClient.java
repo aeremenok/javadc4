@@ -12,11 +12,11 @@ package net.sf.javadc.net.client;
 
 import java.util.List;
 
+import junit.framework.Assert;
 import net.sf.javadc.interfaces.IClient;
 import net.sf.javadc.listeners.ClientListener;
 import net.sf.javadc.listeners.ConnectionListener;
 import net.sf.javadc.net.DownloadRequest;
-import net.sf.javadc.net.InvalidArgumentException;
 import net.sf.javadc.net.hub.HostInfo;
 import net.sf.javadc.util.GenericModel;
 
@@ -27,11 +27,8 @@ import net.sf.javadc.util.GenericModel;
  * @author Timo Westk�mper
  */
 public abstract class AbstractClient
-    extends GenericModel
+    extends GenericModel<ClientListener>
 {
-    /**
-     * 
-     */
     private HostInfo host;
 
     /*
@@ -48,20 +45,16 @@ public abstract class AbstractClient
         if ( obj == this )
         {
             return true;
-
         }
         else if ( obj instanceof Client )
         {
             Client c = (Client) obj;
             return client.getHost().equals( c.getHost() );
-
         }
         else
         { // obj is not a Client instance
             return false;
-
         }
-
     }
 
     /**
@@ -73,13 +66,10 @@ public abstract class AbstractClient
         DownloadRequest dr )
     {
         final ClientListener[] listeners = listenerList.getListeners( ClientListener.class );
-
-        for ( int i = 0; i < listeners.length; i++ )
+        for ( ClientListener listener : listeners )
         {
-            listeners[i].browseListDownloaded( (IClient) this, dr, host );
-
+            listener.browseListDownloaded( (IClient) this, dr, host );
         }
-
     }
 
     /**
@@ -91,30 +81,23 @@ public abstract class AbstractClient
         ConnectionListener listener )
     {
         ClientListener[] listeners = listenerList.getListeners( ClientListener.class );
-
-        for ( int i = 0; i < listeners.length; i++ )
+        for ( ClientListener listener2 : listeners )
         {
-            listeners[i].connectionRequested( (Client) this, isServer, listener );
-
+            listener2.connectionRequested( (Client) this, isServer, listener );
         }
-
     }
 
     /**
      * @param downloads TODO
      */
     public void fireDisconnected(
-        List downloads )
+        List<DownloadRequest> downloads )
     {
-
         final ClientListener[] listeners = listenerList.getListeners( ClientListener.class );
-
-        for ( int i = 0; i < listeners.length; i++ )
+        for ( ClientListener listener : listeners )
         {
-            listeners[i].disconnected( downloads );
-
+            listener.disconnected( downloads );
         }
-
     }
 
     /**
@@ -126,13 +109,10 @@ public abstract class AbstractClient
         DownloadRequest dr )
     {
         final ClientListener[] listeners = listenerList.getListeners( ClientListener.class );
-
-        for ( int i = 0; i < listeners.length; i++ )
+        for ( ClientListener listener : listeners )
         {
-            listeners[i].downloadAdded( (Client) this, dr );
-
+            listener.downloadAdded( (Client) this, dr );
         }
-
     }
 
     /**
@@ -144,13 +124,10 @@ public abstract class AbstractClient
         DownloadRequest dr )
     {
         final ClientListener[] listeners = listenerList.getListeners( ClientListener.class );
-
-        for ( int i = 0; i < listeners.length; i++ )
+        for ( ClientListener listener : listeners )
         {
-            listeners[i].downloadRemoved( (IClient) this, dr );
-
+            listener.downloadRemoved( (IClient) this, dr );
         }
-
     }
 
     /**
@@ -159,13 +136,10 @@ public abstract class AbstractClient
     public void fireReceivedNick()
     {
         ClientListener[] listeners = listenerList.getListeners( ClientListener.class );
-
-        for ( int i = 0; i < listeners.length; i++ )
+        for ( ClientListener listener : listeners )
         {
-            listeners[i].receivedNick( (Client) this );
-
+            listener.receivedNick( (Client) this );
         }
-
     }
 
     /**
@@ -176,7 +150,6 @@ public abstract class AbstractClient
     public final HostInfo getHost()
     {
         return host;
-
     }
 
     /*
@@ -198,13 +171,8 @@ public abstract class AbstractClient
     public final void setHost(
         HostInfo updatedHost )
     {
-        if ( updatedHost == null )
-        {
-            throw new InvalidArgumentException( "updatedHost was null." );
-        }
-
+        Assert.assertNotNull( updatedHost );
         host = updatedHost;
-
     }
 
     /*
@@ -213,17 +181,8 @@ public abstract class AbstractClient
      * @see net.sf.javadc.util.GenericModel#getListenerClass()
      */
     @Override
-    protected final Class getListenerClass()
+    protected final Class<ClientListener> getListenerClass()
     {
         return ClientListener.class;
-
     }
-
 }
-
-/*******************************************************************************
- * $Log: AbstractClient.java,v $ Revision 1.19 2006/05/30 14:20:37 pmoukhataev Windows installer created Revision 1.18
- * 2005/10/02 11:42:28 timowest updated sources and tests Revision 1.17 2005/09/30 15:59:53 timowest updated sources and
- * tests Revision 1.16 2005/09/25 16:40:59 timowest updated sources and tests Revision 1.15 2005/09/12 21:12:02 timowest
- * added log block
- */

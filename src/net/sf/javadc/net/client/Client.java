@@ -39,8 +39,6 @@ public class Client
     implements
         IClient
 {
-
-    /** ********************************************************************** */
     private class MyConnectionListener
         implements
             ConnectionListener
@@ -53,23 +51,21 @@ public class Client
          *      net.sf.javadc.interfaces.IConnection)
          */
         public void disconnected(
-            IConnection connection )
+            IConnection connection1 )
         {
             Client.this.connection = null;
 
             // if the Connection was based on a local socket, we can't
             // reestablish the connection here
-            if ( connection.isServer() )
+            if ( connection1.isServer() )
             {
-                fireDisconnected( new ArrayList( downloads ) );
-
+                fireDisconnected( new ArrayList<DownloadRequest>( downloads ) );
             }
             else
             {
                 try
                 {
                     checkDownloads();
-
                 }
                 catch ( IOException e )
                 {
@@ -86,10 +82,10 @@ public class Client
          * @see net.sf.javadc.listeners.ConnectionListener#downloadComplete(net.sf.javadc.interfaces.IConnection)
          */
         public void downloadComplete(
-            IConnection connection )
+            IConnection connection1 )
         {
             // removes the finished element from the list of downloads
-            DownloadRequest completed = (DownloadRequest) downloads.remove( 0 );
+            DownloadRequest completed = downloads.remove( 0 );
 
             logger.debug( "DL complete " + completed.getSearchResult().getFilename() );
 
@@ -98,7 +94,6 @@ public class Client
             {
                 logger.debug( "Firing list complete" );
                 fireBrowseListDownloaded( completed );
-
             }
 
             completed.setComplete( true );
@@ -118,7 +113,7 @@ public class Client
          * @see net.sf.javadc.listeners.ConnectionListener#downloadFailed(net.sf.javadc.interfaces.IConnection)
          */
         public void downloadFailed(
-            IConnection connection )
+            IConnection connection1 )
         {
             removeDownload( 0 );
 
@@ -138,7 +133,7 @@ public class Client
          *      net.sf.javadc.interfaces.IConnection)
          */
         public void stateChanged(
-            IConnection connection )
+            IConnection connection1 )
         {
             try
             {
@@ -152,7 +147,7 @@ public class Client
 
             }
 
-            updateDownloadRequestStates( connection );
+            updateDownloadRequestStates( connection1 );
 
         }
 
@@ -162,9 +157,8 @@ public class Client
          * @see net.sf.javadc.listeners.ConnectionListener#uploadComplete(net.sf.javadc.interfaces.IConnection)
          */
         public void uploadComplete(
-            IConnection connection )
+            IConnection connection1 )
         {
-
             // TODO Auto-generated method stub
         }
 
@@ -174,48 +168,26 @@ public class Client
          * @see net.sf.javadc.listeners.ConnectionListener#uploadFailed(net.sf.javadc.interfaces.IConnection)
          */
         public void uploadFailed(
-            IConnection connection )
+            IConnection connection1 )
         {
             // TODO Auto-generated method stub
         }
 
     }
 
-    private final static Category logger             = Logger.getLogger( Client.class );
+    private final static Category       logger             = Logger.getLogger( Client.class );
 
     // members
-    /**
-     * 
-     */
-    private final List            downloads          = new ArrayList();
-
-    /**
-     * 
-     */
-    private IConnection           connection;
-
-    /**
-     * 
-     */
-    private String                nick               = "";
-
-    /**
-     * 
-     */
-    private boolean               bZSupport          = false;
-
-    /**
-     * 
-     */
-    private ConnectionListener    connectionListener = new MyConnectionListener();
+    private final List<DownloadRequest> downloads          = new ArrayList<DownloadRequest>();
+    private IConnection                 connection;
+    private String                      nick               = "";
+    private boolean                     bZSupport          = false;
+    private ConnectionListener          connectionListener = new MyConnectionListener();
 
     // private final IClientManager clientManager;
 
     // components
-    /**
-     * 
-     */
-    private final ISettings       settings;
+    private final ISettings             settings;
 
     /**
      * Create a Client instance with the given HostInfo, ISettings instance and IClientManager
@@ -316,7 +288,7 @@ public class Client
             }
 
             // get first element and set it to be downloaded
-            DownloadRequest downloadRequest = (DownloadRequest) downloads.get( 0 );
+            DownloadRequest downloadRequest = downloads.get( 0 );
 
             // add the downloadRequest if a connection is available and the
             // downloadRequest has not failed
@@ -400,7 +372,7 @@ public class Client
 
         if ( index < downloads.size() )
         {
-            return (DownloadRequest) downloads.get( index );
+            return downloads.get( index );
 
         }
         else
@@ -420,7 +392,7 @@ public class Client
      */
     public final DownloadRequest[] getDownloads()
     {
-        return (DownloadRequest[]) downloads.toArray( new DownloadRequest[downloads.size()] );
+        return downloads.toArray( new DownloadRequest[downloads.size()] );
 
     }
 
@@ -433,7 +405,7 @@ public class Client
     {
         if ( downloads.size() > 0 )
         {
-            return (DownloadRequest) downloads.get( downloads.size() - 1 );
+            return downloads.get( downloads.size() - 1 );
 
         }
         else
@@ -502,19 +474,15 @@ public class Client
         DownloadRequest dr )
     {
         int index = downloads.indexOf( dr );
-
         if ( index > -1 )
         {
             // removeDownload(downloads.indexOf(dr));
             removeDownload( index );
-
         }
         else
         {
             logger.error( "Download " + dr + " was not found in queue." );
-
         }
-
     }
 
     /*
@@ -525,30 +493,25 @@ public class Client
     public final void removeDownload(
         int index )
     {
-
         // index is out of range
         if ( index < 0 || index >= downloads.size() )
         {
-            logger.error( "Error in DownloadRequest.removeDownload(int index)\n" + "Index " + index +
-                " was out of range." );
-
+            logger.error( "Error in DownloadRequest.removeDownload(int index)\nIndex " + index + " was out of range." );
             // index is in valid ranges
         }
         else
         {
             logger.info( "Removing DownloadRequest with index " + index + "." );
 
-            DownloadRequest lastRemoved = (DownloadRequest) downloads.remove( index );
+            DownloadRequest lastRemoved = downloads.remove( index );
 
             if ( lastRemoved == null )
             {
                 logger.error( "lastRemoved was null." );
-
             }
             else
             {
                 logger.info( "DownloadRequest was successfully removed." );
-
             }
 
             // if the given index of the DownloadRequest is 0
@@ -562,12 +525,10 @@ public class Client
                 if ( connection != null )
                 {
                     dr = connection.getDownloadRequest();
-
                 }
                 else
                 {
                     logger.error( "connection was null in Client.removedDownload(int index)" );
-
                 }
 
                 // initiate a requestChange also when no DownloadRequest has
@@ -578,12 +539,10 @@ public class Client
                 if ( dr != null )
                 {
                     requestChange = lastRemoved.equals( connection.getDownloadRequest() );
-
                 }
                 else
                 {
                     logger.info( "DownloadRequest was not set for " + connection );
-
                 }
 
                 if ( requestChange )
@@ -597,7 +556,6 @@ public class Client
                         {
                             connection.setState( ConnectionState.COMMAND_DOWNLOAD );
                         }
-
                     }
                     else
                     {
@@ -611,18 +569,13 @@ public class Client
                         }
 
                         disconnect();
-
                     }
-
                 }
 
             }
-
             lastRemoved.setComplete( false );
             fireDownloadRemoved( lastRemoved );
-
         }
-
     }
 
     /*
@@ -719,7 +672,7 @@ public class Client
             connection = null;
         }
 
-        fireDisconnected( new ArrayList( downloads ) );
+        fireDisconnected( new ArrayList<DownloadRequest>( downloads ) );
 
     }
 
@@ -744,7 +697,7 @@ public class Client
 
             for ( int i = 0; i < downloads.size(); i++ )
             {
-                DownloadRequest dr = (DownloadRequest) downloads.get( i );
+                DownloadRequest dr = downloads.get( i );
 
                 DownloadRequestState newState =
                     DownloadRequestState.deriveFromConnectionState( connState, connDownloadRequest.equals( dr ) );

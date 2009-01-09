@@ -15,6 +15,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
+import junit.framework.Assert;
 import net.sf.javadc.config.UserInfo;
 import net.sf.javadc.interfaces.IClient;
 import net.sf.javadc.interfaces.IHub;
@@ -47,7 +48,7 @@ public class HubUser
          */
         @Override
         public void disconnected(
-            List downloads )
+            List<DownloadRequest> downloads1 )
         {
             if ( client == null )
             {
@@ -61,55 +62,30 @@ public class HubUser
             client = null;
 
             // no more downloads available
-            if ( downloads.isEmpty() )
+            if ( downloads1.isEmpty() )
             {
+                // still downloads available
+
                 logger.info( "No more downloads available" );
                 return;
-
-                // still downloads available
-            }
-            else
-            {
-                HubUser.this.downloads.addAll( downloads );
-
-                requestConnection( ((DownloadRequest) downloads.get( 0 )).getSearchResult() );
-
             }
 
+            HubUser.this.downloads.addAll( downloads1 );
+            requestConnection( downloads1.get( 0 ).getSearchResult() );
         }
-
     }
 
-    private final static Category    logger         = Logger.getLogger( HubUser.class );
+    private final static Category                 logger         = Logger.getLogger( HubUser.class );
+    private transient int                         ipTries        = 0;
 
-    /**
-     * 
-     */
-    private transient int            ipTries        = 0;
-
-    /**
-     * 
-     */
-    private final transient List     downloads      = new ArrayList();
+    private final transient List<DownloadRequest> downloads      = new ArrayList<DownloadRequest>();
 
     // ClientListener
-    /**
-     * 
-     */
-    private transient ClientListener clientListener = new MyClientListener();
+    private transient ClientListener              clientListener = new MyClientListener();
 
     // external
-    /**
-     * 
-     */
-    private transient Client         client;
-
-    /**
-     * 
-     */
-    private final IHub               hub;
-
-    /** ********************************************************************** */
+    private transient Client                      client;
+    private final IHub                            hub;
 
     /**
      * Creates a <CODE>HubUser</CODE> instance for the given <CODE>IHub
@@ -118,13 +94,8 @@ public class HubUser
     public HubUser(
         IHub hub )
     {
-        if ( hub == null )
-        {
-            throw new NullPointerException( "hub was null." );
-        }
-
+        Assert.assertNotNull( hub );
         this.hub = hub;
-
     }
 
     /**
@@ -137,15 +108,10 @@ public class HubUser
         DownloadRequest dr )
         throws IOException
     {
-        if ( dr == null )
-        {
-            throw new InvalidArgumentException( "DownloadRequest was null." );
-
-        }
-        else if ( client != null )
+        Assert.assertNotNull( dr );
+        if ( client != null )
         {
             client.addDownload( dr );
-
         }
         else
         {
@@ -157,7 +123,6 @@ public class HubUser
             // request a connection to the remote client
             hub.requestConnection( dr.getSearchResult().getNick() );
         }
-
     }
 
     /**
@@ -176,7 +141,7 @@ public class HubUser
      * 
      * @return Returns the downloads.
      */
-    public List getDownloads()
+    public List<DownloadRequest> getDownloads()
     {
         return downloads;
     }
@@ -221,7 +186,7 @@ public class HubUser
                 logger.debug( "Moving download queue to Client instance." );
 
                 // add downloads to client
-                client.addDownloads( (DownloadRequest[]) downloads.toArray( new DownloadRequest[downloads.size()] ) );
+                client.addDownloads( downloads.toArray( new DownloadRequest[downloads.size()] ) );
 
                 downloads.clear(); // clear downloads
 
@@ -230,7 +195,6 @@ public class HubUser
             {
                 logger.error( "Download queue could not be moved." );
                 logger.error( e );
-
             }
 
         }
@@ -262,14 +226,10 @@ public class HubUser
     @Override
     public final String toString()
     {
-
         // return MessageRenderer.getInstance().toString(this);
         return "$ALL " + getNick() + " " + getDescription() + getTag() + "$ $" + getSpeed() + getSpeedCode() + "$" +
             getEmail() + "$" + getSharedSize() + "$";
-
     }
-
-    // /////////////////////////////////////////////////////////////////////////
 
     /**
      * Request a new Connection to download the given SearchResult

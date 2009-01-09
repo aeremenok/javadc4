@@ -117,7 +117,7 @@ public class He3
         // int charpos = 0;
 
         BitParser bp = null;
-        Vector chars = new Vector();
+        Vector<HuffCouple> chars = new Vector<HuffCouple>();
         HuffNode root = new HuffNode();
 
         try
@@ -140,7 +140,7 @@ public class He3
 
             for ( int i = 0; i < chars.size(); i++ )
             {
-                HuffCouple hc = (HuffCouple) chars.elementAt( i );
+                HuffCouple hc = chars.elementAt( i );
                 HuffNode node = root;
 
                 for ( int j = 0; j < hc.length; j++ )

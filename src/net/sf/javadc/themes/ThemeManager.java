@@ -23,6 +23,7 @@ import java.util.List;
 import javax.swing.JCheckBox;
 import javax.swing.JRadioButton;
 import javax.swing.UIManager;
+import javax.swing.UIManager.LookAndFeelInfo;
 import javax.swing.plaf.metal.DefaultMetalTheme;
 import javax.swing.plaf.metal.MetalLookAndFeel;
 import javax.swing.plaf.metal.MetalTheme;
@@ -84,9 +85,8 @@ public class ThemeManager
         }
     }
 
-    private List      themes = new ArrayList();
-
-    private ISettings settings;
+    private List<Theme> themes = new ArrayList<Theme>();
+    private ISettings   settings;
 
     /**
      * Returns true, if a plugin with className is installed.
@@ -103,11 +103,8 @@ public class ThemeManager
                 if ( info[i].getClassName().equals( className ) )
                 {
                     return true;
-
                 }
-
             }
-
         }
 
         return false;
@@ -185,9 +182,9 @@ public class ThemeManager
      */
     public UIManager.LookAndFeelInfo[] getInstalledLookAndFeels()
     {
-        HashSet classNames = new HashSet();
+        HashSet<String> classNames = new HashSet<String>();
 
-        LinkedList lafs = new LinkedList();
+        LinkedList<LookAndFeelInfo> lafs = new LinkedList<LookAndFeelInfo>();
         UIManager.LookAndFeelInfo[] info = UIManager.getInstalledLookAndFeels();
 
         if ( info != null )
@@ -225,7 +222,7 @@ public class ThemeManager
 
         }
 
-        return (UIManager.LookAndFeelInfo[]) lafs.toArray( new UIManager.LookAndFeelInfo[0] );
+        return lafs.toArray( new UIManager.LookAndFeelInfo[0] );
 
     }
 
@@ -256,9 +253,9 @@ public class ThemeManager
     public MetalTheme getThemeByName(
         String themeName )
     {
-        for ( Iterator it = themes.iterator(); it.hasNext(); )
+        for ( Iterator<Theme> it = themes.iterator(); it.hasNext(); )
         {
-            Theme theme = (Theme) it.next();
+            Theme theme = it.next();
 
             if ( theme.getName().equals( themeName ) )
             {
@@ -292,7 +289,7 @@ public class ThemeManager
      */
     public Theme[] getThemes()
     {
-        Theme[] array = (Theme[]) themes.toArray( new Theme[0] );
+        Theme[] array = themes.toArray( new Theme[0] );
 
         Arrays.sort( array, new ThemeComparator() );
 
@@ -339,22 +336,20 @@ public class ThemeManager
         UIManager.installLookAndFeel( "Plastic 3D", "com.jgoodies.plaf.plastic.Plastic3DLookAndFeel" );
         UIManager.installLookAndFeel( "Plastic XP", "com.jgoodies.plaf.plastic.PlasticXPLookAndFeel" );
 
-        List plasticThemes = new ArrayList( PlasticLookAndFeel.getInstalledThemes() );
+        List installedThemes = PlasticLookAndFeel.getInstalledThemes();
+        List<MetalTheme> plasticThemes = new ArrayList<MetalTheme>( installedThemes );
 
         // add some custom themes
         plasticThemes.add( new DarkTheme() );
 
         // install themes
-        for ( Iterator it = plasticThemes.iterator(); it.hasNext(); )
+        for ( Iterator<? extends MetalTheme> it = plasticThemes.iterator(); it.hasNext(); )
         {
-            Object theme = it.next();
-
+            MetalTheme theme = it.next();
             if ( theme instanceof PlasticTheme )
             {
                 themes.add( new MyTheme( (PlasticTheme) theme ) );
-
             }
-
         }
 
     }

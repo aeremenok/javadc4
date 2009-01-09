@@ -191,13 +191,13 @@ public class SettingsAdapter
      * 
      * @see net.sf.javadc.interfaces.ISettings#getUploadDirs()
      */
-    public final List getUploadDirs()
+    public final List<String> getUploadDirs()
     {
-        List list = _settings.getUploadDirs();
+        List<String> list = _settings.getUploadDirs();
 
         if ( list == null )
         {
-            list = new ArrayList();
+            list = new ArrayList<String>();
             _settings.setUploadDirs( list );
         }
 
@@ -454,7 +454,7 @@ public class SettingsAdapter
      * @see net.sf.javadc.interfaces.ISettings#setUploadDirs(java.util.List)
      */
     public final void setUploadDirs(
-        List dirs )
+        List<String> dirs )
     {
         _settings.setUploadDirs( dirs );
 

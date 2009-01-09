@@ -56,24 +56,24 @@ class SearchComponentHubListener
 
     // external
 
-    private static final Category logger         = Category.getInstance( SearchComponentHubListener.class );
+    private static final Category  logger         = Category.getInstance( SearchComponentHubListener.class );
 
     /**
      * 
      */
-    private final SearchComponent searchComponent;
+    private final SearchComponent  searchComponent;
 
     // internal
 
     /**
      * 
      */
-    private final IHub            hub;
+    private final IHub             hub;
 
     /**
      * 
      */
-    private List                  added          = new ArrayList();
+    private List<ResultAndRequest> added          = new ArrayList<ResultAndRequest>();
 
     // private Map results2requests = new HashMap();
 
@@ -82,12 +82,12 @@ class SearchComponentHubListener
     /**
      * 
      */
-    private List                  searchRequests = new ArrayList();
+    private List<SearchRequest>    searchRequests = new ArrayList<SearchRequest>();
 
     /**
      * 
      */
-    private boolean               isAllHubs      = false;
+    private boolean                isAllHubs      = false;
 
     /**
      * Create a SearchComponentHubListener with the given SearchComponent
@@ -280,7 +280,7 @@ class SearchComponentHubListener
      */
     private boolean contained(
         SearchRequest sr,
-        List srs )
+        List<SearchRequest> srs )
     {
         int i = srs.indexOf( sr );
         return i > -1 && i < 2;
@@ -301,7 +301,7 @@ class SearchComponentHubListener
 
         synchronized ( added )
         {
-            searchResults = (ResultAndRequest[]) added.toArray( new ResultAndRequest[added.size()] );
+            searchResults = added.toArray( new ResultAndRequest[added.size()] );
 
             added.clear();
 
@@ -338,21 +338,13 @@ class SearchComponentHubListener
 
                 searchComponent.getTabbedPane().setTitleAt( j,
                     sr.getNamePattern() + " (" + model.getRowCount() + " hits)" );
-
             }
             else
             {
                 added.add( 0, searchResults[i] );
-
             }
 
         }// for
 
     }// update
 }
-
-/*******************************************************************************
- * $Log: SearchComponentHubListener.java,v $ Revision 1.17 2005/10/02 11:42:28 timowest updated sources and tests
- * Revision 1.16 2005/09/15 17:32:29 timowest added null checks Revision 1.15 2005/09/14 07:11:49 timowest updated
- * sources
- */
