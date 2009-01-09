@@ -19,7 +19,6 @@ import java.text.NumberFormat;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
-import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
@@ -37,7 +36,7 @@ import net.sf.javadc.interfaces.IShareManager;
 import net.sf.javadc.listeners.SettingsListener;
 import net.sf.javadc.listeners.ShareManagerListener;
 import net.sf.javadc.listeners.ShareManagerListenerBase;
-import net.sf.javadc.themes.ThemeManager;
+import net.sf.javadc.themes.LAFManager;
 import net.sf.javadc.util.FileUtils;
 
 import org.apache.log4j.Category;
@@ -49,11 +48,6 @@ import snoozesoft.systray4j.SysTrayMenuIcon;
 import snoozesoft.systray4j.SysTrayMenuItem;
 import snoozesoft.systray4j.SysTrayMenuListener;
 import spin.Spin;
-
-import com.jgoodies.plaf.BorderStyle;
-import com.jgoodies.plaf.HeaderStyle;
-import com.jgoodies.plaf.Options;
-import com.jgoodies.plaf.plastic.PlasticLookAndFeel;
 
 /**
  * <CODE>MainFrame</CODE> represents the main frame of the application and contains beside the <CODE>MainMenuBar</CODE>
@@ -71,8 +65,6 @@ public class MainFrame
     implements
         Startable
 {
-
-    /** ********************************************************************** */
     private class MyActionListener
         implements
             ActionListener
@@ -92,19 +84,15 @@ public class MainFrame
                 {
                     settingsDialog = new SettingsDialog( MainFrame.this, "Preferences", true, settings, shareManager );
                     settingsDialog.showSettings();
-
                 }
                 catch ( Exception ex )
                 {
                     logger.debug( ex.toString() );
-
                 }
-
             }
             else if ( menuText == "Close" )
             {
                 Main.close();
-
             }
             else if ( menuText == "Hubs" )
             {
@@ -181,27 +169,23 @@ public class MainFrame
         implements
             SysTrayMenuListener
     {
-
         private JFrame mainFrame;
 
         public MySysTrayMenuListener(
             JFrame _mainFrame )
         {
             mainFrame = _mainFrame;
-
         }
 
         public void iconLeftClicked(
             SysTrayMenuEvent event )
         {
-
         }
 
         public void iconLeftDoubleClicked(
             SysTrayMenuEvent event )
         {
             showhide();
-
         }
 
         public void menuItemSelected(
@@ -212,13 +196,11 @@ public class MainFrame
             if ( command.equals( "exit" ) )
             {
                 Main.close();
-
             }
 
             if ( command.equals( "showhide" ) )
             {
                 showhide();
-
             }
 
             if ( command.equals( "settings" ) )
@@ -232,48 +214,32 @@ public class MainFrame
                 catch ( Exception ex )
                 {
                     logger.debug( ex.toString() );
-
                 }
-
             }
-
         }
 
         private void showhide()
         {
-            if ( mainFrame.isVisible() )
+            boolean visible = mainFrame.isVisible();
+            mainFrame.setVisible( visible );
+            if ( visible )
             {
-                mainFrame.hide();
-
-            }
-            else
-            {
-                mainFrame.show();
-
-                int state = mainFrame.getExtendedState();
-
-                if ( state == JFrame.ICONIFIED )
+                if ( JFrame.ICONIFIED == mainFrame.getExtendedState() )
                 {
                     mainFrame.setExtendedState( JFrame.NORMAL );
-
                 }
-
             }
-
         }
-
     }
 
     private class MyTreeHashingListener
         extends ShareManagerListenerBase
     {
-
         @Override
         public void fileHashed(
             String filename )
         {
             statusBar.updateHashedFile( filename );
-
         }
 
         @Override
@@ -282,11 +248,8 @@ public class MainFrame
             double percent )
         {
             NumberFormat nf = NumberFormat.getPercentInstance();
-
             statusBar.updateHashingFile( filename, nf.format( percent ) );
-
         }
-
     }
 
     private static final long                         serialVersionUID     = 1730490179377255746L;
@@ -318,7 +281,7 @@ public class MainFrame
     private final IShareManager<ShareManagerListener> shareManager;
 
     // private final ITreeHashingManager treeHashingManager;
-    private final ThemeManager                        themeManager;
+    private final LAFManager                        themeManager;
 
     private SettingsDialog                            settingsDialog;
 
@@ -340,7 +303,7 @@ public class MainFrame
      */
     public MainFrame(
         ISettings _settings,
-        ThemeManager _themeManager,
+        LAFManager _themeManager,
         MonitorComponent _slotComponent,
         ManagerComponent _hubManagerComponent,
         MultiSearchComponent _multiSearchComponent,
@@ -410,15 +373,7 @@ public class MainFrame
         // sets up components
         setupComponents();
 
-        // sets menu properties
-        JMenuBar menuBar = new MainMenuBar( menuListener, themeManager, settings );
-
-        menuBar.putClientProperty( Options.HEADER_STYLE_KEY, HeaderStyle.SINGLE );
-        menuBar.putClientProperty( PlasticLookAndFeel.BORDER_STYLE_KEY, BorderStyle.EMPTY );
-        // menuBar.putClientProperty(ExtWindowsLookAndFeel.BORDER_STYLE_KEY,
-        // BorderStyle.EMPTY);
-        menuBar.putClientProperty( PlasticLookAndFeel.IS_3D_KEY, Boolean.FALSE );
-        setJMenuBar( menuBar );
+        setJMenuBar( new MainMenuBar( menuListener, themeManager, settings ) );
 
         // sets size and location
         setLocation( settings.getAdvancedSettings().getXLocation(), settings.getAdvancedSettings().getYLocation() );
@@ -452,24 +407,15 @@ public class MainFrame
     {
         logger.debug( "starting " + this.getClass().getName() );
 
-        // System.out.println();
-        // System.out.println("starting " + this.getClass().getName());
-        // System.out
-        // .println("====================================================");
-
         addWindowListener( new WindowAdapter()
         {
-
             @Override
             public void windowClosing(
                 WindowEvent e )
             {
                 Main.close();
-
             }
-
         } );
-
         // setVisible(true);
     }
 
@@ -481,11 +427,6 @@ public class MainFrame
     public void stop()
     {
         logger.debug( "stopping " + this.getClass().getName() );
-
-        // System.out.println();
-        // System.out.println("stopping " + this.getClass().getName());
-        // System.out
-        // .println("====================================================");
 
         final AdvancedSettings advanced = settings.getAdvancedSettings();
 

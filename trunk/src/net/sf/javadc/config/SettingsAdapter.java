@@ -161,7 +161,6 @@ public class SettingsAdapter
     public final String getIP()
     {
         return _settings.getIP();
-
     }
 
     /*
@@ -409,7 +408,6 @@ public class SettingsAdapter
         GuiSettings guiSettings )
     {
         _settings.setGuiSettings( guiSettings );
-
     }
 
     /*
@@ -421,7 +419,6 @@ public class SettingsAdapter
         String string )
     {
         _settings.setIP( string );
-
     }
 
     /*

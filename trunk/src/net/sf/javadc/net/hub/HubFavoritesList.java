@@ -13,6 +13,7 @@ package net.sf.javadc.net.hub;
 
 import java.util.List;
 
+import junit.framework.Assert;
 import net.sf.javadc.interfaces.IHubFavoritesList;
 import net.sf.javadc.interfaces.IHubFavoritesLoader;
 import net.sf.javadc.interfaces.IHubInfo;
@@ -35,15 +36,8 @@ public class HubFavoritesList
 {
     // private static final Category logger = Category
     // .getInstance(HubFavoritesList.class);
-    /**
-     *  
-     */
-    private List                      hubInfos;
-
+    private List<IHubInfo>            hubInfos;
     // components
-    /**
-     * 
-     */
     private final IHubFavoritesLoader loader;
 
     /**
@@ -53,14 +47,8 @@ public class HubFavoritesList
     public HubFavoritesList(
         IHubFavoritesLoader _loader )
     {
-
-        if ( _loader == null )
-        {
-            throw new NullPointerException( "_loader was null." );
-        }
-
+        Assert.assertNotNull( _loader );
         loader = _loader;
-
     }
 
     /*
@@ -71,24 +59,17 @@ public class HubFavoritesList
     public final void addHubInfo(
         IHubInfo hubInfo )
     {
-        if ( hubInfo == null )
-        {
-            throw new NullPointerException( "hubInfo was null." );
-
-        }
+        Assert.assertNotNull( hubInfo );
 
         if ( !hubInfos.contains( hubInfo ) )
         { // if hub has not yet been added
             hubInfos.add( hubInfo );
             fireHubListChanged();
-
         }
         else
         {
-
             // ?
         }
-
     }
 
     /*
@@ -96,13 +77,10 @@ public class HubFavoritesList
      * 
      * @see net.sf.javadc.interfaces.IHubFavoritesList#getHubInfos()
      */
-    public List getHubInfos()
+    public List<IHubInfo> getHubInfos()
     {
         return hubInfos;
-
     }
-
-    /** ********************************************************************** */
 
     /*
      * (non-Javadoc)
@@ -110,10 +88,9 @@ public class HubFavoritesList
      * @see net.sf.javadc.util.GenericModel#getListenerClass()
      */
     @Override
-    public Class getListenerClass()
+    public Class<HubListListener> getListenerClass()
     {
         return HubListListener.class;
-
     }
 
     /*
@@ -124,15 +101,9 @@ public class HubFavoritesList
     public final void removeHub(
         IHubInfo hubInfo )
     {
-        if ( hubInfo == null )
-        {
-            throw new NullPointerException( "hubInfo was null." );
-
-        }
-
+        Assert.assertNotNull( hubInfo );
         hubInfos.remove( hubInfos.indexOf( hubInfo ) );
         fireHubListChanged();
-
     }
 
     /*
@@ -141,10 +112,9 @@ public class HubFavoritesList
      * @see net.sf.javadc.interfaces.IHubFavoritesList#setHubInfos(java.util.ArrayList)
      */
     public void setHubInfos(
-        List list )
+        List<IHubInfo> list )
     {
         hubInfos = list;
-
     }
 
     /*
@@ -156,13 +126,7 @@ public class HubFavoritesList
     {
         // hub infos are loaded when the container is started
         hubInfos = loader.load();
-
-        if ( hubInfos == null )
-        {
-            throw new NullPointerException( "hubInfos was null." );
-
-        }
-
+        Assert.assertNotNull( hubInfos );
     }
 
     /*
@@ -174,7 +138,6 @@ public class HubFavoritesList
     {
         // hub infos are saved when the container is closed
         loader.save( hubInfos );
-
     }
 
     /*
@@ -185,7 +148,6 @@ public class HubFavoritesList
     public final void update()
     {
         fireHubListChanged();
-
     }
 
     /**
@@ -194,18 +156,9 @@ public class HubFavoritesList
     private final void fireHubListChanged()
     {
         final HubListListener[] listeners = listenerList.getListeners( HubListListener.class );
-
-        for ( int i = 0; i < listeners.length; i++ )
+        for ( HubListListener listener : listeners )
         {
-            listeners[i].hubListChanged();
-
+            listener.hubListChanged();
         }
-
     }
-
 }
-
-/*******************************************************************************
- * $Log: HubFavoritesList.java,v $ Revision 1.16 2005/10/02 11:42:28 timowest updated sources and tests Revision 1.15
- * 2005/09/30 15:59:53 timowest updated sources and tests Revision 1.14 2005/09/12 21:12:02 timowest added log block
- */

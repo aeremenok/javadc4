@@ -22,7 +22,7 @@ import javax.swing.JRadioButtonMenuItem;
 import javax.swing.KeyStroke;
 
 import net.sf.javadc.interfaces.ISettings;
-import net.sf.javadc.themes.ThemeManager;
+import net.sf.javadc.themes.LAFManager;
 import net.sf.javadc.util.FileUtils;
 
 /**
@@ -34,25 +34,11 @@ import net.sf.javadc.util.FileUtils;
 public class MainMenuBar
     extends JMenuBar
 {
-    /**
-     * 
-     */
     private static final long    serialVersionUID = -8034134760555725921L;
 
     // private final MainFrame dcFrame;
-    /**
-     * 
-     */
     private final ActionListener dcFrame;
-
-    /**
-     * 
-     */
-    private final ThemeManager   themeManager;
-
-    /**
-     * 
-     */
+    private final LAFManager   themeManager;
     private final ISettings      settings;
 
     /**
@@ -64,7 +50,7 @@ public class MainMenuBar
      */
     public MainMenuBar(
         ActionListener _dcFrame,
-        ThemeManager _themeManager,
+        LAFManager _themeManager,
         ISettings _settings )
     {
         super();
@@ -89,8 +75,6 @@ public class MainMenuBar
         add( navigationMenu );
 
     }
-
-    /** ********************************************************************** */
 
     /**
      * Build the File Menu
@@ -166,60 +150,26 @@ public class MainMenuBar
      */
     private JMenu buildViewMenu()
     {
-        JRadioButtonMenuItem item;
-
         JMenu menu = createMenu( "View", 'V' );
 
         ButtonGroup lafsGroup = new ButtonGroup();
-        ButtonGroup themeGroup = new ButtonGroup();
         String[] names = themeManager.getLafsNames();
 
         for ( int i = 0; i < names.length; i++ )
         {
             String name = names[i];
 
-            if ( name.indexOf( "Plastic" ) == -1 )
-            {
-                item =
-                    createRadioButtonMenuItem( name, name.equalsIgnoreCase( settings.getGuiSettings().getLookAndFeel() ) );
-                item.setName( name );
-                item.addActionListener( dcFrame );
-                lafsGroup.add( item );
-                menu.add( item );
-
-            }
-            else
-            {
-                JMenu submenu = createSubMenu( name );
-
-                lafsGroup.add( submenu );
-                menu.add( submenu );
-
-                String[] themes = themeManager.getThemeNames();
-
-                for ( int j = 0; j < themes.length; j++ )
-                {
-                    String theme = themes[j];
-
-                    item =
-                        createRadioButtonMenuItem( theme, (name.equalsIgnoreCase( settings.getGuiSettings()
-                            .getLookAndFeel() ) && theme.equalsIgnoreCase( settings.getGuiSettings().getTheme() )) );
-                    item.setName( name + "_" + theme );
-                    item.addActionListener( dcFrame );
-                    themeGroup.add( item );
-                    submenu.add( item );
-
-                }
-
-            }
-
+            JRadioButtonMenuItem item =
+                createRadioButtonMenuItem( name, name.equalsIgnoreCase( settings.getGuiSettings().getLookAndFeel() ) );
+            item.setName( name );
+            item.addActionListener( dcFrame );
+            lafsGroup.add( item );
+            menu.add( item );
         }
 
         return menu;
 
     }
-
-    // Factory Methods ********************************************************
 
     /**
      * Create a simple Menu with the given text and mnemonic
@@ -233,11 +183,8 @@ public class MainMenuBar
         char mnemonic )
     {
         JMenu menu = new JMenu( text );
-
         menu.setMnemonic( mnemonic );
-
         return menu;
-
     }
 
     /**
@@ -252,7 +199,6 @@ public class MainMenuBar
         char mnemonic )
     {
         return new JMenuItem( text, mnemonic );
-
     }
 
     /**
@@ -269,11 +215,8 @@ public class MainMenuBar
         char mnemonic )
     {
         JMenuItem menuItem = new JMenuItem( text, icon );
-
         menuItem.setMnemonic( mnemonic );
-
         return menuItem;
-
     }
 
     /**
@@ -292,11 +235,8 @@ public class MainMenuBar
         KeyStroke key )
     {
         JMenuItem menuItem = createMenuItem( text, icon, mnemonic );
-
         menuItem.setAccelerator( key );
-
         return menuItem;
-
     }
 
     /**
@@ -315,23 +255,6 @@ public class MainMenuBar
     }
 
     /**
-     * Create a simple Menu with the given text
-     * 
-     * @param text
-     * @return
-     */
-    private JMenu createSubMenu(
-        String text )
-    {
-        JMenu menu = new JMenu( text );
-
-        return menu;
-
-    }
-
-    // Subclass will override the following methods ***************************
-
-    /**
      * Checks and answers whether the quit action has been moved to an operating system specific menu, e.g. the OS X
      * application menu.
      * 
@@ -340,33 +263,8 @@ public class MainMenuBar
     private boolean isQuitInOSMenu()
     {
         return false;
-
     }
 
-    /**
-     * Checks and answers whether the about action has been moved to an operating system specific menu, e.g. the OS X
-     * application menu.
-     * 
-     * @return true if the about action is in an OS-specific menu
-     */
-    // private boolean isAboutInOSMenu() {
-    // return false;
-    //
-    // }
-    // Higher Level Factory Methods *****************************************
-    /**
-     * Creates and answers a <code>JRadioButtonMenuItem</code> with the given enablement and selection state.
-     */
-    // private JRadioButtonMenuItem createRadioItem(String label, boolean
-    // selected) {
-    // JRadioButtonMenuItem item = createRadioButtonMenuItem(label, selected);
-    //
-    // item.setEnabled(true);
-    //
-    // return item;
-    //
-    // }
-    // Helper Code ************************************************************
     /**
      * Looks up and answers an icon for the specified filename suffix.
      */
@@ -374,12 +272,5 @@ public class MainMenuBar
         String filename )
     {
         return FileUtils.loadIcon( filename );
-
     }
-
 }
-
-/*******************************************************************************
- * $Log: MainMenuBar.java,v $ Revision 1.19 2005/10/02 11:42:28 timowest updated sources and tests Revision 1.18
- * 2005/09/25 16:40:58 timowest updated sources and tests Revision 1.17 2005/09/14 07:11:49 timowest updated sources
- */

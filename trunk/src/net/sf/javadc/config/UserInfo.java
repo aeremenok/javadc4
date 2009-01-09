@@ -22,44 +22,14 @@ public class UserInfo
     implements
         IUserInfo
 {
-
-    /**
-     * 
-     */
     private String description;
-
-    /**
-     * 
-     */
     private String email;
-    /**
-     * 
-     */
     private String nick;
-
-    /**
-     * 
-     */
     private String speed;
-
-    /**
-     * 
-     */
     private String tag;
 
-    /**
-     * 
-     */
     private int    port;
-
-    /**
-     * 
-     */
     private long   sharedSize = 0;
-
-    /**
-     * 
-     */
     private byte   speedCode;
 
     /**
@@ -68,7 +38,6 @@ public class UserInfo
     public UserInfo()
     {
         description = email = nick = speed = tag = "";
-
     }
 
     /*
@@ -84,13 +53,8 @@ public class UserInfo
         {
             IUserInfo user = (IUserInfo) obj;
             return getNick().equals( user.getNick() );
-
         }
-        else
-        { // obj is not UserInfo
-            return false;
-
-        }
+        return false;
     }
 
     /*
@@ -101,7 +65,6 @@ public class UserInfo
     public String getDescription()
     {
         return description;
-
     }
 
     /*
@@ -112,7 +75,6 @@ public class UserInfo
     public String getEmail()
     {
         return email;
-
     }
 
     /*
@@ -123,7 +85,6 @@ public class UserInfo
     public String getNick()
     {
         return nick;
-
     }
 
     /*
@@ -134,7 +95,6 @@ public class UserInfo
     public int getPort()
     {
         return port;
-
     }
 
     /*
@@ -145,7 +105,6 @@ public class UserInfo
     public long getSharedSize()
     {
         return sharedSize;
-
     }
 
     /*
@@ -156,7 +115,6 @@ public class UserInfo
     public String getSpeed()
     {
         return speed;
-
     }
 
     /*
@@ -167,7 +125,6 @@ public class UserInfo
     public byte getSpeedCode()
     {
         return speedCode;
-
     }
 
     /*
@@ -178,7 +135,6 @@ public class UserInfo
     public String getTag()
     {
         return tag;
-
     }
 
     /*
@@ -201,7 +157,6 @@ public class UserInfo
         String string )
     {
         description = string;
-
     }
 
     /*
@@ -213,7 +168,6 @@ public class UserInfo
         String string )
     {
         email = string;
-
     }
 
     /*
@@ -227,7 +181,6 @@ public class UserInfo
         // Timo : 20.05.2004
         // filters spaces and dollar signs out
         nick = string.replace( ' ', '_' ).replace( '$', '_' );
-
     }
 
     /*
@@ -239,7 +192,6 @@ public class UserInfo
         int i )
     {
         port = i;
-
     }
 
     /*
@@ -251,7 +203,6 @@ public class UserInfo
         long l )
     {
         sharedSize = l;
-
     }
 
     /*
@@ -263,7 +214,6 @@ public class UserInfo
         String string )
     {
         speed = string;
-
     }
 
     /*
@@ -275,10 +225,7 @@ public class UserInfo
         byte code )
     {
         speedCode = code;
-
     }
-
-    /** ********************************************************************** */
 
     /*
      * (non-Javadoc)
@@ -289,12 +236,5 @@ public class UserInfo
         String string )
     {
         tag = string;
-
     }
-
 }
-
-/*******************************************************************************
- * $Log: UserInfo.java,v $ Revision 1.12 2005/10/02 11:42:27 timowest updated sources and tests Revision 1.11 2005/09/30
- * 15:59:52 timowest updated sources and tests Revision 1.10 2005/09/14 07:11:48 timowest updated sources
- */

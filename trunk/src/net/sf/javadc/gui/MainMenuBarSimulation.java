@@ -22,7 +22,7 @@ import javax.swing.JMenuItem;
 import net.sf.javadc.config.GuiSettings;
 import net.sf.javadc.config.Settings;
 import net.sf.javadc.interfaces.ISettings;
-import net.sf.javadc.themes.ThemeManager;
+import net.sf.javadc.themes.LAFManager;
 
 /**
  * @author Timo Westk�mper To change the template for this generated type comment go to
@@ -33,22 +33,19 @@ public class MainMenuBarSimulation
     private class MySettings
         extends Settings
     {
-
         private GuiSettings guiSettings = new GuiSettings();
 
         public MySettings()
         {
-            guiSettings.setLookAndFeel( "Plastic XP" );
-            guiSettings.setPlasticTabStyle( "normal" );
+            guiSettings.setLookAndFeel( "Metal" );
             guiSettings.setTabIconsEnabled( true );
-            guiSettings.setTheme( "Dark Star" );
+            // guiSettings.setTheme( "Dark Star" );
         }
 
         @Override
         public GuiSettings getGuiSettings()
         {
             return guiSettings;
-
         }
     }
 
@@ -58,7 +55,7 @@ public class MainMenuBarSimulation
 
     private ISettings    settings     = new MySettings();
 
-    private ThemeManager themeManager = new ThemeManager( settings );
+    private LAFManager themeManager = new LAFManager( settings );
 
     public static void main(
         String[] args )

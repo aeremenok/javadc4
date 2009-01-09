@@ -11,8 +11,6 @@
 // $Id: GuiSettingsFactory.java,v 1.14 2005/10/02 11:42:27 timowest Exp $
 package net.sf.javadc.config;
 
-import com.jgoodies.plaf.plastic.PlasticLookAndFeel;
-
 /**
  * <CODE>GuiSettingsFactory</CODE> represents a Factory Method implementation to create pre populated instances of
  * <CODE>GuiSettings</CODE>
@@ -21,9 +19,6 @@ import com.jgoodies.plaf.plastic.PlasticLookAndFeel;
  */
 public class GuiSettingsFactory
 {
-    /**
-     * 
-     */
     public static int DEFAULT = 1;
 
     /**
@@ -40,16 +35,13 @@ public class GuiSettingsFactory
         if ( selection == DEFAULT )
         {
             settings = createDefault();
-
         }
         else
         {
             // ?
-
         }
 
         return settings;
-
     }
 
     /**
@@ -61,21 +53,12 @@ public class GuiSettingsFactory
     {
         GuiSettings settings = new GuiSettings();
 
-        settings.setLookAndFeel( "Plastic XP" );
-        settings.setTheme( "Sky Bluer - Tahoma" );
+        settings.setLookAndFeel( "Metal" );
         settings.setUseSystemFonts( Boolean.TRUE );
         settings.setUseNarrowButtons( false );
         settings.setTabIconsEnabled( false );
-        settings.setPlasticTabStyle( PlasticLookAndFeel.TAB_STYLE_METAL_VALUE );
-        settings.setPlasticHighContrastFocusEnabled( true );
         settings.setPopupDropShadowEnabled( Boolean.TRUE );
 
         return settings;
     }
-
 }
-
-/*******************************************************************************
- * $Log: GuiSettingsFactory.java,v $ Revision 1.14 2005/10/02 11:42:27 timowest updated sources and tests Revision 1.13
- * 2005/09/30 15:59:52 timowest updated sources and tests Revision 1.12 2005/09/14 07:11:48 timowest updated sources
- */

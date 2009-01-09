@@ -59,7 +59,7 @@ import net.sf.javadc.net.hub.HubList;
 import net.sf.javadc.net.hub.HubManager;
 import net.sf.javadc.tasks.ClientTaskFactory;
 import net.sf.javadc.tasks.HubTaskFactory;
-import net.sf.javadc.themes.ThemeManager;
+import net.sf.javadc.themes.LAFManager;
 import net.sf.javadc.util.TaskManager;
 
 import org.picocontainer.MutablePicoContainer;
@@ -224,7 +224,7 @@ public class ContainerBuilder
         // loads the settings from the XML serialized version
         mainContainer.registerComponentImplementation( ISettingsLoader.class, SettingsLoader.class );
         // manager for swing look and feel implementations
-        mainContainer.registerComponentImplementation( ThemeManager.class );
+        mainContainer.registerComponentImplementation( LAFManager.class );
         // user information
         mainContainer.registerComponentImplementation( IUserInfo.class, User.class );
         // manages the shared files of the user

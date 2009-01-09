@@ -26,19 +26,10 @@
   <void property="guiSettings"> 
    <object class="net.sf.javadc.config.GuiSettings"> 
     <void property="lookAndFeel"> 
-     <string>Plastic XP</string> 
-    </void> 
-    <void property="plasticHighContrastFocusEnabled"> 
-     <boolean>true</boolean> 
-    </void> 
-    <void property="plasticTabStyle"> 
-     <string>metal</string> 
+     <string>Metal</string> 
     </void> 
     <void property="popupDropShadowEnabled"> 
      <boolean>true</boolean> 
-    </void> 
-    <void property="theme"> 
-     <string>Sky Bluer - Tahoma</string> 
     </void> 
     <void property="useSystemFonts"> 
      <boolean>true</boolean> 
