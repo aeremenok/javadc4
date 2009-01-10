@@ -60,9 +60,9 @@ public class UserListComponent
         private final RowTableModel model;
 
         // private long lastChanged = 0;
-        private ArrayList           added   = new ArrayList();
+        private ArrayList<HubUser>  added   = new ArrayList<HubUser>();
 
-        private ArrayList           removed = new ArrayList();
+        private ArrayList<HubUser>  removed = new ArrayList<HubUser>();
 
         private boolean             updated = false;
 
@@ -132,28 +132,25 @@ public class UserListComponent
         {
             // updates the model only if the last change has happend more
             // than 1 second ago
-            HubUser[] ad = (HubUser[]) added.toArray( new HubUser[added.size()] );
+            HubUser[] ad = added.toArray( new HubUser[added.size()] );
 
             added.clear();
 
-            HubUser[] re = (HubUser[]) removed.toArray( new HubUser[removed.size()] );
+            HubUser[] re = removed.toArray( new HubUser[removed.size()] );
 
             removed.clear();
 
             // adds new hubs
-            for ( int i = 0; i < ad.length; i++ )
+            for ( HubUser element : ad )
             {
-                model.addRow( ad[i], getUserColumns( ad[i] ) );
-
+                model.addRow( element, getUserColumns( element ) );
             }
 
             // removed old hubs
-            for ( int j = 0; j < re.length; j++ )
+            for ( HubUser element : re )
             {
-                model.deleteRow( re[j] );
-
+                model.deleteRow( element );
             }
-
         }
 
     }
@@ -163,44 +160,20 @@ public class UserListComponent
      */
     private static final long      serialVersionUID = 2650931664823334860L;
 
-    // private final static Category logger = Category
-    // .getInstance(UserListComponent.class);
-    /**
-     * 
-     */
     private final IHub             hub;
 
-    /**
-     *  
-     */
     private HubComponent           hubComponent;
-
-    /**
-     * 
-     */
     private final RowTableModel    model            =
                                                         new RowTableModel( new String[] { "Nick", "Size", "Speed",
                     "Description"                      } );
-
-    /**
-     * 
-     */
     private final SortableTable    list             =
                                                         new SortableTable( new int[] { 90, 70, 70, -1 }, this, model,
                                                             "users" );
 
     // external components
-    /**
-     * 
-     */
     private final ISettings        settings;
 
-    /**
-     * 
-     */
     private final IDownloadManager downloadManager;
-
-    /** ********************************************************************** */
 
     /**
      * Create a new UserListComponent instance
@@ -298,7 +271,7 @@ public class UserListComponent
         {
 
             public void actionPerformed(
-                ActionEvent e )
+                ActionEvent e1 )
             {
                 HubUser user = (HubUser) model.getRow( row );
 
@@ -312,7 +285,7 @@ public class UserListComponent
         {
 
             public void actionPerformed(
-                ActionEvent e )
+                ActionEvent e1 )
             {
                 int[] els = {};
                 cellSelected( row, column, els );
@@ -355,7 +328,7 @@ public class UserListComponent
 
         try
         {
-            opList = (hub).getOpList();
+            opList = hub.getOpList();
 
         }
         catch ( Exception e )
@@ -378,10 +351,3 @@ public class UserListComponent
     }
 
 }
-
-/*******************************************************************************
- * $Log: UserListComponent.java,v $ Revision 1.22 2005/10/02 11:42:28 timowest updated sources and tests Revision 1.21
- * 2005/09/30 15:59:53 timowest updated sources and tests Revision 1.20 2005/09/26 17:53:13 timowest added null checks
- * Revision 1.19 2005/09/25 16:40:58 timowest updated sources and tests Revision 1.18 2005/09/14 07:11:49 timowest
- * updated sources
- */

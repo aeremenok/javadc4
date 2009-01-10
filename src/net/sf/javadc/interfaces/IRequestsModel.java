@@ -12,6 +12,7 @@ package net.sf.javadc.interfaces;
 
 import java.util.List;
 
+import net.sf.javadc.listeners.RequestsModelListener;
 import net.sf.javadc.net.DownloadRequest;
 
 /**
@@ -24,7 +25,7 @@ import net.sf.javadc.net.DownloadRequest;
  */
 public interface IRequestsModel
     extends
-        IGenericModel
+        IGenericModel<RequestsModelListener>
 {
     /**
      * Notify registered listeners that the given Connection instance has been added
@@ -104,7 +105,7 @@ public interface IRequestsModel
      * 
      * @return
      */
-    public abstract List getAllDownloads();
+    public abstract List<DownloadRequest> getAllDownloads();
 
     /**
      * Remove the given DownloadRequest from the queue

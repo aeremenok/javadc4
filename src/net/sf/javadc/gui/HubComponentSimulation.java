@@ -6,6 +6,7 @@ package net.sf.javadc.gui;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.EventListener;
 
 import javax.swing.JFrame;
 
@@ -24,16 +25,15 @@ import net.sf.javadc.net.hub.HubManager;
  */
 public class HubComponentSimulation
 {
-    // private ISettings settings = new Settings();
-    private ISettings        settings        = new BaseSettings( true );
+    private ISettings<EventListener> settings        = new BaseSettings( true );
 
-    private IHubManager      hubManager      = new HubManager();
+    private IHubManager              hubManager      = new HubManager();
 
-    private ISegmentManager  segmentManager  = new SegmentManager( settings );
+    private ISegmentManager          segmentManager  = new SegmentManager( settings );
 
-    private IDownloadManager downloadManager = new DownloadManager( hubManager, segmentManager );
+    private IDownloadManager         downloadManager = new DownloadManager( hubManager, segmentManager );
 
-    private HubComponent     hubComponent    = new HubComponent( new BaseHub(), settings, downloadManager );
+    private HubComponent             hubComponent    = new HubComponent( new BaseHub(), settings, downloadManager );
 
     public static void main(
         String[] args )

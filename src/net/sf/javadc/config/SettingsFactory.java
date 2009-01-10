@@ -11,6 +11,8 @@
 // $Id: SettingsFactory.java,v 1.8 2005/10/02 11:42:27 timowest Exp $
 package net.sf.javadc.config;
 
+import java.util.EventListener;
+
 import net.sf.javadc.interfaces.ISettings;
 
 /**
@@ -26,9 +28,9 @@ public class SettingsFactory
      * 
      * @return
      */
-    public ISettings createDefaultSettings()
+    public ISettings<EventListener> createDefaultSettings()
     {
-        ISettings settings = new Settings();
+        ISettings<EventListener> settings = new Settings();
 
         // userInfo
         UserInfo userInfo = new UserInfo();

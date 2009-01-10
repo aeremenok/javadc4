@@ -26,13 +26,10 @@ import spin.Spin;
 public class ShareManagerWindow
     extends JWindow
 {
-
-    /** ********************************************************************** */
     private class MyShareManagerListener
         implements
             ShareManagerListener
     {
-
         /*
          * (non-Javadoc)
          * 
@@ -92,58 +89,27 @@ public class ShareManagerWindow
         }
     }
 
-    /**
-     * 
-     */
-    private static final long    serialVersionUID     = -565409389543402770L;
+    private static final long                         serialVersionUID     = -565409389543402770L;
 
-    /**
-     * 
-     */
-    private final int            screenWidth          = getToolkit().getScreenSize().width;
-
-    /**
-     * 
-     */
-    private final int            screenHeight         = getToolkit().getScreenSize().height;
+    private final int                                 screenWidth          = getToolkit().getScreenSize().width;
+    private final int                                 screenHeight         = getToolkit().getScreenSize().height;
 
     // private final int frameWidth = 350;
-    /**
-     * 
-     */
-    private final int            frameWidth           = 175;
+    private final int                                 frameWidth           = 175;
 
     // private final int frameHeight = 200;
-    /**
-     * 
-     */
-    private final int            frameHeight          = 100;
+    private final int                                 frameHeight          = 100;
+    private final JPanel                              mainPanel            = new JPanel();
+    private final JLabel                              label                = new JLabel();
 
-    /**
-     * 
-     */
-    private final JPanel         mainPanel            = new JPanel();
-
-    /**
-     * 
-     */
-    private final JLabel         label                = new JLabel();
-
-    /**
-     * 
-     */
-    private final JLabel         logo                 = new JLabel();
-
-    /**
-     * 
-     */
-    private ShareManagerListener shareManagerListener = new MyShareManagerListener();
+    private final JLabel                              logo                 = new JLabel();
+    private ShareManagerListener                      shareManagerListener = new MyShareManagerListener();
 
     // external components
     /**
      * 
      */
-    private final IShareManager  shareManager;
+    private final IShareManager<ShareManagerListener> shareManager;
 
     /**
      * Create a ShareManagerWindow with the given IShareManager instance
@@ -160,7 +126,7 @@ public class ShareManagerWindow
             throw new NullPointerException( "shareManager was null" );
         }
 
-        shareManager = (IShareManager) Spin.off( _shareManager );
+        shareManager = (IShareManager<ShareManagerListener>) Spin.off( _shareManager );
         shareManager.addListener( shareManagerListener );
 
         // sets location and size of the component
@@ -192,11 +158,4 @@ public class ShareManagerWindow
 
         // setModal(true); // dialog is modal
     }
-
 }
-
-/*******************************************************************************
- * $Log: ShareManagerWindow.java,v $ Revision 1.18 2005/10/02 11:42:28 timowest updated sources and tests Revision 1.17
- * 2005/09/26 17:53:13 timowest added null checks Revision 1.16 2005/09/25 16:40:58 timowest updated sources and tests
- * Revision 1.15 2005/09/14 07:11:49 timowest updated sources
- */

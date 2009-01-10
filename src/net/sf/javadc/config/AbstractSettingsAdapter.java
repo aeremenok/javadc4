@@ -19,8 +19,7 @@ import net.sf.javadc.util.GenericModel;
 import org.picocontainer.Startable;
 
 /**
- * <CODE>AbstractSettingsAdapter</CODE> represents the base class for the <CODE>SettingsAdapter</CODE>, which wraps the
- * serialized <CODE>Settings
+ * Base class for the <CODE>SettingsAdapter</CODE>, which wraps the serialized <CODE>Settings
  * </CODE> instance
  * 
  * @author Timo Westk�mper $Id: AbstractSettingsAdapter.java,v 1.14 2005/10/02 11:42:27 timowest Exp $ $Author: timowest
@@ -32,9 +31,6 @@ public abstract class AbstractSettingsAdapter
         ISettings<SettingsListener>,
         Startable
 {
-    /**
-     * 
-     */
     protected ISettingsLoader settingsLoader;
 
     /**
@@ -44,10 +40,9 @@ public abstract class AbstractSettingsAdapter
     public void addListener(
         SettingsListener listener )
     {
-        SettingsListener l = listener;
-        super.addListener( l );
-        l.downloadSlotsChanged( getUsedDownloadSlots(), getDownloadSlots() );
-        l.uploadSlotsChanged( getUsedUploadSlots(), getUploadSlots() );
+        super.addListener( listener );
+        listener.downloadSlotsChanged( getUsedDownloadSlots(), getDownloadSlots() );
+        listener.uploadSlotsChanged( getUsedUploadSlots(), getUploadSlots() );
     }
 
     /**
@@ -55,14 +50,11 @@ public abstract class AbstractSettingsAdapter
      */
     public final void fireDownloadSlotsChanged()
     {
-
         SettingsListener[] l = listenerList.getListeners( SettingsListener.class );
-
-        for ( int i = 0; i < l.length; i++ )
+        for ( SettingsListener listener : l )
         {
-            l[i].downloadSlotsChanged( getUsedDownloadSlots(), getDownloadSlots() );
+            listener.downloadSlotsChanged( getUsedDownloadSlots(), getDownloadSlots() );
         }
-
     }
 
     /**
@@ -70,14 +62,11 @@ public abstract class AbstractSettingsAdapter
      */
     public final void fireUploadSlotsChanged()
     {
-
         SettingsListener[] l = listenerList.getListeners( SettingsListener.class );
-
-        for ( int i = 0; i < l.length; i++ )
+        for ( SettingsListener element : l )
         {
-            l[i].uploadSlotsChanged( getUsedUploadSlots(), getUploadSlots() );
+            element.uploadSlotsChanged( getUsedUploadSlots(), getUploadSlots() );
         }
-
     }
 
     /*
@@ -89,7 +78,6 @@ public abstract class AbstractSettingsAdapter
     {
         setUsedUploadSlots( 0 );
         setUsedDownloadSlots( 0 );
-
     }
 
     /*
@@ -103,7 +91,6 @@ public abstract class AbstractSettingsAdapter
         setUsedDownloadSlots( 0 );
 
         settingsLoader.save();
-
     }
 
     /*
@@ -118,9 +105,3 @@ public abstract class AbstractSettingsAdapter
     }
 
 }
-
-/*******************************************************************************
- * $Log: AbstractSettingsAdapter.java,v $ Revision 1.14 2005/10/02 11:42:27 timowest updated sources and tests Revision
- * 1.13 2005/09/30 15:59:52 timowest updated sources and tests Revision 1.12 2005/09/14 07:11:48 timowest updated
- * sources
- */

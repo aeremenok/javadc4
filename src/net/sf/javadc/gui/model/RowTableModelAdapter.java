@@ -33,12 +33,9 @@ import org.apache.log4j.Category;
 public class RowTableModelAdapter
     extends AbstractTableModel
 {
-
-    /** ********************************************************************** */
     private class MyRequestsModelListener
         extends RequestsModelListenerBase
     {
-
         // NOTE : this listener is not interested in Connection related events
 
         /*
@@ -143,16 +140,22 @@ public class RowTableModelAdapter
         Object[] columns )
     {
         throw new RuntimeException( ERROR_MESSAGE );
-
     }
 
-    /**
-     * 
-     */
     public void clear()
     {
         throw new RuntimeException( ERROR_MESSAGE );
+    }
 
+    /**
+     * Delete the given DownloadRequest from the underlying model
+     * 
+     * @param row
+     */
+    public void deleteRow(
+        DownloadRequest row )
+    {
+        model.removeDownloadRequest( row );
     }
 
     /**
@@ -163,51 +166,16 @@ public class RowTableModelAdapter
     public void deleteRow(
         int index )
     {
-        DownloadRequest dr = (DownloadRequest) model.getAllDownloads().get( index );
-
+        DownloadRequest dr = model.getAllDownloads().get( index );
         if ( dr != null )
         {
             model.removeDownloadRequest( dr );
-
         }
         else
         {
             logger.warn( "DownloadRequest with index " + index + " could not be found." );
-
         }
-
     }
-
-    /**
-     * Delete the given DownloadRequest from the underlying model
-     * 
-     * @param row
-     */
-    public void deleteRow(
-        Object row )
-    {
-        if ( row instanceof DownloadRequest )
-        {
-            model.removeDownloadRequest( (DownloadRequest) row );
-
-        }
-        else if ( row != null )
-        {
-            String error = "Wrong argument class " + row.getClass().getName() + " for row in deleteRow";
-            logger.error( error );
-
-            throw new RuntimeException( error );
-
-        }
-        else
-        {
-            logger.error( "Row was null", new NullPointerException() );
-
-        }
-
-    }
-
-    /** ********************************************************************** */
 
     /*
      * (non-Javadoc)
@@ -215,7 +183,7 @@ public class RowTableModelAdapter
      * @see javax.swing.table.TableModel#getColumnClass(int)
      */
     @Override
-    public final Class getColumnClass(
+    public final Class<? extends Object> getColumnClass(
         int columnIndex )
     {
         if ( getRowCount() > 0 )
@@ -223,14 +191,8 @@ public class RowTableModelAdapter
             final Object o = getValueAt( 0, columnIndex );
 
             return o != null ? o.getClass() : Object.class;
-
         }
-        else
-        {
-            return super.getColumnClass( columnIndex );
-
-        }
-
+        return super.getColumnClass( columnIndex );
     }
 
     /*
@@ -263,22 +225,15 @@ public class RowTableModelAdapter
      * @param row
      * @return
      */
-    public Object getRow(
+    public DownloadRequest getRow(
         int row )
     {
-        List rows = model.getAllDownloads();
-
+        List<DownloadRequest> rows = model.getAllDownloads();
         if ( row < rows.size() )
         {
             return rows.get( row );
-
         }
-        else
-        {
-            return null;
-
-        }
-
+        return null;
     }
 
     /*
@@ -310,7 +265,7 @@ public class RowTableModelAdapter
      * 
      * @return
      */
-    public List getRows()
+    public List<DownloadRequest> getRows()
     {
         return model.getAllDownloads();
 
@@ -327,13 +282,11 @@ public class RowTableModelAdapter
     {
         if ( rowIndex < getRowCount() )
         {
-
             DownloadRequest dr;
 
             try
             {
-                dr = (DownloadRequest) model.getAllDownloads().get( rowIndex );
-
+                dr = model.getAllDownloads().get( rowIndex );
             }
             catch ( Exception e )
             {
@@ -346,20 +299,16 @@ public class RowTableModelAdapter
                 try
                 {
                     return getColumnsForRow( dr )[columnIndex];
-
                 }
                 catch ( Exception e )
                 {
                     logger.error( e );
-
                 }
-
             }
             else
             {
                 logger.error( "Column index " + columnIndex + " exceeded " + "amount of available columns." );
             }
-
         }
         else
         {
@@ -379,7 +328,6 @@ public class RowTableModelAdapter
         Object[] columns )
     {
         throw new RuntimeException( ERROR_MESSAGE );
-
     }
 
     /**
@@ -388,10 +336,9 @@ public class RowTableModelAdapter
      * @param rows
      */
     public void setRows(
-        List rows )
+        @SuppressWarnings( "unused" ) List<DownloadRequest> rows )
     {
         throw new RuntimeException( ERROR_MESSAGE );
-
     }
 
     /**
@@ -425,23 +372,11 @@ public class RowTableModelAdapter
 
             // normal download
         }
-        else
-        {
-            return new Object[] { sr.getFilename(), sr.getTTH(), new Long( dr.getTempFileSize() ),
 
-                            // full file size
-                            new Long( sr.getFileSize() ), sr.getNick(), sr.getHost(), sr.getHub().getName(),
-                            dr.getState() };
-
-        }
+        return new Object[] { sr.getFilename(), sr.getTTH(), new Long( dr.getTempFileSize() ),
+        // full file size
+                        new Long( sr.getFileSize() ), sr.getNick(), sr.getHost(), sr.getHub().getName(), dr.getState() };
 
     }
 
 }
-
-/*******************************************************************************
- * $Log: RowTableModelAdapter.java,v $ Revision 1.21 2005/10/02 11:42:28 timowest updated sources and tests Revision
- * 1.20 2005/09/26 17:19:52 timowest updated sources and tests Revision 1.19 2005/09/25 16:40:58 timowest updated
- * sources and tests Revision 1.18 2005/09/15 17:32:29 timowest added null checks Revision 1.17 2005/09/14 07:11:49
- * timowest updated sources
- */

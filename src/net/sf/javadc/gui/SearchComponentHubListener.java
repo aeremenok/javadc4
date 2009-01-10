@@ -29,10 +29,8 @@ import org.apache.log4j.Category;
 class SearchComponentHubListener
     extends HubListenerBase
 {
-
     private class ResultAndRequest
     {
-
         public final SearchResult  searchResult;
 
         public final SearchRequest searchRequest;
@@ -41,7 +39,6 @@ class SearchComponentHubListener
             SearchResult _searchResult,
             SearchRequest _searchRequest )
         {
-
             // if (_searchResult == null)
             // throw new NullPointerException("searchResult was null.");
             //            
@@ -58,35 +55,19 @@ class SearchComponentHubListener
 
     private static final Category  logger         = Category.getInstance( SearchComponentHubListener.class );
 
-    /**
-     * 
-     */
     private final SearchComponent  searchComponent;
 
     // internal
 
-    /**
-     * 
-     */
     private final IHub             hub;
-
-    /**
-     * 
-     */
     private List<ResultAndRequest> added          = new ArrayList<ResultAndRequest>();
 
     // private Map results2requests = new HashMap();
 
     // private boolean updated = false;
 
-    /**
-     * 
-     */
     private List<SearchRequest>    searchRequests = new ArrayList<SearchRequest>();
 
-    /**
-     * 
-     */
     private boolean                isAllHubs      = false;
 
     /**
@@ -121,13 +102,11 @@ class SearchComponentHubListener
                 ActionEvent evt )
             {
                 update();
-
             }
 
         };
 
         new Timer( ConstantSettings.SEARCHRESULTS_UPDATEINTERVAL, taskPerformer ).start();
-
     }
 
     /*
@@ -163,8 +142,6 @@ class SearchComponentHubListener
         }// else
 
     }
-
-    /** ********************************************************************** */
 
     /*
      * (non-Javadoc)
@@ -292,7 +269,7 @@ class SearchComponentHubListener
     private void update()
     {
         List models = searchComponent.getModels();
-        List searchRequests = searchComponent.getSearchRequests();
+        List searchRequests1 = searchComponent.getSearchRequests();
 
         // SearchResult[] searchResults;
         ResultAndRequest[] searchResults;
@@ -318,7 +295,7 @@ class SearchComponentHubListener
             RowTableModel model = null;
             SearchRequest sr = searchResults[i].searchRequest;
 
-            int j = searchRequests.indexOf( sr );
+            int j = searchRequests1.indexOf( sr );
 
             if ( j == -1 )
             {

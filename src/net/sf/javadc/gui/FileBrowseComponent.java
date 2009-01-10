@@ -16,6 +16,7 @@ import java.awt.Point;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseEvent;
+import java.util.EventListener;
 
 import javax.swing.Icon;
 import javax.swing.JLabel;
@@ -59,14 +60,12 @@ public class FileBrowseComponent
         implements
             SortableTableListener
     {
-
         public void cellSelected(
             int row,
             int column,
             int[] selectedColumn )
         {
             // TODO Auto-generated method stub
-
         }
 
         public void showPopupClicked(
@@ -76,23 +75,12 @@ public class FileBrowseComponent
             int[] selectedRows )
         {
             // TODO Auto-generated method stub
-
         }
-
     }
-
-    // private final static Logger logger =
-    // Logger.getLogger(FileBrowseComponent.class);
-
-    /** ********************************************************************** */
 
     private class MyTreeCellRenderer
         extends DefaultTreeCellRenderer
     {
-
-        /**
-         * 
-         */
         private static final long serialVersionUID = -1207862436601048067L;
 
         @Override
@@ -100,14 +88,12 @@ public class FileBrowseComponent
         {
             return getClosedIcon();
         }
-
     }
 
     private class MyTreeSelectionListener
         implements
             TreeSelectionListener
     {
-
         public void valueChanged(
             TreeSelectionEvent arg0 )
         {
@@ -118,79 +104,26 @@ public class FileBrowseComponent
 
             fileTableLabel.setText( "Content of " + node.getFile().getPath().substring( 1 ) );
         }
-
     }
 
-    /**
-     * 
-     */
-    private static final long       serialVersionUID      = 7606840779863197560L;
+    private static final long              serialVersionUID      = 7606840779863197560L;
 
     // attributes
-    /**
-     * 
-     */
-    private IHub                    hub;
-
-    /**
-     * 
-     */
-    private JTree                   tree;
-
-    /**
-     * 
-     */
-    private JLabel                  fileTableLabel;
-
-    /**
-     * 
-     */
-    private SortableTable           fileTable;
-
-    /**
-     * 
-     */
-    private String                  nick;
-
-    /**
-     * 
-     */
-    private SortableTableListener   fileListTableListener = new MySortableTableListener();
-
-    /**
-     * 
-     */
-    private TreeSelectionListener   treeSelectionListener = new MyTreeSelectionListener();
+    private IHub                           hub;
+    private JTree                          tree;
+    private JLabel                         fileTableLabel;
+    private SortableTable                  fileTable;
+    private String                         nick;
+    private SortableTableListener          fileListTableListener = new MySortableTableListener();
+    private TreeSelectionListener          treeSelectionListener = new MyTreeSelectionListener();
 
     // components
-    /**
-     * 
-     */
-    private final ISettings         settings;
+    private final ISettings<EventListener> settings;
+    private final FileListModel            fileListModel;
+    private final FileListTreeModel        fileListTreeModel;
 
-    /**
-     * 
-     */
-    private final FileListModel     fileListModel;
-
-    /**
-     * 
-     */
-    private final FileListTreeModel fileListTreeModel;
-
-    /** ********************************************************************** */
-
-    /**
-     * 
-     */
-    private FileListTableModel      fileListTableModel;
-
-    /**
-     * 
-     */
-    private final IDownloadManager  downloadManager;
-
-    /** ********************************************************************** */
+    private FileListTableModel             fileListTableModel;
+    private final IDownloadManager         downloadManager;
 
     /**
      * Create a FileBrowseComponent instance with the given IHub, nick and ISettings instance to be used
@@ -202,7 +135,7 @@ public class FileBrowseComponent
     public FileBrowseComponent(
         IHub hub,
         String nick,
-        ISettings settings,
+        ISettings<EventListener> settings,
         IDownloadManager downloadManager )
     {
         super( new BorderLayout() );
@@ -226,7 +159,7 @@ public class FileBrowseComponent
      * @param _settings ISettings instance to be used
      */
     public FileBrowseComponent(
-        ISettings _settings,
+        ISettings<EventListener> _settings,
         IDownloadManager _downloadManager )
     {
         super( new BorderLayout() );
@@ -339,7 +272,7 @@ public class FileBrowseComponent
         {
 
             public void actionPerformed(
-                ActionEvent e )
+                ActionEvent e1 )
             {
                 SearchResult sr = new SearchResult( hub, nick, filename, settings, 1 );
 
@@ -355,10 +288,3 @@ public class FileBrowseComponent
     }
 
 }
-
-/*******************************************************************************
- * $Log: FileBrowseComponent.java,v $ Revision 1.26 2005/10/02 11:42:28 timowest updated sources and tests Revision 1.25
- * 2005/09/26 17:53:12 timowest added null checks Revision 1.24 2005/09/26 17:19:52 timowest updated sources and tests
- * Revision 1.23 2005/09/25 16:40:58 timowest updated sources and tests Revision 1.22 2005/09/15 17:32:29 timowest added
- * null checks Revision 1.21 2005/09/14 07:11:49 timowest updated sources
- */

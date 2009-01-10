@@ -17,6 +17,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.EventListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -106,26 +107,26 @@ public class HubComponent
 
     }
 
-    private static final long       serialVersionUID = -5374039091287814873L;
+    private static final long              serialVersionUID = -5374039091287814873L;
 
-    private final static Category   logger           = Category.getInstance( HubComponent.class );
-    private final JButton           disconnectButton;
+    private final static Category          logger           = Category.getInstance( HubComponent.class );
+    private final JButton                  disconnectButton;
 
     // private final JPanel hubPane;
-    private final JPopupMenu        popup            = new JPopupMenu();
-    private final JTabbedPane       tabPane          = new JTabbedPane();
-    private final MessageComponent  messageComponent;
-    private final SearchComponent   searchComponent;
-    private final SplitPane         splitPane;
-    private final JToolBar          toolBar;
-    private final UserListComponent userList;
-    private final HubListener       hubListener;
-    private boolean                 active           = true;
+    private final JPopupMenu               popup            = new JPopupMenu();
+    private final JTabbedPane              tabPane          = new JTabbedPane();
+    private final MessageComponent         messageComponent;
+    private final SearchComponent          searchComponent;
+    private final SplitPane                splitPane;
+    private final JToolBar                 toolBar;
+    private final UserListComponent        userList;
+    private final HubListener              hubListener;
+    private boolean                        active           = true;
 
     // external components
-    private final IHub              hub;
-    private final ISettings         settings;
-    private final IDownloadManager  downloadManager;
+    private final IHub                     hub;
+    private final ISettings<EventListener> settings;
+    private final IDownloadManager         downloadManager;
 
     /**
      * Create a HubComponent which uses the given IHub and ISettings instance
@@ -135,7 +136,7 @@ public class HubComponent
      */
     public HubComponent(
         IHub _hub,
-        ISettings _settings,
+        ISettings<EventListener> _settings,
         IDownloadManager _downloadManager )
     {
         super( new BorderLayout() );

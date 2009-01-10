@@ -12,15 +12,13 @@
 package net.sf.javadc.util;
 
 /**
+ * todo replace with java standard Enum
+ * 
  * @author Jesper Nordenberg
  * @version $Revision: 1.9 $ $Date: 2005/10/02 11:42:28 $
  */
 public class Enum
 {
-
-    /**
-     * 
-     */
     private final String name;
 
     /**
@@ -30,7 +28,6 @@ public class Enum
         String name )
     {
         this.name = name;
-
     }
 
     /*
@@ -42,12 +39,5 @@ public class Enum
     public String toString()
     {
         return name;
-
     }
-
 }
-
-/*******************************************************************************
- * $Log: Enum.java,v $ Revision 1.9 2005/10/02 11:42:28 timowest updated sources and tests Revision 1.8 2005/09/14
- * 07:11:48 timowest updated sources
- */

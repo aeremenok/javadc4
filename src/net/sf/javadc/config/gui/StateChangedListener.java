@@ -14,12 +14,13 @@ package net.sf.javadc.config.gui;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
+import junit.framework.Assert;
+
 import org.apache.log4j.Category;
 
 /**
- * <CODE>StateChangedListener</CODE> is an <CODE>ActionListener</CODE> implementation which flags the changed attribute
- * of the related <CODE>
- * AbstractSettingsPanel</CODE> instance, when changes have occured
+ * An <CODE>ActionListener</CODE> implementation which flags the changed attribute of the related
+ * <CODE>AbstractSettingsPanel</CODE> instance, when changes have occured
  * 
  * @author Timo Westk�mper
  */
@@ -29,9 +30,6 @@ public class StateChangedListener
 {
     private final static Category       logger = Category.getInstance( StateChangedListener.class );
 
-    /**
-     * 
-     */
     private final AbstractSettingsPanel panel;
 
     /**
@@ -42,13 +40,8 @@ public class StateChangedListener
     public StateChangedListener(
         AbstractSettingsPanel panel )
     {
-        if ( panel == null )
-        {
-            throw new NullPointerException( "panel was null" );
-        }
-
+        Assert.assertNotNull( panel );
         this.panel = panel;
-
     }
 
     /*
@@ -61,7 +54,6 @@ public class StateChangedListener
     {
         logger.debug( "Settings changed to true for instance of " + panel.getClass() );
         this.panel.setChanged( true );
-
     }
 
     /**
@@ -72,13 +64,5 @@ public class StateChangedListener
     public final AbstractSettingsPanel getPanel()
     {
         return panel;
-
     }
-
 }
-
-/*******************************************************************************
- * $Log: StateChangedListener.java,v $ Revision 1.12 2005/10/02 11:42:28 timowest updated sources and tests Revision
- * 1.11 2005/09/30 15:59:53 timowest updated sources and tests Revision 1.10 2005/09/25 16:40:58 timowest updated
- * sources and tests Revision 1.9 2005/09/14 07:11:49 timowest updated sources
- */

@@ -12,6 +12,7 @@ package net.sf.javadc.gui;
 
 import java.awt.event.WindowAdapter;
 import java.awt.event.WindowEvent;
+import java.util.EventListener;
 
 import javax.swing.JFrame;
 
@@ -25,20 +26,17 @@ import net.sf.javadc.net.SegmentManager;
 import net.sf.javadc.net.hub.HubManager;
 
 /**
- * @author Timo Westk�mper TODO To change the template for this generated type comment go to Window - Preferences - Java
- *         - Code Style - Code Templates
+ * todo what is it?
+ * 
+ * @author Timo Westk�mper
  */
 public class FileBrowseComponentSimulation
 {
-    private IHubManager         hubManager          = new HubManager();
-
-    private ISettings           settings            = new Settings();
-
-    private ISegmentManager     segmentManager      = new SegmentManager( settings );
-
-    private IDownloadManager    downloadManager     = new DownloadManager( hubManager, segmentManager );
-
-    private FileBrowseComponent fileBrowseComponent = new FileBrowseComponent( settings, downloadManager );
+    private IHubManager              hubManager          = new HubManager();
+    private ISettings<EventListener> settings            = new Settings();
+    private ISegmentManager          segmentManager      = new SegmentManager( settings );
+    private IDownloadManager         downloadManager     = new DownloadManager( hubManager, segmentManager );
+    private FileBrowseComponent      fileBrowseComponent = new FileBrowseComponent( settings, downloadManager );
 
     public static void main(
         String[] args )
@@ -57,15 +55,12 @@ public class FileBrowseComponentSimulation
 
         fileListFrame.addWindowListener( new WindowAdapter()
         {
-
             @Override
             public void windowClosing(
                 WindowEvent e )
             {
                 System.exit( 0 );
-
             }
-
         } );
 
         fileListFrame.setVisible( true );
@@ -75,22 +70,11 @@ public class FileBrowseComponentSimulation
             while ( true )
             {
                 Thread.sleep( 10000 );
-
             }
-
         }
         catch ( InterruptedException e )
         {
-            // logger.error(e.toString());
-            // System.out.println(e.toString());
             e.printStackTrace();
-
         }
-
     }
 }
-
-/*******************************************************************************
- * $Log: FileBrowseComponentSimulation.java,v $ Revision 1.12 2005/10/02 11:42:28 timowest updated sources and tests
- * Revision 1.11 2005/09/14 07:11:49 timowest updated sources
- */

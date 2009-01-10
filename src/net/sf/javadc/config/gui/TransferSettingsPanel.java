@@ -37,8 +37,6 @@ import net.sf.javadc.interfaces.IShareManager;
 import net.sf.javadc.util.layout.HIGConstraints;
 import net.sf.javadc.util.layout.HIGLayout;
 
-import org.apache.log4j.Category;
-
 /**
  * <CODE>TransferSettingsPanel</CODE> is a subpanel of the <code>SettingsDialog</code>. It enables the user to set the
  * share preferences.
@@ -50,18 +48,17 @@ public class TransferSettingsPanel
 {
     private static final long              serialVersionUID      = 8818041755542208208L;
 
-    private final static Category          logger                = Category.getInstance( TransferSettingsPanel.class );
     private final JButton                  addShareButton        = new JButton( "Add" );
     private final JButton                  tempDownloadDirButton = new JButton( "Browse" );
     private final JButton                  downloadDirButton     = new JButton();
     private final JTextField               txtDownloadDir        = new JTextField();
     private final JButton                  removeShareButton     = new JButton( "Remove" );
-    private final JList                    shareList;                                                                  // =
+    private final JList                    shareList;                                       // =
     // new
     // JList();
 
     private final DirectoryListModel       shareModel            = new DirectoryListModel();
-    private final JScrollPane              shareScrollPane;                                                            // =
+    private final JScrollPane              shareScrollPane;                                 // =
     // new
     // JScrollPane(shareList);
 
@@ -99,19 +96,13 @@ public class TransferSettingsPanel
 
         try
         {
-            jbInit();
+            initComponents();
         }
         catch ( Exception ex )
         {
-            // logger.error("Catched " + ex.getClass().getName()
-            // + " when trying to initialize TransferSettingsPanel.", ex);
-            //            
-            // throw new RuntimeException(ex);
-
-            logger.error( "Caught " + ex.getClass().getName(), ex );
+            logger.error( "cannot init panel", ex );
             throw new RuntimeException( ex );
         }
-
     }
 
     /**
@@ -123,19 +114,16 @@ public class TransferSettingsPanel
         try
         {
             txtDownloadDir.setText( settings.getDownloadDir() );
-
         }
         catch ( NullPointerException e )
         {
             // logger.error(e);
             logger.error( "Caught " + e.getClass().getName(), e );
-
         }
 
         try
         {
             txtTempDownloadDir.setText( settings.getTempDownloadDir() );
-
         }
         catch ( NullPointerException e )
         {
@@ -144,16 +132,10 @@ public class TransferSettingsPanel
 
         }
 
-        String[] strList = new String[settings.getUploadDirs().size()];
-
-        strList = settings.getUploadDirs().toArray( strList );
-
-        for ( int i = 0; i < strList.length; i++ )
+        for ( String element : settings.getUploadDirs() )
         {
-            shareModel.addDirectory( strList[i] );
-
+            shareModel.addDirectory( element );
         }
-
     }
 
     /*
@@ -200,7 +182,6 @@ public class TransferSettingsPanel
         if ( returnVal == JFileChooser.APPROVE_OPTION )
         {
             return chooser.getSelectedFile().getPath();
-
         }
 
         return null;
@@ -368,7 +349,6 @@ public class TransferSettingsPanel
         try
         {
             ((DirectoryListModel) shareList.getModel()).removeDirectoryAt( shareList.getSelectedIndex() );
-
         }
         catch ( Exception e )
         {
@@ -404,7 +384,7 @@ public class TransferSettingsPanel
      * @see net.sf.javadc.config.gui.AbstractSettingsPanel#jbInit()
      */
     @Override
-    protected final void jbInit()
+    protected final void initComponents()
         throws Exception
     {
         this.setLayout( new BorderLayout() );
@@ -417,6 +397,5 @@ public class TransferSettingsPanel
         p1.add( getUploadPreferences() );
 
         this.add( p1, BorderLayout.NORTH );
-
     }
 }

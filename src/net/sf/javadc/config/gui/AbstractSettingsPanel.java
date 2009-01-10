@@ -13,6 +13,8 @@ package net.sf.javadc.config.gui;
 
 import javax.swing.JPanel;
 
+import org.apache.log4j.Category;
+
 /**
  * <CODE>AbstractSettingsPanel</CODE> is an abstract super class for <CODE>
  * JPanel</CODE> instances in the
@@ -23,17 +25,8 @@ import javax.swing.JPanel;
 public abstract class AbstractSettingsPanel
     extends JPanel
 {
-    // private final static Category logger = Category
-    // .getInstance(AbstractSettingsPanel.class);
-
-    /**
-     * 
-     */
+    protected final Category             logger               = Category.getInstance( getClass() );
     private boolean                      changed;
-
-    /**
-     * 
-     */
     protected final StateChangedListener stateChangedListener = new StateChangedListener( this );
 
     /**
@@ -66,17 +59,17 @@ public abstract class AbstractSettingsPanel
     }
 
     /**
-     * Loads the values and initializes them if needed.
-     */
-    protected abstract void initPanel();
-
-    /**
      * Initialize the subpanels
      * 
      * @throws Exception
      */
-    protected abstract void jbInit()
+    protected abstract void initComponents()
         throws Exception;
+
+    /**
+     * Loads the values and initializes them if needed.
+     */
+    protected abstract void initPanel();
 
     /**
      * Action Handler invoked when Cancel is pressed
@@ -87,11 +80,4 @@ public abstract class AbstractSettingsPanel
      * Action Handler invoked when OK is pressed
      */
     protected abstract void onOK();
-
 }
-
-/*******************************************************************************
- * $Log: AbstractSettingsPanel.java,v $ Revision 1.13 2005/10/02 11:42:28 timowest updated sources and tests Revision
- * 1.12 2005/09/30 15:59:53 timowest updated sources and tests Revision 1.11 2005/09/14 07:11:49 timowest updated
- * sources
- */
