@@ -16,6 +16,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.util.ArrayList;
+import java.util.EventListener;
 import java.util.List;
 
 import javax.swing.JMenuItem;
@@ -52,12 +53,9 @@ import spin.Spin;
 public class ManagerComponent
     extends JPanel
 {
-
-    /** ********************************************************************** */
     private class MyHubListener
         extends HubListenerBase
     {
-
         private boolean updated = false;
 
         public void update(
@@ -96,29 +94,25 @@ public class ManagerComponent
         @Override
         public void userAdded(
             IHub hub,
-            HubUser ui )
+            HubUser ui1 )
         {
             if ( !updated )
             {
                 update( hub );
 
             }
-
         }
 
         @Override
         public void userRemoved(
             IHub hub,
-            HubUser ui )
+            HubUser ui1 )
         {
             if ( !updated )
             {
                 update( hub );
-
             }
-
         }
-
     }
 
     private class MyHubManagerListener
@@ -137,17 +131,14 @@ public class ManagerComponent
                 return; // hub already added
 
             }
-            else
-            {
-                logger.debug( "Adding Hub " + hub );
 
-                hub.addListener( (HubListener) Spin.over( hubListener ) );
-                hubs.add( hub );
+            logger.debug( "Adding Hub " + hub );
 
-                tabPane.addTab( getTabString( hub ), FileUtils.loadIcon( "images/16/network_local.png" ),
-                    new HubComponent( hub, settings, downloadManager ) );
+            hub.addListener( (HubListener) Spin.over( hubListener ) );
+            hubs.add( hub );
 
-            }
+            tabPane.addTab( getTabString( hub ), FileUtils.loadIcon( "images/16/network_local.png" ), new HubComponent(
+                hub, settings, downloadManager ) );
 
         }
 
@@ -162,78 +153,31 @@ public class ManagerComponent
                 return; // not found
 
             }
-            else
-            {
-                logger.debug( "Removing Hub " + hub );
 
-                tabPane.setTitleAt( index + 1, getTabString( hub ) + " (offline)" );
-
-                hub.removeListener( hubListener );
-                // hubs.remove(index);
-
-                // HubComponents are always removed explicily
-                // tabPane.remove(index + 1);
-
-            }
-
+            logger.debug( "Removing Hub " + hub );
+            tabPane.setTitleAt( index + 1, getTabString( hub ) + " (offline)" );
+            hub.removeListener( hubListener );
         }
-
     }
 
-    /**
-     * 
-     */
-    private static final long       serialVersionUID = 4174061825052027243L;
+    private static final long              serialVersionUID = 4174061825052027243L;
 
-    private final static Category   logger           = Category.getInstance( ManagerComponent.class );
+    private final static Category          logger           = Category.getInstance( ManagerComponent.class );
 
-    /**
-     *  
-     */
-    private final MyHubListener     hubListener      = new MyHubListener();
+    private final MyHubListener            hubListener      = new MyHubListener();
+    private final HubListComponent         hubListComponent;
 
-    /**
-     * 
-     */
-    private final HubListComponent  hubListComponent;
+    private final IHubManager              hubManager;
 
-    /**
-     * 
-     */
-    private final IHubManager       hubManager;
+    private final List<IHub>               hubs             = new ArrayList<IHub>();
 
-    /**
-     * 
-     */
-    private final List              hubs             = new ArrayList();
-
-    /**
-     * 
-     */
-    private final JPopupMenu        popup            = new JPopupMenu();
-
-    /**
-     * 
-     */
-    private final JTabbedPane       tabPane          = new JTabbedPane();
+    private final JPopupMenu               popup            = new JPopupMenu();
+    private final JTabbedPane              tabPane          = new JTabbedPane();
 
     // external components
-    /**
-     * 
-     */
-    private final ISettings         settings;
-
-    /**
-     * 
-     */
-    private final IHubFavoritesList hubFavoritesList;
-
-    /** ********************************************************************** */
-
-    /**
-     * 
-     */
-    private final IDownloadManager  downloadManager;
+    private final ISettings<EventListener> settings;
+    private final IHubFavoritesList        hubFavoritesList;
+    private final IDownloadManager         downloadManager;
 
     /**
      * Create a ManagerComponent with the given IHubManager, IHubFavoritesList, HubListComponent and ISettings instance
@@ -248,7 +192,7 @@ public class ManagerComponent
         IHubManager _hubManager,
         IHubFavoritesList _hubFavoritesList,
         HubListComponent _hubListComponent,
-        ISettings _settings,
+        ISettings<EventListener> _settings,
         IDownloadManager _downloadManager )
     {
         super( new BorderLayout() );
@@ -404,7 +348,7 @@ public class ManagerComponent
                     // Hub connection is still active
                     if ( hubComponent.isActive() )
                     {
-                        IHub hub = (IHub) hubs.get( index - 1 );
+                        IHub hub = hubs.get( index - 1 );
                         hub.disconnect();
                     }
 
@@ -436,7 +380,7 @@ public class ManagerComponent
 
                 if ( index > 0 )
                 {
-                    IHub hub = (IHub) hubs.get( index - 1 );
+                    IHub hub = hubs.get( index - 1 );
 
                     hubFavoritesList.addHubInfo( new HubInfo( hub ) );
 

@@ -30,8 +30,6 @@ import net.sf.javadc.interfaces.ISettings;
 import net.sf.javadc.util.layout.HIGConstraints;
 import net.sf.javadc.util.layout.HIGLayout;
 
-import org.apache.log4j.Category;
-
 /**
  * <CODE>ConnectionSettingsPanel</CODE> is a panel to edit connection related settings
  * 
@@ -40,45 +38,16 @@ import org.apache.log4j.Category;
 public class ConnectionSettingsPanel
     extends AbstractSettingsPanel
 {
-    /**
-     * 
-     */
-    private static final long     serialVersionUID = -2854836248361391163L;
+    private static final long  serialVersionUID = -2854836248361391163L;
 
-    private final static Category logger           = Category.getInstance( ConnectionSettingsPanel.class );
+    private final JRadioButton radioActive      = new JRadioButton( "Active Mode" );
+    private final JRadioButton radioPassive     = new JRadioButton( "Passive Mode" );
+    private final JTextField   txtForceIP       = new JTextField();
+    private final JTextField   txtForcePort     = new JTextField();
+    private final JTextField   txtUploadSlots   = new JTextField();
+    private final JTextField   txtDownloadSlots = new JTextField();
 
-    /**
-     * 
-     */
-    private final JRadioButton    radioActive      = new JRadioButton( "Active Mode" );
-
-    /**
-     * 
-     */
-    private final JRadioButton    radioPassive     = new JRadioButton( "Passive Mode" );
-
-    /**
-     * 
-     */
-    private final JTextField      txtForceIP       = new JTextField();
-
-    /**
-     * 
-     */
-    private final JTextField      txtForcePort     = new JTextField();
-
-    /**
-     * 
-     */
-    private final JTextField      txtUploadSlots   = new JTextField();
-
-    /**
-     * 
-     */
-    private final JTextField      txtDownloadSlots = new JTextField();
-
-    // components
-    private final ISettings       settings;
+    private final ISettings    settings;
 
     /**
      * Create a ConnectionSettingsPanel instance with the given ISettings component
@@ -97,7 +66,7 @@ public class ConnectionSettingsPanel
 
         try
         {
-            jbInit();
+            initComponents();
 
         }
         catch ( Exception e )
@@ -107,7 +76,6 @@ public class ConnectionSettingsPanel
 
             throw new RuntimeException( error, e );
         }
-
     }
 
     /*
@@ -188,7 +156,6 @@ public class ConnectionSettingsPanel
     @Override
     public final void onCancel()
     {
-
     }
 
     /*
@@ -210,7 +177,6 @@ public class ConnectionSettingsPanel
             settings.setUploadSlots( new Integer( txtUploadSlots.getText() ).intValue() );
 
             settings.setDownloadSlots( new Integer( txtDownloadSlots.getText() ).intValue() );
-
         }
 
     }
@@ -225,7 +191,6 @@ public class ConnectionSettingsPanel
     {
         txtForceIP.setEnabled( b );
         txtForcePort.setEnabled( b );
-
     }
 
     /**
@@ -363,7 +328,7 @@ public class ConnectionSettingsPanel
      * @see net.sf.javadc.config.gui.AbstractSettingsPanel#jbInit()
      */
     @Override
-    protected final void jbInit()
+    protected final void initComponents()
         throws Exception
     {
         this.setLayout( new BorderLayout() );
@@ -384,11 +349,4 @@ public class ConnectionSettingsPanel
         this.add( p2, BorderLayout.CENTER );
 
     }
-
 }
-
-/*******************************************************************************
- * $Log: ConnectionSettingsPanel.java,v $ Revision 1.16 2005/10/02 11:42:28 timowest updated sources and tests Revision
- * 1.15 2005/09/30 15:59:53 timowest updated sources and tests Revision 1.14 2005/09/25 16:40:58 timowest updated
- * sources and tests Revision 1.13 2005/09/14 07:11:49 timowest updated sources
- */

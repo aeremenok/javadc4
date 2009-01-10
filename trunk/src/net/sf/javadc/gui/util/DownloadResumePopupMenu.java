@@ -46,20 +46,20 @@ public class DownloadResumePopupMenu
     /** 
      * 
      */
-    private static final long      serialVersionUID = -8219487136313980549L;
+    private static final long        serialVersionUID = -8219487136313980549L;
 
-    private static final Category  logger           = Category.getInstance( DownloadResumePopupMenu.class );
+    private static final Category    logger           = Category.getInstance( DownloadResumePopupMenu.class );
 
-    private final IHub             hub;
+    private final IHub               hub;
 
-    private final SearchResult     searchResult;
+    private final SearchResult       searchResult;
 
-    private final List             allSelectedSearchResults;
+    private final List<SearchResult> allSelectedSearchResults;
 
     // components
-    private final ISettings        settings;
+    private final ISettings          settings;
 
-    private final IDownloadManager downloadManager;
+    private final IDownloadManager   downloadManager;
 
     /**
      * Create a DownloadResumePopupMenu which uses the given IHub, SearchResult, and ISettings instance
@@ -72,7 +72,7 @@ public class DownloadResumePopupMenu
     public DownloadResumePopupMenu(
         IHub _hub,
         SearchResult _searchResult,
-        List _allSelectedSearchResults,
+        List<SearchResult> _allSelectedSearchResults,
         ISettings _settings,
         IDownloadManager _downloadManager )
     {
@@ -129,14 +129,14 @@ public class DownloadResumePopupMenu
     /**
      * Choose file to resume via a ResumeAsFileChooser
      * 
-     * @param searchResult SearchResult for which an available file should be used for resume
+     * @param searchResult1 SearchResult for which an available file should be used for resume
      */
     private final void chooseFileToResume(
-        SearchResult searchResult )
+        SearchResult searchResult1 )
     {
         final ResumeAsFileChooser fileChooser = new ResumeAsFileChooser( settings.getTempDownloadDir() );
 
-        if ( fileChooser.showResumeDialog( new File( searchResult.getFilename() ) ) == ResumeAsFileChooser.APPROVE_OPTION )
+        if ( fileChooser.showResumeDialog( new File( searchResult1.getFilename() ) ) == ResumeAsFileChooser.APPROVE_OPTION )
         {
             logger.debug( "Resuming file as: " + fileChooser.getSelectedFile().getAbsolutePath() );
 
@@ -144,7 +144,7 @@ public class DownloadResumePopupMenu
 
             try
             {
-                downloadManager.requestDownload( new DownloadRequest( searchResult, fileChooser.getSelectedFile()
+                downloadManager.requestDownload( new DownloadRequest( searchResult1, fileChooser.getSelectedFile()
                     .getAbsolutePath(), settings ) );
 
             }
@@ -162,15 +162,15 @@ public class DownloadResumePopupMenu
      * Custom resume the SearchResult with the given filename
      * 
      * @param name filename to be used to resume download
-     * @param searchResult SearchResult to be used for resume
+     * @param searchResult1 SearchResult to be used for resume
      */
     private final void customResume(
         String name,
-        SearchResult searchResult )
+        SearchResult searchResult1 )
     {
         try
         {
-            downloadManager.requestDownload( new DownloadRequest( searchResult, settings.getTempDownloadDir() +
+            downloadManager.requestDownload( new DownloadRequest( searchResult1, settings.getTempDownloadDir() +
                 File.separator + name, settings ) );
 
         }
@@ -185,15 +185,14 @@ public class DownloadResumePopupMenu
     /**
      * Start a download for the given SearchResult
      * 
-     * @param searchResult
+     * @param searchResult1
      */
     private final void downloadFile(
-        SearchResult searchResult )
+        SearchResult searchResult1 )
     {
         // logger.debug("Requesting download from hub " + hub.toString());
 
-        downloadManager.requestDownload( new DownloadRequest( searchResult, settings ) );
-
+        downloadManager.requestDownload( new DownloadRequest( searchResult1, settings ) );
     }
 
     /**
@@ -201,11 +200,9 @@ public class DownloadResumePopupMenu
      */
     private final void downloadFiles()
     {
-
-        for ( Iterator i = allSelectedSearchResults.iterator(); i.hasNext(); )
+        for ( Iterator<SearchResult> i = allSelectedSearchResults.iterator(); i.hasNext(); )
         {
-            SearchResult searchResult = (SearchResult) i.next();
-            downloadFile( searchResult );
+            downloadFile( i.next() );
         }
 
     }
@@ -345,22 +342,19 @@ public class DownloadResumePopupMenu
                 // iterates over the search results and initiates searches
                 // if TTH information is available
 
-                for ( Iterator i = allSelectedSearchResults.iterator(); i.hasNext(); )
+                for ( SearchResult searchResult1 : allSelectedSearchResults )
                 {
-                    SearchResult searchResult = (SearchResult) i.next();
-
-                    if ( searchResult.getTTH() != null )
+                    if ( searchResult1.getTTH() != null )
                     {
                         try
                         {
-                            hub.search( new SearchRequest( searchResult.getTTH(), SearchRequest.TTH, 0, true, false ) );
+                            hub.search( new SearchRequest( searchResult1.getTTH(), SearchRequest.TTH, 0, true, false ) );
                         }
                         catch ( IOException e )
                         {
                             logger.error( "Caught " + e.getClass().getName(), e );
                         }
                     }
-
                 }
             }
 
@@ -368,11 +362,4 @@ public class DownloadResumePopupMenu
 
         add( search );
     }
-
 }
-
-/*******************************************************************************
- * $Log: DownloadResumePopupMenu.java,v $ Revision 1.22 2005/10/02 11:42:27 timowest updated sources and tests Revision
- * 1.21 2005/09/25 16:40:58 timowest updated sources and tests Revision 1.20 2005/09/14 07:11:49 timowest updated
- * sources
- */

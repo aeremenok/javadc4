@@ -17,6 +17,7 @@ import java.awt.event.MouseEvent;
 import javax.swing.JMenuItem;
 import javax.swing.JPopupMenu;
 
+import junit.framework.Assert;
 import net.sf.javadc.gui.HubListComponentListener;
 import net.sf.javadc.interfaces.IHub;
 import net.sf.javadc.interfaces.IHubFactory;
@@ -26,7 +27,7 @@ import net.sf.javadc.util.FileUtils;
 import net.sf.javadc.util.GenericModel;
 
 public class HubFavoritesTableListener
-    extends GenericModel
+    extends GenericModel<HubListComponentListener>
     implements
         SortableTableListener
 {
@@ -52,33 +53,15 @@ public class HubFavoritesTableListener
         IHubFavoritesList _favoritesList,
         IHubFactory _hubFactory )
     {
-
-        if ( _model == null )
-        {
-            throw new NullPointerException( "model was null" );
-        }
-
-        if ( _favoritesList == null )
-        {
-            throw new NullPointerException( "favoritesList was null" );
-        }
-
-        if ( _hubFactory == null )
-        {
-            throw new NullPointerException( "hubFactory was null" );
-        }
+        Assert.assertNotNull( _hubFactory );
+        Assert.assertNotNull( _model );
+        Assert.assertNotNull( _favoritesList );
 
         model = _model;
 
-        // Timo : 31.05.2004
-        // already spinned in HubListComponent
-        // hubList = _hubList;
         favoritesList = _favoritesList;
         hubFactory = _hubFactory;
-
     }
-
-    /** ********************************************************************** */
 
     /*
      * (non-Javadoc)
@@ -90,16 +73,13 @@ public class HubFavoritesTableListener
         int column,
         int[] selectedRows )
     {
-
         // multi selection
 
-        for ( int i = 0; i < selectedRows.length; i++ )
+        for ( int selectedRow : selectedRows )
         {
-            IHub hub = hubFactory.createHub( (IHubInfo) model.getRow( selectedRows[i] ) );
+            IHub hub = hubFactory.createHub( (IHubInfo) model.getRow( selectedRow ) );
             fireHubSelected( hub );
-
         }
-
     }
 
     /**
@@ -111,13 +91,10 @@ public class HubFavoritesTableListener
         IHub hub )
     {
         final HubListComponentListener[] listeners = listenerList.getListeners( HubListComponentListener.class );
-
-        for ( int i = 0; i < listeners.length; i++ )
+        for ( HubListComponentListener listener : listeners )
         {
-            listeners[i].hubSelected( hub );
-
+            listener.hubSelected( hub );
         }
-
     }
 
     /*
@@ -137,38 +114,29 @@ public class HubFavoritesTableListener
         connected.setIcon( FileUtils.loadIcon( "images/16/connect_established.png" ) );
         connected.addActionListener( new ActionListener()
         {
-
             public void actionPerformed(
-                ActionEvent e )
+                ActionEvent e1 )
             {
                 // multi selection
-
                 cellSelected( row, column, selectedRows );
-
             }
-
         } );
 
         final JMenuItem favorites = new JMenuItem( "Remove from Favorites" );
         favorites.setIcon( FileUtils.loadIcon( "images/16/edit_remove.png" ) );
         favorites.addActionListener( new ActionListener()
         {
-
             public void actionPerformed(
-                ActionEvent e )
+                ActionEvent e1 )
             {
                 favoritesList.removeHub( (IHubInfo) model.getRow( row ) );
-
-                // favoritesList.update();
             }
-
         } );
 
         popup.add( connected );
         popup.add( favorites );
 
         popup.show( e.getComponent(), e.getX(), e.getY() );
-
     }
 
     /*
@@ -177,7 +145,7 @@ public class HubFavoritesTableListener
      * @see net.sf.javadc.util.GenericModel#getListenerClass()
      */
     @Override
-    protected Class getListenerClass()
+    protected Class<HubListComponentListener> getListenerClass()
     {
         return HubListComponentListener.class;
 

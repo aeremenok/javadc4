@@ -21,136 +21,46 @@ import net.sf.javadc.util.Enum;
 public class ConnectionState
     extends Enum
 {
-    /**
-     * 
-     */
-    public final static ConnectionState COMMAND_DOWNLOAD     = new ConnectionState( "Idle download mode" );
-
-    /**
-     * 
-     */
-    public final static ConnectionState COMMAND_UPLOAD       = new ConnectionState( "Idle upload mode" );
+    public final static ConnectionState               COMMAND_DOWNLOAD     = new ConnectionState( "Idle download mode" );
+    public final static ConnectionState               COMMAND_UPLOAD       = new ConnectionState( "Idle upload mode" );
 
     // initial states
-
-    /** 
-     * 
-     */
-    public final static ConnectionState CONNECTING           = new ConnectionState( "Connecting" );
-
-    /**
-     * 
-     */
-    public final static ConnectionState NOT_CONNECTED        = new ConnectionState( "Not connected" );
-
-    /**
-     * 
-     */
-    public final static ConnectionState LOGIN                = new ConnectionState( "Login" );
-
-    /**
-     * 
-     */
-    public final static ConnectionState SETTING_DIRECTION    = new ConnectionState( "Setting direction" );
+    public final static ConnectionState               CONNECTING           = new ConnectionState( "Connecting" );
+    public final static ConnectionState               NOT_CONNECTED        = new ConnectionState( "Not connected" );
+    public final static ConnectionState               LOGIN                = new ConnectionState( "Login" );
+    public final static ConnectionState               SETTING_DIRECTION    = new ConnectionState( "Setting direction" );
 
     // contiuous states
-
-    /**
-     * 
-     */
-    public final static ConnectionState DOWNLOADING          = new ConnectionState( "Downloading" );
-
-    /**
-     * 
-     */
-    public final static ConnectionState RESUMING             = new ConnectionState( "Resuming" );
-
-    /**
-     * 
-     */
-    public final static ConnectionState RESUME_SUCCEEDED     = new ConnectionState( "Resume succeeded." );
-
-    /**
-     * 
-     */
-    public final static ConnectionState UPLOADING            = new ConnectionState( "Uploading" );
-
-    /**
-     * 
-     */
-    public final static ConnectionState COMPRESSED_UPLOADING = new ConnectionState( "Uploading (compressed)" );
-
-    /**
-     * 
-     */
-    public final static ConnectionState DOWNLOAD_FINISHED    = new ConnectionState( "Download finished" );
-
-    /**
-     * 
-     */
-    public final static ConnectionState UPLOAD_FINISHED      = new ConnectionState( "Upload finished" );
+    public final static ConnectionState               DOWNLOADING          = new ConnectionState( "Downloading" );
+    public final static ConnectionState               RESUMING             = new ConnectionState( "Resuming" );
+    public final static ConnectionState               RESUME_SUCCEEDED     = new ConnectionState( "Resume succeeded." );
+    public final static ConnectionState               UPLOADING            = new ConnectionState( "Uploading" );
+    public final static ConnectionState               COMPRESSED_UPLOADING =
+                                                                               new ConnectionState(
+                                                                                   "Uploading (compressed)" );
+    public final static ConnectionState               DOWNLOAD_FINISHED    = new ConnectionState( "Download finished" );
+    public final static ConnectionState               UPLOAD_FINISHED      = new ConnectionState( "Upload finished" );
 
     // waiting states
+    public final static ConnectionState               WAITING              = new ConnectionState( "Waiting" );
+    public final static ConnectionState               REMOTELY_QUEUED      = new ConnectionState( "Remotely Queued" );
+    public final static ConnectionState               NO_UPLOAD_SLOTS      = new ConnectionState( "No Upload slots" );
 
-    /**
-     * 
-     */
-    public final static ConnectionState WAITING              = new ConnectionState( "Waiting" );
-
-    /**
-     * 
-     */
-    public final static ConnectionState REMOTELY_QUEUED      = new ConnectionState( "Remotely Queued" );
-
-    /**
-     * 
-     */
-    public final static ConnectionState NO_UPLOAD_SLOTS      = new ConnectionState( "No Upload slots" );
-
-    /**
-     * 
-     */
-    public final static ConnectionState NO_DOWNLOAD_SLOTS    = new ConnectionState( "No Download slots" );
+    public final static ConnectionState               NO_DOWNLOAD_SLOTS    = new ConnectionState( "No Download slots" );
 
     // public final static ConnectionState RESCHEDULE = new ConnectionState(
     // "Reschedule Download");
 
     // error states
-
-    /**
-     * 
-     */
-    public final static ConnectionState ABORTED              = new ConnectionState( "Aborted" );
-
-    /**
-     * 
-     */
-    public final static ConnectionState RESUME_FAILED        = new ConnectionState( "Resume failed." );
-
-    /**
-     * 
-     */
-    public final static ConnectionState CORRUPT_FILE         = new ConnectionState( "Corrupt File" );
-
-    /**
-     * 
-     */
-    public final static ConnectionState INVALID_LOCK         = new ConnectionState( "Invalid Lock Data" );
-
-    /**
-     * 
-     */
-    public final static ConnectionState INVALID_DIRECTION    = new ConnectionState( "Invalid Direction Data" );
-
-    /**
-     * 
-     */
-    public final static ConnectionState FILE_NOT_FOUND       = new ConnectionState( "File Not Found." );
-
-    /**
-     * represents the state transitions for active tasks in the ClientConnection
-     */
-    private static final Map            transitions          = new HashMap();
+    public final static ConnectionState               ABORTED              = new ConnectionState( "Aborted" );
+    public final static ConnectionState               RESUME_FAILED        = new ConnectionState( "Resume failed." );
+    public final static ConnectionState               CORRUPT_FILE         = new ConnectionState( "Corrupt File" );
+    public final static ConnectionState               INVALID_LOCK         = new ConnectionState( "Invalid Lock Data" );
+    public final static ConnectionState               INVALID_DIRECTION    =
+                                                                               new ConnectionState(
+                                                                                   "Invalid Direction Data" );
+    public final static ConnectionState               FILE_NOT_FOUND       = new ConnectionState( "File Not Found." );
+    private static final Map<ConnectionState, String> transitions          = new HashMap<ConnectionState, String>();
 
     static
     {
@@ -193,8 +103,6 @@ public class ConnectionState
 
     }
 
-    // private String info = "";
-
     /**
      * Query for a TaskString by providing a ConnectionState object
      * 
@@ -204,8 +112,7 @@ public class ConnectionState
     public static String getTransition(
         ConnectionState state )
     {
-        return (String) transitions.get( state );
-
+        return transitions.get( state );
     }
 
     /**
@@ -213,7 +120,7 @@ public class ConnectionState
      * 
      * @return
      */
-    public static Map getTransitions()
+    public static Map<ConnectionState, String> getTransitions()
     {
         return transitions;
     }
@@ -227,12 +134,6 @@ public class ConnectionState
         String name )
     {
         super( name );
-
     }
 
 }
-
-/*******************************************************************************
- * $Log: ConnectionState.java,v $ Revision 1.16 2005/10/02 11:42:28 timowest updated sources and tests Revision 1.15
- * 2005/09/30 15:59:53 timowest updated sources and tests Revision 1.14 2005/09/12 21:12:02 timowest added log block
- */

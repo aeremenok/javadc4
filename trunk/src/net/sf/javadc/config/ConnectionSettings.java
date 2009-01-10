@@ -23,19 +23,10 @@ import org.apache.log4j.Logger;
  */
 public class ConnectionSettings
 {
-
     private final static Category logger                           = Logger.getLogger( ConnectionSettings.class );
 
-    // Client Connection related
-
     // public static int UPLOAD_BLOCK_SIZE = 64000;
-    /**
-     * 
-     */
     public static int             UPLOAD_BLOCK_SIZE                = 8000;
-    /**
-     * 
-     */
     public static int             SOCKET_INPUT_BUFFER_SIZE         = 17520;
 
     /***************************************************************************
@@ -45,15 +36,7 @@ public class ConnectionSettings
     public static int             VERIFY_RESUME_SIZE               = SOCKET_INPUT_BUFFER_SIZE;
 
     // public static int BUFFER_SIZE = 1024 * 1024 * 5;
-
-    /**
-     * 
-     */
     public static int             DOWNLOAD_SEGMENT_SIZE            = 40 * 1024 * 1024;
-
-    /**
-     * 
-     */
     public static int             DOWNLOAD_CHUNK_SIZE              = 50 * 1024 * 1024;
 
     /**
@@ -81,36 +64,26 @@ public class ConnectionSettings
     /** Hub Download Request queuing related */
     public static int             HUB_FLUSHDOWNLOADQUEUE_DELAY     = 20 * 1000;
 
-    /**
-     * 
-     */
     public static int             HUB_FLUSHDOWNLOADQUEUE_INTERVAL  = 10 * 1000;
 
     static
     {
         InputStream stream = ConnectionSettings.class.getClassLoader().getResourceAsStream( "connection.properties" );
-
         if ( stream != null )
         {
-
             try
             {
                 loadProperties( stream );
-
             }
             catch ( Exception e )
             {
-                logger.error( "Caught " + e.getClass().getName(), e );
-
+                logger.error( "cannot load properties", e );
             }
-
         }
         else
         {
-
             logger.error( "InputStream for connection.properties " + "could not be created." );
         }
-
     }
 
     /**
@@ -152,13 +125,5 @@ public class ConnectionSettings
         HUB_FLUSHDOWNLOADQUEUE_DELAY = Integer.parseInt( props.getProperty( "HUB_FLUSHDOWNLOADQUEUE_DELAY" ) );
 
         HUB_FLUSHDOWNLOADQUEUE_INTERVAL = Integer.parseInt( props.getProperty( "HUB_FLUSHDOWNLOADQUEUE_INTERVAL" ) );
-
     }
-
 }
-
-/*******************************************************************************
- * $Log: ConnectionSettings.java,v $ Revision 1.15 2005/10/02 11:42:27 timowest updated sources and tests Revision 1.14
- * 2005/09/30 15:59:52 timowest updated sources and tests Revision 1.13 2005/09/26 17:19:52 timowest updated sources and
- * tests Revision 1.12 2005/09/14 07:11:48 timowest updated sources
- */

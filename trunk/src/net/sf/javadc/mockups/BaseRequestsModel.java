@@ -20,11 +20,12 @@ import net.sf.javadc.net.DownloadRequest;
 import net.sf.javadc.util.GenericModel;
 
 /**
- * @author Timo Westk�mper TODO To change the template for this generated type comment go to Window - Preferences - Java
- *         - Code Style - Code Templates
+ * todo describe
+ * 
+ * @author Timo Westk�mper
  */
 public class BaseRequestsModel
-    extends GenericModel
+    extends GenericModel<RequestsModelListener>
     implements
         IRequestsModel
 {
@@ -42,11 +43,6 @@ public class BaseRequestsModel
         // TODO Auto-generated method stub
 
     }
-
-    /*
-     * public List getActiveDownloads() { // TODO Auto-generated method stub
-     * return null; }
-     */
 
     /*
      * (non-Javadoc)
@@ -137,7 +133,7 @@ public class BaseRequestsModel
      * 
      * @see net.sf.javadc.interfaces.IRequestsModel#getAllDownloads()
      */
-    public List getAllDownloads()
+    public List<DownloadRequest> getAllDownloads()
     {
         // TODO Auto-generated method stub
         return null;

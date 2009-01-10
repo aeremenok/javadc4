@@ -17,14 +17,12 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.List;
 
 import javax.swing.JMenuItem;
 import javax.swing.JPanel;
 import javax.swing.JPopupMenu;
 
+import junit.framework.Assert;
 import net.sf.javadc.gui.model.RowTableModelAdapter;
 import net.sf.javadc.gui.model.SortableTable;
 import net.sf.javadc.gui.model.SortableTableListener;
@@ -32,7 +30,6 @@ import net.sf.javadc.gui.util.ByteCellRenderer;
 import net.sf.javadc.interfaces.IDownloadManager;
 import net.sf.javadc.interfaces.IHub;
 import net.sf.javadc.interfaces.IRequestsModel;
-import net.sf.javadc.net.DownloadRequest;
 import net.sf.javadc.net.SearchRequest;
 import net.sf.javadc.net.SearchResult;
 import net.sf.javadc.net.hub.AllHubs;
@@ -55,33 +52,15 @@ public class IncompleteComponent
         SortableTableListener,
         KeyListener
 {
-    /**
-     * 
-     */
     private static final long          serialVersionUID = 1181165713477183455L;
 
     private final static Category      logger           = Category.getInstance( IncompleteComponent.class );
 
-    /**
-     * 
-     */
     private final RowTableModelAdapter model;
-
-    /**
-     * 
-     */
     private final SortableTable        incompleteTable;
 
     // external components
-    // private final ISettings settings;
-    /**
-     * 
-     */
     private IDownloadManager           downloadManager;
-
-    /**
-     * 
-     */
     private IHub                       hub;
 
     /**
@@ -97,27 +76,11 @@ public class IncompleteComponent
     {
         super( new BorderLayout() );
 
-        // if (_settings == null)
-        // throw new NullPointerException("settings was null.");
-
-        if ( _requestsModel == null )
-        {
-            throw new NullPointerException( "requestsModel was null." );
-        }
-
-        if ( _downloadManager == null )
-        {
-            throw new NullPointerException( "downloadManager was null." );
-        }
-
-        if ( _hub == null )
-        {
-            throw new NullPointerException( "hub was null." );
-        }
+        Assert.assertNotNull( _requestsModel );
+        Assert.assertNotNull( _downloadManager );
+        Assert.assertNotNull( _hub );
 
         // spinned components
-        // settings = _settings;
-
         downloadManager = (IDownloadManager) Spin.off( _downloadManager );
 
         hub = (IHub) Spin.off( _hub );
@@ -138,8 +101,6 @@ public class IncompleteComponent
 
     }
 
-    /** ********************************************************************** */
-
     /**
      * Cancel the DownloadRequest located in the row with the given index
      * 
@@ -148,19 +109,10 @@ public class IncompleteComponent
     public final void cancel(
         int[] selectedRows )
     {
-
-        List rows = new ArrayList();
-
-        for ( int i = 0; i < selectedRows.length; i++ )
+        for ( int selectedRow : selectedRows )
         {
-            rows.add( model.getRow( selectedRows[i] ) );
+            model.deleteRow( model.getRow( selectedRow ) );
         }
-
-        for ( Iterator i = rows.iterator(); i.hasNext(); )
-        {
-            model.deleteRow( i.next() );
-        }
-
     }
 
     /*
@@ -173,19 +125,9 @@ public class IncompleteComponent
         int column,
         int[] selectedRows )
     {
-
-        List requests = new ArrayList();
-
-        for ( int i = 0; i < selectedRows.length; i++ )
+        for ( int selectedRow : selectedRows )
         {
-            requests.add( model.getRow( selectedRows[i] ) );
-
-        }
-
-        for ( Iterator i = requests.iterator(); i.hasNext(); )
-        {
-            downloadManager.requestDownload( (DownloadRequest) i.next() );
-
+            downloadManager.requestDownload( model.getRow( selectedRow ) );
         }
     }
 
@@ -197,7 +139,6 @@ public class IncompleteComponent
     public final void keyPressed(
         KeyEvent ke )
     {
-
     }
 
     /*
@@ -276,30 +217,22 @@ public class IncompleteComponent
         {
 
             public void actionPerformed(
-                ActionEvent e )
+                ActionEvent e1 )
             {
-
                 // multi selection
-
                 cancel( selectedRows );
-
             }
-
         } );
 
         reconnect.addActionListener( new ActionListener()
         {
 
             public void actionPerformed(
-                ActionEvent e )
+                ActionEvent e1 )
             {
-
                 // multi selection
-
                 cellSelected( row, column, selectedRows );
-
             }
-
         } );
 
         search.addActionListener( new ActionListener()
@@ -308,13 +241,9 @@ public class IncompleteComponent
             public void actionPerformed(
                 ActionEvent arg0 )
             {
-
                 // multiselection ( general )
-
                 searchForAlternates( selectedRows, false );
-
             }
-
         } );
 
         searchFreeSlots.addActionListener( new ActionListener()
@@ -354,42 +283,22 @@ public class IncompleteComponent
         int[] selectedRows,
         boolean freeSlots )
     {
-
-        List rows = new ArrayList();
-
-        for ( int i = 0; i < selectedRows.length; i++ )
+        for ( int selectedRow : selectedRows )
         {
-            rows.add( model.getRow( selectedRows[i] ) );
-        }
-
-        for ( Iterator i = rows.iterator(); i.hasNext(); )
-        {
-
-            SearchResult searchResult = ((DownloadRequest) i.next()).getSearchResult();
+            SearchResult searchResult = model.getRow( selectedRow ).getSearchResult();
 
             if ( searchResult.getTTH() != null )
             {
-
                 SearchRequest sr = new SearchRequest( searchResult.getTTH(), SearchRequest.TTH, 0, true, freeSlots );
-
                 try
                 {
                     hub.search( sr );
-
                 }
                 catch ( IOException e )
                 {
                     logger.error( "Caught " + e.getClass().getName() + " when trying to search with " + sr, e );
                 }
-
             }
         }
-
     }
-
 }
-
-/*******************************************************************************
- * $Log: IncompleteComponent.java,v $ Revision 1.19 2005/10/02 11:42:28 timowest updated sources and tests Revision 1.18
- * 2005/09/25 16:40:58 timowest updated sources and tests Revision 1.17 2005/09/14 07:11:49 timowest updated sources
- */

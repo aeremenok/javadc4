@@ -27,28 +27,11 @@ public class SearchResultsController
     implements
         SortableTableListener
 {
-
-    // private static final Category logger = Category
-    // .getInstance(SearchResultsController.class);
-    /**
-     * 
-     */
     private final RowTableModel    model;
 
     // components
-    /**
-     * 
-     */
     private final IHub             hub;
-
-    /**
-     * 
-     */
     private final ISettings        settings;
-
-    /** 
-     * 
-     */
     private final IDownloadManager downloadManager;
 
     /**
@@ -134,12 +117,12 @@ public class SearchResultsController
         MouseEvent e,
         int[] selectedRows )
     {
-
-        List searchResults = new ArrayList();
+        List<SearchResult> searchResults = new ArrayList<SearchResult>();
 
         for ( int i = 0; i < selectedRows.length; i++ )
         {
-            searchResults.add( model.getRow( selectedRows[i] ) );
+            searchResults.add( (SearchResult) model.getRow( selectedRows[i] ) // todo infer generics
+                );
         }
 
         // single selection action
@@ -151,10 +134,4 @@ public class SearchResultsController
         popup.show( e.getComponent(), e.getX(), e.getY() );
 
     }
-
 }
-
-/*******************************************************************************
- * $Log: SearchResultsController.java,v $ Revision 1.13 2005/10/02 11:42:28 timowest updated sources and tests Revision
- * 1.12 2005/09/14 07:11:49 timowest updated sources
- */

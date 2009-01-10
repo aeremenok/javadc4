@@ -24,77 +24,37 @@ import net.sf.javadc.util.Enum;
 public class DownloadRequestState
     extends Enum
 {
-    /**
-     * 
-     */
-    private static Map                       activeChanges;
+    private static Map<ConnectionState, DownloadRequestState> activeChanges;
+    private static Map<ConnectionState, DownloadRequestState> passiveChanges;
 
-    /**
-     * 
-     */
-    private static Map                       passiveChanges;
-
-    /**
-     * 
-     */
-    public final static DownloadRequestState CONNECTING      = new DownloadRequestState( "Connecting" );
-
-    /**
-     * 
-     */
-    public final static DownloadRequestState DOWNLOADING     = new DownloadRequestState( "Downloading" );
-
-    /**
-     * 
-     */
-    public final static DownloadRequestState OFFLINE         = new DownloadRequestState( "Offline" );
-
-    /**
-     * 
-     */
-    public final static DownloadRequestState QUEUED          = new DownloadRequestState( "Queued" );
-
-    /**
-     * 
-     */
-    public final static DownloadRequestState REMOTELY_QUEUED = new DownloadRequestState( "Remotely Queued" );
-
-    /**
-     * 
-     */
-    public final static DownloadRequestState WAITING         = new DownloadRequestState( "Waiting" );
+    public final static DownloadRequestState                  CONNECTING      = new DownloadRequestState( "Connecting" );
+    public final static DownloadRequestState                  DOWNLOADING     =
+                                                                                  new DownloadRequestState(
+                                                                                      "Downloading" );
+    public final static DownloadRequestState                  OFFLINE         = new DownloadRequestState( "Offline" );
+    public final static DownloadRequestState                  QUEUED          = new DownloadRequestState( "Queued" );
+    public final static DownloadRequestState                  REMOTELY_QUEUED =
+                                                                                  new DownloadRequestState(
+                                                                                      "Remotely Queued" );
+    public final static DownloadRequestState                  WAITING         = new DownloadRequestState( "Waiting" );
 
     static
     {
-        activeChanges = new HashMap();
-
+        activeChanges = new HashMap<ConnectionState, DownloadRequestState>();
         activeChanges.put( ConnectionState.DOWNLOADING, DownloadRequestState.DOWNLOADING );
-
         activeChanges.put( ConnectionState.CONNECTING, DownloadRequestState.CONNECTING );
-
         activeChanges.put( ConnectionState.WAITING, DownloadRequestState.WAITING );
-
         activeChanges.put( ConnectionState.REMOTELY_QUEUED, DownloadRequestState.REMOTELY_QUEUED );
-
         activeChanges.put( ConnectionState.NO_DOWNLOAD_SLOTS, DownloadRequestState.QUEUED );
-
         activeChanges.put( ConnectionState.NOT_CONNECTED, DownloadRequestState.OFFLINE );
 
-        passiveChanges = new HashMap();
-
+        passiveChanges = new HashMap<ConnectionState, DownloadRequestState>();
         passiveChanges.put( ConnectionState.CONNECTING, DownloadRequestState.CONNECTING );
-
         passiveChanges.put( ConnectionState.DOWNLOADING, DownloadRequestState.QUEUED );
-
         passiveChanges.put( ConnectionState.REMOTELY_QUEUED, DownloadRequestState.REMOTELY_QUEUED );
-
         passiveChanges.put( ConnectionState.NO_DOWNLOAD_SLOTS, DownloadRequestState.QUEUED );
-
         passiveChanges.put( ConnectionState.NOT_CONNECTED, DownloadRequestState.OFFLINE );
-
     }
-
-    // private String info = "";
 
     /**
      * Derive the DownloadRequestState from the state of the related IConnection
@@ -109,15 +69,10 @@ public class DownloadRequestState
     {
         if ( isDownloadRequestActive )
         {
-            return (DownloadRequestState) activeChanges.get( connectionState );
-
-        }
-        else
-        {
-            return (DownloadRequestState) passiveChanges.get( connectionState );
-
+            return activeChanges.get( connectionState );
         }
 
+        return passiveChanges.get( connectionState );
     }
 
     /**
@@ -129,12 +84,5 @@ public class DownloadRequestState
         String name )
     {
         super( name );
-
     }
-
 }
-
-/*******************************************************************************
- * $Log: DownloadRequestState.java,v $ Revision 1.11 2005/10/02 11:42:27 timowest updated sources and tests Revision
- * 1.10 2005/09/30 15:59:53 timowest updated sources and tests Revision 1.9 2005/09/12 21:12:02 timowest added log block
- */

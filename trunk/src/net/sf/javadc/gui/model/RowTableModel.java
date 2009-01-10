@@ -27,15 +27,11 @@ import org.apache.log4j.Category;
 public class RowTableModel
     extends AbstractTableModel
 {
-
-    /**
-     * 
-     */
     private static final long     serialVersionUID = -2735540297212202988L;
 
     private final static Category logger           = Category.getInstance( RowTableModel.class );
 
-    private List                  rows             = new ArrayList();
+    private List<RowColumns>      rows             = new ArrayList<RowColumns>();
 
     private final String[]        columnNames;
 
@@ -66,8 +62,7 @@ public class RowTableModel
         Object row,
         Object[] columns )
     {
-        RowColumns rc = new RowColumns( row, columns );
-        rows.add( rc );
+        rows.add( new RowColumns( row, columns ) );
 
         int index = rows.size() - 1;
         fireTableRowsInserted( index, index );
@@ -115,12 +110,8 @@ public class RowTableModel
         {
             rows.remove( index );
             fireTableRowsDeleted( index, index );
-
         }
-
     }
-
-    /** ********************************************************************** */
 
     /*
      * (non-Javadoc)
@@ -140,25 +131,16 @@ public class RowTableModel
         else if ( getRowCount() > 0 )
         {
             final Object o = getValueAt( 0, columnIndex );
-
             if ( o != null )
             {
                 return o.getClass();
-
             }
-            else
-            {
-                return Object.class;
-
-            }
-
+            return Object.class;
         }
         else
         {
             return super.getColumnClass( columnIndex );
-
         }
-
     }
 
     /*
@@ -194,7 +176,7 @@ public class RowTableModel
     public final Object getRow(
         int row )
     {
-        return ((RowColumns) rows.get( row )).row;
+        return rows.get( row ).row;
 
     }
 
@@ -218,7 +200,7 @@ public class RowTableModel
     public final int getRowIndex(
         Object row )
     {
-        RowColumns[] rowcol = (RowColumns[]) rows.toArray( new RowColumns[rows.size()] );
+        RowColumns[] rowcol = rows.toArray( new RowColumns[rows.size()] );
 
         for ( int i = 0; i < rowcol.length; i++ )
         {
@@ -237,10 +219,10 @@ public class RowTableModel
     /**
      * @return
      */
-    public final List getRows()
+    public final List<Object> getRows()
     {
         int size = rows.size();
-        List temprows = new ArrayList( size );
+        List<Object> temprows = new ArrayList<Object>( size );
 
         for ( int i = 0; i < size; i++ )
         {
@@ -265,20 +247,16 @@ public class RowTableModel
         {
             try
             {
-                return ((RowColumns) rows.get( rowIndex )).columns[columnIndex];
-
+                return rows.get( rowIndex ).columns[columnIndex];
             }
             catch ( ArrayIndexOutOfBoundsException e )
-            {
+            { // todo replace with checking
                 logger.error( "Caught " + e.getClass().getName(), e );
-
             }
-
         }
         else
         {
             logger.error( "rowIndex was " + rowIndex + " and columnIndex was " + columnIndex );
-
         }
 
         return null;
@@ -298,20 +276,16 @@ public class RowTableModel
 
         if ( index >= 0 )
         {
-            final RowColumns rc = (RowColumns) rows.get( index );
-
-            rc.columns = columns;
+            rows.get( index ).columns = columns;
             fireTableRowsUpdated( index, index );
-
         }
-
     }
 
     /**
      * @param rows
      */
     public final void setRows(
-        List rows )
+        List<RowColumns> rows )
     {
         this.rows = rows;
 
@@ -321,9 +295,7 @@ public class RowTableModel
         for ( int index = 0; index < count; index++ )
         {
             fireTableRowsInserted( index, index );
-
         }
-
     }
 
     /**
@@ -332,14 +304,5 @@ public class RowTableModel
     public final void update()
     {
         fireTableDataChanged();
-
     }
-
 }
-
-/*******************************************************************************
- * $Log: RowTableModel.java,v $ Revision 1.14 2005/10/02 11:42:28 timowest updated sources and tests Revision 1.13
- * 2005/09/26 17:19:52 timowest updated sources and tests Revision 1.12 2005/09/15 17:32:29 timowest added null checks
- * Revision 1.11 2005/09/14 07:11:49 timowest updated sources
- */
-

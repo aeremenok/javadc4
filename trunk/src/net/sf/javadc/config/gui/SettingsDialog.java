@@ -26,41 +26,42 @@ import javax.swing.JDialog;
 import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 
+import junit.framework.Assert;
 import net.sf.javadc.interfaces.ISettings;
 import net.sf.javadc.interfaces.IShareManager;
 
 import org.apache.log4j.Category;
 
 /**
- * <CODE>SettingsDialog</CODE> is the main dialog for editing the application settings of javadc3
+ * The main dialog for editing the application settings of javadc3
  * 
  * @author Timo Westk�mper
  */
 public class SettingsDialog
     extends JDialog
 {
-    private static final long             serialVersionUID = 5170053346711095610L;
+    private static final long              serialVersionUID = 5170053346711095610L;
 
-    private final static Category         logger           = Category.getInstance( SettingsDialog.class );
+    private final static Category          logger           = Category.getInstance( SettingsDialog.class );
 
-    private final Panel                   buttonPanel      = new Panel( new FlowLayout( FlowLayout.RIGHT ) );
-    private final JButton                 okButton         = new JButton( "OK" );
-    private final JButton                 cancelButton     = new JButton( "Cancel" );
-    private final JButton                 applyButton      = new JButton( "Apply" );
+    private final Panel                    buttonPanel      = new Panel( new FlowLayout( FlowLayout.RIGHT ) );
+    private final JButton                  okButton         = new JButton( "OK" );
+    private final JButton                  cancelButton     = new JButton( "Cancel" );
+    private final JButton                  applyButton      = new JButton( "Apply" );
 
     // private boolean doRefresh = true;
     // private final FlowLayout flowLayout1 = new FlowLayout();
 
     // main panels
-    private final GeneralSettingsPanel    generalSettingsPanel;
-    private final ConnectionSettingsPanel connectionSettingsPanel;
-    private final TransferSettingsPanel   transferSettingsPanel;
-    private final JPanel                  mainPanel        = new JPanel();
-    private final JTabbedPane             tabPane          = new JTabbedPane();
+    private final GeneralSettingsPanel     generalSettingsPanel;
+    private final ConnectionSettingsPanel  connectionSettingsPanel;
+    private final TransferSettingsPanel    transferSettingsPanel;
+    private final JPanel                   mainPanel        = new JPanel();
+    private final JTabbedPane              tabPane          = new JTabbedPane();
 
     // components
-    private final ISettings<EventListener>               settings;
-    private final IShareManager           shareManager;
+    private final ISettings<EventListener> settings;
+    private final IShareManager            shareManager;
 
     /**
      * Create a SettingsDialog instance with the given container frame, title, modal settings and references to the
@@ -81,15 +82,8 @@ public class SettingsDialog
     {
         super( owner, title, modal );
 
-        if ( _settings == null )
-        {
-            throw new NullPointerException( "settings was null" );
-        }
-
-        if ( _shareManager == null )
-        {
-            throw new NullPointerException( "shareManager was null" );
-        }
+        Assert.assertNotNull( _shareManager );
+        Assert.assertNotNull( _settings );
 
         settings = _settings;
         shareManager = _shareManager;
@@ -102,19 +96,14 @@ public class SettingsDialog
 
         try
         {
-            jbInit();
-
+            initComponents();
         }
         catch ( Exception e )
         {
-            // logger.error("Catched " + e.getClass().getName()
-            // + " when trying to initialize dialog.");
-            // logger.error(e);
-
-            logger.error( "Caught " + e.getClass().getName(), e );
-
+            logger.error( "cannot initialize dialog", e );
         }
 
+        initListeners();
     }
 
     /**
@@ -127,7 +116,6 @@ public class SettingsDialog
         transferSettingsPanel.initPanel();
 
         setVisible( true );
-
     }
 
     /**
@@ -135,7 +123,7 @@ public class SettingsDialog
      * 
      * @throws Exception
      */
-    private final void jbInit()
+    private final void initComponents()
         throws Exception
     {
         mainPanel.setLayout( new BorderLayout() );
@@ -162,47 +150,39 @@ public class SettingsDialog
         mainPanel.add( tabPane, BorderLayout.CENTER );
         this.getContentPane().add( mainPanel, null );
 
-        // setup buttons
+        mainPanel.setPreferredSize( new Dimension( 400, 350 ) );
+        this.setContentPane( mainPanel );
+    }
+
+    private void initListeners()
+    {
         okButton.addActionListener( new ActionListener()
         {
-
             public void actionPerformed(
                 ActionEvent e )
             {
                 onOK();
                 setVisible( false );
-
             }
-
         } );
 
         cancelButton.addActionListener( new ActionListener()
         {
-
             public void actionPerformed(
                 ActionEvent e )
             {
                 setVisible( false );
-
             }
-
         } );
 
         applyButton.addActionListener( new ActionListener()
         {
-
             public void actionPerformed(
                 ActionEvent e )
             {
                 onOK();
-
             }
-
         } );
-
-        mainPanel.setPreferredSize( new Dimension( 400, 350 ) );
-        this.setContentPane( mainPanel );
-
     }
 
     /**
@@ -213,8 +193,5 @@ public class SettingsDialog
         generalSettingsPanel.onOK();
         connectionSettingsPanel.onOK();
         transferSettingsPanel.onOK();
-
-        /* setVisible(false); */
     }
-
 }

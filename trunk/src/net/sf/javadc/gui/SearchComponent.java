@@ -16,6 +16,7 @@ import java.util.List;
 
 import javax.swing.ImageIcon;
 import javax.swing.JTabbedPane;
+import javax.swing.JTable;
 
 import net.sf.javadc.gui.model.RowTableModel;
 import net.sf.javadc.gui.model.SortableTable;
@@ -40,57 +41,21 @@ import org.apache.log4j.Category;
 public class SearchComponent
     extends BasePanel
 {
-
-    /**
-     * 
-     */
     private static final long                serialVersionUID = 8072157846911090407L;
 
     private static final Category            logger           = Category.getInstance( SearchComponent.class );
 
-    /*
-     * private SearchComponentHubListener hubListener = new
-     * SearchComponentHubListener( this);
-     */
-    /**
-     * 
-     */
     private final SearchComponentHubListener hubListener;
 
-    /**
-     * 
-     */
-    private final List                       models           = new ArrayList();
-
-    /**
-     * 
-     */
-    private final List                       searchRequests   = new ArrayList();
-
-    /**
-     * 
-     */
+    private final List<RowTableModel>        models           = new ArrayList<RowTableModel>();
+    private final List<SearchRequest>        searchRequests   = new ArrayList<SearchRequest>();
     private final JTabbedPane                tabbedPane       = new JTabbedPane();
 
-    /**
-     * 
-     */
     private boolean                          initialized      = false;
 
     // external components
-    /**
-     * 
-     */
     private final IHub                       hub;
-
-    /**
-     * 
-     */
     private final ISettings                  settings;
-
-    /**
-     * 
-     */
     private final IDownloadManager           downloadManager;
 
     /**
@@ -149,8 +114,6 @@ public class SearchComponent
 
     }
 
-    /** ********************************************************************** */
-
     /**
      * Add the given SearchRequest to the SearchComponent
      * 
@@ -172,12 +135,10 @@ public class SearchComponent
         if ( searchRequest != null )
         {
             name = searchRequest.getNamePattern();
-
         }
         else
         {
             name = "default";
-
         }
 
         tabbedPane.insertTab( name + " (0 hits)", null, searchResults, null, 0 );
@@ -195,7 +156,6 @@ public class SearchComponent
     public SearchComponentHubListener getHubListener()
     {
         return hubListener;
-
     }
 
     /**
@@ -203,7 +163,7 @@ public class SearchComponent
      * 
      * @return
      */
-    public List getModels()
+    public List<RowTableModel> getModels()
     {
         return models;
 
@@ -234,7 +194,7 @@ public class SearchComponent
      * 
      * @return
      */
-    public List getSearchRequests()
+    public List<SearchRequest> getSearchRequests()
     {
         return searchRequests;
 
@@ -259,13 +219,14 @@ public class SearchComponent
     private void initializeSortableTable(
         SortableTable table )
     {
-        table.getTable().setDefaultRenderer( Long.class, new ByteCellRenderer() );
+        JTable table2 = table.getTable();
+        table2.setDefaultRenderer( Long.class, new ByteCellRenderer() );
 
         ImageIcon[] buffer = getUserIcons();
 
-        table.getTable().getColumn( "Nick" ).setCellRenderer( new UserCellRenderer( buffer, null ) );
+        table2.getColumn( "Nick" ).setCellRenderer( new UserCellRenderer( buffer, null ) );
 
-        table.getTable().getColumn( "Ping" ).setCellRenderer( new javax.swing.table.DefaultTableCellRenderer() );
+        table2.getColumn( "Ping" ).setCellRenderer( new javax.swing.table.DefaultTableCellRenderer() );
 
     }
 
@@ -286,13 +247,12 @@ public class SearchComponent
         // don't add model again
         if ( models.size() == 1 && !initialized )
         {
-            model = (RowTableModel) models.get( 0 );
+            model = models.get( 0 );
 
             searchResults = (SortableTable) tabbedPane.getComponentAt( 0 );
 
             // tabbedPane.setTitleAt(0, name + " (0)");
             initialized = true;
-
             searchRequests.add( 0, searchRequest );
 
             // create new entries
@@ -318,11 +278,8 @@ public class SearchComponent
             models.add( 0, model );
 
             // }
-
         }
-
         return searchResults;
-
     }
 
     /**
@@ -336,7 +293,7 @@ public class SearchComponent
     {
         int index = -1;
 
-        SearchRequest[] requests = (SearchRequest[]) searchRequests.toArray( new SearchRequest[searchRequests.size()] );
+        SearchRequest[] requests = searchRequests.toArray( new SearchRequest[searchRequests.size()] );
 
         // check which of the SearchRequests matches the search result
         for ( int i = 0; i < requests.length && index == -1; i++ )
@@ -346,18 +303,8 @@ public class SearchComponent
             if ( requests[i] != null && requests[i].matches( searchResult ) )
             {
                 index = i;
-
             }
-
         }
-
         return index;
-
     }
-
 }
-
-/*******************************************************************************
- * $Log: SearchComponent.java,v $ Revision 1.24 2005/10/02 11:42:28 timowest updated sources and tests Revision 1.23
- * 2005/09/25 16:40:58 timowest updated sources and tests Revision 1.22 2005/09/14 07:11:49 timowest updated sources
- */

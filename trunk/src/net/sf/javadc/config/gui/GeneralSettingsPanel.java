@@ -23,12 +23,11 @@ import javax.swing.JPanel;
 import javax.swing.JTextField;
 import javax.swing.border.TitledBorder;
 
+import junit.framework.Assert;
 import net.sf.javadc.interfaces.ISettings;
 import net.sf.javadc.interfaces.IUserInfo;
 import net.sf.javadc.util.layout.HIGConstraints;
 import net.sf.javadc.util.layout.HIGLayout;
-
-import org.apache.log4j.Category;
 
 /**
  * <CODE>GeneralSettingsPanel</CODE> is a panel to edit general application settings
@@ -38,55 +37,19 @@ import org.apache.log4j.Category;
 public class GeneralSettingsPanel
     extends AbstractSettingsPanel
 {
-    /**
-     * 
-     */
-    private static final long     serialVersionUID = 8431748853711086062L;
+    private static final long serialVersionUID = 8431748853711086062L;
 
-    private final static Category logger           = Category.getInstance( GeneralSettingsPanel.class );
+    private final String[]    speeds           = { "56Kbps", "Satellite", "DSL", "Cable", "LAN(T1)", "LAN(T3)" };
 
-    /**
-     * 
-     */
-    private final String[]        speeds           = { "56Kbps", "Satellite", "DSL", "Cable", "LAN(T1)", "LAN(T3)" };
+    private final JComboBox   comboConnection  = new JComboBox( speeds );
+    private final JTextField  txtDescription   = new JTextField();
+    private final JTextField  txtEmail         = new JTextField();
+    private final JTextField  txtNick          = new JTextField();
+    private final JTextField  txtTag           = new JTextField();
+    private final JTextField  txtHubList       = new JTextField();
+    private final JCheckBox   checkForceMove   = new JCheckBox( "Auto-Forward" );
 
-    /**
-     * 
-     */
-    private final JComboBox       comboConnection  = new JComboBox( speeds );
-
-    /**
-     * 
-     */
-    private final JTextField      txtDescription   = new JTextField();
-
-    /**
-     * 
-     */
-    private final JTextField      txtEmail         = new JTextField();
-
-    /**
-     * 
-     */
-    private final JTextField      txtNick          = new JTextField();
-
-    /**
-     * 
-     */
-    private final JTextField      txtTag           = new JTextField();
-
-    /**
-     * 
-     */
-    private final JTextField      txtHubList       = new JTextField();
-
-    /**
-     * 
-     */
-    private final JCheckBox       checkForceMove   = new JCheckBox( "Auto-Forward" );
-
-    // components
-    private final ISettings       settings;
+    private final ISettings   settings;
 
     /**
      * Create a GeneralSettingsPanel instance with the given ISettings instance
@@ -96,29 +59,20 @@ public class GeneralSettingsPanel
     public GeneralSettingsPanel(
         ISettings _settings )
     {
-        if ( _settings == null )
-        {
-            throw new NullPointerException( "settings was null." );
-        }
+        Assert.assertNotNull( _settings );
 
         settings = _settings;
 
         try
         {
-            jbInit();
-
+            initComponents();
         }
         catch ( Exception ex )
         {
-            // logger.error("Catched " + ex.getClass().getName()
-            // + " when trying to initialize GeneralSettingsPanel.", ex);
-
-            String error = "Caught " + ex.getClass().getName();
+            String error = "cannot init panel";
             logger.error( error, ex );
             throw new RuntimeException( error, ex );
-
         }
-
     }
 
     /*
@@ -139,7 +93,6 @@ public class GeneralSettingsPanel
         try
         {
             txtDescription.setText( lUser.getDescription() );
-
         }
         catch ( NullPointerException e )
         {
@@ -191,7 +144,6 @@ public class GeneralSettingsPanel
     @Override
     public final void onCancel()
     {
-
     }
 
     /*
@@ -306,7 +258,7 @@ public class GeneralSettingsPanel
      * @see net.sf.javadc.config.gui.AbstractSettingsPanel#jbInit()
      */
     @Override
-    protected final void jbInit()
+    protected final void initComponents()
         throws Exception
     {
         this.setLayout( new BorderLayout() );
@@ -319,13 +271,5 @@ public class GeneralSettingsPanel
         p1.add( getOtherSettingsPanel() );
 
         this.add( p1, BorderLayout.NORTH );
-
     }
-
 }
-
-/*******************************************************************************
- * $Log: GeneralSettingsPanel.java,v $ Revision 1.17 2005/10/02 11:42:28 timowest updated sources and tests Revision
- * 1.16 2005/09/30 15:59:53 timowest updated sources and tests Revision 1.15 2005/09/25 16:40:58 timowest updated
- * sources and tests Revision 1.14 2005/09/14 07:11:49 timowest updated sources
- */

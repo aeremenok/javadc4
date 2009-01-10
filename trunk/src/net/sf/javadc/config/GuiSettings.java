@@ -182,10 +182,4 @@ public class GuiSettings
     {
         this.useSystemFonts = useSystemFonts;
     }
-
 }
-
-/*******************************************************************************
- * $Log: GuiSettings.java,v $ Revision 1.17 2005/10/02 11:42:27 timowest updated sources and tests Revision 1.16
- * 2005/09/30 15:59:52 timowest updated sources and tests Revision 1.15 2005/09/14 07:11:48 timowest updated sources
- */

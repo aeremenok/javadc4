@@ -229,7 +229,6 @@ public class HubListComponent
                 if ( filterText.getSelectedItem() != null )
                 {
                     filter = filterText.getSelectedItem().toString();
-
                 }
 
                 filterText.addItem( filter );

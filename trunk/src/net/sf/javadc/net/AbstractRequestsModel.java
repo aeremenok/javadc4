@@ -23,7 +23,7 @@ import net.sf.javadc.util.GenericModel;
  * @author Timo Westk�mper
  */
 public abstract class AbstractRequestsModel
-    extends GenericModel
+    extends GenericModel<RequestsModelListener>
     implements
         IRequestsModel
 {
@@ -37,14 +37,11 @@ public abstract class AbstractRequestsModel
         IConnection connection,
         int index )
     {
-
         RequestsModelListener[] l = getRequestsModelListeners();
-
-        for ( int i = 0; i < l.length; i++ )
+        for ( RequestsModelListener element : l )
         {
-            l[i].connectionAdded( connection, index );
+            element.connectionAdded( connection, index );
         }
-
     }
 
     /*
@@ -57,14 +54,11 @@ public abstract class AbstractRequestsModel
         IConnection connection,
         int index )
     {
-
         RequestsModelListener[] l = getRequestsModelListeners();
-
-        for ( int i = 0; i < l.length; i++ )
+        for ( RequestsModelListener element : l )
         {
-            l[i].connectionChanged( connection, index );
+            element.connectionChanged( connection, index );
         }
-
     }
 
     /*
@@ -77,14 +71,11 @@ public abstract class AbstractRequestsModel
         IConnection connection,
         int index )
     {
-
         RequestsModelListener[] l = getRequestsModelListeners();
-
-        for ( int i = 0; i < l.length; i++ )
+        for ( RequestsModelListener element : l )
         {
-            l[i].connectionRemoved( connection, index );
+            element.connectionRemoved( connection, index );
         }
-
     }
 
     /*
@@ -119,16 +110,12 @@ public abstract class AbstractRequestsModel
         DownloadRequest dr,
         int index )
     {
-
         RequestsModelListener[] l = getRequestsModelListeners();
-
-        // NOTE : index is not really used
-
-        for ( int i = 0; i < l.length; i++ )
+        // xxx NOTE : index is not really used
+        for ( RequestsModelListener element : l )
         {
-            l[i].requestChanged( client, dr, index );
+            element.requestChanged( client, dr, index );
         }
-
     }
 
     /*
@@ -142,14 +129,11 @@ public abstract class AbstractRequestsModel
         DownloadRequest dr,
         int index )
     {
-
         RequestsModelListener[] l = getRequestsModelListeners();
-
-        for ( int i = 0; i < l.length; i++ )
+        for ( RequestsModelListener element : l )
         {
-            l[i].requestRemoved( client, dr, index );
+            element.requestRemoved( client, dr, index );
         }
-
     }
 
     /**
@@ -157,7 +141,6 @@ public abstract class AbstractRequestsModel
      */
     private RequestsModelListener[] getRequestsModelListeners()
     {
-
         return listenerList.getListeners( RequestsModelListener.class );
     }
 
@@ -167,14 +150,8 @@ public abstract class AbstractRequestsModel
      * @see net.sf.javadc.util.GenericModel#getListenerClass()
      */
     @Override
-    protected Class getListenerClass()
+    protected Class<RequestsModelListener> getListenerClass()
     {
         return RequestsModelListener.class;
     }
-
 }
-
-/*******************************************************************************
- * $Log: AbstractRequestsModel.java,v $ Revision 1.6 2005/10/02 11:42:27 timowest updated sources and tests Revision 1.5
- * 2005/09/25 16:40:58 timowest updated sources and tests Revision 1.4 2005/09/12 21:12:02 timowest added log block
- */

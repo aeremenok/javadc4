@@ -25,21 +25,20 @@ import net.sf.javadc.interfaces.ISettings;
 import net.sf.javadc.interfaces.IUserInfo;
 
 /**
- * @author Timo Westk�mper To change the template for this generated type comment go to
- *         Window&gt;Preferences&gt;Java&gt;Code Generation&gt;Code and Comments
+ * todo describe
+ * 
+ * @author Timo Westk�mper
  */
 public class BaseSettings
     implements
-        ISettings
+        ISettings<EventListener>
 {
-
     private final boolean windowsStyle;
 
     public BaseSettings(
         boolean _windowsStyle )
     {
         windowsStyle = _windowsStyle;
-
     }
 
     /*
@@ -51,7 +50,6 @@ public class BaseSettings
         EventListener listener )
     {
         // TODO Auto-generated method stub
-
     }
 
     /*
@@ -94,17 +92,13 @@ public class BaseSettings
      */
     public String getDownloadDir()
     {
+        // todo parametrize
         if ( windowsStyle )
         {
             return "C:\\";
-
-        }
-        else
-        {
-            return "/temp/";
-
         }
 
+        return "/temp/";
     }
 
     /*
@@ -240,15 +234,12 @@ public class BaseSettings
      * 
      * @see net.sf.javadc.config.ISettings#getUploadDirs()
      */
-    public List getUploadDirs()
+    public List<String> getUploadDirs()
     {
-        // TODO Auto-generated method stub
-        List list = new ArrayList();
-
+        List<String> list = new ArrayList<String>();
+        // todo correct
         list.add( new String( "C:\\Timo" ) );
-
         return list;
-
     }
 
     /*
@@ -547,7 +538,6 @@ public class BaseSettings
     public void setUsedUploadSlots(
         int i )
     {
-
         // TODO Auto-generated method stub
     }
 

@@ -67,7 +67,7 @@ class BasePanel
      */
     private final ImageIcon getImage(
         String path,
-        boolean shaded )
+        @SuppressWarnings( "unused" ) boolean shaded )
     {
         ImageIcon icon = FileUtils.loadIcon( path );
 

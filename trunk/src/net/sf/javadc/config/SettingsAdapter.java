@@ -25,8 +25,7 @@ import org.apache.log4j.Category;
 import org.apache.log4j.Logger;
 
 /**
- * <CODE>SettingsAdapter</CODE> is an Adapter to the basic <CODE>Settings</CODE> instance which includes EventListener
- * notification
+ * An Adapter to the basic <CODE>Settings</CODE> instance which includes EventListener notification
  * 
  * @author Timo Westk�mper
  */
@@ -35,11 +34,7 @@ public class SettingsAdapter
 {
     static private final Category          logger = Logger.getLogger( SettingsLoader.class );
 
-    // components
-    /**
-     * 
-     */
-    private final ISettings<EventListener> _settings;
+    private final ISettings<EventListener> settings;
 
     /**
      * Create a SettingsAdapter instance which uses the given ISettingsLoader instance to populate a Settings instance
@@ -52,7 +47,7 @@ public class SettingsAdapter
         Assert.assertNotNull( _settingsLoader );
 
         settingsLoader = _settingsLoader;
-        _settings = settingsLoader.load();
+        settings = settingsLoader.load();
 
         clearTemporaryDownloadDirectory();
     }
@@ -64,20 +59,7 @@ public class SettingsAdapter
      */
     public final AdvancedSettings getAdvancedSettings()
     {
-        /*
-         * AdvancedSettings a = _settings.getAdvancedSettings();
-         * 
-         * if (a == null){ a = new AdvancedSettings();
-         * _settings.setAdvancedSettings(a);
-         *  }
-         * 
-         * return a;
-         */
-
-        // null checks are not necessary, because AdvancedSettings is set via
-        // SettingsFactory
-        return _settings.getAdvancedSettings();
-
+        return settings.getAdvancedSettings();
     }
 
     /*
@@ -87,8 +69,7 @@ public class SettingsAdapter
      */
     public final String getDownloadDir()
     {
-        return _settings.getDownloadDir();
-
+        return settings.getDownloadDir();
     }
 
     /*
@@ -98,14 +79,8 @@ public class SettingsAdapter
      */
     public final int getDownloadSlots()
     {
-        return _settings.getDownloadSlots();
-
+        return settings.getDownloadSlots();
     }
-
-    /*
-     * public final File getDownloadDirectory() { return
-     * _settings.getDownloadDirectory(); }
-     */
 
     /*
      * (non-Javadoc)
@@ -114,8 +89,7 @@ public class SettingsAdapter
      */
     public final int getDownloadSpeed()
     {
-        return _settings.getDownloadSpeed();
-
+        return settings.getDownloadSpeed();
     }
 
     /*
@@ -125,8 +99,7 @@ public class SettingsAdapter
      */
     public final int getFreeDownloadSlotCount()
     {
-        return _settings.getFreeDownloadSlotCount();
-
+        return settings.getFreeDownloadSlotCount();
     }
 
     /*
@@ -136,8 +109,7 @@ public class SettingsAdapter
      */
     public final int getFreeUploadSlotCount()
     {
-        return _settings.getFreeUploadSlotCount();
-
+        return settings.getFreeUploadSlotCount();
     }
 
     /*
@@ -147,7 +119,7 @@ public class SettingsAdapter
      */
     public final GuiSettings getGuiSettings()
     {
-        return _settings.getGuiSettings();
+        return settings.getGuiSettings();
     }
 
     /*
@@ -157,7 +129,7 @@ public class SettingsAdapter
      */
     public final String getIP()
     {
-        return _settings.getIP();
+        return settings.getIP();
     }
 
     /*
@@ -167,8 +139,7 @@ public class SettingsAdapter
      */
     public final String getLogDir()
     {
-        return _settings.getLogDir();
-
+        return settings.getLogDir();
     }
 
     /*
@@ -178,8 +149,7 @@ public class SettingsAdapter
      */
     public final String getTempDownloadDir()
     {
-        return _settings.getTempDownloadDir();
-
+        return settings.getTempDownloadDir();
     }
 
     /*
@@ -189,16 +159,13 @@ public class SettingsAdapter
      */
     public final List<String> getUploadDirs()
     {
-        List<String> list = _settings.getUploadDirs();
-
+        List<String> list = settings.getUploadDirs();
         if ( list == null )
         {
             list = new ArrayList<String>();
-            _settings.setUploadDirs( list );
+            settings.setUploadDirs( list );
         }
-
         return list;
-
     }
 
     /*
@@ -208,7 +175,7 @@ public class SettingsAdapter
      */
     public final int getUploadSlots()
     {
-        return _settings.getUploadSlots();
+        return settings.getUploadSlots();
     }
 
     /*
@@ -218,8 +185,7 @@ public class SettingsAdapter
      */
     public final int getUploadSpeed()
     {
-        return _settings.getUploadSpeed();
-
+        return settings.getUploadSpeed();
     }
 
     /*
@@ -229,8 +195,7 @@ public class SettingsAdapter
      */
     public final int getUsedDownloadSlots()
     {
-        return _settings.getUsedDownloadSlots();
-
+        return settings.getUsedDownloadSlots();
     }
 
     /*
@@ -240,8 +205,7 @@ public class SettingsAdapter
      */
     public final int getUsedUploadSlots()
     {
-        return _settings.getUsedUploadSlots();
-
+        return settings.getUsedUploadSlots();
     }
 
     /*
@@ -251,20 +215,7 @@ public class SettingsAdapter
      */
     public final IUserInfo getUserInfo()
     {
-
-        /*
-         * IUserInfo userInfo =_settings.getUserInfo();
-         * 
-         * if (userInfo == null){ userInfo = new UserInfo();
-         * _settings.setUserInfo(userInfo); }
-         * 
-         * return userInfo;
-         */
-
-        // null checks are not necessary, because UserInfo is set via
-        // SettingsFactory
-        return _settings.getUserInfo();
-
+        return settings.getUserInfo();
     }
 
     /*
@@ -274,8 +225,7 @@ public class SettingsAdapter
      */
     public final boolean isActive()
     {
-        return _settings.isActive();
-
+        return settings.isActive();
     }
 
     /*
@@ -285,7 +235,7 @@ public class SettingsAdapter
      */
     public final void releaseDownloadSlot()
     {
-        _settings.releaseDownloadSlot();
+        settings.releaseDownloadSlot();
         fireDownloadSlotsChanged();
     }
 
@@ -296,7 +246,7 @@ public class SettingsAdapter
      */
     public final void releaseUploadSlot()
     {
-        _settings.releaseUploadSlot();
+        settings.releaseUploadSlot();
         fireUploadSlotsChanged();
     }
 
@@ -307,10 +257,9 @@ public class SettingsAdapter
      */
     public final boolean reserveDownloadSlot()
     {
-        boolean ret = _settings.reserveDownloadSlot();
+        boolean ret = settings.reserveDownloadSlot();
         fireDownloadSlotsChanged();
         return ret;
-
     }
 
     /*
@@ -320,7 +269,7 @@ public class SettingsAdapter
      */
     public final boolean reserveUploadSlot()
     {
-        boolean ret = _settings.reserveUploadSlot();
+        boolean ret = settings.reserveUploadSlot();
         fireUploadSlotsChanged();
         return ret;
     }
@@ -333,7 +282,6 @@ public class SettingsAdapter
     public final void setActive(
         boolean b )
     {
-
         if ( b )
         {
             logger.info( "Switching to active mode" );
@@ -344,8 +292,7 @@ public class SettingsAdapter
         }
         logger.info( "============================================" );
 
-        _settings.setActive( b );
-
+        settings.setActive( b );
     }
 
     /*
@@ -354,10 +301,9 @@ public class SettingsAdapter
      * @see net.sf.javadc.interfaces.ISettings#setAdvancedSettings(net.sf.javadc.config.AdvancedSettings)
      */
     public final void setAdvancedSettings(
-        AdvancedSettings settings )
+        AdvancedSettings advancedSettings )
     {
-        _settings.setAdvancedSettings( settings );
-
+        settings.setAdvancedSettings( advancedSettings );
     }
 
     /*
@@ -368,8 +314,7 @@ public class SettingsAdapter
     public final void setDownloadDir(
         String dir )
     {
-        _settings.setDownloadDir( dir );
-
+        settings.setDownloadDir( dir );
     }
 
     /*
@@ -380,8 +325,7 @@ public class SettingsAdapter
     public final void setDownloadSlots(
         int slots )
     {
-        _settings.setDownloadSlots( slots );
-
+        settings.setDownloadSlots( slots );
     }
 
     /*
@@ -392,8 +336,7 @@ public class SettingsAdapter
     public final void setDownloadSpeed(
         int i )
     {
-        _settings.setDownloadSpeed( i );
-
+        settings.setDownloadSpeed( i );
     }
 
     /*
@@ -404,7 +347,7 @@ public class SettingsAdapter
     public final void setGuiSettings(
         GuiSettings guiSettings )
     {
-        _settings.setGuiSettings( guiSettings );
+        settings.setGuiSettings( guiSettings );
     }
 
     /*
@@ -415,7 +358,7 @@ public class SettingsAdapter
     public final void setIP(
         String string )
     {
-        _settings.setIP( string );
+        settings.setIP( string );
     }
 
     /*
@@ -426,8 +369,7 @@ public class SettingsAdapter
     public final void setLogDir(
         String string )
     {
-        _settings.setLogDir( string );
-
+        settings.setLogDir( string );
     }
 
     /*
@@ -438,8 +380,7 @@ public class SettingsAdapter
     public final void setTempDownloadDir(
         String string )
     {
-        _settings.setTempDownloadDir( string );
-
+        settings.setTempDownloadDir( string );
     }
 
     /*
@@ -450,8 +391,7 @@ public class SettingsAdapter
     public final void setUploadDirs(
         List<String> dirs )
     {
-        _settings.setUploadDirs( dirs );
-
+        settings.setUploadDirs( dirs );
     }
 
     /*
@@ -462,8 +402,7 @@ public class SettingsAdapter
     public final void setUploadSlots(
         int i )
     {
-        _settings.setUploadSlots( i );
-
+        settings.setUploadSlots( i );
     }
 
     /*
@@ -474,8 +413,7 @@ public class SettingsAdapter
     public final void setUploadSpeed(
         int i )
     {
-        _settings.setUploadSpeed( i );
-
+        settings.setUploadSpeed( i );
     }
 
     /*
@@ -486,8 +424,7 @@ public class SettingsAdapter
     public final void setUsedDownloadSlots(
         int i )
     {
-        _settings.setUsedDownloadSlots( i );
-
+        settings.setUsedDownloadSlots( i );
     }
 
     /*
@@ -498,8 +435,7 @@ public class SettingsAdapter
     public final void setUsedUploadSlots(
         int i )
     {
-        _settings.setUsedUploadSlots( i );
-
+        settings.setUsedUploadSlots( i );
     }
 
     /*
@@ -510,8 +446,7 @@ public class SettingsAdapter
     public final void setUserInfo(
         IUserInfo userInfo )
     {
-        _settings.setUserInfo( userInfo );
-
+        settings.setUserInfo( userInfo );
     }
 
     /**
@@ -524,44 +459,28 @@ public class SettingsAdapter
         if ( tempDirName != null && !tempDirName.equals( "" ) )
         {
             File tempDir = new File( tempDirName );
-
             File[] files = tempDir.listFiles();
-
             if ( files == null )
             {
                 logger.error( "Couldn't obtain any files for directory " + tempDir );
                 return;
             }
-
-            for ( int i = 0; i < files.length; i++ )
+            for ( File file : files )
             {
-                if ( files[i].isFile() && files[i].length() == 0 )
+                if ( file.isFile() && file.length() == 0 )
                 {
-                    logger.debug( "File " + files[i].getPath() + " is removed." );
-                    files[i].delete();
-
+                    logger.debug( "File " + file.getPath() + " is removed." );
+                    file.delete();
                 }
                 else
                 {
-                    logger.debug( "File " + files[i].getPath() + " is not removed." );
-
+                    logger.debug( "File " + file.getPath() + " is not removed." );
                 }
-
             }
-
         }
         else
         {
             logger.debug( "Temporary directory has not been specified." );
-
         }
-
     }
-
 }
-
-/*******************************************************************************
- * $Log: SettingsAdapter.java,v $ Revision 1.25 2005/10/02 11:42:27 timowest updated sources and tests Revision 1.24
- * 2005/09/30 15:59:52 timowest updated sources and tests Revision 1.23 2005/09/26 17:19:52 timowest updated sources and
- * tests Revision 1.22 2005/09/14 07:11:48 timowest updated sources
- */

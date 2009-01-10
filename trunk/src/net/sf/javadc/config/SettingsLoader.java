@@ -17,6 +17,7 @@ import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.util.EventListener;
 
 import net.sf.javadc.interfaces.ISettings;
 import net.sf.javadc.interfaces.ISettingsLoader;
@@ -24,22 +25,22 @@ import net.sf.javadc.interfaces.ISettingsLoader;
 import org.apache.log4j.Category;
 
 /**
- * <CODE>SettingsLoader</CODE> loads the core application settings from XML when the application containers are started
- * and saves the settings back to XML when the application is closed
+ * Loads the core application settings from XML when the application containers are started and saves the settings back
+ * to XML when the application is closed
  */
 public class SettingsLoader
     implements
         ISettingsLoader
 {
-    static private final Category logger          = Category.getInstance( SettingsLoader.class );
+    static private final Category    logger          = Category.getInstance( SettingsLoader.class );
 
     /**
      * Factory method implementation to create instance of Settings, if the XML serialized representation is not
      * available
      */
-    private final SettingsFactory settingsFactory = new SettingsFactory();
-    private final String          configFileName;
-    private ISettings             settings;
+    private final SettingsFactory    settingsFactory = new SettingsFactory();
+    private final String             configFileName;
+    private ISettings<EventListener> settings;
 
     /**
      * Create a SettingsLoader instance which reads the Settings from the default location
@@ -65,7 +66,8 @@ public class SettingsLoader
      * 
      * @return
      */
-    public ISettings load()
+    @SuppressWarnings( "unchecked" )
+    public ISettings<EventListener> load()
     {
         logger.debug( "Loading settings ... " );
 
@@ -73,7 +75,7 @@ public class SettingsLoader
         {
             XMLDecoder d = new XMLDecoder( new BufferedInputStream( new FileInputStream( configFileName ) ) );
 
-            settings = (ISettings) d.readObject();
+            settings = (ISettings<EventListener>) d.readObject();
             d.close();
 
             logger.info( "Settings loaded." );
